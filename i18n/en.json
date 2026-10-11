@@ -1,0 +1,224 @@
+{
+  "html": {
+    "lang": "en"
+  },
+  "meta": {
+    "title": "Robin Prause — Engineering leadership",
+    "description": "Robin Prause builds and runs platforms: payments, search, multi-tenant data, compliance. Employment references and a B.Sc. in Media Computer Science.",
+    "og": "Platforms, end to end. Payments, search, multi-tenant data, compliance.",
+    "locale": "en_US"
+  },
+  "home": "/",
+  "base": "",
+  "lang": {
+    "en": {
+      "current": "is-current"
+    },
+    "de": {
+      "current": ""
+    }
+  },
+  "nav": {
+    "label": "Page",
+    "work": "Work",
+    "projects": "Projects",
+    "education": "Education",
+    "documents": "Documents",
+    "questions": "Questions",
+    "workSub": "02/2026 — today, CTO",
+    "projectsSub": "Demo, code, store",
+    "educationSub": "Media Informatics, B.Sc. 2023",
+    "documentsSub": "Originals, readable here",
+    "questionsSub": "Ask the documents"
+  },
+  "skip": "Skip to content",
+  "route": {
+    "label": "Reading progress",
+    "done": "Through"
+  },
+  "depth": {
+    "label": "Reading depth",
+    "brief": "10 s",
+    "mid": "10 min",
+    "all": "All"
+  },
+  "theme": {
+    "label": "Appearance",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "kicker": "Engineering leadership · Rodgau",
+  "hero": {
+    "claim": "I build platforms. And the control that runs them."
+  },
+  "foot": {
+    "cta": "If it fits, write me.",
+    "year": "2026",
+    "top": "Top"
+  },
+  "orbit": {
+    "platforms": "Marketplace platforms",
+    "payments": "Split payments",
+    "multitenant": "Multi-tenant data",
+    "migrations": "Zero-downtime migrations",
+    "i18n": "DE · EN · IT",
+    "search": "Product search",
+    "webhooks": "Idempotent webhooks",
+    "auth": "Auth & 2FA",
+    "shipping": "Shipping & returns",
+    "compliance": "Compliance in the product",
+    "observability": "Tracing & metrics",
+    "ai": "Human-in-the-loop AI",
+    "testing": "Unit to E2E"
+  },
+  "portrait": {
+    "alt": "Portrait of Robin Prause",
+    "caption": "Robin Prause, Rodgau"
+  },
+  "hello": "You are probably here because you are hiring, or building something. Here is what I do right now:",
+  "lede": "I have built and run platforms end to end: payments, search, support, shipping, compliance. In-house, with AI agents, and with the audit trail that makes every change traceable.",
+  "note": "From consulting to full technical ownership. I know both sides: the process, and the code.",
+  "guide": {
+    "label": "Reading guide",
+    "hide": "Hide guide",
+    "intro": "Hi. Scroll on — I will tell you what matters as you go.",
+    "brief": "You are on the 10-second view. Switch to 10 min and the full path appears.",
+    "work": "The first entry is today. Below it, the way here — most recent first.",
+    "projects": "Three things you can open. The store is production; the desk in the middle is running right now — the same engine answers questions further down.",
+    "education": "Short section. Computer science in Friedberg, finished 2023.",
+    "documents": "Everything here is the original. Open what you need; it stays on this page.",
+    "questions": "Ask the documents directly. The answer only uses what is in them.",
+    "done": "That was the whole desk. If it fits, write me:",
+    "workLate": "Further down: freelance, thesis, internships — the part that shows where this comes from.",
+    "projectsLate": "The store is production. The thesis code is from 2023, left exactly as the experiment made it.",
+    "documentsLate": "CV first. Certificates and references back it up.",
+    "questionsLate": "Tip: just start typing, the field catches the question."
+  },
+  "work": {
+    "title": "Work",
+    "lead": "If you only read one entry, read the first. The rest shows how I got there.",
+    "now": "today",
+    "cto": {
+      "where": "smartport Marketplace B.V. · Amsterdam · Remote",
+      "text": "Overall responsibility for strategy, development, and operations of the marketplace and ERP platform. Next.js, NestJS, PostgreSQL, Turborepo, Railway, Cloudflare. Commission models and payouts stay configurable, so a new market does not require a code change."
+    },
+    "ecommerce": {
+      "where": "smartport GmbH · Dietzenbach",
+      "text": "Product responsibility for the online shops: roadmap, Shopify, and the connections to warehouse and customer service."
+    },
+    "engineer": {
+      "where": "Randstad Digital Germany AG · Eschborn",
+      "text": "An Angular 19 application in an Nx monorepo, UI from Figma with Tailwind, and interfaces over OpenAPI and RxJS."
+    },
+    "freelance": {
+      "where": "MGVO · club management software"
+    },
+    "thesis": {
+      "title": "Bachelor's thesis",
+      "where": "Randstad Digital, formerly AUSY Technologies"
+    },
+    "abrio": {
+      "title": "Frontend intern",
+      "where": "Abrio GmbH · Frankfurt"
+    },
+    "student": {
+      "title": "Working student",
+      "where": "Gewa Comp GmbH · Obertshausen"
+    },
+    "assistant": {
+      "title": "Research assistant",
+      "where": "University Medical Center Mainz · E-Mental-Health"
+    },
+    "uhp": {
+      "title": "Intern",
+      "where": "UHP Software GmbH · Darmstadt"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "lead": "Reading about it is one thing. Here are three things you can click: the store I run today, a running desk, and the thesis code.",
+    "note": "The desk is the same pipeline that answers questions at the end of this page: fetch, index, pick, ask Jev. Open it, press Run now, and watch the map.",
+    "wire": {
+      "when": "Live demo",
+      "where": "Python · Qdrant · Jev · one process, many desks",
+      "text": "Wire reads a set of sources on a schedule, keeps an index, and asks Jev one yes/no question about every new story. Which sources, how often, which question — that is a desk. The demo runs a crypto desk; the manage page sets up a new one in four steps.",
+      "demo": "Open the desk"
+    },
+    "events": {
+      "when": "2023 · Archive",
+      "where": "NestJS · TypeScript · MongoDB · Bachelor thesis",
+      "text": "The backend from my thesis: an event manager with staff, lines, business units, feedback and votes. Written in 2023 entirely by prompting chat-based AI models — the experiment the thesis is about. Archived unchanged."
+    },
+    "smartport": {
+      "when": "In production",
+      "where": "Next.js · NestJS · PostgreSQL · Railway · Cloudflare",
+      "text": "The marketplace I run as CTO: storefront, seller payouts, search, shipping and compliance on one platform. Not a demo — this is the shop that takes orders.",
+      "open": "Open the store"
+    }
+  },
+  "education": {
+    "title": "Education",
+    "lead": "Two lines. The thesis is the interesting one if you work with AI in the browser.",
+    "degree": "B.Sc. Media Computer Science",
+    "where": "Technische Hochschule Mittelhessen · Friedberg",
+    "text": "Bachelor's examination on 19 December 2023. The thesis at Randstad Digital looks at what chat-based AI models can carry in web development, and where they stop.",
+    "school": "Abitur",
+    "schoolWhere": "Paul-Gerhardt-Schule · Hanau",
+    "languages": "German, native · English, fluent"
+  },
+  "documents": {
+    "title": "Documents",
+    "lead": "You do not have to take my word for it. These are the originals, and they open right here.",
+    "note": "The sheets show the first page of each file, rendered in your browser. Nothing leaves this page.",
+    "cv": "CV",
+    "cvDetail": "As of 2026",
+    "diploma": "Bachelor's certificate",
+    "diplomaDetail": "THM · B.Sc. Media Computer Science · 2023",
+    "transcript": "Bachelor's transcript",
+    "transcriptDetail": "THM · grades · 2023",
+    "reference": "Employment reference",
+    "randstad": "Randstad Digital · Software Engineer · 2023–2025",
+    "thesis": "Randstad Digital · bachelor's thesis · 2023",
+    "internship": "Internship reference",
+    "abrio": "Abrio · frontend · 2023",
+    "gewa": "Gewa Comp · working student · 2023",
+    "mainz": "University Medical Center Mainz · 2022",
+    "uhp": "UHP Software · internship · 2021",
+    "safe": "Scaled Agile · valid through September 2025"
+  },
+  "reader": {
+    "close": "Close",
+    "prev": "Previous page",
+    "next": "Next page",
+    "download": "Download",
+    "fail": "This document could not be opened."
+  },
+  "chat": {
+    "title": "Ask the documents.",
+    "mark": "AI",
+    "hint": "Start typing anywhere on the page — the field catches the question.",
+    "lead": "Something missing? Ask. The answer comes out of the documents above, nothing else.",
+    "note": "Same search as the desk: the documents are embedded, matched by meaning and by words, then merged. Jev checks whether a hit actually answers the question. If the documents do not cover it, there is no answer.",
+    "label": "Question",
+    "placeholder": "For example: Where did you study?",
+    "submit": "Ask",
+    "pending": "Looking through the documents.",
+    "empty": "There is no answer for that right now.",
+    "down": "The desk is not reachable right now."
+  },
+  "missing": {
+    "kicker": "404",
+    "title": "This page",
+    "emph": "does not exist.",
+    "back": "Back to the home page"
+  },
+  "rail": {
+    "reading": "You are reading",
+    "left": "~{n} min left",
+    "leftSec": "~{n} s left",
+    "under": "under 1 min",
+    "underSec": "under 1 s",
+    "done": "All read",
+    "start": "Top of the page"
+  }
+}

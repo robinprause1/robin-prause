@@ -1,0 +1,224 @@
+{
+  "html": {
+    "lang": "de"
+  },
+  "meta": {
+    "title": "Robin Prause — Engineering-Führung",
+    "description": "Robin Prause baut und betreibt Plattformen: Payments, Suche, mandantenfähige Daten, Compliance. Arbeitszeugnisse und Bachelor Medieninformatik.",
+    "og": "Plattformen, Ende zu Ende. Payments, Suche, mandantenfähige Daten, Compliance.",
+    "locale": "de_DE"
+  },
+  "home": "/de",
+  "base": "/de",
+  "lang": {
+    "en": {
+      "current": ""
+    },
+    "de": {
+      "current": "is-current"
+    }
+  },
+  "nav": {
+    "label": "Seite",
+    "work": "Arbeit",
+    "projects": "Projekte",
+    "education": "Ausbildung",
+    "documents": "Unterlagen",
+    "questions": "Fragen",
+    "workSub": "02/2026 — heute, CTO",
+    "projectsSub": "Demo, Code, Shop",
+    "educationSub": "Medieninformatik, B.Sc. 2023",
+    "documentsSub": "Originale, direkt lesbar",
+    "questionsSub": "Frag die Unterlagen"
+  },
+  "skip": "Zum Inhalt",
+  "route": {
+    "label": "Lesefortschritt",
+    "done": "Durch"
+  },
+  "depth": {
+    "label": "Lesetiefe",
+    "brief": "10 s",
+    "mid": "10 min",
+    "all": "Alles"
+  },
+  "theme": {
+    "label": "Darstellung",
+    "light": "Hell",
+    "dark": "Dunkel"
+  },
+  "kicker": "Engineering-Führung · Rodgau",
+  "hero": {
+    "claim": "Ich baue Plattformen. Und die Kontrolle, die sie trägt."
+  },
+  "foot": {
+    "cta": "Wenn es passt, schreib mir.",
+    "year": "2026",
+    "top": "Nach oben"
+  },
+  "orbit": {
+    "platforms": "Marktplatz-Plattformen",
+    "payments": "Split-Payments",
+    "multitenant": "Mandantenfähige Daten",
+    "migrations": "Migrationen ohne Downtime",
+    "i18n": "DE · EN · IT",
+    "search": "Produktsuche",
+    "webhooks": "Idempotente Webhooks",
+    "auth": "Auth & 2FA",
+    "shipping": "Versand & Retouren",
+    "compliance": "Compliance im Produkt",
+    "observability": "Tracing & Metriken",
+    "ai": "Human-in-the-loop AI",
+    "testing": "Unit bis E2E"
+  },
+  "portrait": {
+    "alt": "Porträt von Robin Prause",
+    "caption": "Robin Prause, Rodgau"
+  },
+  "hello": "Du bist vermutlich hier, weil du jemanden suchst oder etwas baust. Das mache ich gerade:",
+  "lede": "Ich habe Plattformen Ende zu Ende gebaut und betrieben: Payments, Suche, Support, Versand, Compliance. Als Eigenentwicklung, mit KI-Agenten und mit dem Audit-Trail, der jede Änderung nachvollziehbar macht.",
+  "note": "Vom Consulting zur vollen technischen Verantwortung. Ich kenne beide Seiten: den Prozess und den Code.",
+  "guide": {
+    "label": "Lesebegleitung",
+    "hide": "Begleitung ausblenden",
+    "intro": "Hi. Scroll einfach weiter — ich sag dir unterwegs, was zählt.",
+    "brief": "Du bist in der 10-Sekunden-Ansicht. Stell auf 10 min, dann siehst du den ganzen Weg.",
+    "work": "Der erste Eintrag ist heute. Darunter der Weg hierher, das Neueste zuerst.",
+    "projects": "Drei Dinge zum Öffnen. Der Shop ist Produktion; der Desk in der Mitte läuft gerade — derselbe Motor beantwortet weiter unten die Fragen.",
+    "education": "Kurzer Abschnitt. Informatik in Friedberg, fertig 2023.",
+    "documents": "Hier liegt alles im Original. Öffne, was du brauchst — es bleibt auf dieser Seite.",
+    "questions": "Frag die Unterlagen direkt. Die Antwort nutzt nur, was drinsteht.",
+    "done": "Das war der ganze Schreibtisch. Wenn es passt, schreib mir:",
+    "workLate": "Weiter unten: Freelance, Bachelorarbeit, Praktika — der Teil, der zeigt, wo das herkommt.",
+    "projectsLate": "Der Shop ist Produktion. Der Code der Bachelorarbeit ist von 2023 und liegt so da, wie das Experiment ihn hinterlassen hat.",
+    "documentsLate": "Lebenslauf zuerst. Zeugnisse und Zertifikate belegen ihn.",
+    "questionsLate": "Tipp: Einfach lostippen, das Feld fängt die Frage auf."
+  },
+  "work": {
+    "title": "Arbeit",
+    "lead": "Wenn du nur einen Eintrag liest, lies den ersten. Der Rest zeigt, wie ich dahin gekommen bin.",
+    "now": "heute",
+    "cto": {
+      "where": "smartport Marketplace B.V. · Amsterdam · Remote",
+      "text": "Gesamtverantwortung für Strategie, Entwicklung und Betrieb der Marktplatz- und ERP-Plattform. Next.js, NestJS, PostgreSQL, Turborepo, Railway, Cloudflare. Provisionsmodelle und Auszahlungen bleiben konfigurierbar, neue Märkte brauchen keinen Eingriff in den Code."
+    },
+    "ecommerce": {
+      "where": "smartport GmbH · Dietzenbach",
+      "text": "Produktverantwortung für die Onlineshops: Roadmap, Shopify, die Schnittstellen zu Lager und Kundenservice."
+    },
+    "engineer": {
+      "where": "Randstad Digital Germany AG · Eschborn",
+      "text": "Angular-19-Anwendung im Nx-Monorepo, UI nach Figma mit Tailwind, Schnittstellen über OpenAPI und RxJS."
+    },
+    "freelance": {
+      "where": "MGVO · Vereinsmanagement"
+    },
+    "thesis": {
+      "title": "Bachelorand",
+      "where": "Randstad Digital, vormals AUSY Technologies"
+    },
+    "abrio": {
+      "title": "Praktikant Frontend",
+      "where": "Abrio GmbH · Frankfurt"
+    },
+    "student": {
+      "title": "Werkstudent",
+      "where": "Gewa Comp GmbH · Obertshausen"
+    },
+    "assistant": {
+      "title": "Wissenschaftliche Hilfskraft",
+      "where": "Universitätsmedizin Mainz · E-Mental-Health"
+    },
+    "uhp": {
+      "title": "Praktikant",
+      "where": "UHP Software GmbH · Darmstadt"
+    }
+  },
+  "projects": {
+    "title": "Projekte",
+    "lead": "Darüber lesen ist das eine. Hier sind drei Dinge zum Anklicken: der Shop, den ich heute betreibe, ein laufender Desk und der Code der Bachelorarbeit.",
+    "note": "Der Desk ist dieselbe Pipeline, die am Ende dieser Seite die Fragen beantwortet: lesen, indexieren, auswählen, Jev fragen. Öffne ihn, drück auf Run now und sieh der Karte zu.",
+    "wire": {
+      "when": "Live-Demo",
+      "where": "Python · Qdrant · Jev · ein Prozess, viele Desks",
+      "text": "Wire liest nach Plan eine Reihe von Quellen, hält einen Index und stellt Jev zu jeder neuen Meldung eine Ja/Nein-Frage. Welche Quellen, wie oft, welche Frage — das ist ein Desk. Die Demo fährt einen Crypto-Desk; die Manage-Seite legt in vier Schritten einen neuen an.",
+      "demo": "Desk öffnen"
+    },
+    "events": {
+      "when": "2023 · Archiv",
+      "where": "NestJS · TypeScript · MongoDB · Bachelorarbeit",
+      "text": "Das Backend aus meiner Bachelorarbeit: ein Event-Manager mit Staff, Lines, Business Units, Feedback und Votes. 2023 vollständig per Prompt mit chatbasierten KI-Modellen erzeugt — das Experiment, um das es in der Arbeit geht. Unverändert archiviert."
+    },
+    "smartport": {
+      "when": "In Produktion",
+      "where": "Next.js · NestJS · PostgreSQL · Railway · Cloudflare",
+      "text": "Der Marktplatz, den ich als CTO verantworte: Storefront, Auszahlungen an Händler, Suche, Versand und Compliance auf einer Plattform. Keine Demo — das ist der Shop, der Bestellungen annimmt.",
+      "open": "Shop öffnen"
+    }
+  },
+  "education": {
+    "title": "Ausbildung",
+    "lead": "Zwei Zeilen. Die Bachelorarbeit ist die interessante, wenn du mit KI im Browser arbeitest.",
+    "degree": "Medieninformatik, B.Sc.",
+    "where": "Technische Hochschule Mittelhessen · Friedberg",
+    "text": "Bachelorprüfung am 19. Dezember 2023. Die Arbeit bei Randstad Digital untersucht, was chatbasierte KI-Modelle in der Webentwicklung tragen und wo sie aufhören.",
+    "school": "Abitur",
+    "schoolWhere": "Paul-Gerhardt-Schule · Hanau",
+    "languages": "Deutsch, Muttersprache · Englisch, fließend"
+  },
+  "documents": {
+    "title": "Unterlagen",
+    "lead": "Du musst mir nichts glauben. Das sind die Originale, und sie öffnen sich direkt hier.",
+    "note": "Die Blätter zeigen die erste Seite jeder Datei, gerendert in deinem Browser. Nichts verlässt diese Seite.",
+    "cv": "Lebenslauf",
+    "cvDetail": "Stand 2026",
+    "diploma": "Bachelorurkunde",
+    "diplomaDetail": "THM · B.Sc. Medieninformatik · 2023",
+    "transcript": "Bachelorzeugnis",
+    "transcriptDetail": "THM · Noten · 2023",
+    "reference": "Arbeitszeugnis",
+    "randstad": "Randstad Digital · Software Engineer · 2023–2025",
+    "thesis": "Randstad Digital · Bachelorarbeit · 2023",
+    "internship": "Praktikumszeugnis",
+    "abrio": "Abrio · Frontend · 2023",
+    "gewa": "Gewa Comp · Werkstudent · 2023",
+    "mainz": "Universitätsmedizin Mainz · 2022",
+    "uhp": "UHP Software · Praktikum · 2021",
+    "safe": "Scaled Agile · gültig bis September 2025"
+  },
+  "reader": {
+    "close": "Schließen",
+    "prev": "Vorherige Seite",
+    "next": "Nächste Seite",
+    "download": "Herunterladen",
+    "fail": "Dieses Dokument ließ sich nicht öffnen."
+  },
+  "chat": {
+    "title": "Frag die Unterlagen.",
+    "mark": "KI",
+    "hint": "Einfach irgendwo auf der Seite lostippen — das Feld fängt die Frage auf.",
+    "lead": "Fehlt dir etwas? Frag. Die Antwort kommt aus den Unterlagen oben, aus nichts anderem.",
+    "note": "Dieselbe Suche wie am Desk: die Unterlagen werden eingebettet, dicht und über die Wörter gefunden und zusammengeführt. Jev prüft, ob die Treffer die Frage tragen. Steht es nicht drin, gibt es keine Antwort.",
+    "label": "Frage",
+    "placeholder": "Zum Beispiel: Wo hast du studiert?",
+    "submit": "Fragen",
+    "pending": "Ich schaue in die Unterlagen.",
+    "empty": "Dazu gibt es gerade keine Antwort.",
+    "down": "Der Desk ist gerade nicht erreichbar."
+  },
+  "missing": {
+    "kicker": "404",
+    "title": "Diese Seite",
+    "emph": "gibt es nicht.",
+    "back": "Zurück zur Startseite"
+  },
+  "rail": {
+    "reading": "Du liest",
+    "left": "noch ~{n} min",
+    "leftSec": "noch ~{n} s",
+    "under": "unter 1 min",
+    "underSec": "unter 1 s",
+    "done": "Alles gelesen",
+    "start": "Oben auf der Seite"
+  }
+}

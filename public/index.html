@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="{{html.lang}}">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var h=document.documentElement;var t=localStorage.getItem("prause-theme");if(t==="light"||t==="dark")h.dataset.theme=t;var d=sessionStorage.getItem("prause-depth");h.dataset.depth=(d==="brief"||d==="all")?d:"mid";if(location.search.indexOf("hero=orbit")!==-1)h.dataset.hero="orbit"}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{meta.title}}</title>
+  <meta name="description" content="{{meta.description}}">
+  <link rel="alternate" hreflang="en" href="/">
+  <link rel="alternate" hreflang="de" href="/de">
+  <link rel="alternate" hreflang="x-default" href="/">
+  <meta name="theme-color" content="#f3efe6">
+  <meta property="og:title" content="Robin Prause">
+  <meta property="og:description" content="{{meta.og}}">
+  <meta property="og:locale" content="{{meta.locale}}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/portrait.jpg?v=5">
+  <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
+  <link rel="preload" href="/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=51">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Robin Prause",
+    "jobTitle": "Engineering leadership",
+    "email": "mailto:mail@robin-prause.de",
+    "telephone": "+49-152-53281802",
+    "image": "/portrait.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rodgau",
+      "addressCountry": "DE"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Technische Hochschule Mittelhessen"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/robin-prause-330666278",
+      "https://github.com/robinprause1"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="{{base}}#work-title">{{skip}}</a>
+
+  <header class="mast">
+    <div class="mast-row">
+      <a class="word" href="{{home}}#top">Robin Prause</a>
+      <nav aria-label="{{nav.label}}">
+        <span class="stops" id="stops">
+          <a href="{{base}}#work-title" data-stop="work">
+            <b aria-hidden="true">01</b>
+            <span class="stop-label">{{nav.work}}</span>
+            <i class="stop-bar" aria-hidden="true"></i>
+          </a>
+          <a href="{{base}}#projects-title" data-stop="projects">
+            <b aria-hidden="true">02</b>
+            <span class="stop-label">{{nav.projects}}</span>
+            <i class="stop-bar" aria-hidden="true"></i>
+          </a>
+          <a href="{{base}}#education-title" data-stop="education">
+            <b aria-hidden="true">03</b>
+            <span class="stop-label">{{nav.education}}</span>
+            <i class="stop-bar" aria-hidden="true"></i>
+          </a>
+          <a href="{{base}}#documents-title" data-stop="documents">
+            <b aria-hidden="true">04</b>
+            <span class="stop-label">{{nav.documents}}</span>
+            <i class="stop-bar" aria-hidden="true"></i>
+          </a>
+          <a href="{{base}}#questions-title" data-stop="questions">
+            <b aria-hidden="true">05</b>
+            <span class="stop-label">{{nav.questions}}</span>
+            <i class="stop-bar" aria-hidden="true"></i>
+          </a>
+        </span>
+      </nav>
+      <div class="dials">
+        <div class="depth" id="depth" role="radiogroup" aria-label="{{depth.label}}">
+          <button type="button" role="radio" aria-checked="false" data-depth-set="brief">{{depth.brief}}</button>
+          <button type="button" role="radio" aria-checked="false" data-depth-set="mid">{{depth.mid}}</button>
+          <button type="button" role="radio" aria-checked="false" data-depth-set="all">{{depth.all}}</button>
+        </div>
+        <div class="theme" id="theme" role="radiogroup" aria-label="{{theme.label}}">
+          <button type="button" role="radio" aria-checked="false" data-theme-set="light">{{theme.light}}</button>
+          <button type="button" role="radio" aria-checked="false" data-theme-set="dark">{{theme.dark}}</button>
+        </div>
+        <span class="langs">
+          <a href="/" hreflang="en" lang="en" class="{{lang.en.current}}">EN</a>
+          <a href="/de" hreflang="de" lang="de" class="{{lang.de.current}}">DE</a>
+        </span>
+      </div>
+    </div>
+    <div class="route" id="route" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="{{route.label}}">
+      <span class="route-fill" id="route-fill"></span>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="name">
+      <div class="page hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">
+            <span>{{kicker}}</span>
+          </p>
+          <p class="claim">{{hero.claim}}</p>
+          <p class="hello" data-depth="all">{{hello}}</p>
+          <p class="lede">{{lede}}</p>
+          <p class="note" data-depth="all">{{note}}</p>
+          <p class="contact">
+            <a href="mailto:mail@robin-prause.de">mail@robin-prause.de</a>
+            <a href="https://www.linkedin.com/in/robin-prause-330666278" rel="noopener noreferrer">LinkedIn</a>
+            <a href="tel:+4915253281802">+49 152 53281802</a>
+          </p>
+        </div>
+        <figure class="portrait">
+          <div class="orbit" aria-hidden="true">
+            <span>TypeScript</span>
+            <span>Next.js</span>
+            <span>NestJS</span>
+            <span>PostgreSQL</span>
+            <span>Cloudflare</span>
+          </div>
+          <img src="/portrait.jpg?v=5" width="1024" height="1024" alt="{{portrait.alt}}" fetchpriority="high">
+          <figcaption>
+            <span>{{portrait.caption}}</span>
+          </figcaption>
+        </figure>
+      </div>
+      <h1 id="name" class="name page" aria-label="Robin Prause">
+        <span class="name-a">Robin</span>
+        <span class="name-b">Prause</span>
+      </h1>
+      <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>{{orbit.platforms}}</span><i></i>
+        <span>TypeScript</span><i></i>
+        <span>{{orbit.payments}}</span><i></i>
+        <span>NestJS</span><i></i>
+        <span>{{orbit.multitenant}}</span><i></i>
+        <span>PostgreSQL</span><i></i>
+        <span>Prisma</span><i></i>
+        <span>{{orbit.migrations}}</span><i></i>
+        <span>Next.js</span><i></i>
+        <span>{{orbit.i18n}}</span><i></i>
+        <span>{{orbit.search}}</span><i></i>
+        <span>Redis</span><i></i>
+        <span>BullMQ</span><i></i>
+        <span>{{orbit.webhooks}}</span><i></i>
+        <span>{{orbit.auth}}</span><i></i>
+        <span>{{orbit.shipping}}</span><i></i>
+        <span>{{orbit.compliance}}</span><i></i>
+        <span>{{orbit.observability}}</span><i></i>
+        <span>Railway</span><i></i>
+        <span>Cloudflare</span><i></i>
+        <span>{{orbit.ai}}</span><i></i>
+        <span>{{orbit.testing}}</span><i></i>
+        <span>{{orbit.platforms}}</span><i></i>
+        <span>TypeScript</span><i></i>
+        <span>{{orbit.payments}}</span><i></i>
+        <span>NestJS</span><i></i>
+        <span>{{orbit.multitenant}}</span><i></i>
+        <span>PostgreSQL</span><i></i>
+        <span>Prisma</span><i></i>
+        <span>{{orbit.migrations}}</span><i></i>
+        <span>Next.js</span><i></i>
+        <span>{{orbit.i18n}}</span><i></i>
+        <span>{{orbit.search}}</span><i></i>
+        <span>Redis</span><i></i>
+        <span>BullMQ</span><i></i>
+        <span>{{orbit.webhooks}}</span><i></i>
+        <span>{{orbit.auth}}</span><i></i>
+        <span>{{orbit.shipping}}</span><i></i>
+        <span>{{orbit.compliance}}</span><i></i>
+        <span>{{orbit.observability}}</span><i></i>
+        <span>Railway</span><i></i>
+        <span>Cloudflare</span><i></i>
+        <span>{{orbit.ai}}</span><i></i>
+        <span>{{orbit.testing}}</span><i></i>
+      </div>
+      </div>
+    </section>
+
+    <section id="work" class="chapter page" aria-labelledby="work-title">
+      <div class="section-head">
+        <p class="num" aria-hidden="true">01</p>
+        <h2 id="work-title">{{work.title}}</h2>
+        <p class="lead">{{work.lead}}</p>
+      </div>
+      <div class="section-body">
+        <ol class="stations">
+          <li class="role now">
+            <p class="when"><time datetime="2026-02">02/2026</time> — {{work.now}}</p>
+            <div>
+              <h3>Chief Technology Officer</h3>
+              <p class="where">{{work.cto.where}}</p>
+              <p>{{work.cto.text}}</p>
+            </div>
+          </li>
+          <li class="role" data-depth="mid">
+            <p class="when"><time datetime="2025-07">07/2025</time> — 01/2026</p>
+            <div>
+              <h3>Head of E-Commerce</h3>
+              <p class="where">{{work.ecommerce.where}}</p>
+              <p>{{work.ecommerce.text}}</p>
+            </div>
+          </li>
+          <li class="role" data-depth="mid">
+            <p class="when"><time datetime="2024-03">03/2024</time> — 06/2025</p>
+            <div>
+              <h3>Software Engineer</h3>
+              <p class="where">{{work.engineer.where}}</p>
+              <p>{{work.engineer.text}}</p>
+            </div>
+          </li>
+          <li class="role" data-depth="mid">
+            <p class="when"><time datetime="2022-10">10/2022</time> — 12/2024</p>
+            <div>
+              <h3>Freelancer</h3>
+              <p class="where">{{work.freelance.where}}</p>
+            </div>
+          </li>
+          <li class="role" data-depth="mid">
+            <p class="when"><time datetime="2023-08">08/2023</time> — 02/2024</p>
+            <div>
+              <h3>{{work.thesis.title}}</h3>
+              <p class="where">{{work.thesis.where}}</p>
+            </div>
+          </li>
+          <li class="role" data-depth="mid">
+            <p class="when"><time datetime="2023-04">04/2023</time> — 06/2023</p>
+            <div>
+              <h3>{{work.abrio.title}}</h3>
+              <p class="where">{{work.abrio.where}}</p>
+            </div>
+          </li>
+          <li class="role" data-depth="mid">
+            <p class="when"><time datetime="2023-01">01/2023</time> — 03/2023</p>
+            <div>
+              <h3>{{work.student.title}}</h3>
+              <p class="where">{{work.student.where}}</p>
+            </div>
+          </li>
+          <li class="role" data-depth="mid">
+            <p class="when"><time datetime="2022-04">04/2022</time> — 09/2022</p>
+            <div>
+              <h3>{{work.assistant.title}}</h3>
+              <p class="where">{{work.assistant.where}}</p>
+            </div>
+          </li>
+          <li class="role" data-depth="mid">
+            <p class="when"><time datetime="2021-08">08/2021</time> — 09/2021</p>
+            <div>
+              <h3>{{work.uhp.title}}</h3>
+              <p class="where">{{work.uhp.where}}</p>
+            </div>
+          </li>
+        </ol>
+        <p class="stack" data-depth="all">Next.js · NestJS · PostgreSQL · Redis · Turborepo · Docker · Railway · Cloudflare · TypeScript · Angular · Shopify · Vue</p>
+      </div>
+    </section>
+
+    <section id="projects" class="chapter page" aria-labelledby="projects-title" data-depth="mid">
+      <div class="section-head">
+        <p class="num" aria-hidden="true">02</p>
+        <h2 id="projects-title">{{projects.title}}</h2>
+        <p class="lead">{{projects.lead}}</p>
+        <p class="note" data-depth="all">{{projects.note}}</p>
+      </div>
+      <div class="section-body">
+        <ol class="stations projects">
+          <li class="role project">
+            <p class="when">{{projects.smartport.when}}</p>
+            <div>
+              <h3>smartport.com</h3>
+              <p class="where">{{projects.smartport.where}}</p>
+              <p class="text">{{projects.smartport.text}}</p>
+              <p class="links">
+                <a href="https://smartport.com" target="_blank" rel="noopener noreferrer">{{projects.smartport.open}}</a>
+              </p>
+            </div>
+          </li>
+          <li class="role project now">
+            <p class="when">{{projects.wire.when}}</p>
+            <div>
+              <h3>Wire</h3>
+              <p class="where">{{projects.wire.where}}</p>
+              <p class="text">{{projects.wire.text}}</p>
+              <p class="links">
+                <a href="https://wire.robin-prause.de" target="_blank" rel="noopener noreferrer">{{projects.wire.demo}}</a>
+                <a href="https://github.com/robinprause1/wire" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </p>
+            </div>
+          </li>
+          <li class="role project">
+            <p class="when">{{projects.events.when}}</p>
+            <div>
+              <h3>Event Manager</h3>
+              <p class="where">{{projects.events.where}}</p>
+              <p class="text">{{projects.events.text}}</p>
+              <p class="links">
+                <a href="https://github.com/robinprause1/event-manager-backend" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </p>
+            </div>
+          </li>
+        </ol>
+        <p class="stack" data-depth="all"><a href="https://github.com/robinprause1" target="_blank" rel="noopener noreferrer">github.com/robinprause1</a></p>
+      </div>
+    </section>
+
+    <section id="education" class="chapter page" aria-labelledby="education-title" data-depth="mid">
+      <div class="section-head">
+        <p class="num" aria-hidden="true">03</p>
+        <h2 id="education-title">{{education.title}}</h2>
+        <p class="lead">{{education.lead}}</p>
+      </div>
+      <div class="section-body">
+        <ol class="stations">
+          <li class="role" data-depth="mid">
+            <p class="when"><time datetime="2023-12-19">2023</time></p>
+            <div>
+              <h3>{{education.degree}}</h3>
+              <p class="where">{{education.where}}</p>
+              <p>{{education.text}}</p>
+            </div>
+          </li>
+          <li class="role" data-depth="mid">
+            <p class="when"><time datetime="2020">2020</time></p>
+            <div>
+              <h3>{{education.school}}</h3>
+              <p class="where">{{education.schoolWhere}}</p>
+            </div>
+          </li>
+        </ol>
+        <p class="stack" data-depth="all">{{education.languages}}</p>
+      </div>
+    </section>
+
+    <section id="documents" class="chapter page" aria-labelledby="documents-title">
+      <div class="section-head">
+        <p class="num" aria-hidden="true">04</p>
+        <h2 id="documents-title">{{documents.title}}</h2>
+        <p class="lead">{{documents.lead}}</p>
+        <p class="note" data-depth="all">{{documents.note}}</p>
+      </div>
+      <div class="section-body">
+        <ol class="docs">
+          <li>
+            <a href="/documents/lebenslauf.pdf">
+              <span class="doc-sheet"><canvas class="doc-thumb" width="1" height="1"></canvas><span class="doc-file">PDF</span></span>
+              <span class="doc-title">{{documents.cv}}</span>
+              <span class="doc-detail">{{documents.cvDetail}}</span>
+            </a>
+          </li>
+          <li>
+            <a href="/documents/bachelorurkunde.pdf">
+              <span class="doc-sheet"><canvas class="doc-thumb" width="1" height="1"></canvas><span class="doc-file">PDF</span></span>
+              <span class="doc-title">{{documents.diploma}}</span>
+              <span class="doc-detail">{{documents.diplomaDetail}}</span>
+            </a>
+          </li>
+          <li>
+            <a href="/documents/bachelorzeugnis.pdf">
+              <span class="doc-sheet"><canvas class="doc-thumb" width="1" height="1"></canvas><span class="doc-file">PDF</span></span>
+              <span class="doc-title">{{documents.transcript}}</span>
+              <span class="doc-detail">{{documents.transcriptDetail}}</span>
+            </a>
+          </li>
+          <li>
+            <a href="/documents/zeugnis-randstad-digital.pdf">
+              <span class="doc-sheet"><canvas class="doc-thumb" width="1" height="1"></canvas><span class="doc-file">PDF</span></span>
+              <span class="doc-title">{{documents.reference}}</span>
+              <span class="doc-detail">{{documents.randstad}}</span>
+            </a>
+          </li>
+          <li>
+            <a href="/documents/zeugnis-bachelorarbeit.pdf">
+              <span class="doc-sheet"><canvas class="doc-thumb" width="1" height="1"></canvas><span class="doc-file">PDF</span></span>
+              <span class="doc-title">{{documents.reference}}</span>
+              <span class="doc-detail">{{documents.thesis}}</span>
+            </a>
+          </li>
+          <li>
+            <a href="/documents/zeugnis-abrio.pdf">
+              <span class="doc-sheet"><canvas class="doc-thumb" width="1" height="1"></canvas><span class="doc-file">PDF</span></span>
+              <span class="doc-title">{{documents.internship}}</span>
+              <span class="doc-detail">{{documents.abrio}}</span>
+            </a>
+          </li>
+          <li>
+            <a href="/documents/zeugnis-gewacomp.pdf">
+              <span class="doc-sheet"><canvas class="doc-thumb" width="1" height="1"></canvas><span class="doc-file">PDF</span></span>
+              <span class="doc-title">{{documents.reference}}</span>
+              <span class="doc-detail">{{documents.gewa}}</span>
+            </a>
+          </li>
+          <li>
+            <a href="/documents/zeugnis-unimedizin-mainz.pdf">
+              <span class="doc-sheet"><canvas class="doc-thumb" width="1" height="1"></canvas><span class="doc-file">PDF</span></span>
+              <span class="doc-title">{{documents.reference}}</span>
+              <span class="doc-detail">{{documents.mainz}}</span>
+            </a>
+          </li>
+          <li>
+            <a href="/documents/zeugnis-uhp.pdf">
+              <span class="doc-sheet"><canvas class="doc-thumb" width="1" height="1"></canvas><span class="doc-file">PDF</span></span>
+              <span class="doc-title">{{documents.reference}}</span>
+              <span class="doc-detail">{{documents.uhp}}</span>
+            </a>
+          </li>
+          <li>
+            <a href="/documents/zertifikat-safe-agilist.pdf">
+              <span class="doc-sheet"><canvas class="doc-thumb" width="1" height="1"></canvas><span class="doc-file">PDF</span></span>
+              <span class="doc-title">Certified SAFe 6 Agilist</span>
+              <span class="doc-detail">{{documents.safe}}</span>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="questions" class="chapter page" aria-labelledby="questions-title" data-depth="mid">
+      <div class="section-head">
+        <p class="num" aria-hidden="true">05</p>
+        <h2 id="questions-title">{{chat.title}}</h2>
+        <p class="lead">{{chat.lead}}</p>
+        <p class="note" data-depth="all">{{chat.note}}</p>
+      </div>
+      <div class="section-body">
+        <div id="chat-log" class="chat-log" aria-live="polite"></div>
+        <form id="chat" class="chat" data-mark="{{chat.mark}}" data-pending="{{chat.pending}}" data-empty="{{chat.empty}}" data-down="{{chat.down}}">
+          <label class="visually-hidden" for="chat-question">{{chat.label}}</label>
+          <input id="chat-question" name="question" type="text" maxlength="400" required placeholder="{{chat.placeholder}}" autocomplete="off">
+          <button type="submit"><span>{{chat.submit}}</span><i aria-hidden="true">→</i></button>
+        </form>
+        <p class="chat-hint">{{chat.hint}}</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="page foot">
+      <p class="foot-cta">{{foot.cta}}</p>
+      <a class="foot-mail" href="mailto:mail@robin-prause.de">mail@robin-prause.de</a>
+      <div class="foot-row">
+        <p>Robin Prause · Rodgau · {{foot.year}}</p>
+        <p>
+          <a href="https://www.linkedin.com/in/robin-prause-330666278" rel="noopener noreferrer">LinkedIn</a>
+          <a href="tel:+4915253281802">+49 152 53281802</a>
+          <a href="{{base}}#top">{{foot.top}} ↑</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <aside class="guide" id="guide" aria-label="{{guide.label}}"
+    data-intro="{{guide.intro}}" data-brief="{{guide.brief}}" data-work="{{guide.work}}"
+    data-projects="{{guide.projects}}" data-education="{{guide.education}}" data-documents="{{guide.documents}}"
+    data-questions="{{guide.questions}}" data-done="{{guide.done}}"
+    data-work-late="{{guide.workLate}}" data-projects-late="{{guide.projectsLate}}" data-documents-late="{{guide.documentsLate}}" data-questions-late="{{guide.questionsLate}}">
+    <p class="guide-text" id="guide-text" aria-live="polite"></p>
+    <button type="button" class="guide-hide" id="guide-hide" aria-label="{{guide.hide}}">×</button>
+  </aside>
+
+  <dialog class="reader" id="reader" aria-labelledby="reader-title">
+    <div class="reader-frame">
+      <div class="reader-bar">
+        <div class="reader-copy">
+          <p class="reader-title" id="reader-title"></p>
+          <p class="reader-detail" id="reader-detail"></p>
+        </div>
+        <div class="reader-tools">
+          <p class="reader-pages" id="reader-pages" aria-live="polite">1 / 1</p>
+          <a class="reader-download" id="reader-download" href="/">{{reader.download}}</a>
+          <button type="button" class="reader-close" id="reader-close">{{reader.close}}</button>
+        </div>
+      </div>
+      <div class="reader-meter" aria-hidden="true"><span id="reader-meter"></span></div>
+      <div class="reader-stage">
+        <button type="button" class="reader-turn" id="reader-prev" aria-label="{{reader.prev}}">‹</button>
+        <div class="reader-sheet" id="reader-sheet">
+          <canvas id="reader-canvas"></canvas>
+          <p class="reader-fail" id="reader-fail" hidden>{{reader.fail}}</p>
+        </div>
+        <button type="button" class="reader-turn" id="reader-next" aria-label="{{reader.next}}">›</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="/name.js?v=6"></script>
+  <script src="/motion.js?v=27"></script>
+  <script src="/controls.js?v=6"></script>
+  <script src="/guide.js?v=4"></script>
+  <script src="/chat.js?v=4"></script>
+  <script type="module" src="/reader.js?v=2"></script>
+  <script type="module" src="/shelf.js?v=3"></script>
+</body>
+</html>
