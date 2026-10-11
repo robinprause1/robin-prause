@@ -47,7 +47,7 @@
     "light": "Hell",
     "dark": "Dunkel"
   },
-  "kicker": "Engineering-Führung · Rodgau",
+  "kicker": "Engineering-Führung · Frankfurt",
   "hero": {
     "claim": "Ich baue Plattformen. Und die Kontrolle, die sie trägt."
   },
@@ -73,7 +73,7 @@
   },
   "portrait": {
     "alt": "Porträt von Robin Prause",
-    "caption": "Robin Prause, Rodgau"
+    "caption": "Robin Prause, Frankfurt"
   },
   "hello": "Du bist vermutlich hier, weil du jemanden suchst oder etwas baust. Das mache ich gerade:",
   "lede": "Ich habe Plattformen Ende zu Ende gebaut und betrieben: Payments, Suche, Support, Versand, Compliance. Als Eigenentwicklung, mit KI-Agenten und mit dem Audit-Trail, der jede Änderung nachvollziehbar macht.",

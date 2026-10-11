@@ -47,7 +47,7 @@
     "light": "Light",
     "dark": "Dark"
   },
-  "kicker": "Engineering leadership · Rodgau",
+  "kicker": "Engineering leadership · Frankfurt",
   "hero": {
     "claim": "I build platforms. And the control that runs them."
   },
@@ -73,7 +73,7 @@
   },
   "portrait": {
     "alt": "Portrait of Robin Prause",
-    "caption": "Robin Prause, Rodgau"
+    "caption": "Robin Prause, Frankfurt"
   },
   "hello": "You are probably here because you are hiring, or building something. Here is what I do right now:",
   "lede": "I have built and run platforms end to end: payments, search, support, shipping, compliance. In-house, with AI agents, and with the audit trail that makes every change traceable.",
