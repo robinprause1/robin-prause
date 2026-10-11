@@ -3,6 +3,7 @@ import { createReadStream, existsSync, readFileSync, statSync } from "node:fs";
 import { createServer, request as requestHttp } from "node:http";
 import { extname, join, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
+import { handleMcp } from "./mcp.js";
 
 const repo = fileURLToPath(new URL("..", import.meta.url));
 const python = join(repo, "intel", ".venv", "bin", "python");
@@ -187,6 +188,13 @@ const server = createServer((req, res) => {
     return;
   }
   const pathname = req.url.split("?")[0];
+  if (pathname === "/mcp") {
+    handleMcp(req, res, catalogs).catch((error) => {
+      console.error(error);
+      if (!res.headersSent) send(res, 500, "Error");
+    });
+    return;
+  }
   if (pathname === "/ask" && req.method === "POST") {
     forwardAsk(req, res);
     return;

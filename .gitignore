@@ -3,5 +3,6 @@
 .env.*
 node_modules
 data
+originals
 __pycache__/
 *.pyc

@@ -9,6 +9,9 @@ const pages = document.getElementById("reader-pages");
 const meter = document.getElementById("reader-meter");
 const download = document.getElementById("reader-download");
 const closeButton = document.getElementById("reader-close");
+const zoomOut = document.getElementById("reader-out");
+const zoomFit = document.getElementById("reader-fit");
+const zoomIn = document.getElementById("reader-in");
 const previous = document.getElementById("reader-prev");
 const next = document.getElementById("reader-next");
 const sheet = document.getElementById("reader-sheet");
@@ -26,6 +29,9 @@ if (
   meter instanceof HTMLElement &&
   download instanceof HTMLAnchorElement &&
   closeButton instanceof HTMLButtonElement &&
+  zoomOut instanceof HTMLButtonElement &&
+  zoomFit instanceof HTMLButtonElement &&
+  zoomIn instanceof HTMLButtonElement &&
   previous instanceof HTMLButtonElement &&
   next instanceof HTMLButtonElement &&
   sheet instanceof HTMLElement &&
@@ -40,6 +46,22 @@ if (
   let renderTask = null;
   let rendering = false;
   let pending = null;
+  const zoomSteps = [1, 1.4, 1.9, 2.6];
+  let zoomIndex = 0;
+
+  const paintZoom = () => {
+    zoomOut.disabled = zoomIndex <= 0;
+    zoomIn.disabled = zoomIndex >= zoomSteps.length - 1;
+  };
+
+  const fitScale = (page) => {
+    const unscaled = page.getViewport({ scale: 1 });
+    const box = sheet.getBoundingClientRect();
+    const style = getComputedStyle(sheet);
+    const maxWidth = Math.max(160, box.width - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight) - 4);
+    const maxHeight = Math.max(160, box.height - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom) - 4);
+    return Math.min(maxWidth / unscaled.width, maxHeight / unscaled.height);
+  };
 
   const paintMeter = (current, total) => {
     pages.textContent = `${current} / ${total}`;
@@ -85,9 +107,7 @@ if (
         rendering = false;
         return;
       }
-      const unscaled = page.getViewport({ scale: 1 });
-      const width = Math.max(240, sheet.clientWidth - 8);
-      const viewport = page.getViewport({ scale: width / unscaled.width });
+      const viewport = page.getViewport({ scale: fitScale(page) * zoomSteps[zoomIndex] });
       const outputScale = window.devicePixelRatio || 1;
       canvas.width = Math.floor(viewport.width * outputScale);
       canvas.height = Math.floor(viewport.height * outputScale);
@@ -119,6 +139,7 @@ if (
         canvas.hidden = true;
       });
       paintMeter(pageNum, pdf.numPages);
+      paintZoom();
     }).catch(() => {
       rendering = false;
       if (current !== token) return;
@@ -147,6 +168,8 @@ if (
     if (file) download.setAttribute("download", file);
     fail.hidden = true;
     canvas.hidden = false;
+    zoomIndex = 0;
+    paintZoom();
     dialog.classList.add("is-loading");
     paintMeter(1, 1);
     if (!dialog.open) dialog.showModal();
@@ -179,6 +202,22 @@ if (
     });
   }
 
+  zoomOut.addEventListener("click", () => {
+    if (zoomIndex <= 0) return;
+    zoomIndex -= 1;
+    renderPage(token);
+  });
+  zoomIn.addEventListener("click", () => {
+    if (zoomIndex >= zoomSteps.length - 1) return;
+    zoomIndex += 1;
+    renderPage(token);
+  });
+  zoomFit.addEventListener("click", () => {
+    zoomIndex = 0;
+    sheet.scrollTop = 0;
+    sheet.scrollLeft = 0;
+    renderPage(token);
+  });
   previous.addEventListener("click", () => show(pageNum - 1));
   next.addEventListener("click", () => show(pageNum + 1));
   closeButton.addEventListener("click", () => dialog.close());

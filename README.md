@@ -13,6 +13,8 @@ Dann [http://127.0.0.1:4321](http://127.0.0.1:4321).
 
 Der Abschnitt Fragen startet den Desk aus `intel/` mit. Antworten sind Sätze aus den Unterlagen. Jev entscheidet nur, ob die Treffer die Frage tragen. Der Schlüssel kommt aus der `.env` im Projektroot.
 
+`/mcp` ist ein zustandsloser MCP-Endpunkt im selben Node-Prozess. Er gibt den öffentlichen Profiltext und die Dokumenttitel zurück und ruft kein Modell. Auf Render bleibt das derselbe Free-Webdienst.
+
 Die Seite ist auf Englisch. Deutsch liegt unter `/de`. Texte stehen in `i18n/en.json` und `i18n/de.json`. Der Umschalter in der Navigation wechselt die Sprache, auch für die Antworten.
 
 ## Railway

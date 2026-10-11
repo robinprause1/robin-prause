@@ -744,7 +744,8 @@ h2 {
 .role {
   position: relative;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-columns: 11.5rem minmax(0, 1fr);
+  align-items: start;
   gap: 0.2rem 2rem;
   padding: 1.35rem 0 1.5rem;
   border-top: 1px solid var(--line);
@@ -1443,9 +1444,39 @@ html[data-theme="dark"] .doc-file {
 
 .reader-download,
 .reader-close,
-.reader-turn {
+.reader-turn,
+.reader-zoom button {
   font: inherit;
   cursor: pointer;
+}
+
+.reader-zoom {
+  display: inline-flex;
+  border: 1px solid var(--ink);
+}
+
+.reader-zoom button {
+  padding: 0.4rem 0.7rem;
+  border: 0;
+  border-right: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.reader-zoom button:last-child {
+  border-right: 0;
+}
+
+.reader-zoom button:hover:not(:disabled) {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.reader-zoom button:disabled {
+  opacity: 0.35;
+  cursor: default;
 }
 
 .reader-download,
@@ -1523,12 +1554,14 @@ html[data-theme="dark"] .doc-file {
 }
 
 .reader-sheet {
+  height: 100%;
   min-width: 0;
+  min-height: 0;
   overflow: auto;
   display: grid;
   align-content: start;
   justify-items: center;
-  padding: 1.5rem 0.5rem;
+  padding: 0.75rem 0.5rem;
 }
 
 .reader-sheet canvas {

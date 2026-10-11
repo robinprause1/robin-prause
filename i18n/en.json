@@ -191,6 +191,9 @@
     "prev": "Previous page",
     "next": "Next page",
     "download": "Download",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "fit": "Whole page",
     "fail": "This document could not be opened."
   },
   "chat": {
