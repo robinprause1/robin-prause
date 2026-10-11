@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="{{html.lang}}">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var h=document.documentElement;var t=localStorage.getItem("prause-theme");if(t==="light"||t==="dark")h.dataset.theme=t;var d=sessionStorage.getItem("prause-depth");h.dataset.depth=(d==="brief"||d==="all")?d:"mid";if(location.search.indexOf("hero=orbit")!==-1)h.dataset.hero="orbit"}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{impressum.meta}}</title>
+  <meta name="description" content="{{impressum.description}}">
+  <link rel="alternate" hreflang="en" href="/impressum">
+  <link rel="alternate" hreflang="de" href="/de/impressum">
+  <link rel="alternate" hreflang="x-default" href="/impressum">
+  <meta name="theme-color" content="#f3efe6">
+  <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css?v=54">
+</head>
+<body>
+  <a class="skip" href="#legal">{{skip}}</a>
+  <header class="mast">
+    <div class="mast-row">
+      <a class="word" href="{{home}}">Robin Prause</a>
+      <span></span>
+      <div class="dials">
+        <span class="langs">
+          <a href="/impressum" hreflang="en" lang="en" class="{{lang.en.current}}">EN</a>
+          <a href="/de/impressum" hreflang="de" lang="de" class="{{lang.de.current}}">DE</a>
+        </span>
+      </div>
+    </div>
+  </header>
+  <main id="legal" class="page legal">
+    <p class="kicker">{{impressum.kicker}}</p>
+    <h1>{{impressum.title}}</h1>
+    <p>{{impressum.lead}}</p>
+    <h2>{{impressum.contactTitle}}</h2>
+    <address>
+      {{impressum.name}}<br>
+      {{impressum.street}}<br>
+      {{impressum.city}}<br>
+      {{impressum.country}}
+    </address>
+    <p><a href="mailto:mail@robin-prause.de">mail@robin-prause.de</a></p>
+    <p>{{impressum.mailNote}}</p>
+    <p><a href="https://www.linkedin.com/in/robin-prause-330666278" rel="noopener noreferrer">LinkedIn</a></p>
+    <h2>{{impressum.responsibleTitle}}</h2>
+    <p>{{impressum.responsible}}</p>
+    <h2>{{impressum.scopeTitle}}</h2>
+    <p>{{impressum.scope}}</p>
+    <h2>{{impressum.disputeTitle}}</h2>
+    <p>{{impressum.dispute}}</p>
+    <h2>{{impressum.marksTitle}}</h2>
+    <p>{{impressum.marks}}</p>
+    <p><a href="{{home}}">{{legal.back}}</a></p>
+  </main>
+  <footer class="colophon">
+    <div class="page foot">
+      <div class="foot-row">
+        <p>Robin Prause · {{foot.year}}</p>
+        <p>
+          <a href="mailto:mail@robin-prause.de">mail@robin-prause.de</a>
+          <a href="{{legal.impressumHref}}">{{legal.impressum}}</a>
+          <a href="{{legal.privacyHref}}">{{legal.privacy}}</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -9,6 +9,11 @@ const repo = fileURLToPath(new URL("..", import.meta.url));
 const python = join(repo, "intel", ".venv", "bin", "python");
 const root = fileURLToPath(new URL("./public", import.meta.url));
 const template = readFileSync(new URL("./public/index.html", import.meta.url), "utf8");
+const pages = {
+  home: template,
+  impressum: readFileSync(new URL("./templates/impressum.html", import.meta.url), "utf8"),
+  privacy: readFileSync(new URL("./templates/datenschutz.html", import.meta.url), "utf8"),
+};
 const catalogs = {
   en: flatten(JSON.parse(readFileSync(new URL("./i18n/en.json", import.meta.url), "utf8"))),
   de: flatten(JSON.parse(readFileSync(new URL("./i18n/de.json", import.meta.url), "utf8"))),
@@ -80,9 +85,14 @@ function render(source, lang) {
   });
 }
 
-function pageLanguage(pathname) {
-  if (pathname === "/de" || pathname === "/de/") return "de";
-  if (pathname === "/" || pathname === "/index.html") return "en";
+function pageFor(pathname) {
+  const path = pathname.length > 1 && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+  if (path === "/" || path === "/index.html") return { lang: "en", name: "home" };
+  if (path === "/de") return { lang: "de", name: "home" };
+  if (path === "/impressum") return { lang: "en", name: "impressum" };
+  if (path === "/de/impressum") return { lang: "de", name: "impressum" };
+  if (path === "/datenschutz") return { lang: "en", name: "privacy" };
+  if (path === "/de/datenschutz") return { lang: "de", name: "privacy" };
   return null;
 }
 
@@ -204,9 +214,10 @@ const server = createServer((req, res) => {
     return;
   }
 
-  const language = pageLanguage(pathname);
-  if (language) {
-    const body = render(template, language);
+  const page = pageFor(pathname);
+  if (page) {
+    const body = render(pages[page.name], page.lang);
+    const language = page.lang;
     res.writeHead(200, {
       ...headers,
       "Content-Type": "text/html; charset=utf-8",

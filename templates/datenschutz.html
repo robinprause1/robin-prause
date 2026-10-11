@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="{{html.lang}}">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var h=document.documentElement;var t=localStorage.getItem("prause-theme");if(t==="light"||t==="dark")h.dataset.theme=t;var d=sessionStorage.getItem("prause-depth");h.dataset.depth=(d==="brief"||d==="all")?d:"mid";if(location.search.indexOf("hero=orbit")!==-1)h.dataset.hero="orbit"}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{privacy.meta}}</title>
+  <meta name="description" content="{{privacy.description}}">
+  <link rel="alternate" hreflang="en" href="/datenschutz">
+  <link rel="alternate" hreflang="de" href="/de/datenschutz">
+  <link rel="alternate" hreflang="x-default" href="/datenschutz">
+  <meta name="theme-color" content="#f3efe6">
+  <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css?v=54">
+</head>
+<body>
+  <a class="skip" href="#legal">{{skip}}</a>
+  <header class="mast">
+    <div class="mast-row">
+      <a class="word" href="{{home}}">Robin Prause</a>
+      <span></span>
+      <div class="dials">
+        <span class="langs">
+          <a href="/datenschutz" hreflang="en" lang="en" class="{{lang.en.current}}">EN</a>
+          <a href="/de/datenschutz" hreflang="de" lang="de" class="{{lang.de.current}}">DE</a>
+        </span>
+      </div>
+    </div>
+  </header>
+  <main id="legal" class="page legal">
+    <p class="kicker">{{privacy.kicker}}</p>
+    <h1>{{privacy.title}}</h1>
+    <p>{{privacy.lead}}</p>
+    <h2>{{privacy.controllerTitle}}</h2>
+    <p>{{privacy.controller}}</p>
+    <p><a href="mailto:mail@robin-prause.de">mail@robin-prause.de</a></p>
+    <h2>{{privacy.hostTitle}}</h2>
+    <p>{{privacy.host}}</p>
+    <p><a href="https://render.com/dpa" rel="noopener noreferrer">{{privacy.dpa}}</a></p>
+    <h2>{{privacy.logsTitle}}</h2>
+    <p>{{privacy.logs}}</p>
+    <h2>{{privacy.storageTitle}}</h2>
+    <p>{{privacy.storage}}</p>
+    <h2>{{privacy.mailTitle}}</h2>
+    <p>{{privacy.mail}}</p>
+    <h2>{{privacy.askTitle}}</h2>
+    <p>{{privacy.ask}}</p>
+    <h2>{{privacy.rightsTitle}}</h2>
+    <p>{{privacy.rights}}</p>
+    <h2>{{privacy.authorityTitle}}</h2>
+    <p>{{privacy.authority}} <a href="https://datenschutz.hessen.de" rel="noopener noreferrer">datenschutz.hessen.de</a></p>
+    <p><a href="{{home}}">{{legal.back}}</a></p>
+  </main>
+  <footer class="colophon">
+    <div class="page foot">
+      <div class="foot-row">
+        <p>Robin Prause · {{foot.year}}</p>
+        <p>
+          <a href="mailto:mail@robin-prause.de">mail@robin-prause.de</a>
+          <a href="{{legal.impressumHref}}">{{legal.impressum}}</a>
+          <a href="{{legal.privacyHref}}">{{legal.privacy}}</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

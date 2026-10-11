@@ -435,6 +435,7 @@ main {
 
 .contact a,
 .foot-row a,
+.legal a,
 .missing .lede a,
 .guide-text a,
 .sources a {
@@ -447,6 +448,7 @@ main {
 
 .contact a:hover,
 .foot-row a:hover,
+.legal a:hover,
 .missing .lede a:hover,
 .guide-text a:hover,
 .sources a:hover {
@@ -1019,18 +1021,14 @@ html[data-theme="dark"] .doc-file {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  gap: 2.75rem;
 }
 
 .reference {
   min-width: 0;
-  padding-top: 1.5rem;
   border-top: 1px solid var(--line);
 }
 
 .reference:first-child {
-  padding-top: 0;
   border-top: 0;
 }
 
@@ -1038,17 +1036,50 @@ html[data-theme="dark"] .doc-file {
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  margin-bottom: 1.1rem;
+  margin: 0;
+  padding: 1rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.reference-head::-webkit-details-marker {
+  display: none;
+}
+
+.reference-head::marker {
+  content: "";
+}
+
+.reference-head:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.reference[open] > .reference-head {
+  padding-bottom: 0.85rem;
 }
 
 .reference-logo {
-  width: 7.5rem;
-  height: 3.25rem;
+  height: 2.5rem;
+  width: auto;
+  max-width: 10.5rem;
   flex: 0 0 auto;
   object-fit: contain;
   object-position: left center;
-  background: var(--sheet);
-  padding: 0.35rem 0.45rem;
+}
+
+.reference-chevron {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: auto;
+  border-right: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+  transform: rotate(45deg) translateY(-0.1rem);
+  flex: 0 0 auto;
+}
+
+.reference[open] .reference-chevron {
+  transform: rotate(-135deg) translateY(-0.1rem);
 }
 
 .reference-head .when {
@@ -1068,6 +1099,7 @@ html[data-theme="dark"] .doc-file {
 
 .reference-body {
   max-width: 42rem;
+  padding-bottom: 1.15rem;
   color: var(--ink);
   font-size: 0.98rem;
   line-height: 1.55;
@@ -1092,8 +1124,8 @@ html[data-theme="dark"] .doc-file {
   }
 
   .reference-logo {
-    width: 5.5rem;
-    height: 2.6rem;
+    height: 2rem;
+    max-width: 7.5rem;
   }
 }
 
@@ -1392,6 +1424,39 @@ html[data-theme="dark"] .doc-file {
   font-style: normal;
   font-weight: 400;
   color: var(--muted);
+}
+
+/* ---------- Legal pages ---------- */
+
+.legal {
+  padding: calc(var(--mast) + 3.5rem) 0 5rem;
+}
+
+.legal h1 {
+  margin: 0.35rem 0 1rem;
+  max-width: 16ch;
+  font-weight: 800;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.legal h2 {
+  margin: 2.25rem 0 0.45rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+}
+
+.legal p,
+.legal address {
+  max-width: 38rem;
+  margin: 0.7rem 0 0;
+  font-style: normal;
+  line-height: 1.55;
+}
+
+.legal a {
+  color: inherit;
 }
 
 /* ---------- Motion ---------- */
