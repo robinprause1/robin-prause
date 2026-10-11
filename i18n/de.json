@@ -84,7 +84,7 @@
     "intro": "Hi. Scroll einfach weiter — ich sag dir unterwegs, was zählt.",
     "brief": "Du bist in der 10-Sekunden-Ansicht. Stell auf 10 min, dann siehst du den ganzen Weg.",
     "work": "Der erste Eintrag ist heute. Darunter der Weg hierher, das Neueste zuerst.",
-    "projects": "Drei Dinge zum Öffnen. Der Shop ist Produktion; der Desk in der Mitte läuft gerade — derselbe Motor beantwortet weiter unten die Fragen.",
+    "projects": "Drei Dinge zum Öffnen. Der Shop ist Produktion. Wire in der Mitte ist der Quellcode auf GitHub.",
     "education": "Kurzer Abschnitt. Informatik in Friedberg, fertig 2023.",
     "documents": "Hier liegt alles im Original. Öffne, was du brauchst — es bleibt auf dieser Seite.",
     "questions": "Frag die Unterlagen direkt. Die Antwort nutzt nur, was drinsteht.",
@@ -136,13 +136,13 @@
   },
   "projects": {
     "title": "Projekte",
-    "lead": "Darüber lesen ist das eine. Hier sind drei Dinge zum Anklicken: der Shop, den ich heute betreibe, ein laufender Desk und der Code der Bachelorarbeit.",
-    "note": "Der Desk ist dieselbe Pipeline, die am Ende dieser Seite die Fragen beantwortet: lesen, indexieren, auswählen, Jev fragen. Öffne ihn, drück auf Run now und sieh der Karte zu.",
+    "lead": "Darüber lesen ist das eine. Hier sind drei Dinge zum Anklicken: der Shop, den ich heute betreibe, der Quellcode von Wire und der Code der Bachelorarbeit.",
+    "note": "Wire holt Quellen, hält einen Index und stellt Jev eine Ja/Nein-Frage. Das Repository ist öffentlich.",
     "wire": {
-      "when": "Live-Demo",
+      "when": "Quellcode",
       "where": "Python · Qdrant · Jev · ein Prozess, viele Desks",
-      "text": "Wire liest nach Plan eine Reihe von Quellen, hält einen Index und stellt Jev zu jeder neuen Meldung eine Ja/Nein-Frage. Welche Quellen, wie oft, welche Frage — das ist ein Desk. Die Demo fährt einen Crypto-Desk; die Manage-Seite legt in vier Schritten einen neuen an.",
-      "demo": "Desk öffnen"
+      "text": "Wire liest nach Plan eine Reihe von Quellen, hält einen Index und stellt Jev zu jeder neuen Meldung eine Ja/Nein-Frage. Welche Quellen, wie oft, welche Frage — das ist ein Desk.",
+      "demo": "Quellcode auf GitHub"
     },
     "events": {
       "when": "2023 · Archiv",

@@ -84,7 +84,7 @@
     "intro": "Hi. Scroll on — I will tell you what matters as you go.",
     "brief": "You are on the 10-second view. Switch to 10 min and the full path appears.",
     "work": "The first entry is today. Below it, the way here — most recent first.",
-    "projects": "Three things you can open. The store is production; the desk in the middle is running right now — the same engine answers questions further down.",
+    "projects": "Three things you can open. The store is production. Wire, in the middle, is the source on GitHub.",
     "education": "Short section. Computer science in Friedberg, finished 2023.",
     "documents": "Everything here is the original. Open what you need; it stays on this page.",
     "questions": "Ask the documents directly. The answer only uses what is in them.",
@@ -136,13 +136,13 @@
   },
   "projects": {
     "title": "Projects",
-    "lead": "Reading about it is one thing. Here are three things you can click: the store I run today, a running desk, and the thesis code.",
-    "note": "The desk is the same pipeline that answers questions at the end of this page: fetch, index, pick, ask Jev. Open it, press Run now, and watch the map.",
+    "lead": "Reading about it is one thing. Here are three things you can click: the store I run today, Wire's source, and the thesis code.",
+    "note": "Wire fetches sources, keeps an index, and asks Jev one yes/no question. The repository is public.",
     "wire": {
-      "when": "Live demo",
+      "when": "Source",
       "where": "Python · Qdrant · Jev · one process, many desks",
-      "text": "Wire reads a set of sources on a schedule, keeps an index, and asks Jev one yes/no question about every new story. Which sources, how often, which question — that is a desk. The demo runs a crypto desk; the manage page sets up a new one in four steps.",
-      "demo": "Open the desk"
+      "text": "Wire reads a set of sources on a schedule, keeps an index, and asks Jev one yes/no question about every new story. Which sources, how often, which question — that is a desk.",
+      "demo": "Source on GitHub"
     },
     "events": {
       "when": "2023 · Archive",
