@@ -58,8 +58,8 @@ _PASSAGES: list[tuple[str, str, str]] = [
     (
         "Kontakt",
         "/",
-        "Robin Prause ist per Mail unter mail@robin-prause.de erreichbar, auf LinkedIn unter linkedin.com/in/robin-prause-330666278 "
-        "und telefonisch unter +49 152 53281802. Er lebt in Rodgau.",
+        "Robin Prause ist per Mail unter mail@robin-prause.de erreichbar, auf LinkedIn unter linkedin.com/in/robin-prause-330666278. "
+        "Er lebt in Rodgau.",
     ),
     (
         "Stack",
@@ -160,8 +160,8 @@ _PASSAGES_EN: list[tuple[str, str, str]] = [
     (
         "Contact",
         "/",
-        "Robin Prause can be reached by email at mail@robin-prause.de, on LinkedIn at linkedin.com/in/robin-prause-330666278, "
-        "and by phone at +49 152 53281802. He lives in Rodgau.",
+        "Robin Prause can be reached by email at mail@robin-prause.de, on LinkedIn at linkedin.com/in/robin-prause-330666278. "
+        "He lives in Rodgau.",
     ),
     (
         "Stack",
