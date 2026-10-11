@@ -49,7 +49,7 @@ _STOP = {
 _PASSAGES: list[tuple[str, str, str]] = [
     (
         "Profil",
-        "/documents/lebenslauf.pdf",
+        "#documents",
         "Beruflich arbeitet Robin Prause aktuell als Chief Technology Officer bei smartport Marketplace B.V. in Amsterdam und remote aus Rodgau. "
         "Er verantwortet einen Multi-Vendor-Marktplatz für Consumer Electronics mit Storefronts in Deutschland und Italien, "
         "Händler-Onboarding, Split-Payments, Suche, Support und Versand. Die Plattform ist eine Eigenentwicklung. "
@@ -63,27 +63,27 @@ _PASSAGES: list[tuple[str, str, str]] = [
     ),
     (
         "Stack",
-        "/documents/lebenslauf.pdf",
+        "#documents",
         "Der aktuelle Stack ist Next.js, NestJS, PostgreSQL, Redis, Turborepo, Docker, Railway und Cloudflare, in TypeScript. "
         "Davor Angular, Shopify und Vue. Integrationen auf dem Marktplatz sind unter anderem Mollie Connect, Algolia, "
         "Intercom, Sentry, Trusted Shops, DHL, GLS und Ship24.",
     ),
     (
         "Chief Technology Officer, smartport Marketplace B.V.",
-        "/documents/lebenslauf.pdf",
+        "#documents",
         "Seit Februar 2026 ist Robin Prause Chief Technology Officer der smartport Marketplace B.V. in Amsterdam, remote. "
         "Er verantwortet Strategie, Entwicklung und Betrieb der Marktplatz- und ERP-Plattform. Storefronts in Next.js, "
         "Backend in NestJS, PostgreSQL, Turborepo, Railway, Cloudflare. Provisionsmodelle und Auszahlungen bleiben konfigurierbar.",
     ),
     (
         "Head of E-Commerce, smartport GmbH",
-        "/documents/lebenslauf.pdf",
+        "#documents",
         "Von Juli 2025 bis Januar 2026 war Robin Prause Head of E-Commerce der smartport GmbH in Dietzenbach. "
         "Er hatte die Produktverantwortung für die Onlineshops, von der Roadmap über Shopify bis zu Lager und Kundenservice.",
     ),
     (
         "Software Engineer, Randstad Digital",
-        "/documents/zeugnis-randstad-digital.pdf",
+        "#documents",
         "Von März 2024 bis Juni 2025 war Robin Prause Software Engineer bei der Randstad Digital Germany AG in Eschborn. "
         "Das Zeugnis beschreibt eine Angular-19-Anwendung im Nx-Monorepo, UI nach Figma mit Tailwind, Schnittstellen über OpenAPI und RxJS, "
         "Tests mit Jest, Cypress und Cucumber. Das Arbeitszeugnis umfasst den Zeitraum vom 14. August 2023 bis 30. Juni 2025, "
@@ -91,7 +91,7 @@ _PASSAGES: list[tuple[str, str, str]] = [
     ),
     (
         "Bachelorarbeit, Randstad Digital",
-        "/documents/zeugnis-bachelorarbeit.pdf",
+        "#documents",
         "Von August 2023 bis Februar 2024 schrieb Robin Prause seine Bachelorarbeit bei Randstad Digital, vormals AUSY Technologies. "
         "Das Zeugnis vom 14. August 2023 bis 6. November 2023 nennt das Thema: experimentelle Bearbeitung der Möglichkeiten und Grenzen "
         "chatbasierter KI-Modelle für die Webentwicklung. Dazu gehörten eine Web-Anwendung, ein Backend mit chatbasierten KI-Modellen "
@@ -99,27 +99,27 @@ _PASSAGES: list[tuple[str, str, str]] = [
     ),
     (
         "Praktikum, Abrio",
-        "/documents/zeugnis-abrio.pdf",
+        "#documents",
         "Von April 2023 bis Juni 2023 war Robin Prause Praktikant im Frontend bei der Abrio GmbH in Frankfurt. "
         "Aufgaben laut Zeugnis: Scrum, Shopify Theme Development, GraphQL- und REST-Anbindungen, Shopify Apps mit React, Express und Polaris, "
         "App-Extensions und Shopify Flows.",
     ),
     (
         "Werkstudent, Gewa Comp",
-        "/documents/zeugnis-gewacomp.pdf",
+        "#documents",
         "Von Januar 2023 bis März 2023 war Robin Prause Werkstudent im Web-Development bei der Gewa Comp GmbH in Obertshausen. "
         "Das Zeugnis nennt Angular, DevExtreme, Bootstrap, REST-APIs auf ASP.NET, eine CI/CD-Pipeline und eine Progressive Web App.",
     ),
     (
         "Hilfskraft, Universitätsmedizin Mainz",
-        "/documents/zeugnis-unimedizin-mainz.pdf",
+        "#documents",
         "Von April 2022 bis September 2022 war Robin Prause wissenschaftliche Hilfskraft im Schwerpunkt E-Mental-Health "
         "der Universitätsmedizin Mainz, mit acht Wochenstunden. Er arbeitete im Frontend mit Vue.js, HTML, CSS und JSON "
         "an einem Modul zur Return-to-Work-Planung.",
     ),
     (
         "Praktikum, UHP",
-        "/documents/zeugnis-uhp.pdf",
+        "#documents",
         "Im August und September 2021 war Robin Prause Praktikant bei der UHP Software GmbH in Darmstadt. "
         "Das Zeugnis nennt das PHP-Framework Symfony, Features an einem internen Verwaltungstool und Tests.",
     ),
@@ -130,7 +130,7 @@ _PASSAGES: list[tuple[str, str, str]] = [
     ),
     (
         "Studium",
-        "/documents/bachelorurkunde.pdf",
+        "#documents",
         "Robin Prause hat Medieninformatik an der Technischen Hochschule Mittelhessen in Friedberg studiert, von 2020 bis 2024. "
         "Die Bachelorprüfung hat er am 19. Dezember 2023 bestanden. Der akademische Grad ist Bachelor of Science. "
         "Fachbereiche sind Informationstechnik-Elektrotechnik-Mechatronik sowie Mathematik, Naturwissenschaften und Datenverarbeitung. "
@@ -143,7 +143,7 @@ _PASSAGES: list[tuple[str, str, str]] = [
     ),
     (
         "Zertifikate",
-        "/documents/zertifikat-safe-agilist.pdf",
+        "#documents",
         "Robin Prause ist Certified SAFe 6 Agilist, Zertifikat 71452272-1424, gültig bis September 2025.",
     ),
 ]
@@ -151,7 +151,7 @@ _PASSAGES: list[tuple[str, str, str]] = [
 _PASSAGES_EN: list[tuple[str, str, str]] = [
     (
         "Profile",
-        "/documents/lebenslauf.pdf",
+        "#documents",
         "Robin Prause currently works as Chief Technology Officer at smartport Marketplace B.V. in Amsterdam, remotely from Rodgau. "
         "His work is a multi-vendor marketplace for consumer electronics, with storefronts in Germany and Italy, "
         "merchant onboarding, split payments, search, support, and shipping. The platform is built in-house. "
@@ -165,27 +165,27 @@ _PASSAGES_EN: list[tuple[str, str, str]] = [
     ),
     (
         "Stack",
-        "/documents/lebenslauf.pdf",
+        "#documents",
         "The current stack is Next.js, NestJS, PostgreSQL, Redis, Turborepo, Docker, Railway, and Cloudflare, in TypeScript. "
         "Before that, Angular, Shopify, and Vue. Marketplace integrations include Mollie Connect, Algolia, "
         "Intercom, Sentry, Trusted Shops, DHL, GLS, and Ship24.",
     ),
     (
         "Chief Technology Officer, smartport Marketplace B.V.",
-        "/documents/lebenslauf.pdf",
+        "#documents",
         "Since February 2026 Robin Prause has been Chief Technology Officer of smartport Marketplace B.V. in Amsterdam, working remotely. "
         "He is responsible for strategy, development, and operations of the marketplace and ERP platform. Storefronts in Next.js, "
         "backend in NestJS, PostgreSQL, Turborepo, Railway, Cloudflare. Commission models and payouts stay configurable.",
     ),
     (
         "Head of E-Commerce, smartport GmbH",
-        "/documents/lebenslauf.pdf",
+        "#documents",
         "From July 2025 to January 2026 Robin Prause was Head of E-Commerce at smartport GmbH in Dietzenbach. "
         "He owned the product for the online shops, from the roadmap through Shopify to warehouse and customer service.",
     ),
     (
         "Software Engineer, Randstad Digital",
-        "/documents/zeugnis-randstad-digital.pdf",
+        "#documents",
         "From March 2024 to June 2025 Robin Prause was a software engineer at Randstad Digital Germany AG in Eschborn. "
         "The reference describes an Angular 19 application in an Nx monorepo, UI from Figma with Tailwind, interfaces over OpenAPI and RxJS, "
         "and tests with Jest, Cypress, and Cucumber. The employment reference covers 14 August 2023 to 30 June 2025, "
@@ -193,34 +193,34 @@ _PASSAGES_EN: list[tuple[str, str, str]] = [
     ),
     (
         "Bachelor's thesis, Randstad Digital",
-        "/documents/zeugnis-bachelorarbeit.pdf",
+        "#documents",
         "From August 2023 to February 2024 Robin Prause wrote his bachelor's thesis at Randstad Digital, formerly AUSY Technologies. "
         "The reference from 14 August 2023 to 6 November 2023 names the topic: an experimental study of what chat-based AI models "
         "can and cannot do for web development. That included a web application, a backend with chat-based AI models, and a graphical interface.",
     ),
     (
         "Internship, Abrio",
-        "/documents/zeugnis-abrio.pdf",
+        "#documents",
         "From April 2023 to June 2023 Robin Prause was a frontend intern at Abrio GmbH in Frankfurt. "
         "The reference names Scrum, Shopify theme development, GraphQL and REST integrations, Shopify apps with React, Express, and Polaris, "
         "app extensions, and Shopify Flows.",
     ),
     (
         "Working student, Gewa Comp",
-        "/documents/zeugnis-gewacomp.pdf",
+        "#documents",
         "From January 2023 to March 2023 Robin Prause was a working student in web development at Gewa Comp GmbH in Obertshausen. "
         "The reference names Angular, DevExtreme, Bootstrap, REST APIs on ASP.NET, a CI/CD pipeline, and a progressive web app.",
     ),
     (
         "Research assistant, University Medical Center Mainz",
-        "/documents/zeugnis-unimedizin-mainz.pdf",
+        "#documents",
         "From April 2022 to September 2022 Robin Prause was a research assistant in the E-Mental-Health unit "
         "at the University Medical Center Mainz, eight hours a week. He worked on the frontend with Vue.js, HTML, CSS, and JSON "
         "on a module for return-to-work planning.",
     ),
     (
         "Internship, UHP",
-        "/documents/zeugnis-uhp.pdf",
+        "#documents",
         "In August and September 2021 Robin Prause was an intern at UHP Software GmbH in Darmstadt. "
         "The reference names the PHP framework Symfony, features on an internal administration tool, and tests.",
     ),
@@ -231,7 +231,7 @@ _PASSAGES_EN: list[tuple[str, str, str]] = [
     ),
     (
         "Studies",
-        "/documents/bachelorurkunde.pdf",
+        "#documents",
         "Robin Prause studied media computer science, Medieninformatik, at the Technische Hochschule Mittelhessen in Friedberg, from 2020 to 2024. "
         "He passed the bachelor's examination on 19 December 2023. The degree is Bachelor of Science. "
         "The faculties are information technology, electrical engineering, and mechatronics, plus mathematics, natural sciences, and data processing. "
@@ -244,7 +244,7 @@ _PASSAGES_EN: list[tuple[str, str, str]] = [
     ),
     (
         "Certificates",
-        "/documents/zertifikat-safe-agilist.pdf",
+        "#documents",
         "Robin Prause is a Certified SAFe 6 Agilist, certificate 71452272-1424, valid through September 2025.",
     ),
 ]
@@ -295,10 +295,10 @@ def build(index: WireIndex) -> int:
     if CORPUS.exists():
         raw = json.loads(CORPUS.read_text(encoding="utf-8"))
         labels = {
-            "lebenslauf": ("Lebenslauf", "/documents/lebenslauf.pdf"),
-            "zeugnis-abrio": ("Praktikumszeugnis Abrio", "/documents/zeugnis-abrio.pdf"),
-            "zeugnis-unimedizin-mainz": ("Arbeitszeugnis Universitätsmedizin Mainz", "/documents/zeugnis-unimedizin-mainz.pdf"),
-            "zertifikat-safe-agilist": ("Certified SAFe 6 Agilist", "/documents/zertifikat-safe-agilist.pdf"),
+            "lebenslauf": ("Lebenslauf", "#documents"),
+            "zeugnis-abrio": ("Praktikumszeugnis Abrio", "#documents"),
+            "zeugnis-unimedizin-mainz": ("Arbeitszeugnis Universitätsmedizin Mainz", "#documents"),
+            "zertifikat-safe-agilist": ("Certified SAFe 6 Agilist", "#documents"),
         }
         for key, text in raw.items():
             if key == "lebenslauf":

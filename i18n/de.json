@@ -23,12 +23,12 @@
     "work": "Arbeit",
     "projects": "Projekte",
     "education": "Ausbildung",
-    "documents": "Unterlagen",
+    "documents": "Zeugnisse",
     "questions": "Fragen",
     "workSub": "02/2026 — heute, CTO",
     "projectsSub": "Demo, Code, Shop",
     "educationSub": "Medieninformatik, B.Sc. 2023",
-    "documentsSub": "Originale, direkt lesbar",
+    "documentsSub": "Der Wortlaut, hier auf der Seite",
     "questionsSub": "Frag die Unterlagen"
   },
   "skip": "Zum Inhalt",
@@ -86,12 +86,12 @@
     "work": "Der erste Eintrag ist heute. Darunter der Weg hierher, das Neueste zuerst.",
     "projects": "Drei Dinge zum Öffnen. Der Shop ist Produktion. Wire in der Mitte ist der Quellcode auf GitHub.",
     "education": "Kurzer Abschnitt. Informatik in Friedberg, fertig 2023.",
-    "documents": "Hier liegt alles im Original. Öffne, was du brauchst — es bleibt auf dieser Seite.",
+    "documents": "Die Zeugnisse stehen hier im Wortlaut. Die Dateien selbst liegen nicht auf der Seite.",
     "questions": "Frag die Unterlagen direkt. Die Antwort nutzt nur, was drinsteht.",
     "done": "Das war der ganze Schreibtisch. Wenn es passt, schreib mir:",
     "workLate": "Weiter unten: Freelance, Bachelorarbeit, Praktika — der Teil, der zeigt, wo das herkommt.",
     "projectsLate": "Der Shop ist Produktion. Der Code der Bachelorarbeit ist von 2023 und liegt so da, wie das Experiment ihn hinterlassen hat.",
-    "documentsLate": "Lebenslauf zuerst. Zeugnisse und Zertifikate belegen ihn.",
+    "documentsLate": "Sechs Zeugnisse. Geburtsdatum, Anschrift und Unterschrift sind weggelassen.",
     "questionsLate": "Tipp: Einfach lostippen, das Feld fängt die Frage auf."
   },
   "work": {
@@ -167,9 +167,9 @@
     "languages": "Deutsch, Muttersprache · Englisch, fließend"
   },
   "documents": {
-    "title": "Unterlagen",
-    "lead": "Du musst mir nichts glauben. Das sind die Originale, und sie öffnen sich direkt hier.",
-    "note": "Die Blätter zeigen die erste Seite jeder Datei, gerendert in deinem Browser. Nichts verlässt diese Seite.",
+    "title": "Arbeitszeugnisse",
+    "lead": "Die Arbeitszeugnisse im Wortlaut. Persönliche Angaben sind weggelassen, die Dateien liegen nicht auf der Seite.",
+    "note": "Deutsch ist die Sprache der Schreiben. Die Logos zeigen, wer sie ausgestellt hat.",
     "cv": "Lebenslauf",
     "cvDetail": "Stand 2026",
     "diploma": "Bachelorurkunde",

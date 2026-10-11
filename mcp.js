@@ -42,20 +42,17 @@ function profileText(catalogs) {
 
 function documentsText(catalogs) {
   const en = catalogs.en;
-  const lines = [
-    ["documents.cv", "documents.cvDetail"],
-    ["documents.diploma", "documents.diplomaDetail"],
-    ["documents.transcript", "documents.transcriptDetail"],
-    ["documents.reference", "documents.randstad"],
-    ["documents.reference", "documents.thesis"],
-    ["documents.internship", "documents.abrio"],
-    ["documents.reference", "documents.gewa"],
-    ["documents.reference", "documents.mainz"],
-    ["documents.reference", "documents.uhp"],
+  const letters = [
+    "documents.randstad",
+    "documents.thesis",
+    "documents.abrio",
+    "documents.gewa",
+    "documents.mainz",
+    "documents.uhp",
   ];
   return [
-    ...lines.map(([title, detail]) => `${en[title] ?? title}: ${en[detail] ?? ""}`.trim()),
-    `Certified SAFe 6 Agilist: ${en["documents.safe"] ?? ""}`,
+    "The site quotes six employment references in the original German. The PDF files are not published. Birth dates, home addresses, phone numbers, email addresses and signatures are omitted.",
+    ...letters.map((key) => en[key] ?? key),
   ].join("\n");
 }
 

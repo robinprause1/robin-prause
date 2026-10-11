@@ -23,12 +23,12 @@
     "work": "Work",
     "projects": "Projects",
     "education": "Education",
-    "documents": "Documents",
+    "documents": "References",
     "questions": "Questions",
     "workSub": "02/2026 — today, CTO",
     "projectsSub": "Demo, code, store",
     "educationSub": "Media Informatics, B.Sc. 2023",
-    "documentsSub": "Originals, readable here",
+    "documentsSub": "The letters, quoted here",
     "questionsSub": "Ask the documents"
   },
   "skip": "Skip to content",
@@ -86,12 +86,12 @@
     "work": "The first entry is today. Below it, the way here — most recent first.",
     "projects": "Three things you can open. The store is production. Wire, in the middle, is the source on GitHub.",
     "education": "Short section. Computer science in Friedberg, finished 2023.",
-    "documents": "Everything here is the original. Open what you need; it stays on this page.",
+    "documents": "The references are quoted here in the original German. The files are not on this page.",
     "questions": "Ask the documents directly. The answer only uses what is in them.",
     "done": "That was the whole desk. If it fits, write me:",
     "workLate": "Further down: freelance, thesis, internships — the part that shows where this comes from.",
     "projectsLate": "The store is production. The thesis code is from 2023, left exactly as the experiment made it.",
-    "documentsLate": "CV first. Certificates and references back it up.",
+    "documentsLate": "Six references. Birth dates, addresses and signatures are left out.",
     "questionsLate": "Tip: just start typing, the field catches the question."
   },
   "work": {
@@ -167,9 +167,9 @@
     "languages": "German, native · English, fluent"
   },
   "documents": {
-    "title": "Documents",
-    "lead": "You do not have to take my word for it. These are the originals, and they open right here.",
-    "note": "The sheets show the first page of each file, rendered in your browser. Nothing leaves this page.",
+    "title": "References",
+    "lead": "The employment references, in the original wording. Personal details are left out, and the files are not published.",
+    "note": "German is the language of the letters. Logos mark who wrote them.",
     "cv": "CV",
     "cvDetail": "As of 2026",
     "diploma": "Bachelor's certificate",
