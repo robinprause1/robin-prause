@@ -142,7 +142,7 @@
       "when": "Quellcode",
       "where": "Python · Qdrant · Jev · ein Prozess, viele Desks",
       "text": "Wire liest nach Plan eine Reihe von Quellen, hält einen Index und stellt Jev zu jeder neuen Meldung eine Ja/Nein-Frage. Welche Quellen, wie oft, welche Frage — das ist ein Desk.",
-      "demo": "Quellcode auf GitHub"
+      "demo": "Github"
     },
     "events": {
       "when": "2023 · Archiv",

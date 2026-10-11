@@ -142,7 +142,7 @@
       "when": "Source",
       "where": "Python · Qdrant · Jev · one process, many desks",
       "text": "Wire reads a set of sources on a schedule, keeps an index, and asks Jev one yes/no question about every new story. Which sources, how often, which question — that is a desk.",
-      "demo": "Source on GitHub"
+      "demo": "Github"
     },
     "events": {
       "when": "2023 · Archive",
