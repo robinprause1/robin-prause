@@ -24,12 +24,10 @@
     "projects": "Projects",
     "education": "Education",
     "documents": "References",
-    "questions": "Questions",
     "workSub": "02/2026 — today, CTO",
     "projectsSub": "Demo, code, store",
     "educationSub": "Media Informatics, B.Sc. 2023",
-    "documentsSub": "The letters, quoted here",
-    "questionsSub": "Ask the documents"
+    "documentsSub": "The letters, quoted here"
   },
   "skip": "Skip to content",
   "route": {
@@ -87,12 +85,10 @@
     "projects": "Three things you can open. The store is production. Wire, in the middle, is the source on GitHub.",
     "education": "Short section. Computer science in Friedberg, finished 2023.",
     "documents": "The references are quoted here in the original German. The files are not on this page.",
-    "questions": "Ask the documents directly. The answer only uses what is in them.",
     "done": "That was the whole desk. If it fits, write me:",
     "workLate": "Further down: freelance, thesis, internships — the part that shows where this comes from.",
     "projectsLate": "The store is production. The thesis code is from 2023, left exactly as the experiment made it.",
-    "documentsLate": "Six references. Birth dates, addresses and signatures are left out.",
-    "questionsLate": "Tip: just start typing, the field catches the question."
+    "documentsLate": "Six references. Birth dates, addresses and signatures are left out."
   },
   "work": {
     "title": "Work",
@@ -196,19 +192,6 @@
     "fit": "Whole page",
     "fail": "This document could not be opened."
   },
-  "chat": {
-    "title": "Ask the documents.",
-    "mark": "AI",
-    "hint": "Start typing anywhere on the page — the field catches the question.",
-    "lead": "Something missing? Ask. The answer comes out of the documents above, nothing else.",
-    "note": "Same search as the desk: the documents are embedded, matched by meaning and by words, then merged. Jev checks whether a hit actually answers the question. If the documents do not cover it, there is no answer.",
-    "label": "Question",
-    "placeholder": "For example: Where did you study?",
-    "submit": "Ask",
-    "pending": "Looking through the documents.",
-    "empty": "There is no answer for that right now.",
-    "down": "The desk is not reachable right now."
-  },
   "missing": {
     "kicker": "404",
     "title": "This page",
@@ -269,8 +252,6 @@
     "storage": "This site sets no cookies. There is no analytics and no advertising. Fonts are loaded from this site, not from another provider. If you choose Light or Dark, that choice is stored on your device under the name prause-theme. The reading depth is stored for the browser tab under the name prause-depth and is dropped when the tab closes. The legal basis is section 25 (2) TDDDG: the storage exists for a setting you switch on yourself.",
     "mailTitle": "Email",
     "mail": "The mail link opens your own mail program. This site does not receive the message and does not store it.",
-    "askTitle": "Questions",
-    "ask": "If you send a question in the form on the page, the text and the language of the page are transmitted to this server. The site does not save the question in a database. On the published site the answering program is not running, so the question is not passed on to anyone else. The legal basis is Article 6 (1) (f) GDPR: answering a question you chose to ask about the documents on this page.",
     "rightsTitle": "Your rights",
     "rights": "You can ask for access, correction, deletion and restriction, and you can object to processing that rests on legitimate interest. You can also lodge a complaint with a supervisory authority.",
     "authorityTitle": "Supervisory authority",

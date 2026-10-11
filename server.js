@@ -1,12 +1,9 @@
-import { spawn } from "node:child_process";
-import { createReadStream, existsSync, readFileSync, statSync } from "node:fs";
-import { createServer, request as requestHttp } from "node:http";
+import { createReadStream, readFileSync, statSync } from "node:fs";
+import { createServer } from "node:http";
 import { extname, join, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { handleMcp } from "./mcp.js";
 
-const repo = fileURLToPath(new URL("..", import.meta.url));
-const python = join(repo, "intel", ".venv", "bin", "python");
 const root = fileURLToPath(new URL("./public", import.meta.url));
 const template = readFileSync(new URL("./public/index.html", import.meta.url), "utf8");
 const pages = {
@@ -121,75 +118,9 @@ function notFound(lang) {
 </html>`, lang);
 }
 
-function deskDown(body) {
-  let lang = "en";
-  try {
-    const payload = JSON.parse(body.toString());
-    if (payload && payload.lang === "de") lang = "de";
-  } catch {
-    lang = "en";
-  }
-  const answer = catalogs[lang]["chat.down"] ?? catalogs.en["chat.down"];
-  return JSON.stringify({ answer, sources: [] });
-}
-
 function send(res, status, body, type = "text/plain; charset=utf-8") {
   res.writeHead(status, { ...headers, "Content-Type": type, "Cache-Control": "no-cache" });
   res.end(body);
-}
-
-function startDesk() {
-  if (!existsSync(python)) {
-    console.log("profile desk skipped: intel/.venv is missing");
-    return;
-  }
-  const child = spawn(python, ["-m", "personal.chatd"], {
-    cwd: repo,
-    env: { ...process.env, PYTHONPATH: repo },
-    stdio: ["ignore", "inherit", "inherit"],
-  });
-  child.on("exit", (code) => {
-    console.log(`profile desk exited ${code ?? "null"}`);
-  });
-}
-
-function forwardAsk(req, res) {
-  const chunks = [];
-  let size = 0;
-  req.on("data", (chunk) => {
-    size += chunk.length;
-    if (size > 8_000) {
-      res.destroy();
-      return;
-    }
-    chunks.push(chunk);
-  });
-  req.on("end", () => {
-    const body = Buffer.concat(chunks);
-    const upstream = requestHttp(
-      {
-        hostname: "127.0.0.1",
-        port: 4322,
-        path: "/ask",
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Content-Length": body.length },
-      },
-      (response) => {
-        res.writeHead(response.statusCode ?? 502, {
-          "Content-Type": "application/json; charset=utf-8",
-          "Cache-Control": "no-cache",
-          "X-Content-Type-Options": "nosniff",
-        });
-        response.pipe(res);
-      },
-    );
-    upstream.on("error", () => {
-      if (!res.headersSent) {
-        send(res, 503, deskDown(body), "application/json; charset=utf-8");
-      }
-    });
-    upstream.end(body);
-  });
 }
 
 const server = createServer((req, res) => {
@@ -203,10 +134,6 @@ const server = createServer((req, res) => {
       console.error(error);
       if (!res.headersSent) send(res, 500, "Error");
     });
-    return;
-  }
-  if (pathname === "/ask" && req.method === "POST") {
-    forwardAsk(req, res);
     return;
   }
   if (req.method !== "GET" && req.method !== "HEAD") {
@@ -271,7 +198,6 @@ const server = createServer((req, res) => {
   }
 });
 
-startDesk();
 server.listen(port, host, () => {
   console.log(`listening on http://${host}:${port}`);
 });

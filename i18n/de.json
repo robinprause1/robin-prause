@@ -24,12 +24,10 @@
     "projects": "Projekte",
     "education": "Ausbildung",
     "documents": "Zeugnisse",
-    "questions": "Fragen",
     "workSub": "02/2026 — heute, CTO",
     "projectsSub": "Demo, Code, Shop",
     "educationSub": "Medieninformatik, B.Sc. 2023",
-    "documentsSub": "Der Wortlaut, hier auf der Seite",
-    "questionsSub": "Frag die Unterlagen"
+    "documentsSub": "Der Wortlaut, hier auf der Seite"
   },
   "skip": "Zum Inhalt",
   "route": {
@@ -87,12 +85,10 @@
     "projects": "Drei Dinge zum Öffnen. Der Shop ist Produktion. Wire in der Mitte ist der Quellcode auf GitHub.",
     "education": "Kurzer Abschnitt. Informatik in Friedberg, fertig 2023.",
     "documents": "Die Zeugnisse stehen hier im Wortlaut. Die Dateien selbst liegen nicht auf der Seite.",
-    "questions": "Frag die Unterlagen direkt. Die Antwort nutzt nur, was drinsteht.",
     "done": "Das war der ganze Schreibtisch. Wenn es passt, schreib mir:",
     "workLate": "Weiter unten: Freelance, Bachelorarbeit, Praktika — der Teil, der zeigt, wo das herkommt.",
     "projectsLate": "Der Shop ist Produktion. Der Code der Bachelorarbeit ist von 2023 und liegt so da, wie das Experiment ihn hinterlassen hat.",
-    "documentsLate": "Sechs Zeugnisse. Geburtsdatum, Anschrift und Unterschrift sind weggelassen.",
-    "questionsLate": "Tipp: Einfach lostippen, das Feld fängt die Frage auf."
+    "documentsLate": "Sechs Zeugnisse. Geburtsdatum, Anschrift und Unterschrift sind weggelassen."
   },
   "work": {
     "title": "Arbeit",
@@ -196,19 +192,6 @@
     "fit": "Ganze Seite",
     "fail": "Dieses Dokument ließ sich nicht öffnen."
   },
-  "chat": {
-    "title": "Frag die Unterlagen.",
-    "mark": "KI",
-    "hint": "Einfach irgendwo auf der Seite lostippen — das Feld fängt die Frage auf.",
-    "lead": "Fehlt dir etwas? Frag. Die Antwort kommt aus den Unterlagen oben, aus nichts anderem.",
-    "note": "Dieselbe Suche wie am Desk: die Unterlagen werden eingebettet, dicht und über die Wörter gefunden und zusammengeführt. Jev prüft, ob die Treffer die Frage tragen. Steht es nicht drin, gibt es keine Antwort.",
-    "label": "Frage",
-    "placeholder": "Zum Beispiel: Wo hast du studiert?",
-    "submit": "Fragen",
-    "pending": "Ich schaue in die Unterlagen.",
-    "empty": "Dazu gibt es gerade keine Antwort.",
-    "down": "Der Desk ist gerade nicht erreichbar."
-  },
   "missing": {
     "kicker": "404",
     "title": "Diese Seite",
@@ -269,8 +252,6 @@
     "storage": "Diese Seite setzt keine Cookies. Es gibt kein Analysewerkzeug und keine Werbung. Die Schriften kommen von dieser Seite, nicht von einem anderen Anbieter. Wenn du Hell oder Dunkel wählst, liegt die Wahl auf deinem Gerät unter dem Namen prause-theme. Die Lesetiefe liegt für den Browser-Tab unter dem Namen prause-depth und fällt weg, wenn du den Tab schließt. Rechtsgrundlage ist § 25 Abs. 2 TDDDG: der Speicher dient einer Einstellung, die du selbst einschaltest.",
     "mailTitle": "E-Mail",
     "mail": "Der Mail-Link öffnet dein eigenes Mailprogramm. Diese Seite empfängt die Nachricht nicht und speichert sie nicht.",
-    "askTitle": "Fragen",
-    "ask": "Wenn du im Formular auf der Seite eine Frage stellst, gehen der Text und die Sprache der Seite an diesen Server. Die Seite speichert die Frage nicht in einer Datenbank. Auf dem veröffentlichten Stand läuft das Antwortprogramm nicht, die Frage wird also nicht an jemand anderen weitergegeben. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO: eine Frage zu beantworten, die du zu den Unterlagen auf dieser Seite selbst stellst.",
     "rightsTitle": "Deine Rechte",
     "rights": "Du kannst Auskunft, Berichtigung, Löschung und Einschränkung verlangen und der Verarbeitung auf Grundlage des berechtigten Interesses widersprechen. Du kannst dich außerdem bei einer Aufsichtsbehörde beschweren.",
     "authorityTitle": "Aufsichtsbehörde",

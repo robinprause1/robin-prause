@@ -17,7 +17,7 @@
   <meta property="og:image" content="/portrait.jpg?v=5">
   <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
   <link rel="preload" href="/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=54">
+  <link rel="stylesheet" href="/styles.css?v=55">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -68,11 +68,6 @@
           <a href="{{base}}#documents" data-stop="documents">
             <b aria-hidden="true">04</b>
             <span class="stop-label">{{nav.documents}}</span>
-            <i class="stop-bar" aria-hidden="true"></i>
-          </a>
-          <a href="{{base}}#questions-title" data-stop="questions">
-            <b aria-hidden="true">05</b>
-            <span class="stop-label">{{nav.questions}}</span>
             <i class="stop-bar" aria-hidden="true"></i>
           </a>
         </span>
@@ -525,24 +520,6 @@
         </ol>
       </div>
     </section>
-
-    <section id="questions" class="chapter page" aria-labelledby="questions-title" data-depth="mid">
-      <div class="section-head">
-        <p class="num" aria-hidden="true">05</p>
-        <h2 id="questions-title">{{chat.title}}</h2>
-        <p class="lead">{{chat.lead}}</p>
-        <p class="note" data-depth="all">{{chat.note}}</p>
-      </div>
-      <div class="section-body">
-        <div id="chat-log" class="chat-log" aria-live="polite"></div>
-        <form id="chat" class="chat" data-mark="{{chat.mark}}" data-pending="{{chat.pending}}" data-empty="{{chat.empty}}" data-down="{{chat.down}}">
-          <label class="visually-hidden" for="chat-question">{{chat.label}}</label>
-          <input id="chat-question" name="question" type="text" maxlength="400" required placeholder="{{chat.placeholder}}" autocomplete="off">
-          <button type="submit"><span>{{chat.submit}}</span><i aria-hidden="true">→</i></button>
-        </form>
-        <p class="chat-hint">{{chat.hint}}</p>
-      </div>
-    </section>
   </main>
 
   <footer class="colophon">
@@ -562,8 +539,7 @@
   </footer>
 
   <script src="/name.js?v=6"></script>
-  <script src="/motion.js?v=27"></script>
-  <script src="/controls.js?v=6"></script>
-  <script src="/chat.js?v=4"></script>
+  <script src="/motion.js?v=28"></script>
+  <script src="/controls.js?v=7"></script>
 </body>
 </html>

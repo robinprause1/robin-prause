@@ -62,7 +62,7 @@
   const routeSeen = document.getElementById("route-seen");
   const routeTotal = document.getElementById("route-total");
   const routeCount = document.getElementById("route-count");
-  const stopIds = ["work", "projects", "education", "documents", "questions"];
+  const stopIds = ["work", "projects", "education", "documents"];
   const routeKey = "prause-route";
 
   if (!(route instanceof HTMLElement) || !(routeFill instanceof HTMLElement)) {

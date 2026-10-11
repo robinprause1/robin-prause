@@ -7,7 +7,6 @@ const depth = document.getElementById("depth");
 const theme = document.getElementById("theme");
 const themeMeta = document.querySelector('meta[name="theme-color"]');
 const themes = ["light", "dark"];
-const question = document.getElementById("chat-question");
 let audio = null;
 
 const paintDepth = () => {
@@ -121,20 +120,4 @@ if (theme instanceof HTMLElement) {
   });
 }
 
-if (question instanceof HTMLInputElement) {
-  document.addEventListener("keydown", (event) => {
-    if (event.metaKey || event.ctrlKey || event.altKey || event.defaultPrevented) return;
-    const target = event.target;
-    if (target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target instanceof HTMLSelectElement) return;
-    if (target instanceof HTMLElement && target.isContentEditable) return;
-    const dialog = document.querySelector("dialog[open]");
-    if (dialog) return;
-    const typed = event.key.length === 1 && event.key !== " ";
-    if (!typed) return;
-    if (question.offsetParent === null) return;
-    question.focus({ preventScroll: true });
-    question.scrollIntoView({ block: "center", behavior: "smooth" });
-    if (event.key === "/") event.preventDefault();
-  });
-}
 })();
