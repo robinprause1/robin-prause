@@ -3,13 +3,13 @@
     "lang": "en"
   },
   "meta": {
-    "title": "Robin Prause — Engineering leadership",
+    "title": "Robin Prause — CV · CTO and engineering leadership",
     "description": "Robin Prause builds and runs platforms: payments, search, multi-tenant data, compliance. Employment references and a B.Sc. in Media Computer Science.",
     "og": "Platforms, end to end. Payments, search, multi-tenant data, compliance.",
     "locale": "en_US"
   },
   "home": "/",
-  "base": "",
+  "base": "/cv",
   "lang": {
     "en": {
       "current": "is-current"
@@ -217,6 +217,180 @@
     "done": "All read",
     "start": "Top of the page"
   },
+  "cv": {
+    "href": "/cv",
+    "teaser": "CV"
+  },
+  "offer": {
+    "meta": "AI consulting for small businesses in Rhine-Main | Robin Prause",
+    "description": "Less office work for small businesses in Frankfurt and Rhine-Main. I come along, find what eats your time and set up AI tools you can run yourself.",
+    "href": "/",
+    "teaser": "Consulting for small businesses",
+    "kicker": "CTO know-how and AI for small businesses · Rhine-Main",
+    "claim": "More time for what you actually started out to do.",
+    "lede": "Quotes on Sunday, emails after hours? I find the work that takes the most time and set it up so it runs on the side.",
+    "cta": "Tell me what piles up",
+    "ctaHint": "No obligation. The list is yours, even without a job.",
+    "mastCta": "Get in touch",
+    "steps": {
+      "title": "How it works",
+      "lead": "No risk at the start, no dependency at the end.",
+      "one": {
+        "when": "Step 1",
+        "title": "I come along",
+        "text": "I watch the work and ask questions. Not to check on anyone, but to see where the time goes. Afterwards you get a short list. It is yours, even if you don't hire me."
+      },
+      "two": {
+        "when": "Step 2",
+        "title": "One task, one fixed price",
+        "text": "I propose the one piece of work that relieves you the most and name a fixed sum up front. No timesheets, no surprises on the invoice."
+      },
+      "three": {
+        "when": "Step 3",
+        "title": "Set up and practise",
+        "text": "I set it up with tools that run in your name and practise it with the people who do the work. Until it no longer feels new."
+      },
+      "four": {
+        "when": "Step 4",
+        "title": "Handover",
+        "text": "Once you can do it on your own, I leave. No subscription, no dependency. What stays is the time you get back."
+      }
+    },
+    "tasks": {
+      "title": "What piles up",
+      "lead": "Small things that cost a few minutes every day and add up to weeks over a year. I see what it is for you when I come along.",
+      "office": "Office",
+      "field": "On site",
+      "home": "At home",
+      "quotes": {
+        "title": "Quotes and invoices",
+        "text": "Notes, photos or a phone call turn into a finished draft. You check it and send it, instead of spending Sunday at the desk."
+      },
+      "mail": {
+        "title": "Inbox",
+        "text": "Requests are sorted, standard questions already have a draft reply. No customer waits because an email got lost."
+      },
+      "reports": {
+        "title": "Reports from the field",
+        "text": "Whoever works outside speaks briefly into their phone. A finished report is waiting at the office, no typing in the evening."
+      },
+      "paper": {
+        "title": "Appointments and paperwork",
+        "text": "Scheduling appointments, understanding letters from authorities, keeping deadlines in view. Less to keep turning over in your head."
+      },
+      "private": {
+        "title": "For you, privately",
+        "text": "Your own inbox, your paperwork, or a smart home you maintain yourself afterwards. So your evening is yours again."
+      }
+    },
+    "why": {
+      "title": "Why me",
+      "lead": "Technology is changing every week right now. I follow it every day and bring you the part that actually helps in your daily work.",
+      "overview": {
+        "when": "As a CTO",
+        "big": "CTO",
+        "title": "I keep track, so you don't have to",
+        "text": "As a CTO I am responsible for the technology of a whole platform and decide every week which new tools are worth it and which are just noise. I bring that knowledge to you, translated into your daily work and without jargon."
+      },
+      "care": {
+        "when": "Attitude",
+        "big": "People first",
+        "title": "For the people, not past them",
+        "text": "This is not about replacing anyone. It is about your people typing and searching less and doing more of the work they are good at and enjoy."
+      },
+      "self": {
+        "when": "In person",
+        "big": "1 contact",
+        "title": "The one who comes along also sets it up",
+        "text": "No sales team, no agency, no interns. I come along, set it up, hand it over and explain everything without jargon. You have one contact from start to finish."
+      },
+      "ai": {
+        "when": "Since 2023",
+        "big": "Since 2023",
+        "title": "I know where AI stops",
+        "text": "My bachelor's thesis in 2023 tested what chat-based AI can really do and where it fails. I have worked with it every day since. That is why I only propose what runs reliably for you."
+      },
+      "tech": {
+        "when": "Experience",
+        "big": "Live systems",
+        "title": "I know what counts in day-to-day operations",
+        "text": "I have built and run platforms with payments, shipping and compliance that handle real orders every day. I know where data goes and what has to happen so nothing gets lost."
+      },
+      "near": {
+        "when": "Rhine-Main",
+        "big": "On site",
+        "title": "I come to you",
+        "text": "I live in Rodgau near Frankfurt. Coming along and practising happen at your place, not on a video call."
+      },
+      "more": "My background and references"
+    },
+    "fit": {
+      "title": "Who it is for",
+      "lead": "For businesses where everyone already has enough on their plate.",
+      "yes": {
+        "when": "Fits",
+        "title": "Small businesses under 20 people",
+        "text": "No IT of their own, and the owner decides. For example landscaping, waste and composting, farming or service businesses."
+      },
+      "also": {
+        "when": "Also fits",
+        "title": "Freelancers and private people",
+        "text": "When it is about one clear task you carry on with yourself afterwards."
+      },
+      "no": {
+        "when": "Doesn't fit",
+        "title": "Ongoing support",
+        "text": "If you are looking for someone who is always on call or fills a position, I am the wrong person."
+      }
+    },
+    "band": {
+      "title": "Sounds like your week?",
+      "text": "Two or three sentences are enough. I reply personally and we see if it fits."
+    },
+    "faq": {
+      "title": "Questions",
+      "lead": "What you probably want to know before you let me into your business.",
+      "day": {
+        "q": "Why come along instead of just asking?",
+        "a": "In a conversation people tell you what comes to mind. When I am there, I see what really costs time. You get the list either way, even without a job."
+      },
+      "jobs": {
+        "q": "Will my people worry about their jobs?",
+        "a": "That is not what this is about. I take away work nobody likes doing, so there is more time for the work that matters. When I come along, I tell the team exactly that."
+      },
+      "which": {
+        "q": "Will you see the right work?",
+        "a": "We pick a time when the most piles up. Whatever only comes up once a month, such as billing, we go through briefly together."
+      },
+      "trade": {
+        "q": "You don't know our trade.",
+        "a": "True. That is why I come along instead of showing slides. You know your trade. I bring the overview of technology I have built up as a CTO and explain it so it fits you."
+      },
+      "worth": {
+        "q": "How do I know it was worth it?",
+        "a": "Beforehand we write down how long the task takes today. After the handover we check how long it takes now."
+      },
+      "ai": {
+        "q": "Do I need to know about AI?",
+        "a": "No. You only need to know which work is a pain. Whether and which AI is behind it is my job."
+      },
+      "after": {
+        "q": "What if something stops working later?",
+        "a": "I only set up what you can change and fix yourselves, and I show you how at the handover. After that I am no longer involved."
+      },
+      "data": {
+        "q": "Where does our data live?",
+        "a": "With you. Every account runs in your name, and the provider bills you directly. I don't resell software."
+      },
+      "price": {
+        "q": "What does it cost?",
+        "a": "A fixed sum for exactly one task. I name it after I have come along, before I start."
+      }
+    },
+    "foot": "Tell me in two or three sentences what piles up for you. I will reply personally.",
+    "message": "What piles up for you?",
+    "service": "AI and digital tools for small businesses"
+  },
   "legal": {
     "impressum": "Impressum",
     "privacy": "Privacy",
@@ -236,7 +410,7 @@
     "responsibleTitle": "Responsible for the content",
     "responsible": "Robin Prause, address as above.",
     "scopeTitle": "What this site is",
-    "scope": "This is a personal page. Nothing is sold here, and no contract is made here.",
+    "scope": "On this site I offer consulting for small businesses. No contract is made on the page itself, only once we agree on it by email.",
     "disputeTitle": "Consumer dispute resolution",
     "dispute": "I am not obliged to take part in dispute resolution before a consumer arbitration board, and I am not willing to do so.",
     "marksTitle": "Logos",

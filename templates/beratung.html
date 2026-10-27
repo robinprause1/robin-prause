@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="{{html.lang}}">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var h=document.documentElement;var t=localStorage.getItem("prause-theme");if(t==="light"||t==="dark")h.dataset.theme=t;var d=sessionStorage.getItem("prause-depth");h.dataset.depth=(d==="brief"||d==="all")?d:"mid";if(location.search.indexOf("hero=orbit")!==-1)h.dataset.hero="orbit"}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{offer.meta}}</title>
+  <meta name="description" content="{{offer.description}}">
+  <link rel="canonical" href="{{canonical}}">
+  <link rel="alternate" hreflang="en" href="{{alt.en}}">
+  <link rel="alternate" hreflang="de" href="{{alt.de}}">
+  <link rel="alternate" hreflang="x-default" href="{{alt.en}}">
+  <meta name="theme-color" content="#f3efe6">
+  <meta property="og:site_name" content="Robin Prause">
+  <meta property="og:title" content="{{offer.meta}}">
+  <meta property="og:description" content="{{offer.description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:locale" content="{{meta.locale}}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{site}}/portrait.jpg?v=5">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="{{portrait.alt}}">
+  <meta name="twitter:card" content="summary">
+  <!--ld-->
+  <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
+  <link rel="preload" href="/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=62">
+</head>
+<body>
+  <a class="skip" href="#ablauf-title">{{skip}}</a>
+
+  <header class="mast">
+    <div class="mast-row">
+      <a class="word" href="{{home}}">Robin Prause</a>
+      <span></span>
+      <div class="dials">
+        <a class="mast-cta" href="#kontakt">{{offer.mastCta}}</a>
+        <div class="theme" id="theme" role="radiogroup" aria-label="{{theme.label}}">
+          <button type="button" role="radio" aria-checked="false" data-theme-set="light">{{theme.light}}</button>
+          <button type="button" role="radio" aria-checked="false" data-theme-set="dark">{{theme.dark}}</button>
+        </div>
+        <span class="langs">
+          <a href="/" hreflang="en" lang="en" class="{{lang.en.current}}">EN</a>
+          <a href="/de" hreflang="de" lang="de" class="{{lang.de.current}}">DE</a>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="name">
+      <div class="page hero-grid">
+        <div class="hero-copy">
+          <p class="kicker"><span>{{offer.kicker}}</span></p>
+          <h1 class="claim">{{offer.claim}}</h1>
+          <p class="lede">{{offer.lede}}</p>
+          <div class="cta-row">
+            <a class="cta-button" href="#kontakt">{{offer.cta}} <span aria-hidden="true">→</span></a>
+            <a class="cta-mail" href="mailto:mail@robin-prause.de">mail@robin-prause.de</a>
+          </div>
+          <p class="cta-hint">{{offer.ctaHint}}</p>
+        </div>
+        <figure class="portrait">
+          <img src="/portrait.jpg?v=5" width="1024" height="1024" alt="{{portrait.alt}}" fetchpriority="high">
+          <figcaption>
+            <span>{{portrait.caption}}</span>
+          </figcaption>
+        </figure>
+      </div>
+      <p id="name" class="name page" aria-label="Robin Prause">
+        <span class="name-a">Robin</span>
+        <span class="name-b">Prause</span>
+      </p>
+    </section>
+
+    <section id="ablauf" class="chapter page" aria-labelledby="ablauf-title">
+      <div class="section-head">
+        <p class="num" aria-hidden="true">01</p>
+        <h2 id="ablauf-title">{{offer.steps.title}}</h2>
+        <p class="lead">{{offer.steps.lead}}</p>
+      </div>
+      <div class="section-body">
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>{{offer.steps.one.title}}</h3>
+            <p>{{offer.steps.one.text}}</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>{{offer.steps.two.title}}</h3>
+            <p>{{offer.steps.two.text}}</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>{{offer.steps.three.title}}</h3>
+            <p>{{offer.steps.three.text}}</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">4</span>
+            <h3>{{offer.steps.four.title}}</h3>
+            <p>{{offer.steps.four.text}}</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="aufgaben" class="chapter page" aria-labelledby="aufgaben-title">
+      <div class="section-head">
+        <p class="num" aria-hidden="true">02</p>
+        <h2 id="aufgaben-title">{{offer.tasks.title}}</h2>
+        <p class="lead">{{offer.tasks.lead}}</p>
+      </div>
+      <div class="section-body">
+        <ul class="tiles">
+          <li class="tile">
+            <svg class="tile-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h7M9 17h7"/></svg>
+            <p class="tile-tag">{{offer.tasks.office}}</p>
+            <h3>{{offer.tasks.quotes.title}}</h3>
+            <p>{{offer.tasks.quotes.text}}</p>
+          </li>
+          <li class="tile">
+            <svg class="tile-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg>
+            <p class="tile-tag">{{offer.tasks.office}}</p>
+            <h3>{{offer.tasks.mail.title}}</h3>
+            <p>{{offer.tasks.mail.text}}</p>
+          </li>
+          <li class="tile">
+            <svg class="tile-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+            <p class="tile-tag">{{offer.tasks.field}}</p>
+            <h3>{{offer.tasks.reports.title}}</h3>
+            <p>{{offer.tasks.reports.text}}</p>
+          </li>
+          <li class="tile">
+            <svg class="tile-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+            <p class="tile-tag">{{offer.tasks.office}}</p>
+            <h3>{{offer.tasks.paper.title}}</h3>
+            <p>{{offer.tasks.paper.text}}</p>
+          </li>
+          <li class="tile">
+            <svg class="tile-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>
+            <p class="tile-tag">{{offer.tasks.home}}</p>
+            <h3>{{offer.tasks.private.title}}</h3>
+            <p>{{offer.tasks.private.text}}</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="warum" class="chapter page is-wide" aria-labelledby="warum-title">
+      <div class="section-head">
+        <p class="num" aria-hidden="true">03</p>
+        <h2 id="warum-title">{{offer.why.title}}</h2>
+        <p class="lead">{{offer.why.lead}}</p>
+      </div>
+      <div class="section-body">
+        <div class="why-lead">
+          <p class="why-big">{{offer.why.overview.big}}</p>
+          <div>
+            <h3>{{offer.why.overview.title}}</h3>
+            <p>{{offer.why.overview.text}}</p>
+          </div>
+        </div>
+        <ul class="why-list">
+          <li class="why-row">
+            <p class="why-word">{{offer.why.care.big}}</p>
+            <div>
+              <h3>{{offer.why.care.title}}</h3>
+              <p>{{offer.why.care.text}}</p>
+            </div>
+          </li>
+          <li class="why-row">
+            <p class="why-word">{{offer.why.self.big}}</p>
+            <div>
+              <h3>{{offer.why.self.title}}</h3>
+              <p>{{offer.why.self.text}}</p>
+            </div>
+          </li>
+          <li class="why-row">
+            <p class="why-word">{{offer.why.ai.big}}</p>
+            <div>
+              <h3>{{offer.why.ai.title}}</h3>
+              <p>{{offer.why.ai.text}}</p>
+            </div>
+          </li>
+          <li class="why-row">
+            <p class="why-word">{{offer.why.tech.big}}</p>
+            <div>
+              <h3>{{offer.why.tech.title}}</h3>
+              <p>{{offer.why.tech.text}}</p>
+            </div>
+          </li>
+          <li class="why-row">
+            <p class="why-word">{{offer.why.near.big}}</p>
+            <div>
+              <h3>{{offer.why.near.title}}</h3>
+              <p>{{offer.why.near.text}}</p>
+            </div>
+          </li>
+        </ul>
+        <p class="stack"><a href="{{cv.href}}">{{offer.why.more}}</a></p>
+      </div>
+    </section>
+
+    <section id="fuer-wen" class="chapter page" aria-labelledby="fuer-wen-title">
+      <div class="section-head">
+        <p class="num" aria-hidden="true">04</p>
+        <h2 id="fuer-wen-title">{{offer.fit.title}}</h2>
+        <p class="lead">{{offer.fit.lead}}</p>
+      </div>
+      <div class="section-body">
+        <ul class="fit">
+          <li class="fit-item is-yes">
+            <p class="fit-label">{{offer.fit.yes.when}}</p>
+            <h3>{{offer.fit.yes.title}}</h3>
+            <p>{{offer.fit.yes.text}}</p>
+          </li>
+          <li class="fit-item is-yes">
+            <p class="fit-label">{{offer.fit.also.when}}</p>
+            <h3>{{offer.fit.also.title}}</h3>
+            <p>{{offer.fit.also.text}}</p>
+          </li>
+          <li class="fit-item is-no">
+            <p class="fit-label">{{offer.fit.no.when}}</p>
+            <h3>{{offer.fit.no.title}}</h3>
+            <p>{{offer.fit.no.text}}</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <aside class="cta-band page" aria-labelledby="band-title">
+      <div>
+        <p class="cta-band-title" id="band-title">{{offer.band.title}}</p>
+        <p class="cta-band-text">{{offer.band.text}}</p>
+      </div>
+      <a class="cta-button" href="#kontakt">{{offer.cta}} <span aria-hidden="true">→</span></a>
+    </aside>
+
+    <section id="fragen" class="chapter page" aria-labelledby="fragen-title">
+      <div class="section-head">
+        <p class="num" aria-hidden="true">05</p>
+        <h2 id="fragen-title">{{offer.faq.title}}</h2>
+        <p class="lead">{{offer.faq.lead}}</p>
+      </div>
+      <div class="section-body">
+        <ol class="references faq">
+          <li>
+            <details class="reference">
+              <summary class="reference-head"><h3>{{offer.faq.day.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
+              <div class="reference-body"><p>{{offer.faq.day.a}}</p></div>
+            </details>
+          </li>
+          <li>
+            <details class="reference">
+              <summary class="reference-head"><h3>{{offer.faq.jobs.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
+              <div class="reference-body"><p>{{offer.faq.jobs.a}}</p></div>
+            </details>
+          </li>
+          <li>
+            <details class="reference">
+              <summary class="reference-head"><h3>{{offer.faq.which.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
+              <div class="reference-body"><p>{{offer.faq.which.a}}</p></div>
+            </details>
+          </li>
+          <li>
+            <details class="reference">
+              <summary class="reference-head"><h3>{{offer.faq.trade.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
+              <div class="reference-body"><p>{{offer.faq.trade.a}}</p></div>
+            </details>
+          </li>
+          <li>
+            <details class="reference">
+              <summary class="reference-head"><h3>{{offer.faq.worth.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
+              <div class="reference-body"><p>{{offer.faq.worth.a}}</p></div>
+            </details>
+          </li>
+          <li>
+            <details class="reference">
+              <summary class="reference-head"><h3>{{offer.faq.ai.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
+              <div class="reference-body"><p>{{offer.faq.ai.a}}</p></div>
+            </details>
+          </li>
+          <li>
+            <details class="reference">
+              <summary class="reference-head"><h3>{{offer.faq.after.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
+              <div class="reference-body"><p>{{offer.faq.after.a}}</p></div>
+            </details>
+          </li>
+          <li>
+            <details class="reference">
+              <summary class="reference-head"><h3>{{offer.faq.data.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
+              <div class="reference-body"><p>{{offer.faq.data.a}}</p></div>
+            </details>
+          </li>
+          <li>
+            <details class="reference">
+              <summary class="reference-head"><h3>{{offer.faq.price.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
+              <div class="reference-body"><p>{{offer.faq.price.a}}</p></div>
+            </details>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="page foot">
+      <p class="foot-cta">{{offer.foot}}</p>
+      <a class="foot-mail" href="mailto:mail@robin-prause.de">mail@robin-prause.de</a>
+      <form class="contact" id="kontakt" action="/contact" method="post">
+        <p class="form-note" role="status" data-fail="{{form.failed}}">{{form.note}}</p>
+        <input type="hidden" name="lang" value="{{html.lang}}">
+        <input type="hidden" name="back" value="{{offer.href}}">
+        <div class="hp" aria-hidden="true">
+          <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <label>
+          <span>{{form.name}}</span>
+          <input name="name" required maxlength="80" autocomplete="name">
+        </label>
+        <label>
+          <span>{{form.email}}</span>
+          <input name="email" type="email" required maxlength="120" autocomplete="email">
+        </label>
+        <label>
+          <span>{{offer.message}}</span>
+          <textarea name="message" required maxlength="4000" rows="5"></textarea>
+        </label>
+        <button type="submit">{{form.send}}</button>
+      </form>
+      <div class="foot-row">
+        <p>Robin Prause · Frankfurt · {{foot.year}}</p>
+        <p>
+          <a href="{{cv.href}}">{{cv.teaser}}</a>
+          <a href="https://www.linkedin.com/in/robin-prause-330666278" rel="noopener noreferrer">LinkedIn</a>
+          <a href="{{legal.impressumHref}}">{{legal.impressum}}</a>
+          <a href="{{legal.privacyHref}}">{{legal.privacy}}</a>
+          <a href="#top">{{foot.top}} ↑</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/name.js?v=6"></script>
+  <script src="/motion.js?v=28"></script>
+  <script src="/controls.js?v=7"></script>
+  <script src="/contact.js?v=1"></script>
+</body>
+</html>

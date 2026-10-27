@@ -3,13 +3,13 @@
     "lang": "de"
   },
   "meta": {
-    "title": "Robin Prause — Engineering-Führung",
+    "title": "Robin Prause — Lebenslauf · CTO und Engineering-Führung",
     "description": "Robin Prause baut und betreibt Plattformen: Payments, Suche, mandantenfähige Daten, Compliance. Arbeitszeugnisse und Bachelor Medieninformatik.",
     "og": "Plattformen, Ende zu Ende. Payments, Suche, mandantenfähige Daten, Compliance.",
     "locale": "de_DE"
   },
   "home": "/de",
-  "base": "/de",
+  "base": "/de/lebenslauf",
   "lang": {
     "en": {
       "current": ""
@@ -217,6 +217,180 @@
     "done": "Alles gelesen",
     "start": "Oben auf der Seite"
   },
+  "cv": {
+    "href": "/de/lebenslauf",
+    "teaser": "Lebenslauf"
+  },
+  "offer": {
+    "meta": "KI-Beratung für kleine Betriebe in Rhein-Main | Robin Prause",
+    "description": "Weniger Büro für kleine Betriebe in Frankfurt und Rhein-Main. Ich begleite euch, finde die Zeitfresser und richte KI-Werkzeuge ein, die ihr selbst pflegt.",
+    "href": "/de",
+    "teaser": "Beratung für kleine Betriebe",
+    "kicker": "CTO-Wissen und KI für kleine Betriebe · Rhein-Main",
+    "claim": "Mehr Zeit für das, wofür du eigentlich angefangen hast.",
+    "lede": "Angebote am Sonntag, Mails nach Feierabend? Ich finde die Arbeit, die euch am meisten Zeit raubt, und richte sie so ein, dass sie nebenbei läuft.",
+    "cta": "Schreib mir, was liegen bleibt",
+    "ctaHint": "Unverbindlich. Die Liste gehört dir, auch ohne Auftrag.",
+    "mastCta": "Anfragen",
+    "steps": {
+      "title": "So läuft es",
+      "lead": "Kein Risiko am Anfang, keine Abhängigkeit am Ende.",
+      "one": {
+        "when": "Schritt 1",
+        "title": "Ich begleite euch",
+        "text": "Ich schaue bei der Arbeit zu und frage nach. Nicht, um jemanden zu kontrollieren, sondern um zu sehen, wo die Zeit verloren geht. Danach bekommst du eine kurze Liste. Die gehört dir, auch wenn du nichts beauftragst."
+      },
+      "two": {
+        "when": "Schritt 2",
+        "title": "Eine Aufgabe, ein fester Preis",
+        "text": "Ich schlage die eine Arbeit vor, die euch am meisten entlastet, und nenne vorher eine feste Summe. Keine Stundenzettel, keine Überraschung auf der Rechnung."
+      },
+      "three": {
+        "when": "Schritt 3",
+        "title": "Einrichten und üben",
+        "text": "Ich richte es mit Werkzeugen ein, die auf euren Namen laufen, und übe es mit den Leuten, die die Arbeit tun. So lange, bis es sich nicht mehr neu anfühlt."
+      },
+      "four": {
+        "when": "Schritt 4",
+        "title": "Übergabe",
+        "text": "Wenn ihr es allein könnt, bin ich weg. Kein Abo, keine Abhängigkeit. Was bleibt, ist die Zeit, die ihr zurückbekommt."
+      }
+    },
+    "tasks": {
+      "title": "Was liegen bleibt",
+      "lead": "Kleine Dinge, die jeden Tag ein paar Minuten kosten und sich übers Jahr zu Wochen summieren. Was es bei euch ist, sehe ich, wenn ich euch begleite.",
+      "office": "Büro",
+      "field": "Draußen",
+      "home": "Zu Hause",
+      "quotes": {
+        "title": "Angebote und Rechnungen",
+        "text": "Aus Notizen, Fotos oder einem Anruf wird ein fertiger Entwurf. Du prüfst und schickst ab, statt den Sonntag am Schreibtisch zu verbringen."
+      },
+      "mail": {
+        "title": "Posteingang",
+        "text": "Anfragen sind sortiert, Standardfragen haben schon einen Antwortentwurf. Kein Kunde wartet mehr, weil eine Mail untergegangen ist."
+      },
+      "reports": {
+        "title": "Berichte von draußen",
+        "text": "Wer draußen arbeitet, spricht kurz ins Handy. Im Büro liegt ein fertiger Bericht, ohne Abtippen am Abend."
+      },
+      "paper": {
+        "title": "Termine und Papierkram",
+        "text": "Termine abstimmen, Behördenpost verstehen, Fristen im Blick behalten. Weniger, das einem im Kopf herumgeht."
+      },
+      "private": {
+        "title": "Für dich privat",
+        "text": "Der eigene Posteingang, der Papierkram oder ein Smart Home, das du danach selbst pflegst. Damit der Feierabend wieder einer ist."
+      }
+    },
+    "why": {
+      "title": "Warum ich",
+      "lead": "Die Technik ändert sich gerade jede Woche. Ich verfolge das jeden Tag und bringe euch davon das, was im Alltag wirklich hilft.",
+      "overview": {
+        "when": "Als CTO",
+        "big": "CTO",
+        "title": "Ich behalte den Überblick, damit du es nicht musst",
+        "text": "Als CTO verantworte ich die Technik einer ganzen Plattform und entscheide jede Woche, welche neuen Werkzeuge taugen und welche nur laut sind. Dieses Wissen bringe ich zu euch, übersetzt in euren Alltag und ohne Fachchinesisch."
+      },
+      "care": {
+        "when": "Haltung",
+        "big": "Mensch zuerst",
+        "title": "Für die Leute, nicht an ihnen vorbei",
+        "text": "Es geht nicht darum, jemanden zu ersetzen. Es geht darum, dass deine Leute weniger abtippen und suchen und mehr von der Arbeit machen, die sie können und gern tun."
+      },
+      "self": {
+        "when": "Persönlich",
+        "big": "1 Ansprechpartner",
+        "title": "Wer begleitet, richtet es auch ein",
+        "text": "Kein Vertrieb, keine Agentur, keine Praktikanten. Ich begleite euch, richte ein, übergebe und erkläre alles ohne Fachwörter. Du hast von Anfang bis Ende einen Ansprechpartner."
+      },
+      "ai": {
+        "when": "Seit 2023",
+        "big": "Seit 2023",
+        "title": "Ich weiß, wo KI aufhört",
+        "text": "Meine Bachelorarbeit hat 2023 untersucht, was chatbasierte KI wirklich kann und wo sie scheitert. Seitdem arbeite ich jeden Tag damit. Deshalb schlage ich nur vor, was bei euch zuverlässig läuft."
+      },
+      "tech": {
+        "when": "Erfahrung",
+        "big": "Live-Betrieb",
+        "title": "Ich weiß, was im Betrieb zählt",
+        "text": "Ich habe Plattformen mit Zahlungen, Versand und Compliance gebaut und betrieben, bei denen jeden Tag echte Bestellungen laufen. Ich weiß, wo Daten hingehen und was passieren muss, damit nichts verloren geht."
+      },
+      "near": {
+        "when": "Rhein-Main",
+        "big": "Vor Ort",
+        "title": "Ich komme vorbei",
+        "text": "Ich wohne in Rodgau bei Frankfurt. Begleiten und Üben passieren bei euch vor Ort, nicht im Videocall."
+      },
+      "more": "Mein Werdegang und meine Arbeitszeugnisse"
+    },
+    "fit": {
+      "title": "Für wen",
+      "lead": "Für Betriebe, in denen alle schon genug zu tun haben.",
+      "yes": {
+        "when": "Passt",
+        "title": "Kleine Betriebe unter 20 Leuten",
+        "text": "Ohne eigene IT, und der Inhaber entscheidet selbst. Zum Beispiel Gartenbau, Entsorgung, Landwirtschaft oder Dienstleister."
+      },
+      "also": {
+        "when": "Passt auch",
+        "title": "Selbstständige und Privatleute",
+        "text": "Wenn es um eine klare Aufgabe geht, die du danach allein weiterführst."
+      },
+      "no": {
+        "when": "Passt nicht",
+        "title": "Dauerbetreuung",
+        "text": "Wer jemanden sucht, der dauerhaft ansprechbar ist oder eine Stelle besetzt, ist bei mir falsch."
+      }
+    },
+    "band": {
+      "title": "Klingt nach eurem Alltag?",
+      "text": "Zwei, drei Sätze reichen. Ich melde mich persönlich und wir schauen, ob es passt."
+    },
+    "faq": {
+      "title": "Fragen",
+      "lead": "Was du vermutlich wissen willst, bevor du mich in deinen Betrieb lässt.",
+      "day": {
+        "q": "Warum begleitest du uns, statt nur zu fragen?",
+        "a": "Im Gespräch erzählt man, was einem gerade einfällt. Wenn ich dabei bin, sehe ich, was wirklich Zeit kostet. Die Liste bekommst du in jedem Fall, auch ohne Auftrag."
+      },
+      "jobs": {
+        "q": "Haben meine Leute dann Angst um ihren Job?",
+        "a": "Darum geht es nicht. Ich nehme Arbeit weg, die keiner gern macht, damit mehr Zeit für die bleibt, die zählt. Wenn ich euch begleite, sage ich das dem Team auch so."
+      },
+      "which": {
+        "q": "Sehe ich dabei die richtige Arbeit?",
+        "a": "Wir suchen eine Zeit aus, in der am meisten liegen bleibt. Was nur einmal im Monat anfällt, etwa Abrechnungen, gehen wir kurz zusammen durch."
+      },
+      "trade": {
+        "q": "Du kennst unsere Branche nicht.",
+        "a": "Stimmt. Deshalb begleite ich euch, statt Folien zu zeigen. Eure Branche kennt ihr. Ich bringe den Überblick über die Technik mit, den ich mir als CTO aufgebaut habe, und erkläre sie so, dass sie zu euch passt."
+      },
+      "worth": {
+        "q": "Woran merke ich, dass es sich gelohnt hat?",
+        "a": "Vorher schreiben wir auf, wie lange die Aufgabe heute dauert. Nach der Übergabe schauen wir nach, wie lange sie jetzt dauert."
+      },
+      "ai": {
+        "q": "Muss ich mich mit KI auskennen?",
+        "a": "Nein. Du musst nur wissen, welche Arbeit nervt. Ob und welche KI dahintersteckt, ist meine Sache."
+      },
+      "after": {
+        "q": "Was, wenn später etwas nicht mehr läuft?",
+        "a": "Ich richte nur ein, was ihr selbst ändern und reparieren könnt, und zeige bei der Übergabe, wie. Danach bin ich nicht mehr dabei."
+      },
+      "data": {
+        "q": "Wo liegen unsere Daten?",
+        "a": "Bei euch. Jedes Konto läuft auf euren Namen, und der Anbieter rechnet direkt mit euch ab. Ich verkaufe keine Software weiter."
+      },
+      "price": {
+        "q": "Was kostet das?",
+        "a": "Eine feste Summe für genau eine Aufgabe. Ich nenne sie, nachdem ich euch begleitet habe, und bevor ich anfange."
+      }
+    },
+    "foot": "Erzähl mir in zwei, drei Sätzen, was bei euch liegen bleibt. Ich melde mich persönlich.",
+    "message": "Was bleibt bei euch liegen?",
+    "service": "KI und Digitalisierung für kleine Betriebe"
+  },
   "legal": {
     "impressum": "Impressum",
     "privacy": "Datenschutz",
@@ -236,7 +410,7 @@
     "responsibleTitle": "Verantwortlich für den Inhalt",
     "responsible": "Robin Prause, Anschrift wie oben.",
     "scopeTitle": "Worum es hier geht",
-    "scope": "Das ist eine persönliche Seite. Hier wird nichts verkauft, und es kommt kein Vertrag zustande.",
+    "scope": "Auf dieser Seite biete ich Beratung für kleine Betriebe an. Auf der Seite selbst kommt kein Vertrag zustande, sondern erst, wenn wir ihn per E-Mail vereinbaren.",
     "disputeTitle": "Verbraucherstreitbeilegung",
     "dispute": "Ich bin nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
     "marksTitle": "Logos",

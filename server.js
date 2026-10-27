@@ -11,14 +11,30 @@ if (existsSync(envFile)) process.loadEnvFile(envFile);
 const root = fileURLToPath(new URL("./public", import.meta.url));
 const template = readFileSync(new URL("./public/index.html", import.meta.url), "utf8");
 const pages = {
-  home: template,
+  cv: template,
   impressum: readFileSync(new URL("./templates/impressum.html", import.meta.url), "utf8"),
   privacy: readFileSync(new URL("./templates/datenschutz.html", import.meta.url), "utf8"),
+  offer: readFileSync(new URL("./templates/beratung.html", import.meta.url), "utf8"),
 };
+const formPages = new Set(["/", "/de", "/cv", "/de/lebenslauf"]);
+const moved = new Map([
+  ["/consulting", "/"],
+  ["/de/beratung", "/de"],
+]);
 const catalogs = {
   en: flatten(JSON.parse(readFileSync(new URL("./i18n/en.json", import.meta.url), "utf8"))),
   de: flatten(JSON.parse(readFileSync(new URL("./i18n/de.json", import.meta.url), "utf8"))),
 };
+const site = (process.env.SITE_URL || "https://www.robin-prause.de").replace(/\/+$/, "");
+const paths = {
+  offer: { en: "/", de: "/de" },
+  cv: { en: "/cv", de: "/de/lebenslauf" },
+  impressum: { en: "/impressum", de: "/de/impressum" },
+  privacy: { en: "/datenschutz", de: "/de/datenschutz" },
+};
+const indexed = ["offer", "cv"];
+const faqKeys = ["day", "jobs", "which", "trade", "worth", "ai", "after", "data", "price"];
+const linkedin = "https://www.linkedin.com/in/robin-prause-330666278";
 const port = Number(process.env.PORT) || 4321;
 const host = "0.0.0.0";
 
@@ -89,13 +105,99 @@ function render(source, lang, extra = {}) {
 
 function pageFor(pathname) {
   const path = pathname.length > 1 && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
-  if (path === "/" || path === "/index.html") return { lang: "en", name: "home" };
-  if (path === "/de") return { lang: "de", name: "home" };
+  if (path === "/" || path === "/index.html") return { lang: "en", name: "offer" };
+  if (path === "/de") return { lang: "de", name: "offer" };
+  if (path === "/cv") return { lang: "en", name: "cv" };
+  if (path === "/de/lebenslauf") return { lang: "de", name: "cv" };
   if (path === "/impressum") return { lang: "en", name: "impressum" };
   if (path === "/de/impressum") return { lang: "de", name: "impressum" };
   if (path === "/datenschutz") return { lang: "en", name: "privacy" };
   if (path === "/de/datenschutz") return { lang: "de", name: "privacy" };
   return null;
+}
+
+function seoFields(name, lang) {
+  return {
+    site,
+    canonical: site + paths[name][lang],
+    "alt.en": site + paths[name].en,
+    "alt.de": site + paths[name].de,
+  };
+}
+
+function person(lang) {
+  return {
+    "@type": "Person",
+    "@id": `${site}/#person`,
+    name: "Robin Prause",
+    jobTitle: "CTO",
+    url: site + paths.cv[lang],
+    image: `${site}/portrait.jpg`,
+    email: "mailto:mail@robin-prause.de",
+    address: { "@type": "PostalAddress", addressLocality: "Rodgau", addressRegion: "Hessen", addressCountry: "DE" },
+    sameAs: [linkedin],
+  };
+}
+
+function structuredData(name, lang) {
+  const flat = catalogs[lang] ?? catalogs.en;
+  let graph;
+  if (name === "offer") {
+    graph = [
+      {
+        "@type": "ProfessionalService",
+        "@id": `${site}/#service`,
+        name: `Robin Prause · ${flat["offer.service"]}`,
+        description: flat["offer.description"],
+        url: site + paths.offer[lang],
+        image: `${site}/portrait.jpg`,
+        email: "mailto:mail@robin-prause.de",
+        address: { "@type": "PostalAddress", addressLocality: "Rodgau", addressRegion: "Hessen", addressCountry: "DE" },
+        areaServed: [
+          { "@type": "City", name: "Frankfurt am Main" },
+          { "@type": "City", name: "Rodgau" },
+          { "@type": "City", name: "Offenbach am Main" },
+          { "@type": "City", name: "Darmstadt" },
+          { "@type": "AdministrativeArea", name: "Rhein-Main" },
+        ],
+        knowsLanguage: ["de", "en"],
+        founder: { "@id": `${site}/#person` },
+      },
+      person(lang),
+      {
+        "@type": "FAQPage",
+        mainEntity: faqKeys.map((key) => ({
+          "@type": "Question",
+          name: flat[`offer.faq.${key}.q`],
+          acceptedAnswer: { "@type": "Answer", text: flat[`offer.faq.${key}.a`] },
+        })),
+      },
+    ];
+  } else if (name === "cv") {
+    graph = [{ "@type": "ProfilePage", url: site + paths.cv[lang], mainEntity: person(lang) }];
+  } else {
+    return "";
+  }
+  const json = JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replaceAll("<", "\\u003c");
+  return `<script type="application/ld+json">${json}</script>`;
+}
+
+function sitemap() {
+  const urls = indexed.flatMap((name) =>
+    ["en", "de"].map(
+      (lang) => `  <url>
+    <loc>${site}${paths[name][lang]}</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="${site}${paths[name].en}"/>
+    <xhtml:link rel="alternate" hreflang="de" href="${site}${paths[name].de}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${site}${paths[name].en}"/>
+  </url>`,
+    ),
+  );
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${urls.join("\n")}
+</urlset>
+`;
 }
 
 function errorLanguage(pathname) {
@@ -176,19 +278,19 @@ function readBody(req) {
   });
 }
 
-function redirectContact(res, lang, sent) {
-  const path = lang === "de" ? "/de" : "/";
+function redirectContact(res, lang, sent, back) {
+  const path = formPages.has(back) ? back : lang === "de" ? "/de" : "/";
   res.writeHead(303, { Location: `${path}?sent=${sent}#kontakt`, "Cache-Control": "no-cache" });
   res.end();
 }
 
-function replyContact(req, res, lang, sent) {
+function replyContact(req, res, lang, sent, back = "") {
   const accept = req.headers.accept;
   if (typeof accept === "string" && accept.includes("application/json")) {
     send(res, 200, JSON.stringify({ sent, note: formNote(lang, sent) }), "application/json; charset=utf-8");
     return;
   }
-  redirectContact(res, lang, sent);
+  redirectContact(res, lang, sent, back);
 }
 
 async function receiveContact(req, res) {
@@ -201,29 +303,30 @@ async function receiveContact(req, res) {
   }
   const fields = new URLSearchParams(raw);
   const lang = fields.get("lang") === "de" ? "de" : "en";
+  const back = fields.get("back") || "";
   if ((fields.get("website") || "").trim()) {
-    replyContact(req, res, lang, "ok");
+    replyContact(req, res, lang, "ok", back);
     return;
   }
   const name = singleLine(fields.get("name") || "");
   const email = singleLine(fields.get("email") || "");
   const message = (fields.get("message") || "").replaceAll("\r\n", "\n").trim();
   if (!validContact(name, email, message) || !allowContact(clientIp(req))) {
-    replyContact(req, res, lang, "fail");
+    replyContact(req, res, lang, "fail", back);
     return;
   }
   if (!mailConfigured()) {
-    replyContact(req, res, lang, "setup");
+    replyContact(req, res, lang, "setup", back);
     return;
   }
   try {
     await sendContact({ name, email, message });
   } catch (error) {
     console.error("contact send failed", error instanceof Error ? error.message : error);
-    replyContact(req, res, lang, "fail");
+    replyContact(req, res, lang, "fail", back);
     return;
   }
-  replyContact(req, res, lang, "ok");
+  replyContact(req, res, lang, "ok", back);
 }
 
 function formNote(lang, sent) {
@@ -259,11 +362,28 @@ const server = createServer((req, res) => {
     return;
   }
 
+  if (pathname === "/sitemap.xml") {
+    send(res, 200, sitemap(), "application/xml; charset=utf-8");
+    return;
+  }
+  if (pathname === "/robots.txt") {
+    send(res, 200, `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`);
+    return;
+  }
+
+  const target = moved.get(pathname.length > 1 && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname);
+  if (target) {
+    res.writeHead(301, { Location: target, "Cache-Control": "no-cache" });
+    res.end();
+    return;
+  }
+
   const page = pageFor(pathname);
   if (page) {
     const sent = new URL(req.url, "http://localhost").searchParams.get("sent");
-    const extra = page.name === "home" ? { "form.note": formNote(page.lang, sent) } : {};
-    const body = render(pages[page.name], page.lang, extra);
+    const extra = seoFields(page.name, page.lang);
+    if (page.name === "cv" || page.name === "offer") extra["form.note"] = formNote(page.lang, sent);
+    const body = render(pages[page.name], page.lang, extra).replace("<!--ld-->", () => structuredData(page.name, page.lang));
     const language = page.lang;
     res.writeHead(200, {
       ...headers,
