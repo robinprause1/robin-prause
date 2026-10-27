@@ -1,8 +1,12 @@
-import { createReadStream, readFileSync, statSync } from "node:fs";
+import { createReadStream, existsSync, readFileSync, statSync } from "node:fs";
 import { createServer } from "node:http";
 import { extname, join, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { handleMcp } from "./mcp.js";
+import { mailConfigured, sendContact } from "./mail.js";
+
+const envFile = new URL("./.env", import.meta.url);
+if (existsSync(envFile)) process.loadEnvFile(envFile);
 
 const root = fileURLToPath(new URL("./public", import.meta.url));
 const template = readFileSync(new URL("./public/index.html", import.meta.url), "utf8");
@@ -74,11 +78,12 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;");
 }
 
-function render(source, lang) {
+function render(source, lang, extra = {}) {
   const flat = catalogs[lang] ?? catalogs.en;
   return source.replace(/\{\{([a-zA-Z0-9.]+)\}\}/g, (match, key) => {
-    if (!Object.hasOwn(flat, key)) return match;
-    return escapeHtml(flat[key]);
+    const value = Object.hasOwn(extra, key) ? extra[key] : flat[key];
+    if (value === undefined) return match;
+    return escapeHtml(String(value));
   });
 }
 
@@ -123,6 +128,112 @@ function send(res, status, body, type = "text/plain; charset=utf-8") {
   res.end(body);
 }
 
+const hits = new Map();
+
+function clientIp(req) {
+  const forwarded = req.headers["x-forwarded-for"];
+  if (typeof forwarded === "string" && forwarded.length > 0) return forwarded.split(",")[0].trim();
+  return req.socket.remoteAddress || "unknown";
+}
+
+function allowContact(ip) {
+  const now = Date.now();
+  const recent = (hits.get(ip) || []).filter((time) => now - time < 10 * 60 * 1000);
+  if (recent.length >= 5) {
+    hits.set(ip, recent);
+    return false;
+  }
+  recent.push(now);
+  hits.set(ip, recent);
+  return true;
+}
+
+function singleLine(value) {
+  return value.replace(/[\r\n]+/g, " ").trim();
+}
+
+function validContact(name, email, message) {
+  if (name.length < 1 || name.length > 80) return false;
+  if (message.length < 1 || message.length > 4000) return false;
+  return email.length <= 120 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function readBody(req) {
+  return new Promise((resolve, reject) => {
+    const chunks = [];
+    let size = 0;
+    req.on("data", (chunk) => {
+      size += chunk.length;
+      if (size > 20_000) {
+        reject(new Error("too big"));
+        req.destroy();
+        return;
+      }
+      chunks.push(chunk);
+    });
+    req.on("end", () => resolve(Buffer.concat(chunks).toString("utf8")));
+    req.on("error", reject);
+  });
+}
+
+function redirectContact(res, lang, sent) {
+  const path = lang === "de" ? "/de" : "/";
+  res.writeHead(303, { Location: `${path}?sent=${sent}#kontakt`, "Cache-Control": "no-cache" });
+  res.end();
+}
+
+function replyContact(req, res, lang, sent) {
+  const accept = req.headers.accept;
+  if (typeof accept === "string" && accept.includes("application/json")) {
+    send(res, 200, JSON.stringify({ sent, note: formNote(lang, sent) }), "application/json; charset=utf-8");
+    return;
+  }
+  redirectContact(res, lang, sent);
+}
+
+async function receiveContact(req, res) {
+  let raw = "";
+  try {
+    raw = await readBody(req);
+  } catch {
+    replyContact(req, res, "en", "fail");
+    return;
+  }
+  const fields = new URLSearchParams(raw);
+  const lang = fields.get("lang") === "de" ? "de" : "en";
+  if ((fields.get("website") || "").trim()) {
+    replyContact(req, res, lang, "ok");
+    return;
+  }
+  const name = singleLine(fields.get("name") || "");
+  const email = singleLine(fields.get("email") || "");
+  const message = (fields.get("message") || "").replaceAll("\r\n", "\n").trim();
+  if (!validContact(name, email, message) || !allowContact(clientIp(req))) {
+    replyContact(req, res, lang, "fail");
+    return;
+  }
+  if (!mailConfigured()) {
+    replyContact(req, res, lang, "setup");
+    return;
+  }
+  try {
+    await sendContact({ name, email, message });
+  } catch (error) {
+    console.error("contact send failed", error instanceof Error ? error.message : error);
+    replyContact(req, res, lang, "fail");
+    return;
+  }
+  replyContact(req, res, lang, "ok");
+}
+
+function formNote(lang, sent) {
+  const flat = catalogs[lang] ?? catalogs.en;
+  if (sent === "ok") return flat["form.sent"] ?? "";
+  if (sent === "fail") return flat["form.failed"] ?? "";
+  if (sent === "setup") return flat["form.setup"] ?? "";
+  return "";
+}
+
 const server = createServer((req, res) => {
   if (!req.url) {
     send(res, 400, "Bad request");
@@ -136,6 +247,13 @@ const server = createServer((req, res) => {
     });
     return;
   }
+  if (pathname === "/contact" && req.method === "POST") {
+    receiveContact(req, res).catch((error) => {
+      console.error(error);
+      if (!res.headersSent) send(res, 500, "Error");
+    });
+    return;
+  }
   if (req.method !== "GET" && req.method !== "HEAD") {
     send(res, 405, "Method not allowed");
     return;
@@ -143,7 +261,9 @@ const server = createServer((req, res) => {
 
   const page = pageFor(pathname);
   if (page) {
-    const body = render(pages[page.name], page.lang);
+    const sent = new URL(req.url, "http://localhost").searchParams.get("sent");
+    const extra = page.name === "home" ? { "form.note": formNote(page.lang, sent) } : {};
+    const body = render(pages[page.name], page.lang, extra);
     const language = page.lang;
     res.writeHead(200, {
       ...headers,

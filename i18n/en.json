@@ -54,6 +54,16 @@
     "year": "2026",
     "top": "Top"
   },
+  "form": {
+    "note": "",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "sent": "Thanks. The message is on its way.",
+    "failed": "That did not go through. Write directly to mail@robin-prause.de.",
+    "setup": "This server does not have the mailbox credentials yet."
+  },
   "orbit": {
     "platforms": "Marketplace platforms",
     "payments": "Split payments",
@@ -251,7 +261,7 @@
     "storageTitle": "Cookies and storage on your device",
     "storage": "This site sets no cookies. There is no analytics and no advertising. Fonts are loaded from this site, not from another provider. If you choose Light or Dark, that choice is stored on your device under the name prause-theme. The reading depth is stored for the browser tab under the name prause-depth and is dropped when the tab closes. The legal basis is section 25 (2) TDDDG: the storage exists for a setting you switch on yourself.",
     "mailTitle": "Email",
-    "mail": "The mail link opens your own mail program. This site does not receive the message and does not store it.",
+    "mail": "The form sends your name, email address, and message to mail@robin-prause.de. This site does not store the message. It passes through the Render server in Frankfurt to the Hostinger mailbox, where it stays until I delete it. The basis is Article 6 (1) (b) GDPR when you ask about working together, otherwise Article 6 (1) (f) GDPR so I can answer. The mail link next to the form still opens your own mail program.",
     "rightsTitle": "Your rights",
     "rights": "You can ask for access, correction, deletion and restriction, and you can object to processing that rests on legitimate interest. You can also lodge a complaint with a supervisory authority.",
     "authorityTitle": "Supervisory authority",

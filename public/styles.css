@@ -1180,6 +1180,75 @@ html[data-theme="dark"] .doc-file {
   background: var(--accent);
 }
 
+.contact {
+  display: grid;
+  gap: 1.1rem;
+  max-width: 36rem;
+  margin-top: 2.5rem;
+}
+
+.contact label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact label span {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  margin: 0;
+  padding: 0.45rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+}
+
+.contact textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.contact button {
+  justify-self: start;
+  margin-top: 0.25rem;
+  padding: 0.7rem 1.25rem;
+  border: 0;
+  background: var(--ink);
+  color: var(--bg);
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.form-note {
+  margin: 0;
+  color: var(--accent);
+}
+
+.form-note:empty {
+  display: none;
+}
+
+.hp {
+  position: absolute;
+  left: -9999px;
+  height: 0;
+  overflow: hidden;
+}
+
 .foot-row {
   display: flex;
   flex-wrap: wrap;

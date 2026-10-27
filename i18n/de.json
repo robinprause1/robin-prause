@@ -54,6 +54,16 @@
     "year": "2026",
     "top": "Nach oben"
   },
+  "form": {
+    "note": "",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "send": "Senden",
+    "sent": "Danke. Die Nachricht ist unterwegs.",
+    "failed": "Das hat nicht geklappt. Schreib direkt an mail@robin-prause.de.",
+    "setup": "Das Postfach ist auf diesem Server noch nicht hinterlegt."
+  },
   "orbit": {
     "platforms": "Marktplatz-Plattformen",
     "payments": "Split-Payments",
@@ -251,7 +261,7 @@
     "storageTitle": "Cookies und Speicher auf dem Gerät",
     "storage": "Diese Seite setzt keine Cookies. Es gibt kein Analysewerkzeug und keine Werbung. Die Schriften kommen von dieser Seite, nicht von einem anderen Anbieter. Wenn du Hell oder Dunkel wählst, liegt die Wahl auf deinem Gerät unter dem Namen prause-theme. Die Lesetiefe liegt für den Browser-Tab unter dem Namen prause-depth und fällt weg, wenn du den Tab schließt. Rechtsgrundlage ist § 25 Abs. 2 TDDDG: der Speicher dient einer Einstellung, die du selbst einschaltest.",
     "mailTitle": "E-Mail",
-    "mail": "Der Mail-Link öffnet dein eigenes Mailprogramm. Diese Seite empfängt die Nachricht nicht und speichert sie nicht.",
+    "mail": "Das Formular schickt Name, E-Mail-Adresse und Nachricht an mail@robin-prause.de. Die Seite speichert die Nachricht nicht. Sie geht über den Server bei Render in Frankfurt an das Postfach bei Hostinger und bleibt dort, bis ich sie lösche. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, wenn es um eine mögliche Zusammenarbeit geht, sonst Art. 6 Abs. 1 lit. f DSGVO, um die Nachricht zu beantworten. Der Mail-Link daneben öffnet weiterhin dein eigenes Mailprogramm.",
     "rightsTitle": "Deine Rechte",
     "rights": "Du kannst Auskunft, Berichtigung, Löschung und Einschränkung verlangen und der Verarbeitung auf Grundlage des berechtigten Interesses widersprechen. Du kannst dich außerdem bei einer Aufsichtsbehörde beschweren.",
     "authorityTitle": "Aufsichtsbehörde",
