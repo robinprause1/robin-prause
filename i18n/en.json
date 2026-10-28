@@ -223,18 +223,37 @@
   },
   "offer": {
     "meta": "AI consulting for small businesses in Rhine-Main | Robin Prause",
-    "description": "Less office work for small businesses in Frankfurt and Rhine-Main. I come along, find what eats your time and set up AI tools you can run yourself.",
+    "description": "More time for small businesses in Frankfurt and Rhine-Main. I win back the hours that drain away in the office, with AI tools in your name. Once, or by your side for the long run.",
     "href": "/",
     "teaser": "Consulting for small businesses",
     "kicker": "CTO know-how and AI for small businesses · Rhine-Main",
     "claim": "More time for what you actually started out to do.",
-    "lede": "Quotes on Sunday, emails after hours? I find the work that takes the most time and set it up so it runs on the side.",
+    "lede": "Quotes on Sunday, emails after hours? I win back the hours that drain away in the office. So you reply faster than others, take on more jobs and are actually off in the evening.",
     "cta": "Tell me what piles up",
     "ctaHint": "No obligation. The list is yours, even without a job.",
     "mastCta": "Get in touch",
+    "gain": {
+      "title": "What you gain",
+      "lead": "Many businesses already let AI prepare their routine work. Every week you wait costs the same hours again.",
+      "hours": {
+        "big": "100+",
+        "title": "hours back every year",
+        "text": "That is what a single task brings if it eats two hours a week today. More than two working weeks, every year."
+      },
+      "reply": {
+        "big": "Today",
+        "title": "Replies instead of a backlog",
+        "text": "Requests are sorted, quotes are prepared. Whoever replies first often gets the job."
+      },
+      "evening": {
+        "big": "Off",
+        "title": "Evenings that are evenings",
+        "text": "No Sunday at the desk, no typing up notes at night. The time belongs to you and your people again."
+      }
+    },
     "steps": {
       "title": "How it works",
-      "lead": "No risk at the start, no dependency at the end.",
+      "lead": "No risk at the start. At the end you decide whether you carry on alone or I stay on.",
       "one": {
         "when": "Step 1",
         "title": "I come along",
@@ -253,12 +272,16 @@
       "four": {
         "when": "Step 4",
         "title": "Handover",
-        "text": "Once you can do it on your own, I leave. No subscription, no dependency. What stays is the time you get back."
+        "text": "You can run it, change it and fix it yourselves. Everything is in your name, with no dependency. What stays is the time you get back."
+      },
+      "five": {
+        "title": "Optional: I stay on",
+        "text": "For a fixed monthly sum I remain your contact. I keep everything running, take on the next task and build a tool of your own where ready-made ones fall short: an app for the team, an assistant that prepares work, or a link between your programs. The code is yours."
       }
     },
     "tasks": {
       "title": "What piles up",
-      "lead": "Small things that cost a few minutes every day and add up to weeks over a year. I see what it is for you when I come along.",
+      "lead": "Small things that cost a few minutes every day. Over a year that adds up to weeks missing for customers, jobs and time off. I see what it is for you when I come along.",
       "office": "Office",
       "field": "On site",
       "home": "At home",
@@ -302,7 +325,7 @@
         "when": "In person",
         "big": "1 contact",
         "title": "The one who comes along also sets it up",
-        "text": "No sales team, no agency, no interns. I come along, set it up, hand it over and explain everything without jargon. You have one contact from start to finish."
+        "text": "No sales team, no agency, no interns. I come along, set it up, hand it over and explain everything without jargon. You have one contact for as long as you like."
       },
       "ai": {
         "when": "Since 2023",
@@ -335,17 +358,17 @@
       "also": {
         "when": "Also fits",
         "title": "Freelancers and private people",
-        "text": "When it is about one clear task you carry on with yourself afterwards."
+        "text": "When it is about one clear task: your own inbox, your paperwork or your smart home."
       },
-      "no": {
-        "when": "Doesn't fit",
-        "title": "Ongoing support",
-        "text": "If you are looking for someone who is always on call or fills a position, I am the wrong person."
+      "ongoing": {
+        "when": "And after",
+        "title": "Anyone who wants someone by their side",
+        "text": "After the first job I stay on if you like, for a monthly sum. That way one relief turns into the next, month after month."
       }
     },
     "band": {
-      "title": "Sounds like your week?",
-      "text": "Two or three sentences are enough. I reply personally and we see if it fits."
+      "title": "How many hours was it this week?",
+      "text": "Every week without a fix costs them again. Send me two or three sentences, I reply personally."
     },
     "faq": {
       "title": "Questions",
@@ -368,7 +391,7 @@
       },
       "worth": {
         "q": "How do I know it was worth it?",
-        "a": "Beforehand we write down how long the task takes today. After the handover we check how long it takes now."
+        "a": "Beforehand we write down how long the task takes today. After the handover we measure again. Then it is there in black and white how many hours you got back."
       },
       "ai": {
         "q": "Do I need to know about AI?",
@@ -376,7 +399,7 @@
       },
       "after": {
         "q": "What if something stops working later?",
-        "a": "I only set up what you can change and fix yourselves, and I show you how at the handover. After that I am no longer involved."
+        "a": "Whatever I set up with ready-made tools, you can change and fix yourselves. I show you how at the handover. If you would rather not deal with it, book me for a fixed monthly sum. Then I keep everything running, including a tool of your own."
       },
       "data": {
         "q": "Where does our data live?",
@@ -384,7 +407,7 @@
       },
       "price": {
         "q": "What does it cost?",
-        "a": "A fixed sum for exactly one task. I name it after I have come along, before I start."
+        "a": "A fixed sum for exactly one task. I name it after I have come along, before I start. If I stay on afterwards, it is a fixed monthly sum."
       }
     },
     "foot": "Tell me in two or three sentences what piles up for you. I will reply personally.",

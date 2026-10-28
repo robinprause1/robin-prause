@@ -223,18 +223,37 @@
   },
   "offer": {
     "meta": "KI-Beratung für kleine Betriebe in Rhein-Main | Robin Prause",
-    "description": "Weniger Büro für kleine Betriebe in Frankfurt und Rhein-Main. Ich begleite euch, finde die Zeitfresser und richte KI-Werkzeuge ein, die ihr selbst pflegt.",
+    "description": "Mehr Zeit für kleine Betriebe in Frankfurt und Rhein-Main. Ich hole euch die Stunden zurück, die im Büro versickern, mit KI-Werkzeugen auf euren Namen. Einmalig oder dauerhaft an eurer Seite.",
     "href": "/de",
     "teaser": "Beratung für kleine Betriebe",
     "kicker": "CTO-Wissen und KI für kleine Betriebe · Rhein-Main",
     "claim": "Mehr Zeit für das, wofür du eigentlich angefangen hast.",
-    "lede": "Angebote am Sonntag, Mails nach Feierabend? Ich finde die Arbeit, die euch am meisten Zeit raubt, und richte sie so ein, dass sie nebenbei läuft.",
+    "lede": "Angebote am Sonntag, Mails nach Feierabend? Ich hole euch die Stunden zurück, die im Büro versickern. Damit ihr schneller antwortet als andere, mehr Aufträge schafft und abends wirklich frei habt.",
     "cta": "Schreib mir, was liegen bleibt",
     "ctaHint": "Unverbindlich. Die Liste gehört dir, auch ohne Auftrag.",
     "mastCta": "Anfragen",
+    "gain": {
+      "title": "Was ihr gewinnt",
+      "lead": "Viele Betriebe lassen sich Routinearbeit längst von KI vorbereiten. Jede Woche, die ihr wartet, kostet dieselben Stunden noch einmal.",
+      "hours": {
+        "big": "100+",
+        "title": "Stunden im Jahr zurück",
+        "text": "So viel bringt schon eine Aufgabe, die heute zwei Stunden pro Woche frisst. Das sind mehr als zwei Arbeitswochen, jedes Jahr."
+      },
+      "reply": {
+        "big": "Heute",
+        "title": "Antwort statt Warteschlange",
+        "text": "Anfragen sind sortiert, Angebote vorbereitet. Wer zuerst antwortet, bekommt oft den Auftrag."
+      },
+      "evening": {
+        "big": "Frei",
+        "title": "Feierabend, der einer ist",
+        "text": "Kein Sonntag am Schreibtisch, kein Abtippen am Abend. Die Zeit gehört wieder dir und deinen Leuten."
+      }
+    },
     "steps": {
       "title": "So läuft es",
-      "lead": "Kein Risiko am Anfang, keine Abhängigkeit am Ende.",
+      "lead": "Kein Risiko am Anfang. Am Ende entscheidet ihr, ob ihr allein weitermacht oder ich dranbleibe.",
       "one": {
         "when": "Schritt 1",
         "title": "Ich begleite euch",
@@ -253,12 +272,16 @@
       "four": {
         "when": "Schritt 4",
         "title": "Übergabe",
-        "text": "Wenn ihr es allein könnt, bin ich weg. Kein Abo, keine Abhängigkeit. Was bleibt, ist die Zeit, die ihr zurückbekommt."
+        "text": "Ihr könnt es allein ausführen, ändern und reparieren. Alles läuft auf euren Namen, ohne Abhängigkeit. Was bleibt, ist die Zeit, die ihr zurückbekommt."
+      },
+      "five": {
+        "title": "Optional: Ich bleibe dran",
+        "text": "Für einen festen Monatsbetrag bleibe ich euer Ansprechpartner. Ich halte alles am Laufen, nehme mir die nächste Aufgabe vor und baue ein eigenes Werkzeug, wo fertige nicht reichen: eine App fürs Team, einen Assistenten, der Arbeit vorbereitet, oder eine Verbindung zwischen euren Programmen. Der Code gehört euch."
       }
     },
     "tasks": {
       "title": "Was liegen bleibt",
-      "lead": "Kleine Dinge, die jeden Tag ein paar Minuten kosten und sich übers Jahr zu Wochen summieren. Was es bei euch ist, sehe ich, wenn ich euch begleite.",
+      "lead": "Kleine Dinge, die jeden Tag ein paar Minuten kosten. Übers Jahr sind das Wochen, die für Kunden, Aufträge und Feierabend fehlen. Was es bei euch ist, sehe ich, wenn ich euch begleite.",
       "office": "Büro",
       "field": "Draußen",
       "home": "Zu Hause",
@@ -302,7 +325,7 @@
         "when": "Persönlich",
         "big": "1 Ansprechpartner",
         "title": "Wer begleitet, richtet es auch ein",
-        "text": "Kein Vertrieb, keine Agentur, keine Praktikanten. Ich begleite euch, richte ein, übergebe und erkläre alles ohne Fachwörter. Du hast von Anfang bis Ende einen Ansprechpartner."
+        "text": "Kein Vertrieb, keine Agentur, keine Praktikanten. Ich begleite euch, richte ein, übergebe und erkläre alles ohne Fachwörter. Du hast einen Ansprechpartner, so lange du willst."
       },
       "ai": {
         "when": "Seit 2023",
@@ -335,17 +358,17 @@
       "also": {
         "when": "Passt auch",
         "title": "Selbstständige und Privatleute",
-        "text": "Wenn es um eine klare Aufgabe geht, die du danach allein weiterführst."
+        "text": "Wenn es um eine klare Aufgabe geht: der eigene Posteingang, der Papierkram oder das Smart Home."
       },
-      "no": {
-        "when": "Passt nicht",
-        "title": "Dauerbetreuung",
-        "text": "Wer jemanden sucht, der dauerhaft ansprechbar ist oder eine Stelle besetzt, ist bei mir falsch."
+      "ongoing": {
+        "when": "Und danach",
+        "title": "Wer jemanden dauerhaft an der Seite will",
+        "text": "Nach dem ersten Auftrag bleibe ich auf Wunsch fest dabei, zum Monatsbetrag. So wird aus einer Entlastung Monat für Monat die nächste."
       }
     },
     "band": {
-      "title": "Klingt nach eurem Alltag?",
-      "text": "Zwei, drei Sätze reichen. Ich melde mich persönlich und wir schauen, ob es passt."
+      "title": "Wie viele Stunden waren es diese Woche?",
+      "text": "Jede Woche ohne Lösung kostet sie noch einmal. Schreib mir zwei, drei Sätze, ich melde mich persönlich."
     },
     "faq": {
       "title": "Fragen",
@@ -368,7 +391,7 @@
       },
       "worth": {
         "q": "Woran merke ich, dass es sich gelohnt hat?",
-        "a": "Vorher schreiben wir auf, wie lange die Aufgabe heute dauert. Nach der Übergabe schauen wir nach, wie lange sie jetzt dauert."
+        "a": "Vorher schreiben wir auf, wie lange die Aufgabe heute dauert. Nach der Übergabe messen wir nach. Dann steht schwarz auf weiß da, wie viele Stunden ihr zurückhabt."
       },
       "ai": {
         "q": "Muss ich mich mit KI auskennen?",
@@ -376,7 +399,7 @@
       },
       "after": {
         "q": "Was, wenn später etwas nicht mehr läuft?",
-        "a": "Ich richte nur ein, was ihr selbst ändern und reparieren könnt, und zeige bei der Übergabe, wie. Danach bin ich nicht mehr dabei."
+        "a": "Was ich mit fertigen Werkzeugen einrichte, könnt ihr selbst ändern und reparieren. Das zeige ich bei der Übergabe. Wer sich darum nicht kümmern will, bucht mich zum festen Monatsbetrag. Dann halte ich alles am Laufen, auch ein eigenes Werkzeug."
       },
       "data": {
         "q": "Wo liegen unsere Daten?",
@@ -384,7 +407,7 @@
       },
       "price": {
         "q": "Was kostet das?",
-        "a": "Eine feste Summe für genau eine Aufgabe. Ich nenne sie, nachdem ich euch begleitet habe, und bevor ich anfange."
+        "a": "Eine feste Summe für genau eine Aufgabe. Ich nenne sie, nachdem ich euch begleitet habe, und bevor ich anfange. Wenn ich danach dranbleibe, ist es ein fester Monatsbetrag."
       }
     },
     "foot": "Erzähl mir in zwei, drei Sätzen, was bei euch liegen bleibt. Ich melde mich persönlich.",

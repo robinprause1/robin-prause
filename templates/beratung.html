@@ -25,7 +25,7 @@
   <!--ld-->
   <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
   <link rel="preload" href="/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=62">
+  <link rel="stylesheet" href="/styles.css?v=65">
 </head>
 <body>
   <a class="skip" href="#ablauf-title">{{skip}}</a>
@@ -74,9 +74,36 @@
       </p>
     </section>
 
-    <section id="ablauf" class="chapter page" aria-labelledby="ablauf-title">
+    <section id="gewinn" class="chapter page is-wide" aria-labelledby="gewinn-title">
       <div class="section-head">
         <p class="num" aria-hidden="true">01</p>
+        <h2 id="gewinn-title">{{offer.gain.title}}</h2>
+        <p class="lead">{{offer.gain.lead}}</p>
+      </div>
+      <div class="section-body">
+        <ul class="gains">
+          <li class="gain">
+            <p class="gain-big">{{offer.gain.hours.big}}</p>
+            <h3>{{offer.gain.hours.title}}</h3>
+            <p>{{offer.gain.hours.text}}</p>
+          </li>
+          <li class="gain">
+            <p class="gain-big">{{offer.gain.reply.big}}</p>
+            <h3>{{offer.gain.reply.title}}</h3>
+            <p>{{offer.gain.reply.text}}</p>
+          </li>
+          <li class="gain">
+            <p class="gain-big">{{offer.gain.evening.big}}</p>
+            <h3>{{offer.gain.evening.title}}</h3>
+            <p>{{offer.gain.evening.text}}</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="ablauf" class="chapter page" aria-labelledby="ablauf-title">
+      <div class="section-head">
+        <p class="num" aria-hidden="true">02</p>
         <h2 id="ablauf-title">{{offer.steps.title}}</h2>
         <p class="lead">{{offer.steps.lead}}</p>
       </div>
@@ -102,13 +129,18 @@
             <h3>{{offer.steps.four.title}}</h3>
             <p>{{offer.steps.four.text}}</p>
           </li>
+          <li class="step is-optional">
+            <span class="step-num" aria-hidden="true">5</span>
+            <h3>{{offer.steps.five.title}}</h3>
+            <p>{{offer.steps.five.text}}</p>
+          </li>
         </ol>
       </div>
     </section>
 
     <section id="aufgaben" class="chapter page" aria-labelledby="aufgaben-title">
       <div class="section-head">
-        <p class="num" aria-hidden="true">02</p>
+        <p class="num" aria-hidden="true">03</p>
         <h2 id="aufgaben-title">{{offer.tasks.title}}</h2>
         <p class="lead">{{offer.tasks.lead}}</p>
       </div>
@@ -150,7 +182,7 @@
 
     <section id="warum" class="chapter page is-wide" aria-labelledby="warum-title">
       <div class="section-head">
-        <p class="num" aria-hidden="true">03</p>
+        <p class="num" aria-hidden="true">04</p>
         <h2 id="warum-title">{{offer.why.title}}</h2>
         <p class="lead">{{offer.why.lead}}</p>
       </div>
@@ -205,7 +237,7 @@
 
     <section id="fuer-wen" class="chapter page" aria-labelledby="fuer-wen-title">
       <div class="section-head">
-        <p class="num" aria-hidden="true">04</p>
+        <p class="num" aria-hidden="true">05</p>
         <h2 id="fuer-wen-title">{{offer.fit.title}}</h2>
         <p class="lead">{{offer.fit.lead}}</p>
       </div>
@@ -221,10 +253,10 @@
             <h3>{{offer.fit.also.title}}</h3>
             <p>{{offer.fit.also.text}}</p>
           </li>
-          <li class="fit-item is-no">
-            <p class="fit-label">{{offer.fit.no.when}}</p>
-            <h3>{{offer.fit.no.title}}</h3>
-            <p>{{offer.fit.no.text}}</p>
+          <li class="fit-item is-yes">
+            <p class="fit-label">{{offer.fit.ongoing.when}}</p>
+            <h3>{{offer.fit.ongoing.title}}</h3>
+            <p>{{offer.fit.ongoing.text}}</p>
           </li>
         </ul>
       </div>
@@ -240,7 +272,7 @@
 
     <section id="fragen" class="chapter page" aria-labelledby="fragen-title">
       <div class="section-head">
-        <p class="num" aria-hidden="true">05</p>
+        <p class="num" aria-hidden="true">06</p>
         <h2 id="fragen-title">{{offer.faq.title}}</h2>
         <p class="lead">{{offer.faq.lead}}</p>
       </div>
