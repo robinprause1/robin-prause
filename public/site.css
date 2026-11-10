@@ -1,4 +1,4 @@
-/* Home page: the offer for small businesses. The CV and legal pages use styles.css. */
+/* One stylesheet for the whole site: offer page, CV, legal pages and the 404. */
 
 @font-face {
   font-family: "Schibsted Grotesk";
@@ -36,7 +36,7 @@
   --node: #19234d;
   --node-line: #313d70;
   --ok: #5ad68f;
-  --top: 4rem;
+  --top: 4.5rem;
   --gutter: clamp(1.1rem, 4vw, 3rem);
   --radius: 14px;
   --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
@@ -199,88 +199,169 @@ ol {
 
 /* ---------- Top bar ---------- */
 
+/* The bar and the hero are one navy block; the bar stays navy over the light sections. */
 .top {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: var(--bg);
+  background: var(--night);
+  color: var(--night-ink);
 }
 
 .top-row {
   display: flex;
   align-items: center;
-  gap: 1rem 2rem;
+  gap: 0.75rem;
   height: var(--top);
 }
 
 .brand {
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: -0.02em;
+  margin-right: auto;
+  font-weight: 750;
+  font-size: 1.2rem;
+  letter-spacing: -0.035em;
   text-decoration: none;
   white-space: nowrap;
 }
 
+.top-menu {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-left: clamp(1rem, 3vw, 3rem);
+}
+
 .top-nav {
   display: flex;
-  gap: 0.25rem;
+  gap: 0.15rem;
   margin-inline: auto;
+  padding: 0.25rem;
+  border-radius: 12px;
+  background: rgb(255 255 255 / 0.07);
 }
 
 .top-nav a {
-  padding: 0.45rem 0.7rem;
-  border-radius: 8px;
-  color: var(--muted);
+  padding: 0.45rem 0.85rem;
+  border-radius: 9px;
+  color: var(--night-muted);
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
-  transition: color 140ms ease, background-color 140ms ease;
+  white-space: nowrap;
+  transition: color 160ms ease, background-color 160ms ease;
 }
 
 .top-nav a:hover {
-  background: var(--tint);
-  color: var(--ink);
+  color: var(--night-ink);
 }
 
-.top-tools {
+.top-nav a.is-here {
+  background: var(--night-ink);
+  color: var(--night);
+}
+
+.top-prefs {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
+}
+
+.top-row > .top-prefs {
   margin-left: auto;
-  font-size: 0.88rem;
 }
 
-.top-nav + .top-tools {
-  margin-left: 0;
-}
-
-.theme,
 .langs {
   display: inline-flex;
-  gap: 0.1rem;
+  padding: 0.2rem;
+  border-radius: 10px;
+  background: rgb(255 255 255 / 0.07);
 }
 
-.theme button,
 .langs a {
-  padding: 0.3rem 0.4rem;
-  border: 0;
-  border-radius: 6px;
-  background: transparent;
-  color: var(--muted);
-  font: inherit;
+  padding: 0.3rem 0.55rem;
+  border-radius: 7px;
+  color: var(--night-muted);
+  font-size: 0.85rem;
+  font-weight: 650;
   text-decoration: none;
-  cursor: pointer;
 }
 
-.theme button:hover,
 .langs a:hover {
-  color: var(--ink);
+  color: var(--night-ink);
 }
 
-.theme button[aria-checked="true"],
 .langs a.is-current {
-  color: var(--ink);
-  font-weight: 700;
+  background: rgb(255 255 255 / 0.14);
+  color: var(--night-ink);
+}
+
+.theme-btn,
+.menu-btn {
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: rgb(255 255 255 / 0.07);
+  color: var(--night-ink);
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.theme-btn:hover,
+.menu-btn:hover {
+  background: rgb(255 255 255 / 0.14);
+}
+
+.theme-btn svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Show the theme you would switch to. */
+.theme-btn .is-sun,
+html[data-theme="dark"] .theme-btn .is-moon {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-btn .is-sun {
+  display: block;
+}
+
+.top .btn {
+  background: var(--mark);
+  color: var(--mark-ink);
+}
+
+.menu-btn {
+  display: none;
+  align-content: center;
+  gap: 0.4rem;
+}
+
+.menu-btn i {
+  width: 1.1rem;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 200ms ease;
+}
+
+.menu-btn[aria-expanded="true"] i:first-child {
+  transform: translateY(0.26rem) rotate(45deg);
+}
+
+.menu-btn[aria-expanded="true"] i:last-child {
+  transform: translateY(-0.26rem) rotate(-45deg);
 }
 
 /* ---------- Hero ---------- */
@@ -871,15 +952,10 @@ h3 {
   font-size: 1.08rem;
 }
 
-/* Offers and prices */
+/* Lists of things that open */
 .groups {
   display: grid;
   gap: 0.5rem;
-}
-
-.group {
-  border-radius: var(--radius);
-  background: var(--bg);
 }
 
 summary {
@@ -889,26 +965,6 @@ summary {
 
 summary::-webkit-details-marker {
   display: none;
-}
-
-.group summary {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
-  align-items: center;
-  gap: 0.3rem 1.25rem;
-  padding: 1.25rem 1.5rem;
-  border-radius: var(--radius);
-}
-
-.group summary h3 {
-  font-size: clamp(1.15rem, 1.9vw, 1.5rem);
-  letter-spacing: -0.025em;
-}
-
-.group-from {
-  color: var(--muted);
-  font-size: 0.95rem;
-  text-align: right;
 }
 
 .chev {
@@ -923,52 +979,6 @@ summary::-webkit-details-marker {
 
 details[open] > summary .chev {
   transform: translateY(0.25rem) rotate(-135deg);
-}
-
-.group-lead {
-  max-width: 48rem;
-  padding: 0 1.5rem 0.9rem;
-  color: var(--muted);
-}
-
-.rows {
-  padding: 0 1.5rem 0.75rem;
-}
-
-.rows li {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: baseline;
-  gap: 0.3rem 2rem;
-  padding: 0.95rem 0;
-  border-top: 1px solid var(--line);
-}
-
-.rows h4 {
-  font-size: 1.05rem;
-  font-weight: 650;
-  line-height: 1.25;
-}
-
-.rows p {
-  max-width: 42rem;
-  margin-top: 0.2rem;
-  color: var(--muted);
-}
-
-.rows .row-price {
-  margin: 0;
-  color: var(--ink);
-  font-weight: 700;
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-}
-
-.price-note {
-  max-width: 44rem;
-  margin-top: 1.25rem;
-  color: var(--muted);
-  font-size: 0.95rem;
 }
 
 /* Data protection */
@@ -1192,6 +1202,303 @@ details[open] > summary .chev {
   color: var(--night-ink);
 }
 
+/* ---------- Footnote ---------- */
+
+.star {
+  margin-left: 0.1em;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.foot-note {
+  max-width: 62rem;
+  margin-bottom: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  scroll-margin-top: calc(var(--top) + 2rem);
+}
+
+/* ---------- CV ---------- */
+
+.cv-head {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+  align-items: center;
+  gap: 2rem clamp(2rem, 6vw, 5rem);
+}
+
+.cv-claim {
+  max-width: 22ch;
+  margin-top: 1.25rem;
+  font-weight: 650;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.cv-intro .hero-lede {
+  margin-top: 1rem;
+  color: var(--night-muted);
+}
+
+.cv-intro .actions {
+  margin-top: 1.75rem;
+}
+
+.cv-photo img {
+  display: block;
+  width: 100%;
+  max-width: 22rem;
+  height: auto;
+  margin-left: auto;
+  aspect-ratio: 4 / 5;
+  border-radius: 18px;
+  object-fit: cover;
+  object-position: 50% 18%;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+}
+
+.chips li {
+  padding: 0.45rem 0.8rem;
+  border-radius: 9px;
+  background: var(--node);
+  color: var(--night-muted);
+  font-size: 0.9rem;
+  font-weight: 550;
+}
+
+.line {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: 0.3rem 2rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius);
+  background: var(--tint);
+}
+
+.entry.is-now {
+  background: var(--night);
+  color: var(--night-ink);
+}
+
+.when {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.entry.is-now .when {
+  color: var(--mark);
+}
+
+.where {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.entry.is-now .where,
+.entry.is-now p {
+  color: var(--night-muted);
+}
+
+.entry.is-now .when {
+  color: var(--mark);
+}
+
+.entry h3 + .where {
+  margin-top: 0.15rem;
+}
+
+.entry .where + p {
+  max-width: 48rem;
+  margin-top: 0.6rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.25rem, 2.4vw, 1.9rem);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+
+.card-tag {
+  align-self: start;
+  padding: 0.2rem 0.6rem;
+  border-radius: 99px;
+  background: var(--mark);
+  color: var(--mark-ink);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.card h3 {
+  margin-top: 1rem;
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  letter-spacing: -0.03em;
+}
+
+.card .where {
+  margin-top: 0.2rem;
+}
+
+.card .where + p {
+  margin: 0.8rem 0 1.25rem;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
+.card-link {
+  margin-top: auto;
+}
+
+/* References, quoted in full */
+.reference {
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+
+.reference-head {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  padding: 1.1rem 1.5rem;
+  border-radius: var(--radius);
+}
+
+/* The marks are dark on transparent, so they sit on white in both themes. */
+.reference-logo {
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 9px;
+  background: #ffffff;
+  object-fit: contain;
+}
+
+.reference-chevron {
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 0 0.25rem 0.2rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 200ms ease;
+}
+
+.reference[open] .reference-chevron {
+  transform: translateY(0.25rem) rotate(-135deg);
+}
+
+.reference-body {
+  max-width: 50rem;
+  padding: 0.25rem 1.5rem 1.5rem;
+  color: var(--muted);
+}
+
+.reference-body p + p,
+.reference-body ul + p,
+.reference-body ul {
+  margin-top: 0.85rem;
+}
+
+.reference-body ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.reference-body li + li {
+  margin-top: 0.25rem;
+}
+
+/* ---------- Legal pages and 404 ---------- */
+
+.legal {
+  max-width: 46rem;
+  padding-block: clamp(2.5rem, 7vw, 5rem);
+}
+
+.legal h1 {
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.legal h2 {
+  margin: 2.25rem 0 0.6rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.legal p + p,
+.legal address + p {
+  margin-top: 0.8rem;
+}
+
+.legal address {
+  font-style: normal;
+}
+
+.legal a {
+  color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+.legal + .foot {
+  padding-top: 2.5rem;
+}
+
+.missing {
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--night);
+  color: var(--night-ink);
+}
+
+.missing h1 {
+  max-width: 14ch;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: clamp(2.6rem, 8vw, 6rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.missing h1 em {
+  color: var(--mark);
+  font-style: normal;
+}
+
+.missing .btn {
+  background: var(--mark);
+  color: var(--mark-ink);
+}
+
 /* ---------- Motion ---------- */
 
 [data-reveal].is-waiting {
@@ -1208,8 +1515,47 @@ details[open] > summary .chev {
 /* ---------- Narrower screens ---------- */
 
 @media (max-width: 1100px) {
-  .top-nav {
+  /* The menu drops down from the bar. */
+  .menu-btn {
+    display: grid;
+  }
+
+  .top-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     display: none;
+    margin: 0;
+    padding: 0.5rem var(--gutter) 1.5rem;
+    background: var(--night);
+    box-shadow: 0 24px 40px rgb(0 0 0 / 0.35);
+  }
+
+  .top.is-open .top-menu {
+    display: grid;
+    gap: 1.25rem;
+    justify-content: stretch;
+  }
+
+  .top-nav {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
+
+  .top-nav a {
+    padding: 0.7rem 0;
+    border-radius: 0;
+    color: var(--night-ink);
+    font-size: 1.35rem;
+    letter-spacing: -0.02em;
+  }
+
+  .top-nav a.is-here {
+    background: none;
+    color: var(--mark);
   }
 
   /* The workflow turns from a row into a column; the two results share the last row. */
@@ -1282,17 +1628,32 @@ details[open] > summary .chev {
   .about-photo img {
     max-width: 16rem;
   }
+
+  .cv-head {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cv-photo {
+    order: -1;
+  }
+
+  .cv-photo img {
+    max-width: 11rem;
+    margin-left: 0;
+    aspect-ratio: 1;
+  }
+
+  .cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .entry {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1.1rem 1.2rem;
+  }
 }
 
 @media (max-width: 640px) {
-  .theme {
-    display: none;
-  }
-
-  .top-tools {
-    gap: 0.6rem;
-  }
-
   .actions .btn {
     flex: 1 1 100%;
     justify-content: center;
@@ -1303,29 +1664,18 @@ details[open] > summary .chev {
     gap: 1.6rem;
   }
 
-  .group summary {
+  .reference-head {
     grid-template-columns: minmax(0, 1fr) auto;
-    padding: 1.1rem 1.2rem;
+    padding: 1rem 1.2rem;
   }
 
-  .group-from {
-    grid-column: 1;
-    grid-row: 2;
-    text-align: left;
+  .reference-logo {
+    grid-column: 1 / -1;
+    width: 6.5rem;
   }
 
-  .group summary .chev {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .group-lead,
-  .rows {
+  .reference-body {
     padding-inline: 1.2rem;
-  }
-
-  .rows li {
-    grid-template-columns: minmax(0, 1fr);
   }
 
   .more .btn {
@@ -1350,7 +1700,7 @@ details[open] > summary .chev {
   }
 
   .brand {
-    font-size: 0.98rem;
+    font-size: 1.05rem;
   }
 }
 

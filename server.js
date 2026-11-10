@@ -216,14 +216,15 @@ function notFound(lang) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{missing.title}} — Robin Prause</title>
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="/favicon.svg?v=6" type="image/svg+xml">
+  <link rel="stylesheet" href="/site.css?v=3">
 </head>
 <body>
-  <main class="page missing">
-    <p class="kicker">{{missing.kicker}}</p>
-    <h1>{{missing.title}}<br><em>{{missing.emph}}</em></h1>
-    <p class="lede"><a href="{{home}}">{{missing.back}}</a></p>
+  <main class="missing">
+    <div class="wrap">
+      <h1>{{missing.title}} <em>{{missing.emph}}</em></h1>
+      <p><a class="btn" href="{{home}}">{{missing.back}}</a></p>
+    </div>
   </main>
 </body>
 </html>`, lang);

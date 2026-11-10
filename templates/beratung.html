@@ -10,7 +10,7 @@
   <link rel="alternate" hreflang="de" href="{{alt.de}}">
   <link rel="alternate" hreflang="en" href="{{alt.en}}">
   <link rel="alternate" hreflang="x-default" href="{{alt.default}}">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#0b1020">
   <meta property="og:site_name" content="Robin Prause">
   <meta property="og:title" content="{{offer.meta}}">
   <meta property="og:description" content="{{offer.description}}">
@@ -23,9 +23,9 @@
   <meta property="og:image:alt" content="{{portrait.alt}}">
   <meta name="twitter:card" content="summary">
   <!--ld-->
-  <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg?v=6" type="image/svg+xml">
   <link rel="preload" href="/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/home.css?v=2">
+  <link rel="stylesheet" href="/site.css?v=3">
 </head>
 <body>
   <a class="skip" href="#inhalt">{{skip}}</a>
@@ -45,30 +45,35 @@
     <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h10M4 18h7"/></symbol>
     <symbol id="i-clip" viewBox="0 0 24 24"><path d="M8 5h8v3H8z"/><path d="M8 6H6a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-2M9 13h6M9 17h4"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
     <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
   </svg>
 
   <header class="top">
     <div class="wrap top-row">
       <a class="brand" href="{{home}}">Robin Prause</a>
-      <nav class="top-nav" aria-label="{{offer.nav.label}}">
-        <a href="#beispiele">{{offer.nav.top}}</a>
-        <a href="#ablauf">{{offer.nav.how}}</a>
-        <a href="#preise">{{offer.nav.prices}}</a>
-        <a href="#datenschutz">{{offer.nav.data}}</a>
-        <a href="#fragen">{{offer.nav.faq}}</a>
-      </nav>
-      <div class="top-tools">
-        <div class="theme" id="theme" role="radiogroup" aria-label="{{theme.label}}">
-          <button type="button" role="radio" aria-checked="false" data-theme-set="light">{{theme.light}}</button>
-          <button type="button" role="radio" aria-checked="false" data-theme-set="dark">{{theme.dark}}</button>
+      <div class="top-menu" id="menu">
+        <nav class="top-nav" aria-label="{{offer.nav.label}}">
+          <a href="#beispiele">{{offer.nav.top}}</a>
+          <a href="#ablauf">{{offer.nav.how}}</a>
+          <a href="#datenschutz">{{offer.nav.data}}</a>
+          <a href="#ueber">{{offer.nav.about}}</a>
+          <a href="#fragen">{{offer.nav.faq}}</a>
+        </nav>
+        <div class="top-prefs">
+          <span class="langs">
+            <a href="/" hreflang="de" lang="de" class="{{lang.de.current}}">DE</a>
+            <a href="/en" hreflang="en" lang="en" class="{{lang.en.current}}">EN</a>
+          </span>
+          <button type="button" class="theme-btn" data-theme-toggle aria-label="{{theme.toggle}}">
+            <svg class="is-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+            <svg class="is-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+          </button>
         </div>
-        <span class="langs">
-          <a href="/" hreflang="de" lang="de" class="{{lang.de.current}}">DE</a>
-          <a href="/en" hreflang="en" lang="en" class="{{lang.en.current}}">EN</a>
-        </span>
-        <a class="btn btn-small" href="#kontakt">{{offer.nav.cta}}</a>
       </div>
+      <a class="btn btn-small" href="#kontakt">{{offer.nav.cta}}</a>
+      <button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="{{nav.menu}}"><i></i><i></i></button>
     </div>
   </header>
 
@@ -143,7 +148,7 @@
       <div class="wrap gain">
         <div class="gain-lead" data-reveal>
           <h2 id="gewinn-title">{{offer.gain.title}}</h2>
-          <p class="gain-figure"><b>{{offer.gain.big}}</b> <span>{{offer.gain.unit}}</span></p>
+          <p class="gain-figure"><b>{{offer.gain.big}}</b> <span>{{offer.gain.unit}}<a class="star" href="#hinweis">*</a></span></p>
           <p class="gain-text">{{offer.gain.text}}</p>
         </div>
         <ul class="gain-list" data-reveal>
@@ -235,83 +240,7 @@
       </div>
     </section>
 
-    <section class="band is-tint" id="preise" aria-labelledby="preise-title">
-      <div class="wrap">
-        <div class="head" data-reveal>
-          <h2 id="preise-title">{{offer.price.title}}</h2>
-          <p>{{offer.price.lead}}</p>
-        </div>
-        <div class="groups" data-reveal>
-          <details class="group" open>
-            <summary><h3>{{offer.price.office.title}}</h3><span class="group-from">{{offer.price.office.from}}</span><span class="chev" aria-hidden="true"></span></summary>
-            <ul class="rows">
-              <li><div><h4>{{offer.price.office.mail.t}}</h4><p>{{offer.price.office.mail.d}}</p></div><p class="row-price">{{offer.price.office.mail.p}}</p></li>
-              <li><div><h4>{{offer.price.office.quotes.t}}</h4><p>{{offer.price.office.quotes.d}}</p></div><p class="row-price">{{offer.price.office.quotes.p}}</p></li>
-              <li><div><h4>{{offer.price.office.reports.t}}</h4><p>{{offer.price.office.reports.d}}</p></div><p class="row-price">{{offer.price.office.reports.p}}</p></li>
-              <li><div><h4>{{offer.price.office.dates.t}}</h4><p>{{offer.price.office.dates.d}}</p></div><p class="row-price">{{offer.price.office.dates.p}}</p></li>
-              <li><div><h4>{{offer.price.office.letters.t}}</h4><p>{{offer.price.office.letters.d}}</p></div><p class="row-price">{{offer.price.office.letters.p}}</p></li>
-              <li><div><h4>{{offer.price.office.solo.t}}</h4><p>{{offer.price.office.solo.d}}</p></div><p class="row-price">{{offer.price.office.solo.p}}</p></li>
-            </ul>
-          </details>
-          <details class="group">
-            <summary><h3>{{offer.price.ai.title}}</h3><span class="group-from">{{offer.price.ai.from}}</span><span class="chev" aria-hidden="true"></span></summary>
-            <p class="group-lead">{{offer.price.ai.lead}}</p>
-            <ul class="rows">
-              <li><div><h4>{{offer.price.ai.desk.t}}</h4><p>{{offer.price.ai.desk.d}}</p></div><p class="row-price">{{offer.price.ai.desk.p}}</p></li>
-              <li><div><h4>{{offer.price.ai.rules.t}}</h4><p>{{offer.price.ai.rules.d}}</p></div><p class="row-price">{{offer.price.ai.rules.p}}</p></li>
-              <li><div><h4>{{offer.price.ai.training.t}}</h4><p>{{offer.price.ai.training.d}}</p></div><p class="row-price">{{offer.price.ai.training.p}}</p></li>
-              <li><div><h4>{{offer.price.ai.pack.t}}</h4><p>{{offer.price.ai.pack.d}}</p></div><p class="row-price">{{offer.price.ai.pack.p}}</p></li>
-            </ul>
-          </details>
-          <details class="group">
-            <summary><h3>{{offer.price.assist.title}}</h3><span class="group-from">{{offer.price.assist.from}}</span><span class="chev" aria-hidden="true"></span></summary>
-            <ul class="rows">
-              <li><div><h4>{{offer.price.assist.agent.t}}</h4><p>{{offer.price.assist.agent.d}}</p></div><p class="row-price">{{offer.price.assist.agent.p}}</p></li>
-              <li><div><h4>{{offer.price.assist.connect.t}}</h4><p>{{offer.price.assist.connect.d}}</p></div><p class="row-price">{{offer.price.assist.connect.p}}</p></li>
-              <li><div><h4>{{offer.price.assist.auto.t}}</h4><p>{{offer.price.assist.auto.d}}</p></div><p class="row-price">{{offer.price.assist.auto.p}}</p></li>
-            </ul>
-          </details>
-          <details class="group">
-            <summary><h3>{{offer.price.web.title}}</h3><span class="group-from">{{offer.price.web.from}}</span><span class="chev" aria-hidden="true"></span></summary>
-            <ul class="rows">
-              <li><div><h4>{{offer.price.web.fresh.t}}</h4><p>{{offer.price.web.fresh.d}}</p></div><p class="row-price">{{offer.price.web.fresh.p}}</p></li>
-              <li><div><h4>{{offer.price.web.update.t}}</h4><p>{{offer.price.web.update.d}}</p></div><p class="row-price">{{offer.price.web.update.p}}</p></li>
-              <li><div><h4>{{offer.price.web.google.t}}</h4><p>{{offer.price.web.google.d}}</p></div><p class="row-price">{{offer.price.web.google.p}}</p></li>
-            </ul>
-          </details>
-          <details class="group">
-            <summary><h3>{{offer.price.build.title}}</h3><span class="group-from">{{offer.price.build.from}}</span><span class="chev" aria-hidden="true"></span></summary>
-            <p class="group-lead">{{offer.price.build.lead}}</p>
-            <ul class="rows">
-              <li><div><h4>{{offer.price.build.app.t}}</h4><p>{{offer.price.build.app.d}}</p></div><p class="row-price">{{offer.price.build.app.p}}</p></li>
-              <li><div><h4>{{offer.price.build.own.t}}</h4><p>{{offer.price.build.own.d}}</p></div><p class="row-price">{{offer.price.build.own.p}}</p></li>
-            </ul>
-          </details>
-          <details class="group">
-            <summary><h3>{{offer.price.care.title}}</h3><span class="group-from">{{offer.price.care.from}}</span><span class="chev" aria-hidden="true"></span></summary>
-            <p class="group-lead">{{offer.price.care.lead}}</p>
-            <ul class="rows">
-              <li><div><h4>{{offer.price.care.basic.t}}</h4><p>{{offer.price.care.basic.d}}</p></div><p class="row-price">{{offer.price.care.basic.p}}</p></li>
-              <li><div><h4>{{offer.price.care.plus.t}}</h4><p>{{offer.price.care.plus.d}}</p></div><p class="row-price">{{offer.price.care.plus.p}}</p></li>
-              <li><div><h4>{{offer.price.care.build.t}}</h4><p>{{offer.price.care.build.d}}</p></div><p class="row-price">{{offer.price.care.build.p}}</p></li>
-            </ul>
-          </details>
-          <details class="group">
-            <summary><h3>{{offer.price.home.title}}</h3><span class="group-from">{{offer.price.home.from}}</span><span class="chev" aria-hidden="true"></span></summary>
-            <p class="group-lead">{{offer.price.home.lead}}</p>
-            <ul class="rows">
-              <li><div><h4>{{offer.price.home.paper.t}}</h4><p>{{offer.price.home.paper.d}}</p></div><p class="row-price">{{offer.price.home.paper.p}}</p></li>
-              <li><div><h4>{{offer.price.home.smart.t}}</h4><p>{{offer.price.home.smart.d}}</p></div><p class="row-price">{{offer.price.home.smart.p}}</p></li>
-              <li><div><h4>{{offer.price.home.helper.t}}</h4><p>{{offer.price.home.helper.d}}</p></div><p class="row-price">{{offer.price.home.helper.p}}</p></li>
-              <li><div><h4>{{offer.price.home.learn.t}}</h4><p>{{offer.price.home.learn.d}}</p></div><p class="row-price">{{offer.price.home.learn.p}}</p></li>
-            </ul>
-          </details>
-        </div>
-        <p class="price-note">{{offer.price.note}}</p>
-      </div>
-    </section>
-
-    <section class="band" id="datenschutz" aria-labelledby="datenschutz-title">
+    <section class="band is-tint" id="datenschutz" aria-labelledby="datenschutz-title">
       <div class="wrap">
         <div class="head" data-reveal>
           <h2 id="datenschutz-title">{{offer.data.title}}</h2>
@@ -328,7 +257,7 @@
       </div>
     </section>
 
-    <section class="band is-tint" id="ueber" aria-labelledby="ueber-title">
+    <section class="band" id="ueber" aria-labelledby="ueber-title">
       <div class="wrap about">
         <figure class="about-photo" data-reveal>
           <img src="/portrait.jpg?v=5" width="1024" height="1024" alt="{{portrait.alt}}" loading="lazy">
@@ -345,7 +274,7 @@
       </div>
     </section>
 
-    <section class="band" id="fragen" aria-labelledby="fragen-title">
+    <section class="band is-tint" id="fragen" aria-labelledby="fragen-title">
       <div class="wrap faq">
         <h2 id="fragen-title" data-reveal>{{offer.faq.title}}</h2>
         <div class="faq-list" data-reveal>
@@ -401,6 +330,7 @@
   </main>
 
   <footer class="foot">
+    <div class="wrap"><p class="foot-note" id="hinweis">* {{offer.foot.note}}</p></div>
     <div class="wrap foot-row">
       <p>Robin Prause · Rodgau · {{foot.year}}</p>
       <p>
@@ -412,7 +342,7 @@
     </div>
   </footer>
 
-  <script src="/home.js?v=2"></script>
+  <script src="/site.js?v=3"></script>
   <script src="/contact.js?v=1"></script>
 </body>
 </html>

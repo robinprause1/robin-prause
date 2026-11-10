@@ -27,7 +27,9 @@
     "workSub": "02/2026 — heute, CTO",
     "projectsSub": "Demo, Code, Shop",
     "educationSub": "Medieninformatik, B.Sc. 2023",
-    "documentsSub": "Der Wortlaut, hier auf der Seite"
+    "documentsSub": "Der Wortlaut, hier auf der Seite",
+    "menu": "Menü",
+    "cta": "Kontakt"
   },
   "skip": "Zum Inhalt",
   "route": {
@@ -43,7 +45,8 @@
   "theme": {
     "label": "Darstellung",
     "light": "Hell",
-    "dark": "Dunkel"
+    "dark": "Dunkel",
+    "toggle": "Hell oder dunkel umschalten"
   },
   "kicker": "Engineering-Führung · Frankfurt",
   "hero": {
@@ -232,8 +235,8 @@
       "label": "Seite",
       "top": "Beispiele",
       "how": "Ablauf",
-      "prices": "Preise",
       "data": "Datenschutz",
+      "about": "Über mich",
       "faq": "Fragen",
       "cta": "Anfragen"
     },
@@ -376,7 +379,7 @@
         "t": "Belege an den Steuerberater",
         "d": "Jeden Monat sind alle Belege gesammelt und übergeben, ohne Suchen."
       },
-      "more": "Das ist nur der Anfang. Im Katalog stehen über 60 weitere Beispiele, sortiert nach Bereichen: Büro, Kundenanfragen, Termine, Marketing, Team, Einkauf und Überblick für den Chef."
+      "more": "Das ist nur der Anfang. Im Katalog stehen über 60 weitere Beispiele, sortiert nach Bereichen, und alle Angebote mit Beispielpreisen."
     },
     "how": {
       "title": "So arbeiten wir zusammen",
@@ -400,12 +403,12 @@
       "four": {
         "title": "Betreuung",
         "text": "Ihr macht allein weiter, oder ich bleibe für einen festen Monatsbetrag euer Ansprechpartner. Ich halte alles am Laufen, bringe Neues mit und nehme mir die nächste Aufgabe vor.",
-        "meta": "ab 120 € im Monat"
+        "meta": "Fester Monatsbetrag"
       },
       "five": {
         "title": "Eigenbau",
         "text": "Manchmal braucht eine Aufgabe ein eigenes Werkzeug, zum Beispiel eine App fürs Team. Der Eigenbau folgt auf einen ersten Auftrag, denn dann kenne ich euren Betrieb schon gut. Der Code gehört euch.",
-        "meta": "ab 1.900 €"
+        "meta": "Festpreis nach Umfang"
       },
       "check": {
         "title": "Woran wir eine gute Aufgabe erkennen",
@@ -415,168 +418,6 @@
         "three": "Ein Mensch prüft das Ergebnis, bevor es rausgeht.",
         "four": "Sie läuft mit Standardwerkzeugen auf eurem Namen.",
         "five": "Sie ist in wenigen Wochen eingerichtet und geübt."
-      }
-    },
-    "price": {
-      "title": "Angebote und Preise",
-      "lead": "Jedes Angebot ist eine Aufgabe, die ihr loswerden könnt. Den genauen Preis nenne ich nach dem Begleiten.",
-      "note": "Die Werkzeuge selbst zahlt ihr monatlich direkt beim Anbieter. Ich nenne euch diese Kosten, bevor wir starten.",
-      "office": {
-        "title": "Büro und Kommunikation",
-        "from": "Festpreis je Aufgabe, ab 950 €",
-        "mail": {
-          "t": "Mails und Anfragen sortieren",
-          "d": "Eingehende Mails sind nach Art sortiert und haben einen Antwortentwurf. Ihr prüft und schickt ab.",
-          "p": "ab 950 €"
-        },
-        "quotes": {
-          "t": "Angebote und Rechnungen vorbereiten",
-          "d": "Aus Anfrage, Notiz oder Sprachnachricht wird ein Entwurf in eurer Vorlage, mit euren Preisen.",
-          "p": "ab 950 €"
-        },
-        "reports": {
-          "t": "Berichte von draußen erfassen",
-          "d": "Kurz ins Handy sprechen oder ein Foto machen. Daraus wird ein sauberer Bericht oder Arbeitsnachweis.",
-          "p": "ab 950 €"
-        },
-        "dates": {
-          "t": "Termine abstimmen",
-          "d": "Passende Zeiten kommen aus eurem Kalender, und Kunden bekommen am Vortag eine Erinnerung.",
-          "p": "ab 950 €"
-        },
-        "letters": {
-          "t": "Behördenpost erledigen",
-          "d": "Briefe vom Amt sind in einfachen Worten zusammengefasst, Fristen stehen im Kalender.",
-          "p": "ab 950 €"
-        },
-        "solo": {
-          "t": "Für Solo-Selbstständige und Freiberufler",
-          "d": "Jede dieser Aufgaben gibt es auch für eine Person, meist in ein bis zwei Wochen erledigt.",
-          "p": "ab 490 €"
-        }
-      },
-      "ai": {
-        "title": "Datenschutzsichere KI-Werkzeuge",
-        "from": "Festpreis, ab 390 €",
-        "lead": "Seit Februar 2025 verlangt die EU-KI-Verordnung von jeder Firma, die KI-Werkzeuge im Arbeitsalltag nutzt, dass ihre Leute damit umgehen können. Das gilt für Betriebe jeder Größe.",
-        "desk": {
-          "t": "KI-Arbeitsplatz einrichten",
-          "d": "Firmenkonten für ChatGPT, Microsoft Copilot oder Google Gemini auf euren Namen, mit Vertrag zur Auftragsverarbeitung.",
-          "p": "ab 690 €"
-        },
-        "rules": {
-          "t": "Regeln für den Umgang",
-          "d": "Ein bis zwei Seiten in euren Worten: welche Daten ins Werkzeug dürfen und wer Ergebnisse prüft.",
-          "p": "ab 390 €"
-        },
-        "training": {
-          "t": "KI-Kompetenz fürs Team",
-          "d": "Eine Schulung vor Ort mit euren eigenen Aufgaben. Jede Person bekommt eine Teilnahmebestätigung.",
-          "p": "ab 390 € pro Termin"
-        },
-        "pack": {
-          "t": "Paket „Sicher starten“",
-          "d": "Arbeitsplatz, Regeln und Schulung zusammen, in zwei bis vier Wochen.",
-          "p": "ab 1.290 €"
-        }
-      },
-      "assist": {
-        "title": "Assistenten und Abläufe",
-        "from": "Festpreis, ab 690 €",
-        "agent": {
-          "t": "Ein Assistent, der vorarbeitet",
-          "d": "Er erledigt mehrere Schritte hintereinander und legt euch das Ergebnis zur Freigabe vor.",
-          "p": "ab 1.400 €"
-        },
-        "connect": {
-          "t": "Programme verbinden",
-          "d": "Daten, die ihr heute abtippt, wandern von selbst an die richtige Stelle.",
-          "p": "ab 690 €"
-        },
-        "auto": {
-          "t": "Abläufe automatisieren",
-          "d": "Erinnerungen, Monatsübersichten und Zahlungserinnerungen laufen nach Plan.",
-          "p": "ab 690 €"
-        }
-      },
-      "web": {
-        "title": "Websites, die Anfragen bringen",
-        "from": "Festpreis, ab 390 €",
-        "fresh": {
-          "t": "Neue Website",
-          "d": "Sie sagt klar, was ihr macht. Das Formular fragt gleich das Wichtige ab, Domain und Konto laufen auf euren Namen.",
-          "p": "ab 1.400 €"
-        },
-        "update": {
-          "t": "Website modernisieren",
-          "d": "Klare Texte, ein gutes Bild auf dem Handy und ein Formular, das Anfragen sortiert.",
-          "p": "ab 690 €"
-        },
-        "google": {
-          "t": "Google-Unternehmensprofil",
-          "d": "Leistungen, Öffnungszeiten und Fotos auf dem neuesten Stand. Antworten auf Bewertungen liegen als Entwurf bereit.",
-          "p": "ab 390 €"
-        }
-      },
-      "build": {
-        "title": "Eigenbau: Apps und Werkzeuge fürs Team",
-        "from": "Festpreis nach Umfang, ab 1.900 €",
-        "lead": "Der Eigenbau ist der zweite Schritt nach einem ersten Auftrag. Der Code gehört euch, und er läuft auf eurem Konto.",
-        "app": {
-          "t": "Eigene App oder eigenes Formular",
-          "d": "Genau für euren Ablauf, auf dem Handy, dem Tablet oder im Büro. Zum Beispiel, um Anlieferungen direkt am Tor zu erfassen.",
-          "p": "ab 1.900 €"
-        },
-        "own": {
-          "t": "Eigener Assistent oder eigene Verbindung",
-          "d": "Wenn Standardwerkzeuge an ihre Grenze kommen, etwa bei einer Branchensoftware mit eigener Schnittstelle.",
-          "p": "ab 1.900 €"
-        }
-      },
-      "care": {
-        "title": "Betreuung: ein fester Ansprechpartner",
-        "from": "ab 120 € im Monat",
-        "lead": "Die Betreuung startet nach dem ersten Auftrag und lässt sich monatlich anpassen.",
-        "basic": {
-          "t": "Betreuung Basis",
-          "d": "Ich halte eure Aufgaben am Laufen, spiele Updates ein und beantworte Fragen per Mail und Telefon.",
-          "p": "ab 120 € im Monat"
-        },
-        "plus": {
-          "t": "Betreuung Plus",
-          "d": "Alles aus Basis. Dazu ein Termin im Monat, kleine Anpassungen und Neues, das zu euch passt. Ich nehme mir die nächste Aufgabe vor.",
-          "p": "ab 290 € im Monat"
-        },
-        "build": {
-          "t": "Betreuung Eigenbau",
-          "d": "Zusatz für eure eigene Software: Betrieb auf eurem Konto, Updates, Sicherheit und kleine Fehlerbehebung.",
-          "p": "ab 49 € im Monat, zusätzlich"
-        }
-      },
-      "home": {
-        "title": "Für Privatleute",
-        "from": "pro Stunde, ab 80 €",
-        "lead": "Auch zu Hause gibt es Arbeit, die liegen bleibt. Hier rechne ich nach Stunden ab.",
-        "paper": {
-          "t": "Posteingang und Papierkram",
-          "d": "Mails, Briefe und Unterlagen liegen in klaren Ordnern, und Fristen stehen im Kalender.",
-          "p": "ab 95 € pro Stunde"
-        },
-        "smart": {
-          "t": "Smart Home",
-          "d": "Licht, Heizung und Geräte arbeiten zusammen, zum Beispiel mit Home Assistant oder Philips Hue.",
-          "p": "ab 80 € pro Stunde"
-        },
-        "helper": {
-          "t": "Persönlicher Assistent",
-          "d": "Er plant die Woche mit, fasst Mails zusammen und erinnert an Termine, auf deinem Konto.",
-          "p": "ab 95 € pro Stunde"
-        },
-        "learn": {
-          "t": "KI im Alltag lernen",
-          "d": "Eine Stunde zu zweit, vor Ort oder per Video. Wir üben an deinen eigenen Fragen.",
-          "p": "ab 95 € pro Stunde"
-        }
       }
     },
     "data": {
@@ -608,8 +449,8 @@
       }
     },
     "about": {
-      "title": "Wer ich bin",
-      "one": "Ich habe in der Praxis viel Erfahrung mit Plattformen, Abläufen, Datenschutz und Programmierung gesammelt. Heute verantworte ich als CTO die Technik einer Marktplatz-Plattform.",
+      "title": "Über mich",
+      "one": "Ich entwickle seit Jahren Software, Onlineshops und Plattformen, als Freelancer, im Team und in leitender Rolle. Daher weiß ich, wie Abläufe, Datenschutz und Technik zusammenpassen müssen, damit etwas im Alltag hält.",
       "two": "Bei euch steht aber euer Betrieb im Mittelpunkt, nicht die Technik. Ich höre zu, schaue mir euren Alltag an und setze genau die Aufgabe um, die ihr loswerden wollt.",
       "three": "Ich nehme mir nur wenige Betriebe gleichzeitig vor. So hat jeder meine volle Aufmerksamkeit. Ich wohne in Rodgau bei Frankfurt und komme zu euch.",
       "whoTitle": "Für wen",
@@ -623,8 +464,8 @@
         "a": "Ihr kennt eure Arbeit, das reicht. Ich kümmere mich um die Technik und übe mit euch, bis ihr die Aufgabe allein könnt."
       },
       "cost": {
-        "q": "Was kostet das Begleiten?",
-        "a": "Im ersten Jahr ist das Begleiten kostenlos. Danach nenne ich euch die Aufgabe und eine feste Summe. Ihr entscheidet in Ruhe."
+        "q": "Was kostet das?",
+        "a": "Das Begleiten ist im ersten Jahr kostenlos. Danach nenne ich euch die Aufgabe und eine feste Summe, bevor die Arbeit beginnt. Beispielpreise stehen im Angebotskatalog."
       },
       "start": {
         "q": "Wo fangen wir am besten an?",
@@ -662,6 +503,9 @@
     "end": {
       "title": "Lust auf mehr freie Zeit?",
       "text": "Schreibt mir in zwei, drei Sätzen, was bei euch liegen bleibt. Ich melde mich persönlich, und wir vereinbaren einen Termin zum Begleiten."
+    },
+    "foot": {
+      "note": "Beispielrechnung: zwei Stunden pro Woche über 50 Arbeitswochen. Wie viel Zeit ihr tatsächlich gewinnt, hängt von Betrieb und Aufgabe ab. Die Abläufe und Zahlen auf dieser Seite sind Beispiele, die Preise im Katalog Richtwerte. Verbindlich ist das Angebot, das ihr nach dem Begleiten bekommt."
     }
   },
   "legal": {
@@ -706,7 +550,7 @@
     "logsTitle": "Verbindungsdaten",
     "logs": "Beim Aufruf einer Seite verarbeitet der Server die IP-Adresse, Datum und Uhrzeit, die aufgerufene Adresse, die Kennung des Browsers und den Status der Antwort. Das braucht es, um die Seite auszuliefern und den Betrieb abzusichern. Daraus wird kein Profil gebaut, und es gibt keine Werbung. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO: ein lauffähiger und sicherer Auftritt. Der Hoster bewahrt diese Protokolle für seine betriebliche Dauer auf. Diese Seite führt kein eigenes Protokollarchiv.",
     "storageTitle": "Cookies und Speicher auf dem Gerät",
-    "storage": "Diese Seite setzt keine Cookies. Es gibt kein Analysewerkzeug und keine Werbung. Die Schriften kommen von dieser Seite, nicht von einem anderen Anbieter. Wenn du Hell oder Dunkel wählst, liegt die Wahl auf deinem Gerät unter dem Namen prause-theme. Die Lesetiefe liegt für den Browser-Tab unter dem Namen prause-depth und fällt weg, wenn du den Tab schließt. Rechtsgrundlage ist § 25 Abs. 2 TDDDG: der Speicher dient einer Einstellung, die du selbst einschaltest.",
+    "storage": "Diese Seite setzt keine Cookies. Es gibt kein Analysewerkzeug und keine Werbung. Die Schriften kommen von dieser Seite, nicht von einem anderen Anbieter. Wenn du Hell oder Dunkel wählst, liegt die Wahl auf deinem Gerät unter dem Namen prause-theme. Rechtsgrundlage ist § 25 Abs. 2 TDDDG: der Speicher dient einer Einstellung, die du selbst einschaltest.",
     "mailTitle": "E-Mail",
     "mail": "Das Formular schickt Name, E-Mail-Adresse und Nachricht an mail@robin-prause.de. Die Seite speichert die Nachricht nicht. Sie geht über den Server bei Render in Frankfurt an das Postfach bei Hostinger und bleibt dort, bis ich sie lösche. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, wenn es um eine mögliche Zusammenarbeit geht, sonst Art. 6 Abs. 1 lit. f DSGVO, um die Nachricht zu beantworten. Der Mail-Link daneben öffnet weiterhin dein eigenes Mailprogramm.",
     "rightsTitle": "Deine Rechte",

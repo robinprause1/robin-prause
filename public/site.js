@@ -3,23 +3,22 @@ const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /* ---------- Theme ---------- */
 
-const themeColors = { light: "#ffffff", dark: "#0a0d14" };
-const themeButtons = [...document.querySelectorAll("[data-theme-set]")];
+// The bar is navy in both themes, so the browser chrome follows it.
+const themeColors = { light: "#0b1020", dark: "#10162e" };
+const themeButton = document.querySelector("[data-theme-toggle]");
 const themeMeta = document.querySelector('meta[name="theme-color"]');
 
 function showTheme(theme) {
   root.dataset.theme = theme;
   if (themeMeta) themeMeta.content = themeColors[theme];
-  for (const button of themeButtons) {
-    button.setAttribute("aria-checked", String(button.dataset.themeSet === theme));
-  }
+  if (themeButton) themeButton.setAttribute("aria-pressed", String(theme === "dark"));
 }
 
 showTheme(root.dataset.theme === "dark" ? "dark" : "light");
 
-for (const button of themeButtons) {
-  button.addEventListener("click", () => {
-    const theme = button.dataset.themeSet === "dark" ? "dark" : "light";
+if (themeButton) {
+  themeButton.addEventListener("click", () => {
+    const theme = root.dataset.theme === "dark" ? "light" : "dark";
     showTheme(theme);
     try {
       localStorage.setItem("prause-theme", theme);
@@ -27,6 +26,64 @@ for (const button of themeButtons) {
       // Private mode: the choice just lasts for this page.
     }
   });
+}
+
+/* ---------- Menu on small screens ---------- */
+
+const bar = document.querySelector(".top");
+const menuButton = document.querySelector(".menu-btn");
+
+function setMenu(open) {
+  bar.classList.toggle("is-open", open);
+  menuButton.setAttribute("aria-expanded", String(open));
+}
+
+if (bar && menuButton) {
+  menuButton.addEventListener("click", () => setMenu(!bar.classList.contains("is-open")));
+  bar.addEventListener("click", (event) => {
+    if (event.target.closest(".top-nav a")) setMenu(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !bar.classList.contains("is-open")) return;
+    setMenu(false);
+    menuButton.focus();
+  });
+}
+
+/* ---------- The bar marks the section you are reading ---------- */
+
+const stops = [...document.querySelectorAll('.top-nav a[href^="#"]')]
+  .map((link) => ({ link, section: document.getElementById(link.hash.slice(1)) }))
+  .filter((stop) => stop.section);
+
+if (stops.length) {
+  let queued = false;
+
+  function markStop() {
+    queued = false;
+    const line = window.innerHeight * 0.35;
+    let here = null;
+    for (const stop of stops) {
+      if (stop.section.getBoundingClientRect().top <= line) here = stop;
+    }
+    for (const stop of stops) {
+      const on = stop === here;
+      stop.link.classList.toggle("is-here", on);
+      if (on) stop.link.setAttribute("aria-current", "true");
+      else stop.link.removeAttribute("aria-current");
+    }
+  }
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(markStop);
+    },
+    { passive: true },
+  );
+  markStop();
 }
 
 /* ---------- Sections fade in as they scroll into view ---------- */

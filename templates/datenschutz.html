@@ -11,26 +11,33 @@
   <link rel="alternate" hreflang="en" href="{{alt.en}}">
   <link rel="alternate" hreflang="de" href="{{alt.de}}">
   <link rel="alternate" hreflang="x-default" href="{{alt.en}}">
-  <meta name="theme-color" content="#f3efe6">
-  <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
-  <link rel="stylesheet" href="/styles.css?v=56">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="icon" href="/favicon.svg?v=6" type="image/svg+xml">
+  <link rel="preload" href="/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/site.css?v=3">
 </head>
 <body>
   <a class="skip" href="#legal">{{skip}}</a>
-  <header class="mast">
-    <div class="mast-row">
-      <a class="word" href="{{home}}">Robin Prause</a>
-      <span></span>
-      <div class="dials">
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+  </svg>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="{{home}}">Robin Prause</a>
+      <div class="top-prefs">
         <span class="langs">
-          <a href="/datenschutz" hreflang="en" lang="en" class="{{lang.en.current}}">EN</a>
           <a href="/de/datenschutz" hreflang="de" lang="de" class="{{lang.de.current}}">DE</a>
+          <a href="/datenschutz" hreflang="en" lang="en" class="{{lang.en.current}}">EN</a>
         </span>
+        <button type="button" class="theme-btn" data-theme-toggle aria-label="{{theme.toggle}}">
+          <svg class="is-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="is-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
       </div>
     </div>
   </header>
-  <main id="legal" class="page legal">
-    <p class="kicker">{{privacy.kicker}}</p>
+  <main id="legal" class="wrap legal">
     <h1>{{privacy.title}}</h1>
     <p>{{privacy.lead}}</p>
     <h2>{{privacy.controllerTitle}}</h2>
@@ -51,17 +58,17 @@
     <p>{{privacy.authority}} <a href="https://datenschutz.hessen.de" rel="noopener noreferrer">datenschutz.hessen.de</a></p>
     <p><a href="{{home}}">{{legal.back}}</a></p>
   </main>
-  <footer class="colophon">
-    <div class="page foot">
-      <div class="foot-row">
-        <p>Robin Prause · {{foot.year}}</p>
-        <p>
-          <a href="mailto:mail@robin-prause.de">mail@robin-prause.de</a>
-          <a href="{{legal.impressumHref}}">{{legal.impressum}}</a>
-          <a href="{{legal.privacyHref}}">{{legal.privacy}}</a>
-        </p>
-      </div>
+  <footer class="foot">
+    <div class="wrap foot-row">
+      <p>Robin Prause · {{foot.year}}</p>
+      <p>
+        <a href="mailto:mail@robin-prause.de">mail@robin-prause.de</a>
+        <a href="{{legal.impressumHref}}">{{legal.impressum}}</a>
+        <a href="{{legal.privacyHref}}">{{legal.privacy}}</a>
+      </p>
     </div>
   </footer>
+
+  <script src="/site.js?v=3"></script>
 </body>
 </html>

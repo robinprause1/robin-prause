@@ -27,7 +27,9 @@
     "workSub": "02/2026 — today, CTO",
     "projectsSub": "Demo, code, store",
     "educationSub": "Media Informatics, B.Sc. 2023",
-    "documentsSub": "The letters, quoted here"
+    "documentsSub": "The letters, quoted here",
+    "menu": "Menu",
+    "cta": "Contact"
   },
   "skip": "Skip to content",
   "route": {
@@ -43,7 +45,8 @@
   "theme": {
     "label": "Appearance",
     "light": "Light",
-    "dark": "Dark"
+    "dark": "Dark",
+    "toggle": "Switch between light and dark"
   },
   "kicker": "Engineering leadership · Frankfurt",
   "hero": {
@@ -232,8 +235,8 @@
       "label": "Page",
       "top": "Examples",
       "how": "How it works",
-      "prices": "Prices",
       "data": "Data protection",
+      "about": "About me",
       "faq": "Questions",
       "cta": "Get in touch"
     },
@@ -376,7 +379,7 @@
         "t": "Receipts to the tax adviser",
         "d": "Every month all receipts are collected and handed over, with no searching."
       },
-      "more": "That is only the start. The catalogue lists more than 60 further examples, sorted by area: office, customer requests, appointments, marketing, team, purchasing and an overview for the owner."
+      "more": "That is only the start. The catalogue lists more than 60 further examples, sorted by area, and every offer with example prices."
     },
     "how": {
       "title": "How we work together",
@@ -400,12 +403,12 @@
       "four": {
         "title": "Ongoing support",
         "text": "You carry on alone, or I stay your contact for a fixed monthly sum. I keep everything running, bring new things along and take on the next task.",
-        "meta": "from €120 a month"
+        "meta": "Fixed monthly sum"
       },
       "five": {
         "title": "Custom build",
         "text": "Sometimes a task needs a tool of its own, for example an app for the team. A custom build follows a first job, because by then I know your business well. The code is yours.",
-        "meta": "from €1,900"
+        "meta": "Fixed price by scope"
       },
       "check": {
         "title": "How we recognise a good task",
@@ -415,168 +418,6 @@
         "three": "A person checks the result before it goes out.",
         "four": "It runs with standard tools in your name.",
         "five": "It is set up and practised within a few weeks."
-      }
-    },
-    "price": {
-      "title": "Offers and prices",
-      "lead": "Each offer is a task you can get rid of. I name the exact price after coming along.",
-      "note": "You pay for the tools themselves monthly, directly to the provider. I tell you these costs before we start.",
-      "office": {
-        "title": "Office and communication",
-        "from": "Fixed price per task, from €950",
-        "mail": {
-          "t": "Sort emails and requests",
-          "d": "Incoming emails are sorted by type and have a draft reply. You check and send.",
-          "p": "from €950"
-        },
-        "quotes": {
-          "t": "Prepare quotes and invoices",
-          "d": "A request, a note or a voice message turns into a draft in your template, with your prices.",
-          "p": "from €950"
-        },
-        "reports": {
-          "t": "Capture reports from the field",
-          "d": "Speak briefly into the phone or take a photo. It becomes a clean report or proof of work.",
-          "p": "from €950"
-        },
-        "dates": {
-          "t": "Arrange appointments",
-          "d": "Suitable times come from your calendar, and customers get a reminder the day before.",
-          "p": "from €950"
-        },
-        "letters": {
-          "t": "Handle official letters",
-          "d": "Letters from authorities are summarised in plain words, and deadlines are in the calendar.",
-          "p": "from €950"
-        },
-        "solo": {
-          "t": "For freelancers and the self-employed",
-          "d": "Each of these tasks is also available for one person, usually done in one to two weeks.",
-          "p": "from €490"
-        }
-      },
-      "ai": {
-        "title": "AI tools that respect data protection",
-        "from": "Fixed price, from €390",
-        "lead": "Since February 2025 the EU AI Act requires every company that uses AI tools at work to make sure its people can handle them. That applies to businesses of every size.",
-        "desk": {
-          "t": "Set up an AI workplace",
-          "d": "Company accounts for ChatGPT, Microsoft Copilot or Google Gemini in your name, with a data processing agreement.",
-          "p": "from €690"
-        },
-        "rules": {
-          "t": "Rules for everyday use",
-          "d": "One to two pages in your words: which data may go into the tool and who checks results.",
-          "p": "from €390"
-        },
-        "training": {
-          "t": "AI literacy for the team",
-          "d": "Training on site with your own tasks. Each person gets a certificate of attendance.",
-          "p": "from €390 per session"
-        },
-        "pack": {
-          "t": "“Safe start” package",
-          "d": "Workplace, rules and training together, in two to four weeks.",
-          "p": "from €1,290"
-        }
-      },
-      "assist": {
-        "title": "Assistants and workflows",
-        "from": "Fixed price, from €690",
-        "agent": {
-          "t": "An assistant that prepares work",
-          "d": "It handles several steps in a row and puts the result in front of you for approval.",
-          "p": "from €1,400"
-        },
-        "connect": {
-          "t": "Connect your programs",
-          "d": "Data you type in by hand today moves to the right place by itself.",
-          "p": "from €690"
-        },
-        "auto": {
-          "t": "Automate workflows",
-          "d": "Reminders, monthly overviews and payment reminders run on schedule.",
-          "p": "from €690"
-        }
-      },
-      "web": {
-        "title": "Websites that bring requests",
-        "from": "Fixed price, from €390",
-        "fresh": {
-          "t": "New website",
-          "d": "It says clearly what you do. The form asks for what matters, and domain and account are in your name.",
-          "p": "from €1,400"
-        },
-        "update": {
-          "t": "Modernise a website",
-          "d": "Clear text, a good look on the phone and a form that sorts requests.",
-          "p": "from €690"
-        },
-        "google": {
-          "t": "Google Business Profile",
-          "d": "Services, opening hours and photos up to date. Replies to reviews are ready as drafts.",
-          "p": "from €390"
-        }
-      },
-      "build": {
-        "title": "Custom builds: apps and tools for the team",
-        "from": "Fixed price by scope, from €1,900",
-        "lead": "A custom build is the second step after a first job. The code is yours, and it runs in your account.",
-        "app": {
-          "t": "Your own app or form",
-          "d": "Made for your workflow, on the phone, the tablet or at the office. For example to record deliveries right at the gate.",
-          "p": "from €1,900"
-        },
-        "own": {
-          "t": "Your own assistant or connection",
-          "d": "When standard tools reach their limit, for example with industry software that has its own interface.",
-          "p": "from €1,900"
-        }
-      },
-      "care": {
-        "title": "Ongoing support: one fixed contact",
-        "from": "from €120 a month",
-        "lead": "Support starts after the first job and can be adjusted monthly.",
-        "basic": {
-          "t": "Support Basic",
-          "d": "I keep your tasks running, install updates and answer questions by email and phone.",
-          "p": "from €120 a month"
-        },
-        "plus": {
-          "t": "Support Plus",
-          "d": "Everything in Basic. Plus one meeting a month, small adjustments and new things that suit you. I take on the next task.",
-          "p": "from €290 a month"
-        },
-        "build": {
-          "t": "Support for custom builds",
-          "d": "Add-on for your own software: running it in your account, updates, security and small fixes.",
-          "p": "from €49 a month, extra"
-        }
-      },
-      "home": {
-        "title": "For private people",
-        "from": "per hour, from €80",
-        "lead": "Work piles up at home too. Here I charge by the hour.",
-        "paper": {
-          "t": "Inbox and paperwork",
-          "d": "Emails, letters and documents sit in clear folders, and deadlines are in the calendar.",
-          "p": "from €95 per hour"
-        },
-        "smart": {
-          "t": "Smart home",
-          "d": "Lights, heating and devices work together, for example with Home Assistant or Philips Hue.",
-          "p": "from €80 per hour"
-        },
-        "helper": {
-          "t": "Personal assistant",
-          "d": "It helps plan the week, summarises emails and reminds you of appointments, in your account.",
-          "p": "from €95 per hour"
-        },
-        "learn": {
-          "t": "Learn AI for everyday life",
-          "d": "One hour one-to-one, on site or by video. We practise with your own questions.",
-          "p": "from €95 per hour"
-        }
       }
     },
     "data": {
@@ -608,8 +449,8 @@
       }
     },
     "about": {
-      "title": "Who I am",
-      "one": "I have gathered a lot of hands-on experience with platforms, workflows, data protection and programming. Today I am responsible for the technology of a marketplace platform as its CTO.",
+      "title": "About me",
+      "one": "I have been building software, online shops and platforms for years, as a freelancer, in teams and in a leading role. So I know how workflows, data protection and technology have to fit together for something to hold up in daily work.",
       "two": "With you, though, your business is the focus, not the technology. I listen, look at your daily work and set up exactly the task you want to get rid of.",
       "three": "I only take on a few businesses at a time, so each one has my full attention. I live in Rodgau near Frankfurt and come to you.",
       "whoTitle": "Who it is for",
@@ -623,8 +464,8 @@
         "a": "You know your work, and that is enough. I take care of the technology and practise with you until you can do the task on your own."
       },
       "cost": {
-        "q": "What does coming along cost?",
-        "a": "In the first year, coming along is free. Afterwards I name the task and a fixed sum. You decide in your own time."
+        "q": "What does it cost?",
+        "a": "Coming along is free in the first year. Afterwards I name the task and a fixed sum before the work starts. Example prices are in the offer catalogue."
       },
       "start": {
         "q": "Where is the best place to start?",
@@ -662,6 +503,9 @@
     "end": {
       "title": "Fancy more free time?",
       "text": "Tell me in two or three sentences what piles up for you. I reply personally, and we arrange a visit."
+    },
+    "foot": {
+      "note": "Example calculation: two hours a week over 50 working weeks. How much time you actually gain depends on your business and the task. The workflows and figures on this page are examples, and the prices in the catalogue are guide values. The offer you receive after I have come along is the binding one."
     }
   },
   "legal": {
@@ -706,7 +550,7 @@
     "logsTitle": "Connection data",
     "logs": "When a page is opened, the server processes the IP address, date and time, the address requested, the browser identifier, and the status of the response. This is needed to deliver the page and to keep the service secure. It is not used for advertising, and it is not built into a profile. The legal basis is Article 6 (1) (f) GDPR: a working and secure site. The host keeps these logs for its operational period. This site does not keep a log archive of its own.",
     "storageTitle": "Cookies and storage on your device",
-    "storage": "This site sets no cookies. There is no analytics and no advertising. Fonts are loaded from this site, not from another provider. If you choose Light or Dark, that choice is stored on your device under the name prause-theme. The reading depth is stored for the browser tab under the name prause-depth and is dropped when the tab closes. The legal basis is section 25 (2) TDDDG: the storage exists for a setting you switch on yourself.",
+    "storage": "This site sets no cookies. There is no analytics and no advertising. Fonts are loaded from this site, not from another provider. If you choose Light or Dark, that choice is stored on your device under the name prause-theme. The legal basis is section 25 (2) TDDDG: the storage exists for a setting you switch on yourself.",
     "mailTitle": "Email",
     "mail": "The form sends your name, email address, and message to mail@robin-prause.de. This site does not store the message. It passes through the Render server in Frankfurt to the Hostinger mailbox, where it stays until I delete it. The basis is Article 6 (1) (b) GDPR when you ask about working together, otherwise Article 6 (1) (f) GDPR so I can answer. The mail link next to the form still opens your own mail program.",
     "rightsTitle": "Your rights",

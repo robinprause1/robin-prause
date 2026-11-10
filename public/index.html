@@ -10,7 +10,7 @@
   <link rel="alternate" hreflang="en" href="{{alt.en}}">
   <link rel="alternate" hreflang="de" href="{{alt.de}}">
   <link rel="alternate" hreflang="x-default" href="{{alt.en}}">
-  <meta name="theme-color" content="#f3efe6">
+  <meta name="theme-color" content="#0b1020">
   <meta property="og:site_name" content="Robin Prause">
   <meta property="og:title" content="{{meta.title}}">
   <meta property="og:description" content="{{meta.og}}">
@@ -23,9 +23,9 @@
   <meta property="og:image:alt" content="{{portrait.alt}}">
   <meta name="twitter:card" content="summary">
   <!--ld-->
-  <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg?v=6" type="image/svg+xml">
   <link rel="preload" href="/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=65">
+  <link rel="stylesheet" href="/site.css?v=3">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,276 +51,197 @@
   </script>
 </head>
 <body>
-  <a class="skip" href="{{base}}#work-title">{{skip}}</a>
+  <a class="skip" href="#work">{{skip}}</a>
 
-  <header class="mast">
-    <div class="mast-row">
-      <a class="word" href="{{base}}#top">Robin Prause</a>
-      <nav aria-label="{{nav.label}}">
-        <span class="stops" id="stops">
-          <a href="{{base}}#work-title" data-stop="work">
-            <b aria-hidden="true">01</b>
-            <span class="stop-label">{{nav.work}}</span>
-            <i class="stop-bar" aria-hidden="true"></i>
-          </a>
-          <a href="{{base}}#projects-title" data-stop="projects">
-            <b aria-hidden="true">02</b>
-            <span class="stop-label">{{nav.projects}}</span>
-            <i class="stop-bar" aria-hidden="true"></i>
-          </a>
-          <a href="{{base}}#education-title" data-stop="education">
-            <b aria-hidden="true">03</b>
-            <span class="stop-label">{{nav.education}}</span>
-            <i class="stop-bar" aria-hidden="true"></i>
-          </a>
-          <a href="{{base}}#documents" data-stop="documents">
-            <b aria-hidden="true">04</b>
-            <span class="stop-label">{{nav.documents}}</span>
-            <i class="stop-bar" aria-hidden="true"></i>
-          </a>
-        </span>
-      </nav>
-      <div class="dials">
-        <div class="depth" id="depth" role="radiogroup" aria-label="{{depth.label}}">
-          <button type="button" role="radio" aria-checked="false" data-depth-set="brief">{{depth.brief}}</button>
-          <button type="button" role="radio" aria-checked="false" data-depth-set="mid">{{depth.mid}}</button>
-          <button type="button" role="radio" aria-checked="false" data-depth-set="all">{{depth.all}}</button>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+  </svg>
+
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="{{home}}">Robin Prause</a>
+      <div class="top-menu" id="menu">
+        <nav class="top-nav" aria-label="{{nav.label}}">
+          <a href="#work">{{nav.work}}</a>
+          <a href="#projects">{{nav.projects}}</a>
+          <a href="#education">{{nav.education}}</a>
+          <a href="#documents">{{nav.documents}}</a>
+        </nav>
+        <div class="top-prefs">
+          <span class="langs">
+            <a href="/de/lebenslauf" hreflang="de" lang="de" class="{{lang.de.current}}">DE</a>
+            <a href="/cv" hreflang="en" lang="en" class="{{lang.en.current}}">EN</a>
+          </span>
+          <button type="button" class="theme-btn" data-theme-toggle aria-label="{{theme.toggle}}">
+            <svg class="is-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+            <svg class="is-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+          </button>
         </div>
-        <div class="theme" id="theme" role="radiogroup" aria-label="{{theme.label}}">
-          <button type="button" role="radio" aria-checked="false" data-theme-set="light">{{theme.light}}</button>
-          <button type="button" role="radio" aria-checked="false" data-theme-set="dark">{{theme.dark}}</button>
-        </div>
-        <span class="langs">
-          <a href="/cv" hreflang="en" lang="en" class="{{lang.en.current}}">EN</a>
-          <a href="/de/lebenslauf" hreflang="de" lang="de" class="{{lang.de.current}}">DE</a>
-        </span>
       </div>
-    </div>
-    <div class="route" id="route" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="{{route.label}}">
-      <span class="route-fill" id="route-fill"></span>
+      <a class="btn btn-small" href="#kontakt">{{nav.cta}}</a>
+      <button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="{{nav.menu}}"><i></i><i></i></button>
     </div>
   </header>
 
   <main id="top">
     <section class="hero" aria-labelledby="name">
-      <div class="page hero-grid">
-        <div class="hero-copy">
-          <p class="kicker">
-            <span>{{kicker}}</span>
-          </p>
-          <p class="claim">{{hero.claim}}</p>
-          <p class="hello" data-depth="all">{{hello}}</p>
-          <p class="lede">{{lede}}</p>
-          <p class="note" data-depth="all">{{note}}</p>
-          <p class="contact">
-            <a href="{{offer.href}}">{{offer.teaser}}</a>
-            <a href="mailto:mail@robin-prause.de">mail@robin-prause.de</a>
-            <a href="https://www.linkedin.com/in/robin-prause-330666278" rel="noopener noreferrer">LinkedIn</a>
-          </p>
-        </div>
-        <figure class="portrait">
-          <div class="orbit" aria-hidden="true">
-            <span>TypeScript</span>
-            <span>Next.js</span>
-            <span>NestJS</span>
-            <span>PostgreSQL</span>
-            <span>Cloudflare</span>
+      <div class="wrap cv-head">
+        <div class="cv-intro">
+          <h1 id="name">Robin <em>Prause</em></h1>
+          <p class="cv-claim">{{hero.claim}}</p>
+          <p class="hero-lede">{{lede}}</p>
+          <div class="actions">
+            <a class="btn" href="#kontakt">{{nav.cta}}</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/robin-prause-330666278" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn btn-ghost" href="{{offer.href}}">{{offer.teaser}}</a>
           </div>
+        </div>
+        <figure class="cv-photo">
           <img src="/portrait.jpg?v=5" width="1024" height="1024" alt="{{portrait.alt}}" fetchpriority="high">
-          <figcaption>
-            <span>{{portrait.caption}}</span>
-          </figcaption>
         </figure>
       </div>
-      <h1 id="name" class="name page" aria-label="Robin Prause">
-        <span class="name-a">Robin</span>
-        <span class="name-b">Prause</span>
-      </h1>
-      <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>{{orbit.platforms}}</span><i></i>
-        <span>TypeScript</span><i></i>
-        <span>{{orbit.payments}}</span><i></i>
-        <span>NestJS</span><i></i>
-        <span>{{orbit.multitenant}}</span><i></i>
-        <span>PostgreSQL</span><i></i>
-        <span>Prisma</span><i></i>
-        <span>{{orbit.migrations}}</span><i></i>
-        <span>Next.js</span><i></i>
-        <span>{{orbit.i18n}}</span><i></i>
-        <span>{{orbit.search}}</span><i></i>
-        <span>Redis</span><i></i>
-        <span>BullMQ</span><i></i>
-        <span>{{orbit.webhooks}}</span><i></i>
-        <span>{{orbit.auth}}</span><i></i>
-        <span>{{orbit.shipping}}</span><i></i>
-        <span>{{orbit.compliance}}</span><i></i>
-        <span>{{orbit.observability}}</span><i></i>
-        <span>Railway</span><i></i>
-        <span>Cloudflare</span><i></i>
-        <span>{{orbit.ai}}</span><i></i>
-        <span>{{orbit.testing}}</span><i></i>
-        <span>{{orbit.platforms}}</span><i></i>
-        <span>TypeScript</span><i></i>
-        <span>{{orbit.payments}}</span><i></i>
-        <span>NestJS</span><i></i>
-        <span>{{orbit.multitenant}}</span><i></i>
-        <span>PostgreSQL</span><i></i>
-        <span>Prisma</span><i></i>
-        <span>{{orbit.migrations}}</span><i></i>
-        <span>Next.js</span><i></i>
-        <span>{{orbit.i18n}}</span><i></i>
-        <span>{{orbit.search}}</span><i></i>
-        <span>Redis</span><i></i>
-        <span>BullMQ</span><i></i>
-        <span>{{orbit.webhooks}}</span><i></i>
-        <span>{{orbit.auth}}</span><i></i>
-        <span>{{orbit.shipping}}</span><i></i>
-        <span>{{orbit.compliance}}</span><i></i>
-        <span>{{orbit.observability}}</span><i></i>
-        <span>Railway</span><i></i>
-        <span>Cloudflare</span><i></i>
-        <span>{{orbit.ai}}</span><i></i>
-        <span>{{orbit.testing}}</span><i></i>
-      </div>
+      <div class="wrap">
+        <ul class="chips">
+          <li>{{orbit.platforms}}</li>
+          <li>{{orbit.payments}}</li>
+          <li>{{orbit.multitenant}}</li>
+          <li>{{orbit.migrations}}</li>
+          <li>{{orbit.search}}</li>
+          <li>{{orbit.webhooks}}</li>
+          <li>{{orbit.auth}}</li>
+          <li>{{orbit.shipping}}</li>
+          <li>{{orbit.compliance}}</li>
+          <li>{{orbit.observability}}</li>
+          <li>{{orbit.ai}}</li>
+          <li>{{orbit.testing}}</li>
+          <li>TypeScript</li>
+          <li>Next.js</li>
+          <li>NestJS</li>
+          <li>PostgreSQL</li>
+          <li>Redis</li>
+          <li>Cloudflare</li>
+        </ul>
       </div>
     </section>
 
-    <section id="work" class="chapter page" aria-labelledby="work-title">
-      <div class="section-head">
-        <p class="num" aria-hidden="true">01</p>
-        <h2 id="work-title">{{work.title}}</h2>
-        <p class="lead">{{work.lead}}</p>
-      </div>
-      <div class="section-body">
-        <ol class="stations">
-          <li class="role now">
-            <p class="when"><time datetime="2026-02">02/2026</time> — {{work.now}}</p>
+    <section class="band" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <h2 id="work-title">{{work.title}}</h2>
+          <p>{{work.lead}}</p>
+        </div>
+        <ol class="line" data-reveal>
+          <li class="entry is-now">
+            <p class="when"><time datetime="2026-02">02/2026</time> – {{work.now}}</p>
             <div>
               <h3>Chief Technology Officer</h3>
               <p class="where">{{work.cto.where}}</p>
               <p>{{work.cto.text}}</p>
             </div>
           </li>
-          <li class="role" data-depth="mid">
-            <p class="when"><time datetime="2025-07">07/2025</time> — 01/2026</p>
+          <li class="entry">
+            <p class="when"><time datetime="2025-07">07/2025</time> – 01/2026</p>
             <div>
               <h3>Head of E-Commerce</h3>
               <p class="where">{{work.ecommerce.where}}</p>
               <p>{{work.ecommerce.text}}</p>
             </div>
           </li>
-          <li class="role" data-depth="mid">
-            <p class="when"><time datetime="2024-03">03/2024</time> — 06/2025</p>
+          <li class="entry">
+            <p class="when"><time datetime="2024-03">03/2024</time> – 06/2025</p>
             <div>
               <h3>Software Engineer</h3>
               <p class="where">{{work.engineer.where}}</p>
               <p>{{work.engineer.text}}</p>
             </div>
           </li>
-          <li class="role" data-depth="mid">
-            <p class="when"><time datetime="2022-10">10/2022</time> — 12/2024</p>
+          <li class="entry">
+            <p class="when"><time datetime="2022-10">10/2022</time> – 12/2024</p>
             <div>
               <h3>Freelancer</h3>
               <p class="where">{{work.freelance.where}}</p>
             </div>
           </li>
-          <li class="role" data-depth="mid">
-            <p class="when"><time datetime="2023-08">08/2023</time> — 02/2024</p>
+          <li class="entry">
+            <p class="when"><time datetime="2023-08">08/2023</time> – 02/2024</p>
             <div>
               <h3>{{work.thesis.title}}</h3>
               <p class="where">{{work.thesis.where}}</p>
             </div>
           </li>
-          <li class="role" data-depth="mid">
-            <p class="when"><time datetime="2023-04">04/2023</time> — 06/2023</p>
+          <li class="entry">
+            <p class="when"><time datetime="2023-04">04/2023</time> – 06/2023</p>
             <div>
               <h3>{{work.abrio.title}}</h3>
               <p class="where">{{work.abrio.where}}</p>
             </div>
           </li>
-          <li class="role" data-depth="mid">
-            <p class="when"><time datetime="2023-01">01/2023</time> — 03/2023</p>
+          <li class="entry">
+            <p class="when"><time datetime="2023-01">01/2023</time> – 03/2023</p>
             <div>
               <h3>{{work.student.title}}</h3>
               <p class="where">{{work.student.where}}</p>
             </div>
           </li>
-          <li class="role" data-depth="mid">
-            <p class="when"><time datetime="2022-04">04/2022</time> — 09/2022</p>
+          <li class="entry">
+            <p class="when"><time datetime="2022-04">04/2022</time> – 09/2022</p>
             <div>
               <h3>{{work.assistant.title}}</h3>
               <p class="where">{{work.assistant.where}}</p>
             </div>
           </li>
-          <li class="role" data-depth="mid">
-            <p class="when"><time datetime="2021-08">08/2021</time> — 09/2021</p>
+          <li class="entry">
+            <p class="when"><time datetime="2021-08">08/2021</time> – 09/2021</p>
             <div>
               <h3>{{work.uhp.title}}</h3>
               <p class="where">{{work.uhp.where}}</p>
             </div>
           </li>
         </ol>
-        <p class="stack" data-depth="all">Next.js · NestJS · PostgreSQL · Redis · Turborepo · Docker · Railway · Cloudflare · TypeScript · Angular · Shopify · Vue</p>
       </div>
     </section>
 
-    <section id="projects" class="chapter page" aria-labelledby="projects-title" data-depth="mid">
-      <div class="section-head">
-        <p class="num" aria-hidden="true">02</p>
-        <h2 id="projects-title">{{projects.title}}</h2>
-        <p class="lead">{{projects.lead}}</p>
-        <p class="note" data-depth="all">{{projects.note}}</p>
-      </div>
-      <div class="section-body">
-        <ol class="stations projects">
-          <li class="role project">
-            <p class="when">{{projects.smartport.when}}</p>
-            <div>
-              <h3>smartport.com</h3>
-              <p class="where">{{projects.smartport.where}}</p>
-              <p class="text">{{projects.smartport.text}}</p>
-              <p class="links">
-                <a href="https://smartport.com" target="_blank" rel="noopener noreferrer">{{projects.smartport.open}}</a>
-              </p>
-            </div>
+    <section class="band is-tint" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <h2 id="projects-title">{{projects.title}}</h2>
+          <p>{{projects.lead}}</p>
+        </div>
+        <ul class="cards" data-reveal>
+          <li class="card">
+            <p class="card-tag">{{projects.smartport.when}}</p>
+            <h3>smartport.com</h3>
+            <p class="where">{{projects.smartport.where}}</p>
+            <p>{{projects.smartport.text}}</p>
+            <p class="card-link"><a class="link" href="https://smartport.com" target="_blank" rel="noopener noreferrer">{{projects.smartport.open}}</a></p>
           </li>
-          <li class="role project">
-            <p class="when">{{projects.wire.when}}</p>
-            <div>
-              <h3>Wire</h3>
-              <p class="where">{{projects.wire.where}}</p>
-              <p class="text">{{projects.wire.text}}</p>
-              <p class="links">
-                <a href="https://github.com/robinprause1/wire" target="_blank" rel="noopener noreferrer">{{projects.wire.demo}}</a>
-              </p>
-            </div>
+          <li class="card">
+            <p class="card-tag">{{projects.wire.when}}</p>
+            <h3>Wire</h3>
+            <p class="where">{{projects.wire.where}}</p>
+            <p>{{projects.wire.text}}</p>
+            <p class="card-link"><a class="link" href="https://github.com/robinprause1/wire" target="_blank" rel="noopener noreferrer">{{projects.wire.demo}}</a></p>
           </li>
-          <li class="role project">
-            <p class="when">{{projects.events.when}}</p>
-            <div>
-              <h3>Event Manager</h3>
-              <p class="where">{{projects.events.where}}</p>
-              <p class="text">{{projects.events.text}}</p>
-              <p class="links">
-                <a href="https://github.com/robinprause1/event-manager-backend" target="_blank" rel="noopener noreferrer">Github</a>
-              </p>
-            </div>
+          <li class="card">
+            <p class="card-tag">{{projects.events.when}}</p>
+            <h3>Event Manager</h3>
+            <p class="where">{{projects.events.where}}</p>
+            <p>{{projects.events.text}}</p>
+            <p class="card-link"><a class="link" href="https://github.com/robinprause1/event-manager-backend" target="_blank" rel="noopener noreferrer">Github</a></p>
           </li>
-        </ol>
-        <p class="stack" data-depth="all"><a href="https://github.com/robinprause1" target="_blank" rel="noopener noreferrer">github.com/robinprause1</a></p>
+        </ul>
       </div>
     </section>
 
-    <section id="education" class="chapter page" aria-labelledby="education-title" data-depth="mid">
-      <div class="section-head">
-        <p class="num" aria-hidden="true">03</p>
-        <h2 id="education-title">{{education.title}}</h2>
-        <p class="lead">{{education.lead}}</p>
-      </div>
-      <div class="section-body">
-        <ol class="stations">
-          <li class="role" data-depth="mid">
+    <section class="band" id="education" aria-labelledby="education-title">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <h2 id="education-title">{{education.title}}</h2>
+          <p>{{education.lead}}</p>
+        </div>
+        <ol class="line" data-reveal>
+          <li class="entry">
             <p class="when"><time datetime="2023-12-19">2023</time></p>
             <div>
               <h3>{{education.degree}}</h3>
@@ -328,33 +249,36 @@
               <p>{{education.text}}</p>
             </div>
           </li>
-          <li class="role" data-depth="mid">
+          <li class="entry">
             <p class="when"><time datetime="2020">2020</time></p>
             <div>
               <h3>{{education.school}}</h3>
               <p class="where">{{education.schoolWhere}}</p>
             </div>
           </li>
+          <li class="entry">
+            <p class="when"></p>
+            <div>
+              <p class="where">{{education.languages}}</p>
+            </div>
+          </li>
         </ol>
-        <p class="stack" data-depth="all">{{education.languages}}</p>
       </div>
     </section>
 
-    <section id="documents" class="chapter page" aria-labelledby="documents-title">
-      <div class="section-head">
-        <p class="num" aria-hidden="true">04</p>
-        <h2 id="documents-title">{{documents.title}}</h2>
-        <p class="lead">{{documents.lead}}</p>
-        <p class="note" data-depth="all">{{documents.note}}</p>
-      </div>
-      <div class="section-body">
-        <ol class="references">
+    <section class="band is-tint" id="documents" aria-labelledby="documents-title">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <h2 id="documents-title">{{documents.title}}</h2>
+          <p>{{documents.lead}}</p>
+        </div>
+        <ol class="groups">
           <li>
             <details class="reference">
               <summary class="reference-head">
               <img class="reference-logo" src="/marks/randstad.png?v=2" width="359" height="87" alt="Randstad Digital">
               <div>
-                <p class="when"><time>08/2023 — 06/2025</time></p>
+                <p class="when"><time>08/2023 – 06/2025</time></p>
                 <h3>{{documents.reference}}</h3>
                 <p class="where">{{documents.randstad}}</p>
               </div>
@@ -388,7 +312,7 @@
               <summary class="reference-head">
               <img class="reference-logo" src="/marks/randstad.png?v=2" width="359" height="87" alt="Randstad Digital">
               <div>
-                <p class="when"><time>08/2023 — 11/2023</time></p>
+                <p class="when"><time>08/2023 – 11/2023</time></p>
                 <h3>{{documents.reference}}</h3>
                 <p class="where">{{documents.thesis}}</p>
               </div>
@@ -418,7 +342,7 @@
               <summary class="reference-head">
               <img class="reference-logo" src="/marks/abrio.png?v=2" width="379" height="85" alt="Abrio">
               <div>
-                <p class="when"><time>04/2023 — 06/2023</time></p>
+                <p class="when"><time>04/2023 – 06/2023</time></p>
                 <h3>{{documents.internship}}</h3>
                 <p class="where">{{documents.abrio}}</p>
               </div>
@@ -447,7 +371,7 @@
               <summary class="reference-head">
               <img class="reference-logo" src="/marks/gewa.png?v=2" width="234" height="213" alt="Gewa Comp">
               <div>
-                <p class="when"><time>01/2023 — 03/2023</time></p>
+                <p class="when"><time>01/2023 – 03/2023</time></p>
                 <h3>{{documents.reference}}</h3>
                 <p class="where">{{documents.gewa}}</p>
               </div>
@@ -478,7 +402,7 @@
               <summary class="reference-head">
               <img class="reference-logo" src="/marks/mainz.png?v=2" width="417" height="120" alt="Universitätsmedizin Mainz">
               <div>
-                <p class="when"><time>04/2022 — 09/2022</time></p>
+                <p class="when"><time>04/2022 – 09/2022</time></p>
                 <h3>{{documents.reference}}</h3>
                 <p class="where">{{documents.mainz}}</p>
               </div>
@@ -504,7 +428,7 @@
               <summary class="reference-head">
               <img class="reference-logo" src="/marks/uhp.png?v=2" width="243" height="118" alt="UHP Software">
               <div>
-                <p class="when"><time>08/2021 — 09/2021</time></p>
+                <p class="when"><time>08/2021 – 09/2021</time></p>
                 <h3>{{documents.reference}}</h3>
                 <p class="where">{{documents.uhp}}</p>
               </div>
@@ -529,49 +453,52 @@
         </ol>
       </div>
     </section>
+
+    <section class="end" aria-labelledby="kontakt-title">
+      <div class="wrap end-grid">
+        <div class="end-copy">
+          <h2 id="kontakt-title">{{foot.cta}}</h2>
+          <p><a class="end-mail" href="mailto:mail@robin-prause.de">mail@robin-prause.de</a></p>
+        </div>
+        <form class="contact" id="kontakt" action="/contact" method="post">
+          <p class="form-note" role="status" data-fail="{{form.failed}}">{{form.note}}</p>
+          <input type="hidden" name="lang" value="{{html.lang}}">
+          <input type="hidden" name="back" value="{{base}}">
+          <div class="hp" aria-hidden="true">
+            <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <label>
+            <span>{{form.name}}</span>
+            <input name="name" required maxlength="80" autocomplete="name">
+          </label>
+          <label>
+            <span>{{form.email}}</span>
+            <input name="email" type="email" required maxlength="120" autocomplete="email">
+          </label>
+          <label>
+            <span>{{form.message}}</span>
+            <textarea name="message" required maxlength="4000" rows="5"></textarea>
+          </label>
+          <button class="btn" type="submit">{{form.send}}</button>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <footer class="colophon">
-    <div class="page foot">
-      <p class="foot-cta">{{foot.cta}}</p>
-      <a class="foot-mail" href="mailto:mail@robin-prause.de">mail@robin-prause.de</a>
-      <form class="contact" id="kontakt" action="/contact" method="post">
-        <p class="form-note" role="status" data-fail="{{form.failed}}">{{form.note}}</p>
-        <input type="hidden" name="lang" value="{{html.lang}}">
-        <input type="hidden" name="back" value="{{base}}">
-        <div class="hp" aria-hidden="true">
-          <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-        </div>
-        <label>
-          <span>{{form.name}}</span>
-          <input name="name" required maxlength="80" autocomplete="name">
-        </label>
-        <label>
-          <span>{{form.email}}</span>
-          <input name="email" type="email" required maxlength="120" autocomplete="email">
-        </label>
-        <label>
-          <span>{{form.message}}</span>
-          <textarea name="message" required maxlength="4000" rows="5"></textarea>
-        </label>
-        <button type="submit">{{form.send}}</button>
-      </form>
-      <div class="foot-row">
-        <p>Robin Prause · Frankfurt · {{foot.year}}</p>
-        <p>
-          <a href="{{offer.href}}">{{offer.teaser}}</a>
-          <a href="https://www.linkedin.com/in/robin-prause-330666278" rel="noopener noreferrer">LinkedIn</a>
-          <a href="{{legal.impressumHref}}">{{legal.impressum}}</a>
-          <a href="{{legal.privacyHref}}">{{legal.privacy}}</a>
-          <a href="{{base}}#top">{{foot.top}} ↑</a>
-        </p>
-      </div>
+  <footer class="foot">
+    <div class="wrap foot-row">
+      <p>Robin Prause · Rodgau · {{foot.year}}</p>
+      <p>
+        <a href="{{offer.href}}">{{offer.teaser}}</a>
+        <a href="https://www.linkedin.com/in/robin-prause-330666278" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/robinprause1" rel="noopener noreferrer">GitHub</a>
+        <a href="{{legal.impressumHref}}">{{legal.impressum}}</a>
+        <a href="{{legal.privacyHref}}">{{legal.privacy}}</a>
+      </p>
     </div>
   </footer>
 
-  <script src="/name.js?v=6"></script>
-  <script src="/motion.js?v=28"></script>
-  <script src="/controls.js?v=7"></script>
+  <script src="/site.js?v=3"></script>
   <script src="/contact.js?v=1"></script>
 </body>
 </html>
