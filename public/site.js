@@ -111,6 +111,43 @@ if (!still && "IntersectionObserver" in window) {
   }
 }
 
+/* ---------- Steps: the line fills as you scroll past ---------- */
+
+const path = document.querySelector("[data-path]");
+
+if (path && !still) {
+  const steps = [...path.querySelectorAll(".path-step")];
+  const upright = window.matchMedia("(max-width: 900px)");
+  let queued = false;
+
+  path.classList.add("is-live");
+
+  function fillPath() {
+    queued = false;
+    const box = path.getBoundingClientRect();
+    const view = window.innerHeight;
+    // Upright, the line ends where you read; lying down, it fills while the row crosses the screen.
+    const raw = upright.matches ? (view * 0.6 - box.top) / box.height : (view * 0.85 - box.top) / (view * 0.45);
+    const p = Math.min(Math.max(raw, 0), 1);
+    path.style.setProperty("--p", p.toFixed(3));
+    for (const step of steps) {
+      const at = step.getBoundingClientRect();
+      const reach = upright.matches ? (at.top - box.top) / box.height : (at.left - box.left) / box.width;
+      step.classList.toggle("is-on", p > reach + 0.02);
+    }
+  }
+
+  function queuePath() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(fillPath);
+  }
+
+  window.addEventListener("scroll", queuePath, { passive: true });
+  window.addEventListener("resize", queuePath);
+  fillPath();
+}
+
 /* ---------- Workflow player ---------- */
 
 const SVG = "http://www.w3.org/2000/svg";

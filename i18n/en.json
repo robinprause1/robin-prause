@@ -383,76 +383,89 @@
     },
     "how": {
       "title": "How we work together",
-      "lead": "We start small: set up one task properly and see how much time it saves. Then comes the next one.",
-      "optional": "Optional",
+      "lead": "Three steps, one task. Once it runs, the next one follows.",
+      "optional": "Afterwards, if you like",
       "one": {
         "title": "Coming along",
-        "text": "I come to you and walk along. I watch what you do and ask questions. One question often helps: what would run short first if twice as many customers came tomorrow? That is where we start.",
-        "meta": "Usually half a day to a full day, free in the first year"
+        "text": "I come to you, watch and find the task that eats the most time.",
+        "meta": "Free in the first year"
       },
       "two": {
         "title": "The job",
-        "text": "You get a fixed sum for exactly one task. The sum is set before the work starts. I set the task up with standard tools in your account.",
-        "meta": "Fixed price, set up within a few weeks"
+        "text": "You get a fixed price. Then I set the task up in your accounts.",
+        "meta": "Fixed price, within a few weeks"
       },
       "three": {
         "title": "Handover",
-        "text": "We practise until it sticks. After that you can run, change and fix the task yourselves. You get a short guide in your own words.",
+        "text": "We practise until it sticks. After that you can run the task on your own.",
         "meta": "With a guide in your words"
       },
       "four": {
         "title": "Ongoing support",
-        "text": "You carry on alone, or I stay your contact for a fixed monthly sum. I keep everything running, bring new things along and take on the next task.",
-        "meta": "Fixed monthly sum"
+        "text": "I stay your contact for a fixed monthly sum."
       },
       "five": {
         "title": "Custom build",
-        "text": "Sometimes a task needs a tool of its own, for example an app for the team. A custom build follows a first job, because by then I know your business well. The code is yours.",
-        "meta": "Fixed price by scope"
-      },
-      "check": {
-        "title": "How we recognise a good task",
-        "lead": "All five points hold.",
-        "one": "It comes up at least every week.",
-        "two": "It costs the business about two hours a week in total.",
-        "three": "A person checks the result before it goes out.",
-        "four": "It runs with standard tools in your name.",
-        "five": "It is set up and practised within a few weeks."
+        "text": "A tool of your own, for example an app for the team."
       }
     },
     "data": {
       "title": "Your data stays with you",
-      "lead": "Good automation needs trust. That is why the same principles apply to every job.",
+      "lead": "The same six principles apply to every job.",
       "avv": {
+        "k": "DPA",
         "t": "Data processing agreement",
-        "d": "We sign a data processing agreement before I work with your data. For the tools we use company accounts whose provider offers one."
+        "d": "We sign it before I work with your data. The tools run on company accounts with an agreement too."
       },
       "host": {
+        "k": "DE",
         "t": "Hosting in Germany",
-        "d": "The workflows I set up for you run on servers in Germany. Where a tool processes data elsewhere, I tell you beforehand."
+        "d": "Your workflows run on servers in Germany. Where a tool processes data elsewhere, you know beforehand."
       },
       "name": {
         "t": "Everything in your name",
-        "d": "Accounts, data and access belong to you. You keep the overview at all times."
+        "d": "Accounts, data and access belong to you."
       },
       "less": {
         "t": "Only the data that is needed",
-        "d": "We decide together which data goes into the tool and which does not."
+        "d": "We decide together what goes into the tool."
       },
       "human": {
         "t": "A person checks what matters",
-        "d": "Quotes, replies to customers and payments only go out after your approval."
+        "d": "Quotes, replies and payments only go out after your approval."
       },
       "health": {
         "t": "Health data",
-        "d": "Only with a separate, specially protected setup. For practices we start with workflows that involve no patient data at all."
+        "d": "Only with a specially protected setup. Practices start without patient data."
       }
     },
     "about": {
       "title": "About me",
-      "one": "I have been building software, online shops and platforms for years, as a freelancer, in teams and in a leading role. So I know how workflows, data protection and technology have to fit together for something to hold up in daily work.",
-      "two": "With you, though, your business is the focus, not the technology. I listen, look at your daily work and set up exactly the task you want to get rid of.",
-      "three": "I only take on a few businesses at a time, so each one has my full attention. I live in Rodgau near Frankfurt and come to you.",
+      "lead": "With me, your business is the focus, not the technology. I listen, look at your daily work and set up exactly the task you want to get rid of.",
+      "p1": {
+        "k": "Since 2021",
+        "d": "I have worked in software development: software, online shops, platforms."
+      },
+      "p2": {
+        "k": "Since 2023",
+        "d": "I have built software with AI. My bachelor thesis was already about it."
+      },
+      "p3": {
+        "k": "6 references",
+        "d": "from employers, quoted in full on this site."
+      },
+      "p4": {
+        "k": "B.Sc.",
+        "d": "Media Informatics, Technische Hochschule Mittelhessen."
+      },
+      "p5": {
+        "k": "On site",
+        "d": "I live in Rodgau near Frankfurt and come to your business."
+      },
+      "p6": {
+        "k": "Few businesses",
+        "d": "at a time, so each one has my full attention."
+      },
       "whoTitle": "Who it is for",
       "who": "Small businesses of up to 20 people where the owner decides, for example landscaping, waste disposal, farming and service businesses. Also freelancers, the self-employed and private people.",
       "more": "My background and references"

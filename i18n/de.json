@@ -383,76 +383,89 @@
     },
     "how": {
       "title": "So arbeiten wir zusammen",
-      "lead": "Wir fangen klein an: eine Aufgabe sauber umsetzen und schauen, wie viel Zeit sie spart. Dann kommt die nächste.",
-      "optional": "Auf Wunsch",
+      "lead": "Drei Schritte, eine Aufgabe. Wenn sie läuft, kommt die nächste.",
+      "optional": "Danach, auf Wunsch",
       "one": {
         "title": "Begleiten",
-        "text": "Ich komme zu euch und laufe mit. Ich schaue zu, was ihr tut, und frage nach. Eine Frage hilft dabei oft: Was würde bei euch zuerst knapp, wenn morgen doppelt so viele Kunden kommen? Genau dort setzen wir an.",
-        "meta": "Meist ein halber bis ganzer Tag, im ersten Jahr kostenlos"
+        "text": "Ich komme zu euch, schaue zu und finde die Aufgabe, die am meisten Zeit frisst.",
+        "meta": "Im ersten Jahr kostenlos"
       },
       "two": {
         "title": "Auftrag",
-        "text": "Ihr bekommt eine feste Summe für genau eine Aufgabe. Die Summe steht, bevor die Arbeit beginnt. Ich richte die Aufgabe ein, mit Standardwerkzeugen auf eurem Konto.",
-        "meta": "Festpreis, in wenigen Wochen eingerichtet"
+        "text": "Ihr bekommt einen festen Preis. Dann richte ich die Aufgabe auf euren Konten ein.",
+        "meta": "Festpreis, in wenigen Wochen"
       },
       "three": {
         "title": "Übergabe",
-        "text": "Wir üben, bis es sitzt. Danach könnt ihr die Aufgabe selbst ausführen, ändern und reparieren. Ihr bekommt eine kurze Anleitung in euren eigenen Worten.",
+        "text": "Wir üben, bis es sitzt. Danach könnt ihr die Aufgabe allein.",
         "meta": "Mit Anleitung in euren Worten"
       },
       "four": {
         "title": "Betreuung",
-        "text": "Ihr macht allein weiter, oder ich bleibe für einen festen Monatsbetrag euer Ansprechpartner. Ich halte alles am Laufen, bringe Neues mit und nehme mir die nächste Aufgabe vor.",
-        "meta": "Fester Monatsbetrag"
+        "text": "Ich bleibe für einen festen Monatsbetrag euer Ansprechpartner."
       },
       "five": {
         "title": "Eigenbau",
-        "text": "Manchmal braucht eine Aufgabe ein eigenes Werkzeug, zum Beispiel eine App fürs Team. Der Eigenbau folgt auf einen ersten Auftrag, denn dann kenne ich euren Betrieb schon gut. Der Code gehört euch.",
-        "meta": "Festpreis nach Umfang"
-      },
-      "check": {
-        "title": "Woran wir eine gute Aufgabe erkennen",
-        "lead": "Alle fünf Punkte stimmen.",
-        "one": "Sie kommt mindestens jede Woche vor.",
-        "two": "Sie kostet im Betrieb zusammen etwa zwei Stunden pro Woche.",
-        "three": "Ein Mensch prüft das Ergebnis, bevor es rausgeht.",
-        "four": "Sie läuft mit Standardwerkzeugen auf eurem Namen.",
-        "five": "Sie ist in wenigen Wochen eingerichtet und geübt."
+        "text": "Ein eigenes Werkzeug für euch, zum Beispiel eine App fürs Team."
       }
     },
     "data": {
       "title": "Eure Daten bleiben bei euch",
-      "lead": "Gute Automatisierung braucht Vertrauen. Darum gelten bei jedem Auftrag dieselben Grundsätze.",
+      "lead": "Bei jedem Auftrag gelten dieselben sechs Grundsätze.",
       "avv": {
+        "k": "AVV",
         "t": "Vertrag zur Auftragsverarbeitung",
-        "d": "Wir schließen einen AVV, bevor ich mit euren Daten arbeite. Für die Werkzeuge nutzen wir Firmenkonten, für die der Anbieter einen AVV anbietet."
+        "d": "Wir schließen ihn, bevor ich mit euren Daten arbeite. Auch die Werkzeuge laufen über Firmenkonten mit AVV."
       },
       "host": {
+        "k": "DE",
         "t": "Hosting in Deutschland",
-        "d": "Die Abläufe, die ich für euch einrichte, laufen auf Servern in Deutschland. Wo ein Werkzeug Daten anderswo verarbeitet, sage ich euch das vorher."
+        "d": "Eure Abläufe laufen auf Servern in Deutschland. Verarbeitet ein Werkzeug Daten anderswo, erfahrt ihr das vorher."
       },
       "name": {
         "t": "Alles auf eurem Namen",
-        "d": "Konten, Daten und Zugänge gehören euch. Ihr behaltet jederzeit den Überblick."
+        "d": "Konten, Daten und Zugänge gehören euch."
       },
       "less": {
         "t": "Nur die nötigen Daten",
-        "d": "Wir legen gemeinsam fest, welche Daten ins Werkzeug gehen und welche nicht."
+        "d": "Wir legen gemeinsam fest, was ins Werkzeug geht."
       },
       "human": {
         "t": "Ein Mensch prüft Wichtiges",
-        "d": "Angebote, Antworten an Kunden und Zahlungen gehen erst nach eurer Freigabe raus."
+        "d": "Angebote, Antworten und Zahlungen gehen erst nach eurer Freigabe raus."
       },
       "health": {
         "t": "Gesundheitsdaten",
-        "d": "Nur mit einem eigenen, besonders geschützten Aufbau. Für Praxen starten wir mit Abläufen ganz ohne Patientendaten."
+        "d": "Nur mit besonders geschütztem Aufbau. Praxen starten ohne Patientendaten."
       }
     },
     "about": {
       "title": "Über mich",
-      "one": "Ich entwickle seit Jahren Software, Onlineshops und Plattformen, als Freelancer, im Team und in leitender Rolle. Daher weiß ich, wie Abläufe, Datenschutz und Technik zusammenpassen müssen, damit etwas im Alltag hält.",
-      "two": "Bei euch steht aber euer Betrieb im Mittelpunkt, nicht die Technik. Ich höre zu, schaue mir euren Alltag an und setze genau die Aufgabe um, die ihr loswerden wollt.",
-      "three": "Ich nehme mir nur wenige Betriebe gleichzeitig vor. So hat jeder meine volle Aufmerksamkeit. Ich wohne in Rodgau bei Frankfurt und komme zu euch.",
+      "lead": "Bei mir steht euer Betrieb im Mittelpunkt, nicht die Technik. Ich höre zu, schaue mir euren Alltag an und setze genau die Aufgabe um, die ihr loswerden wollt.",
+      "p1": {
+        "k": "Seit 2021",
+        "d": "arbeite ich in der Softwareentwicklung: Software, Onlineshops, Plattformen."
+      },
+      "p2": {
+        "k": "Seit 2023",
+        "d": "baue ich Software mit KI. Schon meine Bachelorarbeit handelt davon."
+      },
+      "p3": {
+        "k": "6 Zeugnisse",
+        "d": "von Arbeitgebern, im Wortlaut nachzulesen."
+      },
+      "p4": {
+        "k": "B.Sc.",
+        "d": "Medieninformatik, Technische Hochschule Mittelhessen."
+      },
+      "p5": {
+        "k": "Vor Ort",
+        "d": "Ich wohne in Rodgau und komme zu euch in den Betrieb."
+      },
+      "p6": {
+        "k": "Wenige Betriebe",
+        "d": "gleichzeitig. So hat jeder meine volle Aufmerksamkeit."
+      },
       "whoTitle": "Für wen",
       "who": "Kleine Betriebe bis 20 Leute, in denen der Inhaber entscheidet, zum Beispiel Gartenbau, Entsorgung, Landwirtschaft und Dienstleister. Genauso Solo-Selbstständige, Freiberufler und Privatleute.",
       "more": "Mein Werdegang und meine Arbeitszeugnisse"

@@ -217,7 +217,7 @@ function notFound(lang) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{missing.title}} — Robin Prause</title>
   <link rel="icon" href="/favicon.svg?v=6" type="image/svg+xml">
-  <link rel="stylesheet" href="/site.css?v=3">
+  <link rel="stylesheet" href="/site.css?v=5">
 </head>
 <body>
   <main class="missing">

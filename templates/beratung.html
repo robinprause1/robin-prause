@@ -25,7 +25,7 @@
   <!--ld-->
   <link rel="icon" href="/favicon.svg?v=6" type="image/svg+xml">
   <link rel="preload" href="/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/site.css?v=3">
+  <link rel="stylesheet" href="/site.css?v=5">
 </head>
 <body>
   <a class="skip" href="#inhalt">{{skip}}</a>
@@ -45,6 +45,8 @@
     <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h10M4 18h7"/></symbol>
     <symbol id="i-clip" viewBox="0 0 24 24"><path d="M8 5h8v3H8z"/><path d="M8 6H6a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-2M9 13h6M9 17h4"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 8-8M16 7l3 3M14 9l2 2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.3 2.9 7.7 7 9.5 4.1-1.8 7-5.2 7-9.5V6z"/><path d="m9 12 2.2 2.2L15 10"/></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
     <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
@@ -192,50 +194,33 @@
           <h2 id="ablauf-title">{{offer.how.title}}</h2>
           <p>{{offer.how.lead}}</p>
         </div>
-        <ol class="steps" data-reveal>
-          <li class="step">
-            <span class="step-n" aria-hidden="true">1</span>
-            <h3>{{offer.how.one.title}}</h3>
-            <p>{{offer.how.one.text}}</p>
-            <p class="step-meta">{{offer.how.one.meta}}</p>
-          </li>
-          <li class="step">
-            <span class="step-n" aria-hidden="true">2</span>
-            <h3>{{offer.how.two.title}}</h3>
-            <p>{{offer.how.two.text}}</p>
-            <p class="step-meta">{{offer.how.two.meta}}</p>
-          </li>
-          <li class="step">
-            <span class="step-n" aria-hidden="true">3</span>
-            <h3>{{offer.how.three.title}}</h3>
-            <p>{{offer.how.three.text}}</p>
-            <p class="step-meta">{{offer.how.three.meta}}</p>
-          </li>
-          <li class="step is-extra">
-            <span class="step-n" aria-hidden="true">4</span>
-            <h3>{{offer.how.four.title}} <small>{{offer.how.optional}}</small></h3>
-            <p>{{offer.how.four.text}}</p>
-            <p class="step-meta">{{offer.how.four.meta}}</p>
-          </li>
-          <li class="step is-extra">
-            <span class="step-n" aria-hidden="true">5</span>
-            <h3>{{offer.how.five.title}} <small>{{offer.how.optional}}</small></h3>
-            <p>{{offer.how.five.text}}</p>
-            <p class="step-meta">{{offer.how.five.meta}}</p>
-          </li>
-        </ol>
-        <div class="check" data-reveal>
-          <div>
-            <h3>{{offer.how.check.title}}</h3>
-            <p>{{offer.how.check.lead}}</p>
-          </div>
-          <ul>
-            <li>{{offer.how.check.one}}</li>
-            <li>{{offer.how.check.two}}</li>
-            <li>{{offer.how.check.three}}</li>
-            <li>{{offer.how.check.four}}</li>
-            <li>{{offer.how.check.five}}</li>
-          </ul>
+        <div class="path" data-path>
+          <div class="path-line" aria-hidden="true"><i></i></div>
+          <ol class="path-steps">
+            <li class="path-step">
+              <span class="path-n" aria-hidden="true">1</span>
+              <h3>{{offer.how.one.title}}</h3>
+              <p>{{offer.how.one.text}}</p>
+              <p class="path-meta">{{offer.how.one.meta}}</p>
+            </li>
+            <li class="path-step">
+              <span class="path-n" aria-hidden="true">2</span>
+              <h3>{{offer.how.two.title}}</h3>
+              <p>{{offer.how.two.text}}</p>
+              <p class="path-meta">{{offer.how.two.meta}}</p>
+            </li>
+            <li class="path-step">
+              <span class="path-n" aria-hidden="true">3</span>
+              <h3>{{offer.how.three.title}}</h3>
+              <p>{{offer.how.three.text}}</p>
+              <p class="path-meta">{{offer.how.three.meta}}</p>
+            </li>
+          </ol>
+        </div>
+        <div class="after" data-reveal>
+          <p class="after-label">{{offer.how.optional}}</p>
+          <div class="after-item"><h3>{{offer.how.four.title}}</h3><p>{{offer.how.four.text}}</p></div>
+          <div class="after-item"><h3>{{offer.how.five.title}}</h3><p>{{offer.how.five.text}}</p></div>
         </div>
       </div>
     </section>
@@ -246,13 +231,13 @@
           <h2 id="datenschutz-title">{{offer.data.title}}</h2>
           <p>{{offer.data.lead}}</p>
         </div>
-        <ul class="facts" data-reveal>
-          <li><h3>{{offer.data.avv.t}}</h3><p>{{offer.data.avv.d}}</p></li>
-          <li><h3>{{offer.data.host.t}}</h3><p>{{offer.data.host.d}}</p></li>
-          <li><h3>{{offer.data.name.t}}</h3><p>{{offer.data.name.d}}</p></li>
-          <li><h3>{{offer.data.less.t}}</h3><p>{{offer.data.less.d}}</p></li>
-          <li><h3>{{offer.data.human.t}}</h3><p>{{offer.data.human.d}}</p></li>
-          <li><h3>{{offer.data.health.t}}</h3><p>{{offer.data.health.d}}</p></li>
+        <ul class="vault" data-reveal>
+          <li class="vault-card is-big"><p class="vault-k" aria-hidden="true">{{offer.data.avv.k}}</p><h3>{{offer.data.avv.t}}</h3><p>{{offer.data.avv.d}}</p></li>
+          <li class="vault-card is-big"><p class="vault-k" aria-hidden="true">{{offer.data.host.k}}</p><h3>{{offer.data.host.t}}</h3><p>{{offer.data.host.d}}</p></li>
+          <li class="vault-card"><span class="vault-icon"><svg aria-hidden="true"><use href="#i-key"/></svg></span><h3>{{offer.data.name.t}}</h3><p>{{offer.data.name.d}}</p></li>
+          <li class="vault-card"><span class="vault-icon"><svg aria-hidden="true"><use href="#i-sort"/></svg></span><h3>{{offer.data.less.t}}</h3><p>{{offer.data.less.d}}</p></li>
+          <li class="vault-card"><span class="vault-icon"><svg aria-hidden="true"><use href="#i-check"/></svg></span><h3>{{offer.data.human.t}}</h3><p>{{offer.data.human.d}}</p></li>
+          <li class="vault-card"><span class="vault-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span><h3>{{offer.data.health.t}}</h3><p>{{offer.data.health.d}}</p></li>
         </ul>
       </div>
     </section>
@@ -262,14 +247,22 @@
         <figure class="about-photo" data-reveal>
           <img src="/portrait.jpg?v=5" width="1024" height="1024" alt="{{portrait.alt}}" loading="lazy">
         </figure>
-        <div class="about-text" data-reveal>
-          <h2 id="ueber-title">{{offer.about.title}}</h2>
-          <p>{{offer.about.one}}</p>
-          <p>{{offer.about.two}}</p>
-          <p>{{offer.about.three}}</p>
-          <h3>{{offer.about.whoTitle}}</h3>
-          <p>{{offer.about.who}}</p>
-          <p><a class="link" href="{{cv.href}}">{{offer.about.more}}</a></p>
+        <div class="about-text">
+          <h2 id="ueber-title" data-reveal>{{offer.about.title}}</h2>
+          <p class="about-lead" data-reveal>{{offer.about.lead}}</p>
+          <ul class="points" data-reveal>
+            <li><b>{{offer.about.p1.k}}</b><span>{{offer.about.p1.d}}</span></li>
+            <li><b>{{offer.about.p2.k}}</b><span>{{offer.about.p2.d}}</span></li>
+            <li><b>{{offer.about.p3.k}}</b><span>{{offer.about.p3.d}}</span></li>
+            <li><b>{{offer.about.p4.k}}</b><span>{{offer.about.p4.d}}</span></li>
+            <li><b>{{offer.about.p5.k}}</b><span>{{offer.about.p5.d}}</span></li>
+            <li><b>{{offer.about.p6.k}}</b><span>{{offer.about.p6.d}}</span></li>
+          </ul>
+          <div class="about-who" data-reveal>
+            <h3>{{offer.about.whoTitle}}</h3>
+            <p>{{offer.about.who}}</p>
+            <p><a class="link" href="{{cv.href}}">{{offer.about.more}}</a></p>
+          </div>
         </div>
       </div>
     </section>
@@ -342,7 +335,7 @@
     </div>
   </footer>
 
-  <script src="/site.js?v=3"></script>
+  <script src="/site.js?v=4"></script>
   <script src="/contact.js?v=1"></script>
 </body>
 </html>
