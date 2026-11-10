@@ -22,6 +22,8 @@ const moved = new Map([
   ["/index.html", "/"],
   ["/consulting", "/en"],
   ["/de/beratung", "/"],
+  ["/Robin%20Prause%20%E2%80%93%20Logo%20%26%20LinkedIn-Banner.html", "/logos/Robin%20Prause%20%E2%80%93%20Logo%20%26%20LinkedIn-Banner.html"],
+  ["/Robin Prause – Logo & LinkedIn-Banner.html", "/logos/Robin Prause – Logo & LinkedIn-Banner.html"],
 ]);
 const catalogs = {
   en: flatten(JSON.parse(readFileSync(new URL("./i18n/en.json", import.meta.url), "utf8"))),
