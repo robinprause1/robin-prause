@@ -8,7 +8,7 @@
     "og": "Plattformen, Ende zu Ende. Payments, Suche, mandantenfähige Daten, Compliance.",
     "locale": "de_DE"
   },
-  "home": "/de",
+  "home": "/",
   "base": "/de/lebenslauf",
   "lang": {
     "en": {
@@ -223,196 +223,446 @@
   },
   "offer": {
     "meta": "KI-Beratung für kleine Betriebe in Rhein-Main | Robin Prause",
-    "description": "Mehr Zeit für kleine Betriebe in Frankfurt und Rhein-Main. Ich hole euch die Stunden zurück, die im Büro versickern, mit KI-Werkzeugen auf euren Namen. Einmalig oder dauerhaft an eurer Seite.",
-    "href": "/de",
+    "description": "Mehr Zeit für die eigentliche Arbeit: Ich begleite kleine Betriebe in Frankfurt und Rhein-Main, finde die Aufgabe, die am meisten Zeit frisst, und richte sie zum Festpreis ein.",
+    "href": "/",
     "teaser": "Beratung für kleine Betriebe",
-    "kicker": "CTO-Wissen und KI für kleine Betriebe · Rhein-Main",
-    "claim": "Mehr Zeit für das, wofür du eigentlich angefangen hast.",
-    "lede": "Angebote am Sonntag, Mails nach Feierabend? Ich hole euch die Stunden zurück, die im Büro versickern. Damit ihr schneller antwortet als andere, mehr Aufträge schafft und abends wirklich frei habt.",
-    "cta": "Schreib mir, was liegen bleibt",
-    "ctaHint": "Unverbindlich. Die Liste gehört dir, auch ohne Auftrag.",
-    "mastCta": "Anfragen",
+    "service": "KI und Automatisierung für kleine Betriebe",
+    "message": "Was bleibt bei euch liegen?",
+    "nav": {
+      "label": "Seite",
+      "top": "Beispiele",
+      "how": "Ablauf",
+      "prices": "Preise",
+      "data": "Datenschutz",
+      "faq": "Fragen",
+      "cta": "Anfragen"
+    },
+    "hero": {
+      "a": "Mehr Zeit für die",
+      "b": "eigentliche Arbeit.",
+      "lede": "Ich begleite euch bei der Arbeit, finde die Aufgabe, die am meisten Zeit frisst, und nehme sie euch ab. Ohne dass ihr euch mit KI beschäftigen müsst.",
+      "cta": "Termin zum Begleiten anfragen",
+      "hint": "Das Begleiten ist im ersten Jahr kostenlos. Der Preis steht fest, bevor die Arbeit beginnt.",
+      "by": "Robin Prause aus Rodgau bei Frankfurt. Für kleine Betriebe, Selbstständige und Privatleute."
+    },
+    "catalog": {
+      "label": "Angebotskatalog herunterladen",
+      "detail": "PDF, 20 Seiten",
+      "file": "Robin-Prause-Angebotskatalog.pdf"
+    },
+    "flow": {
+      "label": "Beispiele für Abläufe",
+      "note": "Bei Wichtigem entscheidet ihr: Angebote, Antworten an Kunden und Zahlungen kommen als Entwurf, und ihr gebt sie per Klick frei.",
+      "invoice": {
+        "tab": "Eingangsrechnung",
+        "a": {
+          "t": "Rechnung kommt per Mail",
+          "d": "als PDF im Sammelpostfach"
+        },
+        "b": {
+          "t": "Als Rechnung erkannt",
+          "d": "Lieferant, Datum, Betrag und Nummer sind ausgelesen"
+        },
+        "c": {
+          "t": "Sauber abgelegt",
+          "d": "nach festem Muster, im richtigen Monatsordner"
+        },
+        "d": {
+          "t": "Steht in der Buchhaltung",
+          "d": "zum Beispiel in Lexoffice oder sevDesk"
+        },
+        "e": {
+          "t": "Steuerberater weiß Bescheid",
+          "d": "mit einer kurzen Info"
+        }
+      },
+      "request": {
+        "tab": "Kundenanfrage",
+        "a": {
+          "t": "Anfrage über die Website",
+          "d": "Hecke schneiden, 40 Meter, bis Ende März"
+        },
+        "b": {
+          "t": "Kunde hat eine Bestätigung",
+          "d": "persönlich, innerhalb einer Minute"
+        },
+        "c": {
+          "t": "Vorsortiert",
+          "d": "Art, Ort und Dringlichkeit: heute anrufen"
+        },
+        "d": {
+          "t": "Angebot liegt als Entwurf bereit",
+          "d": "in eurer Vorlage, mit euren Preisen"
+        },
+        "e": {
+          "t": "Ihr prüft und schickt ab",
+          "d": "die Entscheidung bleibt bei euch"
+        }
+      },
+      "report": {
+        "tab": "Bericht von draußen",
+        "a": {
+          "t": "Sprachnachricht vom Vorarbeiter",
+          "d": "zwei Minuten, dazu drei Fotos"
+        },
+        "b": {
+          "t": "Abgetippt und verstanden",
+          "d": "Datum, Ort, Arbeiten und Stunden"
+        },
+        "c": {
+          "t": "Dem Auftrag zugeordnet",
+          "d": "die Fotos liegen gleich dabei"
+        },
+        "d": {
+          "t": "Bericht liegt im Büro",
+          "d": "fertig als Arbeitsnachweis"
+        },
+        "e": {
+          "t": "Stunden stehen in der Tabelle",
+          "d": "die Rechnung hat alle Angaben"
+        }
+      }
+    },
     "gain": {
       "title": "Was ihr gewinnt",
-      "lead": "Viele Betriebe lassen sich Routinearbeit längst von KI vorbereiten. Jede Woche, die ihr wartet, kostet dieselben Stunden noch einmal.",
-      "hours": {
-        "big": "100+",
-        "title": "Stunden im Jahr zurück",
-        "text": "So viel bringt schon eine Aufgabe, die heute zwei Stunden pro Woche frisst. Das sind mehr als zwei Arbeitswochen, jedes Jahr."
-      },
-      "reply": {
-        "big": "Heute",
-        "title": "Antwort statt Warteschlange",
-        "text": "Anfragen sind sortiert, Angebote vorbereitet. Wer zuerst antwortet, bekommt oft den Auftrag."
+      "big": "100",
+      "unit": "Stunden im Jahr",
+      "text": "So viel Zeit kommt zurück, schon bei einer Aufgabe, die heute zwei Stunden pro Woche kostet.",
+      "fast": {
+        "t": "Schneller antworten als andere",
+        "d": "Anfragen sind sortiert, Angebote vorbereitet."
       },
       "evening": {
-        "big": "Frei",
-        "title": "Feierabend, der einer ist",
-        "text": "Kein Sonntag am Schreibtisch, kein Abtippen am Abend. Die Zeit gehört wieder dir und deinen Leuten."
+        "t": "Feierabend ohne Schreibtisch",
+        "d": "Abends und am Wochenende bleibt das Büro zu."
+      },
+      "own": {
+        "t": "Alles auf eurem Namen",
+        "d": "Konten und Daten gehören euch, und eure Leute können es danach allein."
+      },
+      "partner": {
+        "t": "Ein fester Ansprechpartner",
+        "d": "Auf Wunsch bleibe ich nach der Übergabe dran."
       }
     },
-    "steps": {
-      "title": "So läuft es",
-      "lead": "Kein Risiko am Anfang. Am Ende entscheidet ihr, ob ihr allein weitermacht oder ich dranbleibe.",
+    "top": {
+      "title": "Die meistgenutzten Automatisierungen",
+      "lead": "Diese Aufgaben kosten in fast jedem Betrieb viel Zeit. Am einfachsten startet ihr meist im Büro, bei Rechnungen und Buchhaltung.",
       "one": {
-        "when": "Schritt 1",
-        "title": "Ich begleite euch",
-        "text": "Ich schaue bei der Arbeit zu und frage nach. Nicht, um jemanden zu kontrollieren, sondern um zu sehen, wo die Zeit verloren geht. Danach bekommst du eine kurze Liste. Die gehört dir, auch wenn du nichts beauftragst."
+        "t": "Eingangsrechnungen erfassen",
+        "d": "Lieferant, Datum und Betrag aus der Rechnung per Mail stehen von selbst in der Buchhaltung."
       },
       "two": {
-        "when": "Schritt 2",
-        "title": "Eine Aufgabe, ein fester Preis",
-        "text": "Ich schlage die eine Arbeit vor, die euch am meisten entlastet, und nenne vorher eine feste Summe. Keine Stundenzettel, keine Überraschung auf der Rechnung."
+        "t": "Posteingang sortieren",
+        "d": "Jede Mail landet im richtigen Ordner, die zuständige Person weiß Bescheid, eine Antwort liegt als Entwurf bereit."
       },
       "three": {
-        "when": "Schritt 3",
-        "title": "Einrichten und üben",
-        "text": "Ich richte es mit Werkzeugen ein, die auf euren Namen laufen, und übe es mit den Leuten, die die Arbeit tun. So lange, bis es sich nicht mehr neu anfühlt."
+        "t": "Sofortantwort auf Anfragen",
+        "d": "Kunden bekommen innerhalb einer Minute eine persönliche Bestätigung, ihr eine kurze Nachricht."
       },
       "four": {
-        "when": "Schritt 4",
-        "title": "Übergabe",
-        "text": "Ihr könnt es allein ausführen, ändern und reparieren. Alles läuft auf euren Namen, ohne Abhängigkeit. Was bleibt, ist die Zeit, die ihr zurückbekommt."
+        "t": "Angebote vorbereiten",
+        "d": "Aus der Anfrage wird ein Entwurf mit euren Preisen. Ihr prüft und schickt ab."
       },
       "five": {
-        "title": "Optional: Ich bleibe dran",
-        "text": "Für einen festen Monatsbetrag bleibe ich euer Ansprechpartner. Ich halte alles am Laufen, nehme mir die nächste Aufgabe vor und baue ein eigenes Werkzeug, wo fertige nicht reichen: eine App fürs Team, einen Assistenten, der Arbeit vorbereitet, oder eine Verbindung zwischen euren Programmen. Der Code gehört euch."
+        "t": "Zahlungen im Blick",
+        "d": "Freundliche Erinnerungen gehen pünktlich raus, und bezahlte Rechnungen werden von selbst abgehakt."
+      },
+      "six": {
+        "t": "Termine buchen und erinnern",
+        "d": "Kunden wählen einen freien Termin und bekommen am Vortag eine Erinnerung."
+      },
+      "seven": {
+        "t": "Belege an den Steuerberater",
+        "d": "Jeden Monat sind alle Belege gesammelt und übergeben, ohne Suchen."
+      },
+      "more": "Das ist nur der Anfang. Im Katalog stehen über 60 weitere Beispiele, sortiert nach Bereichen: Büro, Kundenanfragen, Termine, Marketing, Team, Einkauf und Überblick für den Chef."
+    },
+    "how": {
+      "title": "So arbeiten wir zusammen",
+      "lead": "Wir fangen klein an: eine Aufgabe sauber umsetzen und schauen, wie viel Zeit sie spart. Dann kommt die nächste.",
+      "optional": "Auf Wunsch",
+      "one": {
+        "title": "Begleiten",
+        "text": "Ich komme zu euch und laufe mit. Ich schaue zu, was ihr tut, und frage nach. Eine Frage hilft dabei oft: Was würde bei euch zuerst knapp, wenn morgen doppelt so viele Kunden kommen? Genau dort setzen wir an.",
+        "meta": "Meist ein halber bis ganzer Tag, im ersten Jahr kostenlos"
+      },
+      "two": {
+        "title": "Auftrag",
+        "text": "Ihr bekommt eine feste Summe für genau eine Aufgabe. Die Summe steht, bevor die Arbeit beginnt. Ich richte die Aufgabe ein, mit Standardwerkzeugen auf eurem Konto.",
+        "meta": "Festpreis, in wenigen Wochen eingerichtet"
+      },
+      "three": {
+        "title": "Übergabe",
+        "text": "Wir üben, bis es sitzt. Danach könnt ihr die Aufgabe selbst ausführen, ändern und reparieren. Ihr bekommt eine kurze Anleitung in euren eigenen Worten.",
+        "meta": "Mit Anleitung in euren Worten"
+      },
+      "four": {
+        "title": "Betreuung",
+        "text": "Ihr macht allein weiter, oder ich bleibe für einen festen Monatsbetrag euer Ansprechpartner. Ich halte alles am Laufen, bringe Neues mit und nehme mir die nächste Aufgabe vor.",
+        "meta": "ab 120 € im Monat"
+      },
+      "five": {
+        "title": "Eigenbau",
+        "text": "Manchmal braucht eine Aufgabe ein eigenes Werkzeug, zum Beispiel eine App fürs Team. Der Eigenbau folgt auf einen ersten Auftrag, denn dann kenne ich euren Betrieb schon gut. Der Code gehört euch.",
+        "meta": "ab 1.900 €"
+      },
+      "check": {
+        "title": "Woran wir eine gute Aufgabe erkennen",
+        "lead": "Alle fünf Punkte stimmen.",
+        "one": "Sie kommt mindestens jede Woche vor.",
+        "two": "Sie kostet im Betrieb zusammen etwa zwei Stunden pro Woche.",
+        "three": "Ein Mensch prüft das Ergebnis, bevor es rausgeht.",
+        "four": "Sie läuft mit Standardwerkzeugen auf eurem Namen.",
+        "five": "Sie ist in wenigen Wochen eingerichtet und geübt."
       }
     },
-    "tasks": {
-      "title": "Was liegen bleibt",
-      "lead": "Kleine Dinge, die jeden Tag ein paar Minuten kosten. Übers Jahr sind das Wochen, die für Kunden, Aufträge und Feierabend fehlen. Was es bei euch ist, sehe ich, wenn ich euch begleite.",
-      "office": "Büro",
-      "field": "Draußen",
-      "home": "Zu Hause",
-      "quotes": {
-        "title": "Angebote und Rechnungen",
-        "text": "Aus Notizen, Fotos oder einem Anruf wird ein fertiger Entwurf. Du prüfst und schickst ab, statt den Sonntag am Schreibtisch zu verbringen."
+    "price": {
+      "title": "Angebote und Preise",
+      "lead": "Jedes Angebot ist eine Aufgabe, die ihr loswerden könnt. Den genauen Preis nenne ich nach dem Begleiten.",
+      "note": "Die Werkzeuge selbst zahlt ihr monatlich direkt beim Anbieter. Ich nenne euch diese Kosten, bevor wir starten.",
+      "office": {
+        "title": "Büro und Kommunikation",
+        "from": "Festpreis je Aufgabe, ab 950 €",
+        "mail": {
+          "t": "Mails und Anfragen sortieren",
+          "d": "Eingehende Mails sind nach Art sortiert und haben einen Antwortentwurf. Ihr prüft und schickt ab.",
+          "p": "ab 950 €"
+        },
+        "quotes": {
+          "t": "Angebote und Rechnungen vorbereiten",
+          "d": "Aus Anfrage, Notiz oder Sprachnachricht wird ein Entwurf in eurer Vorlage, mit euren Preisen.",
+          "p": "ab 950 €"
+        },
+        "reports": {
+          "t": "Berichte von draußen erfassen",
+          "d": "Kurz ins Handy sprechen oder ein Foto machen. Daraus wird ein sauberer Bericht oder Arbeitsnachweis.",
+          "p": "ab 950 €"
+        },
+        "dates": {
+          "t": "Termine abstimmen",
+          "d": "Passende Zeiten kommen aus eurem Kalender, und Kunden bekommen am Vortag eine Erinnerung.",
+          "p": "ab 950 €"
+        },
+        "letters": {
+          "t": "Behördenpost erledigen",
+          "d": "Briefe vom Amt sind in einfachen Worten zusammengefasst, Fristen stehen im Kalender.",
+          "p": "ab 950 €"
+        },
+        "solo": {
+          "t": "Für Solo-Selbstständige und Freiberufler",
+          "d": "Jede dieser Aufgaben gibt es auch für eine Person, meist in ein bis zwei Wochen erledigt.",
+          "p": "ab 490 €"
+        }
       },
-      "mail": {
-        "title": "Posteingang",
-        "text": "Anfragen sind sortiert, Standardfragen haben schon einen Antwortentwurf. Kein Kunde wartet mehr, weil eine Mail untergegangen ist."
+      "ai": {
+        "title": "Datenschutzsichere KI-Werkzeuge",
+        "from": "Festpreis, ab 390 €",
+        "lead": "Seit Februar 2025 verlangt die EU-KI-Verordnung von jeder Firma, die KI-Werkzeuge im Arbeitsalltag nutzt, dass ihre Leute damit umgehen können. Das gilt für Betriebe jeder Größe.",
+        "desk": {
+          "t": "KI-Arbeitsplatz einrichten",
+          "d": "Firmenkonten für ChatGPT, Microsoft Copilot oder Google Gemini auf euren Namen, mit Vertrag zur Auftragsverarbeitung.",
+          "p": "ab 690 €"
+        },
+        "rules": {
+          "t": "Regeln für den Umgang",
+          "d": "Ein bis zwei Seiten in euren Worten: welche Daten ins Werkzeug dürfen und wer Ergebnisse prüft.",
+          "p": "ab 390 €"
+        },
+        "training": {
+          "t": "KI-Kompetenz fürs Team",
+          "d": "Eine Schulung vor Ort mit euren eigenen Aufgaben. Jede Person bekommt eine Teilnahmebestätigung.",
+          "p": "ab 390 € pro Termin"
+        },
+        "pack": {
+          "t": "Paket „Sicher starten“",
+          "d": "Arbeitsplatz, Regeln und Schulung zusammen, in zwei bis vier Wochen.",
+          "p": "ab 1.290 €"
+        }
       },
-      "reports": {
-        "title": "Berichte von draußen",
-        "text": "Wer draußen arbeitet, spricht kurz ins Handy. Im Büro liegt ein fertiger Bericht, ohne Abtippen am Abend."
+      "assist": {
+        "title": "Assistenten und Abläufe",
+        "from": "Festpreis, ab 690 €",
+        "agent": {
+          "t": "Ein Assistent, der vorarbeitet",
+          "d": "Er erledigt mehrere Schritte hintereinander und legt euch das Ergebnis zur Freigabe vor.",
+          "p": "ab 1.400 €"
+        },
+        "connect": {
+          "t": "Programme verbinden",
+          "d": "Daten, die ihr heute abtippt, wandern von selbst an die richtige Stelle.",
+          "p": "ab 690 €"
+        },
+        "auto": {
+          "t": "Abläufe automatisieren",
+          "d": "Erinnerungen, Monatsübersichten und Zahlungserinnerungen laufen nach Plan.",
+          "p": "ab 690 €"
+        }
       },
-      "paper": {
-        "title": "Termine und Papierkram",
-        "text": "Termine abstimmen, Behördenpost verstehen, Fristen im Blick behalten. Weniger, das einem im Kopf herumgeht."
+      "web": {
+        "title": "Websites, die Anfragen bringen",
+        "from": "Festpreis, ab 390 €",
+        "fresh": {
+          "t": "Neue Website",
+          "d": "Sie sagt klar, was ihr macht. Das Formular fragt gleich das Wichtige ab, Domain und Konto laufen auf euren Namen.",
+          "p": "ab 1.400 €"
+        },
+        "update": {
+          "t": "Website modernisieren",
+          "d": "Klare Texte, ein gutes Bild auf dem Handy und ein Formular, das Anfragen sortiert.",
+          "p": "ab 690 €"
+        },
+        "google": {
+          "t": "Google-Unternehmensprofil",
+          "d": "Leistungen, Öffnungszeiten und Fotos auf dem neuesten Stand. Antworten auf Bewertungen liegen als Entwurf bereit.",
+          "p": "ab 390 €"
+        }
       },
-      "private": {
-        "title": "Für dich privat",
-        "text": "Der eigene Posteingang, der Papierkram oder ein Smart Home, das du danach selbst pflegst. Damit der Feierabend wieder einer ist."
-      }
-    },
-    "why": {
-      "title": "Warum ich",
-      "lead": "Die Technik ändert sich gerade jede Woche. Ich verfolge das jeden Tag und bringe euch davon das, was im Alltag wirklich hilft.",
-      "overview": {
-        "when": "Als CTO",
-        "big": "CTO",
-        "title": "Ich behalte den Überblick, damit du es nicht musst",
-        "text": "Als CTO verantworte ich die Technik einer ganzen Plattform und entscheide jede Woche, welche neuen Werkzeuge taugen und welche nur laut sind. Dieses Wissen bringe ich zu euch, übersetzt in euren Alltag und ohne Fachchinesisch."
+      "build": {
+        "title": "Eigenbau: Apps und Werkzeuge fürs Team",
+        "from": "Festpreis nach Umfang, ab 1.900 €",
+        "lead": "Der Eigenbau ist der zweite Schritt nach einem ersten Auftrag. Der Code gehört euch, und er läuft auf eurem Konto.",
+        "app": {
+          "t": "Eigene App oder eigenes Formular",
+          "d": "Genau für euren Ablauf, auf dem Handy, dem Tablet oder im Büro. Zum Beispiel, um Anlieferungen direkt am Tor zu erfassen.",
+          "p": "ab 1.900 €"
+        },
+        "own": {
+          "t": "Eigener Assistent oder eigene Verbindung",
+          "d": "Wenn Standardwerkzeuge an ihre Grenze kommen, etwa bei einer Branchensoftware mit eigener Schnittstelle.",
+          "p": "ab 1.900 €"
+        }
       },
       "care": {
-        "when": "Haltung",
-        "big": "Mensch zuerst",
-        "title": "Für die Leute, nicht an ihnen vorbei",
-        "text": "Es geht nicht darum, jemanden zu ersetzen. Es geht darum, dass deine Leute weniger abtippen und suchen und mehr von der Arbeit machen, die sie können und gern tun."
+        "title": "Betreuung: ein fester Ansprechpartner",
+        "from": "ab 120 € im Monat",
+        "lead": "Die Betreuung startet nach dem ersten Auftrag und lässt sich monatlich anpassen.",
+        "basic": {
+          "t": "Betreuung Basis",
+          "d": "Ich halte eure Aufgaben am Laufen, spiele Updates ein und beantworte Fragen per Mail und Telefon.",
+          "p": "ab 120 € im Monat"
+        },
+        "plus": {
+          "t": "Betreuung Plus",
+          "d": "Alles aus Basis. Dazu ein Termin im Monat, kleine Anpassungen und Neues, das zu euch passt. Ich nehme mir die nächste Aufgabe vor.",
+          "p": "ab 290 € im Monat"
+        },
+        "build": {
+          "t": "Betreuung Eigenbau",
+          "d": "Zusatz für eure eigene Software: Betrieb auf eurem Konto, Updates, Sicherheit und kleine Fehlerbehebung.",
+          "p": "ab 49 € im Monat, zusätzlich"
+        }
       },
-      "self": {
-        "when": "Persönlich",
-        "big": "1 Ansprechpartner",
-        "title": "Wer begleitet, richtet es auch ein",
-        "text": "Kein Vertrieb, keine Agentur, keine Praktikanten. Ich begleite euch, richte ein, übergebe und erkläre alles ohne Fachwörter. Du hast einen Ansprechpartner, so lange du willst."
+      "home": {
+        "title": "Für Privatleute",
+        "from": "pro Stunde, ab 80 €",
+        "lead": "Auch zu Hause gibt es Arbeit, die liegen bleibt. Hier rechne ich nach Stunden ab.",
+        "paper": {
+          "t": "Posteingang und Papierkram",
+          "d": "Mails, Briefe und Unterlagen liegen in klaren Ordnern, und Fristen stehen im Kalender.",
+          "p": "ab 95 € pro Stunde"
+        },
+        "smart": {
+          "t": "Smart Home",
+          "d": "Licht, Heizung und Geräte arbeiten zusammen, zum Beispiel mit Home Assistant oder Philips Hue.",
+          "p": "ab 80 € pro Stunde"
+        },
+        "helper": {
+          "t": "Persönlicher Assistent",
+          "d": "Er plant die Woche mit, fasst Mails zusammen und erinnert an Termine, auf deinem Konto.",
+          "p": "ab 95 € pro Stunde"
+        },
+        "learn": {
+          "t": "KI im Alltag lernen",
+          "d": "Eine Stunde zu zweit, vor Ort oder per Video. Wir üben an deinen eigenen Fragen.",
+          "p": "ab 95 € pro Stunde"
+        }
+      }
+    },
+    "data": {
+      "title": "Eure Daten bleiben bei euch",
+      "lead": "Gute Automatisierung braucht Vertrauen. Darum gelten bei jedem Auftrag dieselben Grundsätze.",
+      "avv": {
+        "t": "Vertrag zur Auftragsverarbeitung",
+        "d": "Wir schließen einen AVV, bevor ich mit euren Daten arbeite. Für die Werkzeuge nutzen wir Firmenkonten, für die der Anbieter einen AVV anbietet."
       },
-      "ai": {
-        "when": "Seit 2023",
-        "big": "Seit 2023",
-        "title": "Ich weiß, wo KI aufhört",
-        "text": "Meine Bachelorarbeit hat 2023 untersucht, was chatbasierte KI wirklich kann und wo sie scheitert. Seitdem arbeite ich jeden Tag damit. Deshalb schlage ich nur vor, was bei euch zuverlässig läuft."
+      "host": {
+        "t": "Hosting in Deutschland",
+        "d": "Die Abläufe, die ich für euch einrichte, laufen auf Servern in Deutschland. Wo ein Werkzeug Daten anderswo verarbeitet, sage ich euch das vorher."
       },
-      "tech": {
-        "when": "Erfahrung",
-        "big": "Live-Betrieb",
-        "title": "Ich weiß, was im Betrieb zählt",
-        "text": "Ich habe Plattformen mit Zahlungen, Versand und Compliance gebaut und betrieben, bei denen jeden Tag echte Bestellungen laufen. Ich weiß, wo Daten hingehen und was passieren muss, damit nichts verloren geht."
+      "name": {
+        "t": "Alles auf eurem Namen",
+        "d": "Konten, Daten und Zugänge gehören euch. Ihr behaltet jederzeit den Überblick."
       },
-      "near": {
-        "when": "Rhein-Main",
-        "big": "Vor Ort",
-        "title": "Ich komme vorbei",
-        "text": "Ich wohne in Rodgau bei Frankfurt. Begleiten und Üben passieren bei euch vor Ort, nicht im Videocall."
+      "less": {
+        "t": "Nur die nötigen Daten",
+        "d": "Wir legen gemeinsam fest, welche Daten ins Werkzeug gehen und welche nicht."
       },
+      "human": {
+        "t": "Ein Mensch prüft Wichtiges",
+        "d": "Angebote, Antworten an Kunden und Zahlungen gehen erst nach eurer Freigabe raus."
+      },
+      "health": {
+        "t": "Gesundheitsdaten",
+        "d": "Nur mit einem eigenen, besonders geschützten Aufbau. Für Praxen starten wir mit Abläufen ganz ohne Patientendaten."
+      }
+    },
+    "about": {
+      "title": "Wer ich bin",
+      "one": "Ich habe in der Praxis viel Erfahrung mit Plattformen, Abläufen, Datenschutz und Programmierung gesammelt. Heute verantworte ich als CTO die Technik einer Marktplatz-Plattform.",
+      "two": "Bei euch steht aber euer Betrieb im Mittelpunkt, nicht die Technik. Ich höre zu, schaue mir euren Alltag an und setze genau die Aufgabe um, die ihr loswerden wollt.",
+      "three": "Ich nehme mir nur wenige Betriebe gleichzeitig vor. So hat jeder meine volle Aufmerksamkeit. Ich wohne in Rodgau bei Frankfurt und komme zu euch.",
+      "whoTitle": "Für wen",
+      "who": "Kleine Betriebe bis 20 Leute, in denen der Inhaber entscheidet, zum Beispiel Gartenbau, Entsorgung, Landwirtschaft und Dienstleister. Genauso Solo-Selbstständige, Freiberufler und Privatleute.",
       "more": "Mein Werdegang und meine Arbeitszeugnisse"
     },
-    "fit": {
-      "title": "Für wen",
-      "lead": "Für Betriebe, in denen alle schon genug zu tun haben.",
-      "yes": {
-        "when": "Passt",
-        "title": "Kleine Betriebe unter 20 Leuten",
-        "text": "Ohne eigene IT, und der Inhaber entscheidet selbst. Zum Beispiel Gartenbau, Entsorgung, Landwirtschaft oder Dienstleister."
-      },
-      "also": {
-        "when": "Passt auch",
-        "title": "Selbstständige und Privatleute",
-        "text": "Wenn es um eine klare Aufgabe geht: der eigene Posteingang, der Papierkram oder das Smart Home."
-      },
-      "ongoing": {
-        "when": "Und danach",
-        "title": "Wer jemanden dauerhaft an der Seite will",
-        "text": "Nach dem ersten Auftrag bleibe ich auf Wunsch fest dabei, zum Monatsbetrag. So wird aus einer Entlastung Monat für Monat die nächste."
-      }
-    },
-    "band": {
-      "title": "Wie viele Stunden waren es diese Woche?",
-      "text": "Jede Woche ohne Lösung kostet sie noch einmal. Schreib mir zwei, drei Sätze, ich melde mich persönlich."
-    },
     "faq": {
-      "title": "Fragen",
-      "lead": "Was du vermutlich wissen willst, bevor du mich in deinen Betrieb lässt.",
-      "day": {
-        "q": "Warum begleitest du uns, statt nur zu fragen?",
-        "a": "Im Gespräch erzählt man, was einem gerade einfällt. Wenn ich dabei bin, sehe ich, was wirklich Zeit kostet. Die Liste bekommst du in jedem Fall, auch ohne Auftrag."
-      },
-      "jobs": {
-        "q": "Haben meine Leute dann Angst um ihren Job?",
-        "a": "Darum geht es nicht. Ich nehme Arbeit weg, die keiner gern macht, damit mehr Zeit für die bleibt, die zählt. Wenn ich euch begleite, sage ich das dem Team auch so."
-      },
-      "which": {
-        "q": "Sehe ich dabei die richtige Arbeit?",
-        "a": "Wir suchen eine Zeit aus, in der am meisten liegen bleibt. Was nur einmal im Monat anfällt, etwa Abrechnungen, gehen wir kurz zusammen durch."
-      },
-      "trade": {
-        "q": "Du kennst unsere Branche nicht.",
-        "a": "Stimmt. Deshalb begleite ich euch, statt Folien zu zeigen. Eure Branche kennt ihr. Ich bringe den Überblick über die Technik mit, den ich mir als CTO aufgebaut habe, und erkläre sie so, dass sie zu euch passt."
-      },
-      "worth": {
-        "q": "Woran merke ich, dass es sich gelohnt hat?",
-        "a": "Vorher schreiben wir auf, wie lange die Aufgabe heute dauert. Nach der Übergabe messen wir nach. Dann steht schwarz auf weiß da, wie viele Stunden ihr zurückhabt."
-      },
+      "title": "Häufige Fragen",
       "ai": {
-        "q": "Muss ich mich mit KI auskennen?",
-        "a": "Nein. Du musst nur wissen, welche Arbeit nervt. Ob und welche KI dahintersteckt, ist meine Sache."
+        "q": "Müssen wir uns mit KI auskennen?",
+        "a": "Ihr kennt eure Arbeit, das reicht. Ich kümmere mich um die Technik und übe mit euch, bis ihr die Aufgabe allein könnt."
+      },
+      "cost": {
+        "q": "Was kostet das Begleiten?",
+        "a": "Im ersten Jahr ist das Begleiten kostenlos. Danach nenne ich euch die Aufgabe und eine feste Summe. Ihr entscheidet in Ruhe."
+      },
+      "start": {
+        "q": "Wo fangen wir am besten an?",
+        "a": "Meist im Büro: Rechnungen, Mails und Angebote. Dort steckt in fast jedem Betrieb die meiste Zeit. Wir setzen eine Aufgabe sauber um, und wenn sie läuft, kommt die nächste."
+      },
+      "auto": {
+        "q": "Läuft dann alles vollautomatisch?",
+        "a": "Routinearbeit ja. Bei Wichtigem entscheidet ihr: Angebote, Antworten auf Beschwerden und Zahlungen kommen als Entwurf, und ihr gebt sie per Klick frei."
+      },
+      "own": {
+        "q": "Wem gehören die Konten und Daten?",
+        "a": "Euch. Alle Konten laufen auf euren Namen, und ihr bezahlt die Werkzeuge direkt beim Anbieter. Beim Eigenbau gehört euch auch der Code."
+      },
+      "privacy": {
+        "q": "Wie steht es um den Datenschutz?",
+        "a": "Ich nutze Firmenkonten mit Vertrag zur Auftragsverarbeitung und datenschutzfreundlichen Einstellungen. Wir legen gemeinsam fest, welche Daten ins Werkzeug gehen. Ein Mensch prüft jedes Ergebnis, bevor es rausgeht."
+      },
+      "act": {
+        "q": "Was hat es mit der EU-KI-Verordnung auf sich?",
+        "a": "Seit Februar 2025 sorgt jede Firma, die KI-Werkzeuge im Arbeitsalltag nutzt, für die KI-Kompetenz ihrer Leute. Das gilt auch für kleine Betriebe. Die Schulung „KI-Kompetenz fürs Team“ deckt das ab, mit Teilnahmebestätigung."
+      },
+      "time": {
+        "q": "Wie viel Zeit kostet uns das?",
+        "a": "Beim Begleiten lauft ihr einfach weiter wie immer. Zum Üben plant ihr ein paar kurze Termine ein. Danach spart ihr Zeit."
       },
       "after": {
-        "q": "Was, wenn später etwas nicht mehr läuft?",
-        "a": "Was ich mit fertigen Werkzeugen einrichte, könnt ihr selbst ändern und reparieren. Das zeige ich bei der Übergabe. Wer sich darum nicht kümmern will, bucht mich zum festen Monatsbetrag. Dann halte ich alles am Laufen, auch ein eigenes Werkzeug."
+        "q": "Was passiert nach der Übergabe?",
+        "a": "Ihr könnt die Aufgabe selbst ausführen, ändern und reparieren. Wer möchte, bucht die Betreuung, und ich bleibe euer Ansprechpartner."
       },
-      "data": {
-        "q": "Wo liegen unsere Daten?",
-        "a": "Bei euch. Jedes Konto läuft auf euren Namen, und der Anbieter rechnet direkt mit euch ab. Ich verkaufe keine Software weiter."
-      },
-      "price": {
-        "q": "Was kostet das?",
-        "a": "Eine feste Summe für genau eine Aufgabe. Ich nenne sie, nachdem ich euch begleitet habe, und bevor ich anfange. Wenn ich danach dranbleibe, ist es ein fester Monatsbetrag."
+      "extra": {
+        "q": "Kommen zu den Preisen weitere Kosten dazu?",
+        "a": "Die Werkzeuge selbst zahlt ihr monatlich direkt beim Anbieter. Ich nenne euch diese Kosten, bevor wir starten."
       }
     },
-    "foot": "Erzähl mir in zwei, drei Sätzen, was bei euch liegen bleibt. Ich melde mich persönlich.",
-    "message": "Was bleibt bei euch liegen?",
-    "service": "KI und Digitalisierung für kleine Betriebe"
+    "end": {
+      "title": "Lust auf mehr freie Zeit?",
+      "text": "Schreibt mir in zwei, drei Sätzen, was bei euch liegen bleibt. Ich melde mich persönlich, und wir vereinbaren einen Termin zum Begleiten."
+    }
   },
   "legal": {
     "impressum": "Impressum",

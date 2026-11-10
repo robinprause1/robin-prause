@@ -16,10 +16,12 @@ const pages = {
   privacy: readFileSync(new URL("./templates/datenschutz.html", import.meta.url), "utf8"),
   offer: readFileSync(new URL("./templates/beratung.html", import.meta.url), "utf8"),
 };
-const formPages = new Set(["/", "/de", "/cv", "/de/lebenslauf"]);
+const formPages = new Set(["/", "/en", "/cv", "/de/lebenslauf"]);
 const moved = new Map([
-  ["/consulting", "/"],
-  ["/de/beratung", "/de"],
+  ["/de", "/"],
+  ["/index.html", "/"],
+  ["/consulting", "/en"],
+  ["/de/beratung", "/"],
 ]);
 const catalogs = {
   en: flatten(JSON.parse(readFileSync(new URL("./i18n/en.json", import.meta.url), "utf8"))),
@@ -27,13 +29,14 @@ const catalogs = {
 };
 const site = (process.env.SITE_URL || "https://www.robin-prause.de").replace(/\/+$/, "");
 const paths = {
-  offer: { en: "/", de: "/de" },
+  offer: { en: "/en", de: "/" },
   cv: { en: "/cv", de: "/de/lebenslauf" },
   impressum: { en: "/impressum", de: "/de/impressum" },
   privacy: { en: "/datenschutz", de: "/de/datenschutz" },
 };
+const fallbackLang = { offer: "de", cv: "en", impressum: "en", privacy: "en" };
 const indexed = ["offer", "cv"];
-const faqKeys = ["day", "jobs", "which", "trade", "worth", "ai", "after", "data", "price"];
+const faqKeys = ["ai", "cost", "start", "auto", "own", "privacy", "act", "time", "after", "extra"];
 const linkedin = "https://www.linkedin.com/in/robin-prause-330666278";
 const port = Number(process.env.PORT) || 4321;
 const host = "0.0.0.0";
@@ -105,8 +108,8 @@ function render(source, lang, extra = {}) {
 
 function pageFor(pathname) {
   const path = pathname.length > 1 && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
-  if (path === "/" || path === "/index.html") return { lang: "en", name: "offer" };
-  if (path === "/de") return { lang: "de", name: "offer" };
+  if (path === "/") return { lang: "de", name: "offer" };
+  if (path === "/en") return { lang: "en", name: "offer" };
   if (path === "/cv") return { lang: "en", name: "cv" };
   if (path === "/de/lebenslauf") return { lang: "de", name: "cv" };
   if (path === "/impressum") return { lang: "en", name: "impressum" };
@@ -122,6 +125,7 @@ function seoFields(name, lang) {
     canonical: site + paths[name][lang],
     "alt.en": site + paths[name].en,
     "alt.de": site + paths[name].de,
+    "alt.default": site + paths[name][fallbackLang[name]],
   };
 }
 
@@ -189,7 +193,7 @@ function sitemap() {
     <loc>${site}${paths[name][lang]}</loc>
     <xhtml:link rel="alternate" hreflang="en" href="${site}${paths[name].en}"/>
     <xhtml:link rel="alternate" hreflang="de" href="${site}${paths[name].de}"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${site}${paths[name].en}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${site}${paths[name][fallbackLang[name]]}"/>
   </url>`,
     ),
   );
@@ -201,8 +205,8 @@ ${urls.join("\n")}
 }
 
 function errorLanguage(pathname) {
-  if (pathname === "/de" || pathname.startsWith("/de/")) return "de";
-  return "en";
+  if (pathname === "/en" || pathname.startsWith("/en/")) return "en";
+  return "de";
 }
 
 function notFound(lang) {
@@ -279,7 +283,7 @@ function readBody(req) {
 }
 
 function redirectContact(res, lang, sent, back) {
-  const path = formPages.has(back) ? back : lang === "de" ? "/de" : "/";
+  const path = formPages.has(back) ? back : lang === "de" ? "/" : "/en";
   res.writeHead(303, { Location: `${path}?sent=${sent}#kontakt`, "Cache-Control": "no-cache" });
   res.end();
 }

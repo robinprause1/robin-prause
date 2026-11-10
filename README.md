@@ -5,7 +5,6 @@ Persönliche Seite. Eine Datei, ein Node-Prozess, kein Framework. Railway starte
 ## Lokal
 
 ```bash
-cd personal
 npm start
 ```
 
@@ -13,14 +12,13 @@ Dann [http://127.0.0.1:4321](http://127.0.0.1:4321).
 
 `/mcp` ist ein zustandsloser MCP-Endpunkt im selben Node-Prozess. Er gibt den öffentlichen Profiltext und die Dokumenttitel zurück und ruft kein Modell. Auf Render bleibt das derselbe Free-Webdienst.
 
-Die Seite ist auf Englisch. Deutsch liegt unter `/de`. Texte stehen in `i18n/en.json` und `i18n/de.json`. Der Umschalter in der Navigation wechselt die Sprache.
+Die Startseite ist auf Deutsch. Englisch liegt unter `/en`. Der Lebenslauf liegt unter `/de/lebenslauf` und `/cv`. Texte stehen in `i18n/en.json` und `i18n/de.json`. Der Umschalter in der Navigation wechselt die Sprache.
 
 ## Railway
 
-Dieses Verzeichnis ist ein eigenes Projekt und steht in der `.gitignore` von Wire. Deploy von hier, nicht vom Repository-Root:
+Dieses Verzeichnis ist ein eigenes Projekt. Deploy von hier:
 
 ```bash
-cd personal
 railway up
 ```
 

@@ -8,7 +8,7 @@
     "og": "Platforms, end to end. Payments, search, multi-tenant data, compliance.",
     "locale": "en_US"
   },
-  "home": "/",
+  "home": "/en",
   "base": "/cv",
   "lang": {
     "en": {
@@ -223,196 +223,446 @@
   },
   "offer": {
     "meta": "AI consulting for small businesses in Rhine-Main | Robin Prause",
-    "description": "More time for small businesses in Frankfurt and Rhine-Main. I win back the hours that drain away in the office, with AI tools in your name. Once, or by your side for the long run.",
-    "href": "/",
+    "description": "More time for your real work: I come along with small businesses in Frankfurt and Rhine-Main, find the task that eats the most time and set it up for a fixed price.",
+    "href": "/en",
     "teaser": "Consulting for small businesses",
-    "kicker": "CTO know-how and AI for small businesses · Rhine-Main",
-    "claim": "More time for what you actually started out to do.",
-    "lede": "Quotes on Sunday, emails after hours? I win back the hours that drain away in the office. So you reply faster than others, take on more jobs and are actually off in the evening.",
-    "cta": "Tell me what piles up",
-    "ctaHint": "No obligation. The list is yours, even without a job.",
-    "mastCta": "Get in touch",
+    "service": "AI and automation for small businesses",
+    "message": "What piles up for you?",
+    "nav": {
+      "label": "Page",
+      "top": "Examples",
+      "how": "How it works",
+      "prices": "Prices",
+      "data": "Data protection",
+      "faq": "Questions",
+      "cta": "Get in touch"
+    },
+    "hero": {
+      "a": "More time for your",
+      "b": "real work.",
+      "lede": "I come along while you work, find the task that eats the most time and take it off your hands. You don't have to deal with AI yourself.",
+      "cta": "Ask for a visit",
+      "hint": "Coming along is free in the first year. The price is fixed before the work starts.",
+      "by": "Robin Prause from Rodgau near Frankfurt. For small businesses, freelancers and private people."
+    },
+    "catalog": {
+      "label": "Download the catalogue",
+      "detail": "PDF, 20 pages, in German",
+      "file": "Robin-Prause-Angebotskatalog.pdf"
+    },
+    "flow": {
+      "label": "Example workflows",
+      "note": "You decide on anything important: quotes, replies to customers and payments arrive as drafts, and you approve them with one click.",
+      "invoice": {
+        "tab": "Incoming invoice",
+        "a": {
+          "t": "Invoice arrives by email",
+          "d": "as a PDF in the shared inbox"
+        },
+        "b": {
+          "t": "Recognised as an invoice",
+          "d": "supplier, date, amount and number are read out"
+        },
+        "c": {
+          "t": "Filed properly",
+          "d": "named to a fixed pattern, in the right monthly folder"
+        },
+        "d": {
+          "t": "Entered in your accounts",
+          "d": "for example in Lexoffice or sevDesk"
+        },
+        "e": {
+          "t": "Tax adviser is informed",
+          "d": "with a short note"
+        }
+      },
+      "request": {
+        "tab": "Customer request",
+        "a": {
+          "t": "Request via the website",
+          "d": "hedge trimming, 40 metres, by the end of March"
+        },
+        "b": {
+          "t": "Customer has a confirmation",
+          "d": "personal, within one minute"
+        },
+        "c": {
+          "t": "Pre-sorted",
+          "d": "type, place and urgency: call today"
+        },
+        "d": {
+          "t": "Quote is ready as a draft",
+          "d": "in your template, with your prices"
+        },
+        "e": {
+          "t": "You check and send",
+          "d": "the decision stays with you"
+        }
+      },
+      "report": {
+        "tab": "Report from the field",
+        "a": {
+          "t": "Voice message from the foreman",
+          "d": "two minutes, plus three photos"
+        },
+        "b": {
+          "t": "Typed up and understood",
+          "d": "date, place, work done and hours"
+        },
+        "c": {
+          "t": "Matched to the job",
+          "d": "the photos are filed with it"
+        },
+        "d": {
+          "t": "Report is at the office",
+          "d": "ready as proof of work"
+        },
+        "e": {
+          "t": "Hours are in the sheet",
+          "d": "the invoice has every detail"
+        }
+      }
+    },
     "gain": {
       "title": "What you gain",
-      "lead": "Many businesses already let AI prepare their routine work. Every week you wait costs the same hours again.",
-      "hours": {
-        "big": "100+",
-        "title": "hours back every year",
-        "text": "That is what a single task brings if it eats two hours a week today. More than two working weeks, every year."
-      },
-      "reply": {
-        "big": "Today",
-        "title": "Replies instead of a backlog",
-        "text": "Requests are sorted, quotes are prepared. Whoever replies first often gets the job."
+      "big": "100",
+      "unit": "hours a year",
+      "text": "That much time comes back from a single task that costs two hours a week today.",
+      "fast": {
+        "t": "Reply faster than others",
+        "d": "Requests are sorted, quotes are prepared."
       },
       "evening": {
-        "big": "Off",
-        "title": "Evenings that are evenings",
-        "text": "No Sunday at the desk, no typing up notes at night. The time belongs to you and your people again."
+        "t": "Evenings away from the desk",
+        "d": "The office stays closed at night and at the weekend."
+      },
+      "own": {
+        "t": "Everything in your name",
+        "d": "Accounts and data belong to you, and your people can run it on their own afterwards."
+      },
+      "partner": {
+        "t": "One fixed contact",
+        "d": "If you like, I stay on after the handover."
       }
     },
-    "steps": {
-      "title": "How it works",
-      "lead": "No risk at the start. At the end you decide whether you carry on alone or I stay on.",
+    "top": {
+      "title": "The most used automations",
+      "lead": "These tasks cost a lot of time in almost every business. The easiest place to start is usually the office, with invoices and bookkeeping.",
       "one": {
-        "when": "Step 1",
-        "title": "I come along",
-        "text": "I watch the work and ask questions. Not to check on anyone, but to see where the time goes. Afterwards you get a short list. It is yours, even if you don't hire me."
+        "t": "Capture incoming invoices",
+        "d": "Supplier, date and amount from an emailed invoice appear in your accounts by themselves."
       },
       "two": {
-        "when": "Step 2",
-        "title": "One task, one fixed price",
-        "text": "I propose the one piece of work that relieves you the most and name a fixed sum up front. No timesheets, no surprises on the invoice."
+        "t": "Sort the inbox",
+        "d": "Every email lands in the right folder, the right person is told, and a reply is waiting as a draft."
       },
       "three": {
-        "when": "Step 3",
-        "title": "Set up and practise",
-        "text": "I set it up with tools that run in your name and practise it with the people who do the work. Until it no longer feels new."
+        "t": "Instant reply to requests",
+        "d": "Customers get a personal confirmation within a minute, and you get a short note."
       },
       "four": {
-        "when": "Step 4",
-        "title": "Handover",
-        "text": "You can run it, change it and fix it yourselves. Everything is in your name, with no dependency. What stays is the time you get back."
+        "t": "Prepare quotes",
+        "d": "The request turns into a draft with your prices. You check it and send it."
       },
       "five": {
-        "title": "Optional: I stay on",
-        "text": "For a fixed monthly sum I remain your contact. I keep everything running, take on the next task and build a tool of your own where ready-made ones fall short: an app for the team, an assistant that prepares work, or a link between your programs. The code is yours."
+        "t": "Keep track of payments",
+        "d": "Friendly reminders go out on time, and paid invoices are ticked off by themselves."
+      },
+      "six": {
+        "t": "Book appointments and remind",
+        "d": "Customers pick a free slot and get a reminder the day before."
+      },
+      "seven": {
+        "t": "Receipts to the tax adviser",
+        "d": "Every month all receipts are collected and handed over, with no searching."
+      },
+      "more": "That is only the start. The catalogue lists more than 60 further examples, sorted by area: office, customer requests, appointments, marketing, team, purchasing and an overview for the owner."
+    },
+    "how": {
+      "title": "How we work together",
+      "lead": "We start small: set up one task properly and see how much time it saves. Then comes the next one.",
+      "optional": "Optional",
+      "one": {
+        "title": "Coming along",
+        "text": "I come to you and walk along. I watch what you do and ask questions. One question often helps: what would run short first if twice as many customers came tomorrow? That is where we start.",
+        "meta": "Usually half a day to a full day, free in the first year"
+      },
+      "two": {
+        "title": "The job",
+        "text": "You get a fixed sum for exactly one task. The sum is set before the work starts. I set the task up with standard tools in your account.",
+        "meta": "Fixed price, set up within a few weeks"
+      },
+      "three": {
+        "title": "Handover",
+        "text": "We practise until it sticks. After that you can run, change and fix the task yourselves. You get a short guide in your own words.",
+        "meta": "With a guide in your words"
+      },
+      "four": {
+        "title": "Ongoing support",
+        "text": "You carry on alone, or I stay your contact for a fixed monthly sum. I keep everything running, bring new things along and take on the next task.",
+        "meta": "from €120 a month"
+      },
+      "five": {
+        "title": "Custom build",
+        "text": "Sometimes a task needs a tool of its own, for example an app for the team. A custom build follows a first job, because by then I know your business well. The code is yours.",
+        "meta": "from €1,900"
+      },
+      "check": {
+        "title": "How we recognise a good task",
+        "lead": "All five points hold.",
+        "one": "It comes up at least every week.",
+        "two": "It costs the business about two hours a week in total.",
+        "three": "A person checks the result before it goes out.",
+        "four": "It runs with standard tools in your name.",
+        "five": "It is set up and practised within a few weeks."
       }
     },
-    "tasks": {
-      "title": "What piles up",
-      "lead": "Small things that cost a few minutes every day. Over a year that adds up to weeks missing for customers, jobs and time off. I see what it is for you when I come along.",
-      "office": "Office",
-      "field": "On site",
-      "home": "At home",
-      "quotes": {
-        "title": "Quotes and invoices",
-        "text": "Notes, photos or a phone call turn into a finished draft. You check it and send it, instead of spending Sunday at the desk."
+    "price": {
+      "title": "Offers and prices",
+      "lead": "Each offer is a task you can get rid of. I name the exact price after coming along.",
+      "note": "You pay for the tools themselves monthly, directly to the provider. I tell you these costs before we start.",
+      "office": {
+        "title": "Office and communication",
+        "from": "Fixed price per task, from €950",
+        "mail": {
+          "t": "Sort emails and requests",
+          "d": "Incoming emails are sorted by type and have a draft reply. You check and send.",
+          "p": "from €950"
+        },
+        "quotes": {
+          "t": "Prepare quotes and invoices",
+          "d": "A request, a note or a voice message turns into a draft in your template, with your prices.",
+          "p": "from €950"
+        },
+        "reports": {
+          "t": "Capture reports from the field",
+          "d": "Speak briefly into the phone or take a photo. It becomes a clean report or proof of work.",
+          "p": "from €950"
+        },
+        "dates": {
+          "t": "Arrange appointments",
+          "d": "Suitable times come from your calendar, and customers get a reminder the day before.",
+          "p": "from €950"
+        },
+        "letters": {
+          "t": "Handle official letters",
+          "d": "Letters from authorities are summarised in plain words, and deadlines are in the calendar.",
+          "p": "from €950"
+        },
+        "solo": {
+          "t": "For freelancers and the self-employed",
+          "d": "Each of these tasks is also available for one person, usually done in one to two weeks.",
+          "p": "from €490"
+        }
       },
-      "mail": {
-        "title": "Inbox",
-        "text": "Requests are sorted, standard questions already have a draft reply. No customer waits because an email got lost."
+      "ai": {
+        "title": "AI tools that respect data protection",
+        "from": "Fixed price, from €390",
+        "lead": "Since February 2025 the EU AI Act requires every company that uses AI tools at work to make sure its people can handle them. That applies to businesses of every size.",
+        "desk": {
+          "t": "Set up an AI workplace",
+          "d": "Company accounts for ChatGPT, Microsoft Copilot or Google Gemini in your name, with a data processing agreement.",
+          "p": "from €690"
+        },
+        "rules": {
+          "t": "Rules for everyday use",
+          "d": "One to two pages in your words: which data may go into the tool and who checks results.",
+          "p": "from €390"
+        },
+        "training": {
+          "t": "AI literacy for the team",
+          "d": "Training on site with your own tasks. Each person gets a certificate of attendance.",
+          "p": "from €390 per session"
+        },
+        "pack": {
+          "t": "“Safe start” package",
+          "d": "Workplace, rules and training together, in two to four weeks.",
+          "p": "from €1,290"
+        }
       },
-      "reports": {
-        "title": "Reports from the field",
-        "text": "Whoever works outside speaks briefly into their phone. A finished report is waiting at the office, no typing in the evening."
+      "assist": {
+        "title": "Assistants and workflows",
+        "from": "Fixed price, from €690",
+        "agent": {
+          "t": "An assistant that prepares work",
+          "d": "It handles several steps in a row and puts the result in front of you for approval.",
+          "p": "from €1,400"
+        },
+        "connect": {
+          "t": "Connect your programs",
+          "d": "Data you type in by hand today moves to the right place by itself.",
+          "p": "from €690"
+        },
+        "auto": {
+          "t": "Automate workflows",
+          "d": "Reminders, monthly overviews and payment reminders run on schedule.",
+          "p": "from €690"
+        }
       },
-      "paper": {
-        "title": "Appointments and paperwork",
-        "text": "Scheduling appointments, understanding letters from authorities, keeping deadlines in view. Less to keep turning over in your head."
+      "web": {
+        "title": "Websites that bring requests",
+        "from": "Fixed price, from €390",
+        "fresh": {
+          "t": "New website",
+          "d": "It says clearly what you do. The form asks for what matters, and domain and account are in your name.",
+          "p": "from €1,400"
+        },
+        "update": {
+          "t": "Modernise a website",
+          "d": "Clear text, a good look on the phone and a form that sorts requests.",
+          "p": "from €690"
+        },
+        "google": {
+          "t": "Google Business Profile",
+          "d": "Services, opening hours and photos up to date. Replies to reviews are ready as drafts.",
+          "p": "from €390"
+        }
       },
-      "private": {
-        "title": "For you, privately",
-        "text": "Your own inbox, your paperwork, or a smart home you maintain yourself afterwards. So your evening is yours again."
-      }
-    },
-    "why": {
-      "title": "Why me",
-      "lead": "Technology is changing every week right now. I follow it every day and bring you the part that actually helps in your daily work.",
-      "overview": {
-        "when": "As a CTO",
-        "big": "CTO",
-        "title": "I keep track, so you don't have to",
-        "text": "As a CTO I am responsible for the technology of a whole platform and decide every week which new tools are worth it and which are just noise. I bring that knowledge to you, translated into your daily work and without jargon."
+      "build": {
+        "title": "Custom builds: apps and tools for the team",
+        "from": "Fixed price by scope, from €1,900",
+        "lead": "A custom build is the second step after a first job. The code is yours, and it runs in your account.",
+        "app": {
+          "t": "Your own app or form",
+          "d": "Made for your workflow, on the phone, the tablet or at the office. For example to record deliveries right at the gate.",
+          "p": "from €1,900"
+        },
+        "own": {
+          "t": "Your own assistant or connection",
+          "d": "When standard tools reach their limit, for example with industry software that has its own interface.",
+          "p": "from €1,900"
+        }
       },
       "care": {
-        "when": "Attitude",
-        "big": "People first",
-        "title": "For the people, not past them",
-        "text": "This is not about replacing anyone. It is about your people typing and searching less and doing more of the work they are good at and enjoy."
+        "title": "Ongoing support: one fixed contact",
+        "from": "from €120 a month",
+        "lead": "Support starts after the first job and can be adjusted monthly.",
+        "basic": {
+          "t": "Support Basic",
+          "d": "I keep your tasks running, install updates and answer questions by email and phone.",
+          "p": "from €120 a month"
+        },
+        "plus": {
+          "t": "Support Plus",
+          "d": "Everything in Basic. Plus one meeting a month, small adjustments and new things that suit you. I take on the next task.",
+          "p": "from €290 a month"
+        },
+        "build": {
+          "t": "Support for custom builds",
+          "d": "Add-on for your own software: running it in your account, updates, security and small fixes.",
+          "p": "from €49 a month, extra"
+        }
       },
-      "self": {
-        "when": "In person",
-        "big": "1 contact",
-        "title": "The one who comes along also sets it up",
-        "text": "No sales team, no agency, no interns. I come along, set it up, hand it over and explain everything without jargon. You have one contact for as long as you like."
+      "home": {
+        "title": "For private people",
+        "from": "per hour, from €80",
+        "lead": "Work piles up at home too. Here I charge by the hour.",
+        "paper": {
+          "t": "Inbox and paperwork",
+          "d": "Emails, letters and documents sit in clear folders, and deadlines are in the calendar.",
+          "p": "from €95 per hour"
+        },
+        "smart": {
+          "t": "Smart home",
+          "d": "Lights, heating and devices work together, for example with Home Assistant or Philips Hue.",
+          "p": "from €80 per hour"
+        },
+        "helper": {
+          "t": "Personal assistant",
+          "d": "It helps plan the week, summarises emails and reminds you of appointments, in your account.",
+          "p": "from €95 per hour"
+        },
+        "learn": {
+          "t": "Learn AI for everyday life",
+          "d": "One hour one-to-one, on site or by video. We practise with your own questions.",
+          "p": "from €95 per hour"
+        }
+      }
+    },
+    "data": {
+      "title": "Your data stays with you",
+      "lead": "Good automation needs trust. That is why the same principles apply to every job.",
+      "avv": {
+        "t": "Data processing agreement",
+        "d": "We sign a data processing agreement before I work with your data. For the tools we use company accounts whose provider offers one."
       },
-      "ai": {
-        "when": "Since 2023",
-        "big": "Since 2023",
-        "title": "I know where AI stops",
-        "text": "My bachelor's thesis in 2023 tested what chat-based AI can really do and where it fails. I have worked with it every day since. That is why I only propose what runs reliably for you."
+      "host": {
+        "t": "Hosting in Germany",
+        "d": "The workflows I set up for you run on servers in Germany. Where a tool processes data elsewhere, I tell you beforehand."
       },
-      "tech": {
-        "when": "Experience",
-        "big": "Live systems",
-        "title": "I know what counts in day-to-day operations",
-        "text": "I have built and run platforms with payments, shipping and compliance that handle real orders every day. I know where data goes and what has to happen so nothing gets lost."
+      "name": {
+        "t": "Everything in your name",
+        "d": "Accounts, data and access belong to you. You keep the overview at all times."
       },
-      "near": {
-        "when": "Rhine-Main",
-        "big": "On site",
-        "title": "I come to you",
-        "text": "I live in Rodgau near Frankfurt. Coming along and practising happen at your place, not on a video call."
+      "less": {
+        "t": "Only the data that is needed",
+        "d": "We decide together which data goes into the tool and which does not."
       },
+      "human": {
+        "t": "A person checks what matters",
+        "d": "Quotes, replies to customers and payments only go out after your approval."
+      },
+      "health": {
+        "t": "Health data",
+        "d": "Only with a separate, specially protected setup. For practices we start with workflows that involve no patient data at all."
+      }
+    },
+    "about": {
+      "title": "Who I am",
+      "one": "I have gathered a lot of hands-on experience with platforms, workflows, data protection and programming. Today I am responsible for the technology of a marketplace platform as its CTO.",
+      "two": "With you, though, your business is the focus, not the technology. I listen, look at your daily work and set up exactly the task you want to get rid of.",
+      "three": "I only take on a few businesses at a time, so each one has my full attention. I live in Rodgau near Frankfurt and come to you.",
+      "whoTitle": "Who it is for",
+      "who": "Small businesses of up to 20 people where the owner decides, for example landscaping, waste disposal, farming and service businesses. Also freelancers, the self-employed and private people.",
       "more": "My background and references"
     },
-    "fit": {
-      "title": "Who it is for",
-      "lead": "For businesses where everyone already has enough on their plate.",
-      "yes": {
-        "when": "Fits",
-        "title": "Small businesses under 20 people",
-        "text": "No IT of their own, and the owner decides. For example landscaping, waste and composting, farming or service businesses."
-      },
-      "also": {
-        "when": "Also fits",
-        "title": "Freelancers and private people",
-        "text": "When it is about one clear task: your own inbox, your paperwork or your smart home."
-      },
-      "ongoing": {
-        "when": "And after",
-        "title": "Anyone who wants someone by their side",
-        "text": "After the first job I stay on if you like, for a monthly sum. That way one relief turns into the next, month after month."
-      }
-    },
-    "band": {
-      "title": "How many hours was it this week?",
-      "text": "Every week without a fix costs them again. Send me two or three sentences, I reply personally."
-    },
     "faq": {
-      "title": "Questions",
-      "lead": "What you probably want to know before you let me into your business.",
-      "day": {
-        "q": "Why come along instead of just asking?",
-        "a": "In a conversation people tell you what comes to mind. When I am there, I see what really costs time. You get the list either way, even without a job."
-      },
-      "jobs": {
-        "q": "Will my people worry about their jobs?",
-        "a": "That is not what this is about. I take away work nobody likes doing, so there is more time for the work that matters. When I come along, I tell the team exactly that."
-      },
-      "which": {
-        "q": "Will you see the right work?",
-        "a": "We pick a time when the most piles up. Whatever only comes up once a month, such as billing, we go through briefly together."
-      },
-      "trade": {
-        "q": "You don't know our trade.",
-        "a": "True. That is why I come along instead of showing slides. You know your trade. I bring the overview of technology I have built up as a CTO and explain it so it fits you."
-      },
-      "worth": {
-        "q": "How do I know it was worth it?",
-        "a": "Beforehand we write down how long the task takes today. After the handover we measure again. Then it is there in black and white how many hours you got back."
-      },
+      "title": "Frequent questions",
       "ai": {
-        "q": "Do I need to know about AI?",
-        "a": "No. You only need to know which work is a pain. Whether and which AI is behind it is my job."
+        "q": "Do we need to know about AI?",
+        "a": "You know your work, and that is enough. I take care of the technology and practise with you until you can do the task on your own."
+      },
+      "cost": {
+        "q": "What does coming along cost?",
+        "a": "In the first year, coming along is free. Afterwards I name the task and a fixed sum. You decide in your own time."
+      },
+      "start": {
+        "q": "Where is the best place to start?",
+        "a": "Usually the office: invoices, emails and quotes. That is where most of the time goes in almost every business. We set up one task properly, and once it runs, the next one follows."
+      },
+      "auto": {
+        "q": "Does everything run fully automatically then?",
+        "a": "Routine work does. You decide on anything important: quotes, replies to complaints and payments arrive as drafts, and you approve them with one click."
+      },
+      "own": {
+        "q": "Who owns the accounts and the data?",
+        "a": "You do. All accounts are in your name, and you pay for the tools directly to the provider. With a custom build, the code is yours as well."
+      },
+      "privacy": {
+        "q": "What about data protection?",
+        "a": "I use company accounts with a data processing agreement and privacy-friendly settings. We decide together which data goes into the tool. A person checks every result before it goes out."
+      },
+      "act": {
+        "q": "What is the EU AI Act about?",
+        "a": "Since February 2025 every company that uses AI tools at work has to make sure its people are AI literate. That applies to small businesses too. The training “AI literacy for the team” covers it, with a certificate of attendance."
+      },
+      "time": {
+        "q": "How much of our time does this take?",
+        "a": "While I come along, you simply carry on as usual. For practising you plan a few short sessions. After that you save time."
       },
       "after": {
-        "q": "What if something stops working later?",
-        "a": "Whatever I set up with ready-made tools, you can change and fix yourselves. I show you how at the handover. If you would rather not deal with it, book me for a fixed monthly sum. Then I keep everything running, including a tool of your own."
+        "q": "What happens after the handover?",
+        "a": "You can run, change and fix the task yourselves. If you like, you book ongoing support and I stay your contact."
       },
-      "data": {
-        "q": "Where does our data live?",
-        "a": "With you. Every account runs in your name, and the provider bills you directly. I don't resell software."
-      },
-      "price": {
-        "q": "What does it cost?",
-        "a": "A fixed sum for exactly one task. I name it after I have come along, before I start. If I stay on afterwards, it is a fixed monthly sum."
+      "extra": {
+        "q": "Are there costs on top of the prices?",
+        "a": "You pay for the tools themselves monthly, directly to the provider. I tell you these costs before we start."
       }
     },
-    "foot": "Tell me in two or three sentences what piles up for you. I will reply personally.",
-    "message": "What piles up for you?",
-    "service": "AI and digital tools for small businesses"
+    "end": {
+      "title": "Fancy more free time?",
+      "text": "Tell me in two or three sentences what piles up for you. I reply personally, and we arrange a visit."
+    }
   },
   "legal": {
     "impressum": "Impressum",

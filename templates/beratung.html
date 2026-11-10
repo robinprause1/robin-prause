@@ -7,10 +7,10 @@
   <title>{{offer.meta}}</title>
   <meta name="description" content="{{offer.description}}">
   <link rel="canonical" href="{{canonical}}">
-  <link rel="alternate" hreflang="en" href="{{alt.en}}">
   <link rel="alternate" hreflang="de" href="{{alt.de}}">
-  <link rel="alternate" hreflang="x-default" href="{{alt.en}}">
-  <meta name="theme-color" content="#f3efe6">
+  <link rel="alternate" hreflang="en" href="{{alt.en}}">
+  <link rel="alternate" hreflang="x-default" href="{{alt.default}}">
+  <meta name="theme-color" content="#ffffff">
   <meta property="og:site_name" content="Robin Prause">
   <meta property="og:title" content="{{offer.meta}}">
   <meta property="og:description" content="{{offer.description}}">
@@ -25,359 +25,394 @@
   <!--ld-->
   <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
   <link rel="preload" href="/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=65">
+  <link rel="stylesheet" href="/home.css?v=2">
 </head>
 <body>
-  <a class="skip" href="#ablauf-title">{{skip}}</a>
+  <a class="skip" href="#inhalt">{{skip}}</a>
 
-  <header class="mast">
-    <div class="mast-row">
-      <a class="word" href="{{home}}">Robin Prause</a>
-      <span></span>
-      <div class="dials">
-        <a class="mast-cta" href="#kontakt">{{offer.mastCta}}</a>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7.5 8.5 6 8.5-6"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v18M12.5 8H16M12.5 12H16"/></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></symbol>
+    <symbol id="i-form" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 13h6M7 16.5h10"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5h4"/></symbol>
+    <symbol id="i-sort" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></symbol>
+    <symbol id="i-draft" viewBox="0 0 24 24"><path d="M12 5H6a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-6"/><path d="m17.5 3.5 3 3L12 15l-3.5.5L9 12z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 3 3 5-6.5"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h10M4 18h7"/></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><path d="M8 5h8v3H8z"/><path d="M8 6H6a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-2M9 13h6M9 17h4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
+  </svg>
+
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="{{home}}">Robin Prause</a>
+      <nav class="top-nav" aria-label="{{offer.nav.label}}">
+        <a href="#beispiele">{{offer.nav.top}}</a>
+        <a href="#ablauf">{{offer.nav.how}}</a>
+        <a href="#preise">{{offer.nav.prices}}</a>
+        <a href="#datenschutz">{{offer.nav.data}}</a>
+        <a href="#fragen">{{offer.nav.faq}}</a>
+      </nav>
+      <div class="top-tools">
         <div class="theme" id="theme" role="radiogroup" aria-label="{{theme.label}}">
           <button type="button" role="radio" aria-checked="false" data-theme-set="light">{{theme.light}}</button>
           <button type="button" role="radio" aria-checked="false" data-theme-set="dark">{{theme.dark}}</button>
         </div>
         <span class="langs">
-          <a href="/" hreflang="en" lang="en" class="{{lang.en.current}}">EN</a>
-          <a href="/de" hreflang="de" lang="de" class="{{lang.de.current}}">DE</a>
+          <a href="/" hreflang="de" lang="de" class="{{lang.de.current}}">DE</a>
+          <a href="/en" hreflang="en" lang="en" class="{{lang.en.current}}">EN</a>
         </span>
+        <a class="btn btn-small" href="#kontakt">{{offer.nav.cta}}</a>
       </div>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="name">
-      <div class="page hero-grid">
-        <div class="hero-copy">
-          <p class="kicker"><span>{{offer.kicker}}</span></p>
-          <h1 class="claim">{{offer.claim}}</h1>
-          <p class="lede">{{offer.lede}}</p>
-          <div class="cta-row">
-            <a class="cta-button" href="#kontakt">{{offer.cta}} <span aria-hidden="true">→</span></a>
-            <a class="cta-mail" href="mailto:mail@robin-prause.de">mail@robin-prause.de</a>
+  <main id="inhalt">
+    <section class="hero">
+      <div class="wrap hero-head">
+        <h1>{{offer.hero.a}} <em>{{offer.hero.b}}</em></h1>
+        <div class="hero-side">
+          <div class="hero-pitch">
+            <p class="hero-lede">{{offer.hero.lede}}</p>
+            <p class="hero-by">
+              <img src="/portrait.jpg?v=5" width="96" height="96" alt="">
+              <span>{{offer.hero.by}}</span>
+            </p>
           </div>
-          <p class="cta-hint">{{offer.ctaHint}}</p>
+          <div class="hero-act">
+            <div class="actions">
+              <a class="btn" href="#kontakt">{{offer.hero.cta}}</a>
+              <a class="btn btn-ghost" href="/angebotskatalog.pdf" download="{{offer.catalog.file}}">
+                <svg aria-hidden="true"><use href="#i-down"/></svg>
+                <span>{{offer.catalog.label}}</span>
+              </a>
+            </div>
+            <p class="hero-hint">{{offer.hero.hint}}</p>
+          </div>
         </div>
-        <figure class="portrait">
-          <img src="/portrait.jpg?v=5" width="1024" height="1024" alt="{{portrait.alt}}" fetchpriority="high">
-          <figcaption>
-            <span>{{portrait.caption}}</span>
-          </figcaption>
-        </figure>
       </div>
-      <p id="name" class="name page" aria-label="Robin Prause">
-        <span class="name-a">Robin</span>
-        <span class="name-b">Prause</span>
-      </p>
+
+      <div class="wrap">
+        <div class="flows" data-flows>
+          <div class="flow-tabs" role="tablist" aria-label="{{offer.flow.label}}">
+            <button type="button" role="tab" id="tab-invoice" aria-controls="flow-invoice" aria-selected="true">{{offer.flow.invoice.tab}}</button>
+            <button type="button" role="tab" id="tab-request" aria-controls="flow-request" aria-selected="false" tabindex="-1">{{offer.flow.request.tab}}</button>
+            <button type="button" role="tab" id="tab-report" aria-controls="flow-report" aria-selected="false" tabindex="-1">{{offer.flow.report.tab}}</button>
+          </div>
+          <div class="flow-stage">
+            <svg class="flow-wires" aria-hidden="true" focusable="false"></svg>
+            <div class="flow-panel" id="flow-invoice" role="tabpanel" aria-labelledby="tab-invoice">
+              <ol class="flow">
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><span class="node-text"><strong>{{offer.flow.invoice.a.t}}</strong><span>{{offer.flow.invoice.a.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-scan"/></svg></span><span class="node-text"><strong>{{offer.flow.invoice.b.t}}</strong><span>{{offer.flow.invoice.b.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-folder"/></svg></span><span class="node-text"><strong>{{offer.flow.invoice.c.t}}</strong><span>{{offer.flow.invoice.c.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-book"/></svg></span><span class="node-text"><strong>{{offer.flow.invoice.d.t}}</strong><span>{{offer.flow.invoice.d.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-person"/></svg></span><span class="node-text"><strong>{{offer.flow.invoice.e.t}}</strong><span>{{offer.flow.invoice.e.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+              </ol>
+            </div>
+            <div class="flow-panel" id="flow-request" role="tabpanel" aria-labelledby="tab-request" hidden>
+              <ol class="flow">
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-form"/></svg></span><span class="node-text"><strong>{{offer.flow.request.a.t}}</strong><span>{{offer.flow.request.a.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-bell"/></svg></span><span class="node-text"><strong>{{offer.flow.request.b.t}}</strong><span>{{offer.flow.request.b.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-sort"/></svg></span><span class="node-text"><strong>{{offer.flow.request.c.t}}</strong><span>{{offer.flow.request.c.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-draft"/></svg></span><span class="node-text"><strong>{{offer.flow.request.d.t}}</strong><span>{{offer.flow.request.d.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span class="node-text"><strong>{{offer.flow.request.e.t}}</strong><span>{{offer.flow.request.e.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+              </ol>
+            </div>
+            <div class="flow-panel" id="flow-report" role="tabpanel" aria-labelledby="tab-report" hidden>
+              <ol class="flow">
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-mic"/></svg></span><span class="node-text"><strong>{{offer.flow.report.a.t}}</strong><span>{{offer.flow.report.a.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-text"/></svg></span><span class="node-text"><strong>{{offer.flow.report.b.t}}</strong><span>{{offer.flow.report.b.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-folder"/></svg></span><span class="node-text"><strong>{{offer.flow.report.c.t}}</strong><span>{{offer.flow.report.c.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-clip"/></svg></span><span class="node-text"><strong>{{offer.flow.report.d.t}}</strong><span>{{offer.flow.report.d.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+                <li class="node"><span class="node-icon"><svg aria-hidden="true"><use href="#i-clock"/></svg></span><span class="node-text"><strong>{{offer.flow.report.e.t}}</strong><span>{{offer.flow.report.e.d}}</span></span><i class="node-state" aria-hidden="true"></i></li>
+              </ol>
+            </div>
+          </div>
+          <p class="flow-note">{{offer.flow.note}}</p>
+        </div>
+      </div>
     </section>
 
-    <section id="gewinn" class="chapter page is-wide" aria-labelledby="gewinn-title">
-      <div class="section-head">
-        <p class="num" aria-hidden="true">01</p>
-        <h2 id="gewinn-title">{{offer.gain.title}}</h2>
-        <p class="lead">{{offer.gain.lead}}</p>
-      </div>
-      <div class="section-body">
-        <ul class="gains">
-          <li class="gain">
-            <p class="gain-big">{{offer.gain.hours.big}}</p>
-            <h3>{{offer.gain.hours.title}}</h3>
-            <p>{{offer.gain.hours.text}}</p>
-          </li>
-          <li class="gain">
-            <p class="gain-big">{{offer.gain.reply.big}}</p>
-            <h3>{{offer.gain.reply.title}}</h3>
-            <p>{{offer.gain.reply.text}}</p>
-          </li>
-          <li class="gain">
-            <p class="gain-big">{{offer.gain.evening.big}}</p>
-            <h3>{{offer.gain.evening.title}}</h3>
-            <p>{{offer.gain.evening.text}}</p>
-          </li>
+    <section class="band" id="gewinn" aria-labelledby="gewinn-title">
+      <div class="wrap gain">
+        <div class="gain-lead" data-reveal>
+          <h2 id="gewinn-title">{{offer.gain.title}}</h2>
+          <p class="gain-figure"><b>{{offer.gain.big}}</b> <span>{{offer.gain.unit}}</span></p>
+          <p class="gain-text">{{offer.gain.text}}</p>
+        </div>
+        <ul class="gain-list" data-reveal>
+          <li><h3>{{offer.gain.fast.t}}</h3><p>{{offer.gain.fast.d}}</p></li>
+          <li><h3>{{offer.gain.evening.t}}</h3><p>{{offer.gain.evening.d}}</p></li>
+          <li><h3>{{offer.gain.own.t}}</h3><p>{{offer.gain.own.d}}</p></li>
+          <li><h3>{{offer.gain.partner.t}}</h3><p>{{offer.gain.partner.d}}</p></li>
         </ul>
       </div>
     </section>
 
-    <section id="ablauf" class="chapter page" aria-labelledby="ablauf-title">
-      <div class="section-head">
-        <p class="num" aria-hidden="true">02</p>
-        <h2 id="ablauf-title">{{offer.steps.title}}</h2>
-        <p class="lead">{{offer.steps.lead}}</p>
+    <section class="band is-tint" id="beispiele" aria-labelledby="beispiele-title">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <h2 id="beispiele-title">{{offer.top.title}}</h2>
+          <p>{{offer.top.lead}}</p>
+        </div>
+        <ul class="pairs" data-reveal>
+          <li><h3>{{offer.top.one.t}}</h3><p>{{offer.top.one.d}}</p></li>
+          <li><h3>{{offer.top.two.t}}</h3><p>{{offer.top.two.d}}</p></li>
+          <li><h3>{{offer.top.three.t}}</h3><p>{{offer.top.three.d}}</p></li>
+          <li><h3>{{offer.top.four.t}}</h3><p>{{offer.top.four.d}}</p></li>
+          <li><h3>{{offer.top.five.t}}</h3><p>{{offer.top.five.d}}</p></li>
+          <li><h3>{{offer.top.six.t}}</h3><p>{{offer.top.six.d}}</p></li>
+          <li><h3>{{offer.top.seven.t}}</h3><p>{{offer.top.seven.d}}</p></li>
+        </ul>
+        <div class="more" data-reveal>
+          <p>{{offer.top.more}}</p>
+          <a class="btn" href="/angebotskatalog.pdf" download="{{offer.catalog.file}}">
+            <svg aria-hidden="true"><use href="#i-down"/></svg>
+            <span>{{offer.catalog.label}}</span>
+            <small>{{offer.catalog.detail}}</small>
+          </a>
+        </div>
       </div>
-      <div class="section-body">
-        <ol class="steps">
+    </section>
+
+    <section class="band" id="ablauf" aria-labelledby="ablauf-title">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <h2 id="ablauf-title">{{offer.how.title}}</h2>
+          <p>{{offer.how.lead}}</p>
+        </div>
+        <ol class="steps" data-reveal>
           <li class="step">
-            <span class="step-num" aria-hidden="true">1</span>
-            <h3>{{offer.steps.one.title}}</h3>
-            <p>{{offer.steps.one.text}}</p>
+            <span class="step-n" aria-hidden="true">1</span>
+            <h3>{{offer.how.one.title}}</h3>
+            <p>{{offer.how.one.text}}</p>
+            <p class="step-meta">{{offer.how.one.meta}}</p>
           </li>
           <li class="step">
-            <span class="step-num" aria-hidden="true">2</span>
-            <h3>{{offer.steps.two.title}}</h3>
-            <p>{{offer.steps.two.text}}</p>
+            <span class="step-n" aria-hidden="true">2</span>
+            <h3>{{offer.how.two.title}}</h3>
+            <p>{{offer.how.two.text}}</p>
+            <p class="step-meta">{{offer.how.two.meta}}</p>
           </li>
           <li class="step">
-            <span class="step-num" aria-hidden="true">3</span>
-            <h3>{{offer.steps.three.title}}</h3>
-            <p>{{offer.steps.three.text}}</p>
+            <span class="step-n" aria-hidden="true">3</span>
+            <h3>{{offer.how.three.title}}</h3>
+            <p>{{offer.how.three.text}}</p>
+            <p class="step-meta">{{offer.how.three.meta}}</p>
           </li>
-          <li class="step">
-            <span class="step-num" aria-hidden="true">4</span>
-            <h3>{{offer.steps.four.title}}</h3>
-            <p>{{offer.steps.four.text}}</p>
+          <li class="step is-extra">
+            <span class="step-n" aria-hidden="true">4</span>
+            <h3>{{offer.how.four.title}} <small>{{offer.how.optional}}</small></h3>
+            <p>{{offer.how.four.text}}</p>
+            <p class="step-meta">{{offer.how.four.meta}}</p>
           </li>
-          <li class="step is-optional">
-            <span class="step-num" aria-hidden="true">5</span>
-            <h3>{{offer.steps.five.title}}</h3>
-            <p>{{offer.steps.five.text}}</p>
+          <li class="step is-extra">
+            <span class="step-n" aria-hidden="true">5</span>
+            <h3>{{offer.how.five.title}} <small>{{offer.how.optional}}</small></h3>
+            <p>{{offer.how.five.text}}</p>
+            <p class="step-meta">{{offer.how.five.meta}}</p>
           </li>
         </ol>
-      </div>
-    </section>
-
-    <section id="aufgaben" class="chapter page" aria-labelledby="aufgaben-title">
-      <div class="section-head">
-        <p class="num" aria-hidden="true">03</p>
-        <h2 id="aufgaben-title">{{offer.tasks.title}}</h2>
-        <p class="lead">{{offer.tasks.lead}}</p>
-      </div>
-      <div class="section-body">
-        <ul class="tiles">
-          <li class="tile">
-            <svg class="tile-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h7M9 17h7"/></svg>
-            <p class="tile-tag">{{offer.tasks.office}}</p>
-            <h3>{{offer.tasks.quotes.title}}</h3>
-            <p>{{offer.tasks.quotes.text}}</p>
-          </li>
-          <li class="tile">
-            <svg class="tile-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg>
-            <p class="tile-tag">{{offer.tasks.office}}</p>
-            <h3>{{offer.tasks.mail.title}}</h3>
-            <p>{{offer.tasks.mail.text}}</p>
-          </li>
-          <li class="tile">
-            <svg class="tile-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
-            <p class="tile-tag">{{offer.tasks.field}}</p>
-            <h3>{{offer.tasks.reports.title}}</h3>
-            <p>{{offer.tasks.reports.text}}</p>
-          </li>
-          <li class="tile">
-            <svg class="tile-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-            <p class="tile-tag">{{offer.tasks.office}}</p>
-            <h3>{{offer.tasks.paper.title}}</h3>
-            <p>{{offer.tasks.paper.text}}</p>
-          </li>
-          <li class="tile">
-            <svg class="tile-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>
-            <p class="tile-tag">{{offer.tasks.home}}</p>
-            <h3>{{offer.tasks.private.title}}</h3>
-            <p>{{offer.tasks.private.text}}</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="warum" class="chapter page is-wide" aria-labelledby="warum-title">
-      <div class="section-head">
-        <p class="num" aria-hidden="true">04</p>
-        <h2 id="warum-title">{{offer.why.title}}</h2>
-        <p class="lead">{{offer.why.lead}}</p>
-      </div>
-      <div class="section-body">
-        <div class="why-lead">
-          <p class="why-big">{{offer.why.overview.big}}</p>
+        <div class="check" data-reveal>
           <div>
-            <h3>{{offer.why.overview.title}}</h3>
-            <p>{{offer.why.overview.text}}</p>
+            <h3>{{offer.how.check.title}}</h3>
+            <p>{{offer.how.check.lead}}</p>
           </div>
+          <ul>
+            <li>{{offer.how.check.one}}</li>
+            <li>{{offer.how.check.two}}</li>
+            <li>{{offer.how.check.three}}</li>
+            <li>{{offer.how.check.four}}</li>
+            <li>{{offer.how.check.five}}</li>
+          </ul>
         </div>
-        <ul class="why-list">
-          <li class="why-row">
-            <p class="why-word">{{offer.why.care.big}}</p>
-            <div>
-              <h3>{{offer.why.care.title}}</h3>
-              <p>{{offer.why.care.text}}</p>
-            </div>
-          </li>
-          <li class="why-row">
-            <p class="why-word">{{offer.why.self.big}}</p>
-            <div>
-              <h3>{{offer.why.self.title}}</h3>
-              <p>{{offer.why.self.text}}</p>
-            </div>
-          </li>
-          <li class="why-row">
-            <p class="why-word">{{offer.why.ai.big}}</p>
-            <div>
-              <h3>{{offer.why.ai.title}}</h3>
-              <p>{{offer.why.ai.text}}</p>
-            </div>
-          </li>
-          <li class="why-row">
-            <p class="why-word">{{offer.why.tech.big}}</p>
-            <div>
-              <h3>{{offer.why.tech.title}}</h3>
-              <p>{{offer.why.tech.text}}</p>
-            </div>
-          </li>
-          <li class="why-row">
-            <p class="why-word">{{offer.why.near.big}}</p>
-            <div>
-              <h3>{{offer.why.near.title}}</h3>
-              <p>{{offer.why.near.text}}</p>
-            </div>
-          </li>
-        </ul>
-        <p class="stack"><a href="{{cv.href}}">{{offer.why.more}}</a></p>
       </div>
     </section>
 
-    <section id="fuer-wen" class="chapter page" aria-labelledby="fuer-wen-title">
-      <div class="section-head">
-        <p class="num" aria-hidden="true">05</p>
-        <h2 id="fuer-wen-title">{{offer.fit.title}}</h2>
-        <p class="lead">{{offer.fit.lead}}</p>
+    <section class="band is-tint" id="preise" aria-labelledby="preise-title">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <h2 id="preise-title">{{offer.price.title}}</h2>
+          <p>{{offer.price.lead}}</p>
+        </div>
+        <div class="groups" data-reveal>
+          <details class="group" open>
+            <summary><h3>{{offer.price.office.title}}</h3><span class="group-from">{{offer.price.office.from}}</span><span class="chev" aria-hidden="true"></span></summary>
+            <ul class="rows">
+              <li><div><h4>{{offer.price.office.mail.t}}</h4><p>{{offer.price.office.mail.d}}</p></div><p class="row-price">{{offer.price.office.mail.p}}</p></li>
+              <li><div><h4>{{offer.price.office.quotes.t}}</h4><p>{{offer.price.office.quotes.d}}</p></div><p class="row-price">{{offer.price.office.quotes.p}}</p></li>
+              <li><div><h4>{{offer.price.office.reports.t}}</h4><p>{{offer.price.office.reports.d}}</p></div><p class="row-price">{{offer.price.office.reports.p}}</p></li>
+              <li><div><h4>{{offer.price.office.dates.t}}</h4><p>{{offer.price.office.dates.d}}</p></div><p class="row-price">{{offer.price.office.dates.p}}</p></li>
+              <li><div><h4>{{offer.price.office.letters.t}}</h4><p>{{offer.price.office.letters.d}}</p></div><p class="row-price">{{offer.price.office.letters.p}}</p></li>
+              <li><div><h4>{{offer.price.office.solo.t}}</h4><p>{{offer.price.office.solo.d}}</p></div><p class="row-price">{{offer.price.office.solo.p}}</p></li>
+            </ul>
+          </details>
+          <details class="group">
+            <summary><h3>{{offer.price.ai.title}}</h3><span class="group-from">{{offer.price.ai.from}}</span><span class="chev" aria-hidden="true"></span></summary>
+            <p class="group-lead">{{offer.price.ai.lead}}</p>
+            <ul class="rows">
+              <li><div><h4>{{offer.price.ai.desk.t}}</h4><p>{{offer.price.ai.desk.d}}</p></div><p class="row-price">{{offer.price.ai.desk.p}}</p></li>
+              <li><div><h4>{{offer.price.ai.rules.t}}</h4><p>{{offer.price.ai.rules.d}}</p></div><p class="row-price">{{offer.price.ai.rules.p}}</p></li>
+              <li><div><h4>{{offer.price.ai.training.t}}</h4><p>{{offer.price.ai.training.d}}</p></div><p class="row-price">{{offer.price.ai.training.p}}</p></li>
+              <li><div><h4>{{offer.price.ai.pack.t}}</h4><p>{{offer.price.ai.pack.d}}</p></div><p class="row-price">{{offer.price.ai.pack.p}}</p></li>
+            </ul>
+          </details>
+          <details class="group">
+            <summary><h3>{{offer.price.assist.title}}</h3><span class="group-from">{{offer.price.assist.from}}</span><span class="chev" aria-hidden="true"></span></summary>
+            <ul class="rows">
+              <li><div><h4>{{offer.price.assist.agent.t}}</h4><p>{{offer.price.assist.agent.d}}</p></div><p class="row-price">{{offer.price.assist.agent.p}}</p></li>
+              <li><div><h4>{{offer.price.assist.connect.t}}</h4><p>{{offer.price.assist.connect.d}}</p></div><p class="row-price">{{offer.price.assist.connect.p}}</p></li>
+              <li><div><h4>{{offer.price.assist.auto.t}}</h4><p>{{offer.price.assist.auto.d}}</p></div><p class="row-price">{{offer.price.assist.auto.p}}</p></li>
+            </ul>
+          </details>
+          <details class="group">
+            <summary><h3>{{offer.price.web.title}}</h3><span class="group-from">{{offer.price.web.from}}</span><span class="chev" aria-hidden="true"></span></summary>
+            <ul class="rows">
+              <li><div><h4>{{offer.price.web.fresh.t}}</h4><p>{{offer.price.web.fresh.d}}</p></div><p class="row-price">{{offer.price.web.fresh.p}}</p></li>
+              <li><div><h4>{{offer.price.web.update.t}}</h4><p>{{offer.price.web.update.d}}</p></div><p class="row-price">{{offer.price.web.update.p}}</p></li>
+              <li><div><h4>{{offer.price.web.google.t}}</h4><p>{{offer.price.web.google.d}}</p></div><p class="row-price">{{offer.price.web.google.p}}</p></li>
+            </ul>
+          </details>
+          <details class="group">
+            <summary><h3>{{offer.price.build.title}}</h3><span class="group-from">{{offer.price.build.from}}</span><span class="chev" aria-hidden="true"></span></summary>
+            <p class="group-lead">{{offer.price.build.lead}}</p>
+            <ul class="rows">
+              <li><div><h4>{{offer.price.build.app.t}}</h4><p>{{offer.price.build.app.d}}</p></div><p class="row-price">{{offer.price.build.app.p}}</p></li>
+              <li><div><h4>{{offer.price.build.own.t}}</h4><p>{{offer.price.build.own.d}}</p></div><p class="row-price">{{offer.price.build.own.p}}</p></li>
+            </ul>
+          </details>
+          <details class="group">
+            <summary><h3>{{offer.price.care.title}}</h3><span class="group-from">{{offer.price.care.from}}</span><span class="chev" aria-hidden="true"></span></summary>
+            <p class="group-lead">{{offer.price.care.lead}}</p>
+            <ul class="rows">
+              <li><div><h4>{{offer.price.care.basic.t}}</h4><p>{{offer.price.care.basic.d}}</p></div><p class="row-price">{{offer.price.care.basic.p}}</p></li>
+              <li><div><h4>{{offer.price.care.plus.t}}</h4><p>{{offer.price.care.plus.d}}</p></div><p class="row-price">{{offer.price.care.plus.p}}</p></li>
+              <li><div><h4>{{offer.price.care.build.t}}</h4><p>{{offer.price.care.build.d}}</p></div><p class="row-price">{{offer.price.care.build.p}}</p></li>
+            </ul>
+          </details>
+          <details class="group">
+            <summary><h3>{{offer.price.home.title}}</h3><span class="group-from">{{offer.price.home.from}}</span><span class="chev" aria-hidden="true"></span></summary>
+            <p class="group-lead">{{offer.price.home.lead}}</p>
+            <ul class="rows">
+              <li><div><h4>{{offer.price.home.paper.t}}</h4><p>{{offer.price.home.paper.d}}</p></div><p class="row-price">{{offer.price.home.paper.p}}</p></li>
+              <li><div><h4>{{offer.price.home.smart.t}}</h4><p>{{offer.price.home.smart.d}}</p></div><p class="row-price">{{offer.price.home.smart.p}}</p></li>
+              <li><div><h4>{{offer.price.home.helper.t}}</h4><p>{{offer.price.home.helper.d}}</p></div><p class="row-price">{{offer.price.home.helper.p}}</p></li>
+              <li><div><h4>{{offer.price.home.learn.t}}</h4><p>{{offer.price.home.learn.d}}</p></div><p class="row-price">{{offer.price.home.learn.p}}</p></li>
+            </ul>
+          </details>
+        </div>
+        <p class="price-note">{{offer.price.note}}</p>
       </div>
-      <div class="section-body">
-        <ul class="fit">
-          <li class="fit-item is-yes">
-            <p class="fit-label">{{offer.fit.yes.when}}</p>
-            <h3>{{offer.fit.yes.title}}</h3>
-            <p>{{offer.fit.yes.text}}</p>
-          </li>
-          <li class="fit-item is-yes">
-            <p class="fit-label">{{offer.fit.also.when}}</p>
-            <h3>{{offer.fit.also.title}}</h3>
-            <p>{{offer.fit.also.text}}</p>
-          </li>
-          <li class="fit-item is-yes">
-            <p class="fit-label">{{offer.fit.ongoing.when}}</p>
-            <h3>{{offer.fit.ongoing.title}}</h3>
-            <p>{{offer.fit.ongoing.text}}</p>
-          </li>
+    </section>
+
+    <section class="band" id="datenschutz" aria-labelledby="datenschutz-title">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <h2 id="datenschutz-title">{{offer.data.title}}</h2>
+          <p>{{offer.data.lead}}</p>
+        </div>
+        <ul class="facts" data-reveal>
+          <li><h3>{{offer.data.avv.t}}</h3><p>{{offer.data.avv.d}}</p></li>
+          <li><h3>{{offer.data.host.t}}</h3><p>{{offer.data.host.d}}</p></li>
+          <li><h3>{{offer.data.name.t}}</h3><p>{{offer.data.name.d}}</p></li>
+          <li><h3>{{offer.data.less.t}}</h3><p>{{offer.data.less.d}}</p></li>
+          <li><h3>{{offer.data.human.t}}</h3><p>{{offer.data.human.d}}</p></li>
+          <li><h3>{{offer.data.health.t}}</h3><p>{{offer.data.health.d}}</p></li>
         </ul>
       </div>
     </section>
 
-    <aside class="cta-band page" aria-labelledby="band-title">
-      <div>
-        <p class="cta-band-title" id="band-title">{{offer.band.title}}</p>
-        <p class="cta-band-text">{{offer.band.text}}</p>
+    <section class="band is-tint" id="ueber" aria-labelledby="ueber-title">
+      <div class="wrap about">
+        <figure class="about-photo" data-reveal>
+          <img src="/portrait.jpg?v=5" width="1024" height="1024" alt="{{portrait.alt}}" loading="lazy">
+        </figure>
+        <div class="about-text" data-reveal>
+          <h2 id="ueber-title">{{offer.about.title}}</h2>
+          <p>{{offer.about.one}}</p>
+          <p>{{offer.about.two}}</p>
+          <p>{{offer.about.three}}</p>
+          <h3>{{offer.about.whoTitle}}</h3>
+          <p>{{offer.about.who}}</p>
+          <p><a class="link" href="{{cv.href}}">{{offer.about.more}}</a></p>
+        </div>
       </div>
-      <a class="cta-button" href="#kontakt">{{offer.cta}} <span aria-hidden="true">→</span></a>
-    </aside>
+    </section>
 
-    <section id="fragen" class="chapter page" aria-labelledby="fragen-title">
-      <div class="section-head">
-        <p class="num" aria-hidden="true">06</p>
-        <h2 id="fragen-title">{{offer.faq.title}}</h2>
-        <p class="lead">{{offer.faq.lead}}</p>
+    <section class="band" id="fragen" aria-labelledby="fragen-title">
+      <div class="wrap faq">
+        <h2 id="fragen-title" data-reveal>{{offer.faq.title}}</h2>
+        <div class="faq-list" data-reveal>
+          <details><summary><h3>{{offer.faq.ai.q}}</h3><span class="chev" aria-hidden="true"></span></summary><p>{{offer.faq.ai.a}}</p></details>
+          <details><summary><h3>{{offer.faq.cost.q}}</h3><span class="chev" aria-hidden="true"></span></summary><p>{{offer.faq.cost.a}}</p></details>
+          <details><summary><h3>{{offer.faq.start.q}}</h3><span class="chev" aria-hidden="true"></span></summary><p>{{offer.faq.start.a}}</p></details>
+          <details><summary><h3>{{offer.faq.auto.q}}</h3><span class="chev" aria-hidden="true"></span></summary><p>{{offer.faq.auto.a}}</p></details>
+          <details><summary><h3>{{offer.faq.own.q}}</h3><span class="chev" aria-hidden="true"></span></summary><p>{{offer.faq.own.a}}</p></details>
+          <details><summary><h3>{{offer.faq.privacy.q}}</h3><span class="chev" aria-hidden="true"></span></summary><p>{{offer.faq.privacy.a}}</p></details>
+          <details><summary><h3>{{offer.faq.act.q}}</h3><span class="chev" aria-hidden="true"></span></summary><p>{{offer.faq.act.a}}</p></details>
+          <details><summary><h3>{{offer.faq.time.q}}</h3><span class="chev" aria-hidden="true"></span></summary><p>{{offer.faq.time.a}}</p></details>
+          <details><summary><h3>{{offer.faq.after.q}}</h3><span class="chev" aria-hidden="true"></span></summary><p>{{offer.faq.after.a}}</p></details>
+          <details><summary><h3>{{offer.faq.extra.q}}</h3><span class="chev" aria-hidden="true"></span></summary><p>{{offer.faq.extra.a}}</p></details>
+        </div>
       </div>
-      <div class="section-body">
-        <ol class="references faq">
-          <li>
-            <details class="reference">
-              <summary class="reference-head"><h3>{{offer.faq.day.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
-              <div class="reference-body"><p>{{offer.faq.day.a}}</p></div>
-            </details>
-          </li>
-          <li>
-            <details class="reference">
-              <summary class="reference-head"><h3>{{offer.faq.jobs.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
-              <div class="reference-body"><p>{{offer.faq.jobs.a}}</p></div>
-            </details>
-          </li>
-          <li>
-            <details class="reference">
-              <summary class="reference-head"><h3>{{offer.faq.which.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
-              <div class="reference-body"><p>{{offer.faq.which.a}}</p></div>
-            </details>
-          </li>
-          <li>
-            <details class="reference">
-              <summary class="reference-head"><h3>{{offer.faq.trade.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
-              <div class="reference-body"><p>{{offer.faq.trade.a}}</p></div>
-            </details>
-          </li>
-          <li>
-            <details class="reference">
-              <summary class="reference-head"><h3>{{offer.faq.worth.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
-              <div class="reference-body"><p>{{offer.faq.worth.a}}</p></div>
-            </details>
-          </li>
-          <li>
-            <details class="reference">
-              <summary class="reference-head"><h3>{{offer.faq.ai.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
-              <div class="reference-body"><p>{{offer.faq.ai.a}}</p></div>
-            </details>
-          </li>
-          <li>
-            <details class="reference">
-              <summary class="reference-head"><h3>{{offer.faq.after.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
-              <div class="reference-body"><p>{{offer.faq.after.a}}</p></div>
-            </details>
-          </li>
-          <li>
-            <details class="reference">
-              <summary class="reference-head"><h3>{{offer.faq.data.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
-              <div class="reference-body"><p>{{offer.faq.data.a}}</p></div>
-            </details>
-          </li>
-          <li>
-            <details class="reference">
-              <summary class="reference-head"><h3>{{offer.faq.price.q}}</h3><span class="reference-chevron" aria-hidden="true"></span></summary>
-              <div class="reference-body"><p>{{offer.faq.price.a}}</p></div>
-            </details>
-          </li>
-        </ol>
+    </section>
+
+    <section class="end" aria-labelledby="kontakt-title">
+      <div class="wrap end-grid">
+        <div class="end-copy">
+          <h2 id="kontakt-title">{{offer.end.title}}</h2>
+          <p>{{offer.end.text}}</p>
+          <p><a class="end-mail" href="mailto:mail@robin-prause.de">mail@robin-prause.de</a></p>
+          <a class="btn btn-ghost" href="/angebotskatalog.pdf" download="{{offer.catalog.file}}">
+            <svg aria-hidden="true"><use href="#i-down"/></svg>
+            <span>{{offer.catalog.label}}</span>
+            <small>{{offer.catalog.detail}}</small>
+          </a>
+        </div>
+        <form class="contact" id="kontakt" action="/contact" method="post">
+          <p class="form-note" role="status" data-fail="{{form.failed}}">{{form.note}}</p>
+          <input type="hidden" name="lang" value="{{html.lang}}">
+          <input type="hidden" name="back" value="{{offer.href}}">
+          <div class="hp" aria-hidden="true">
+            <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <label>
+            <span>{{form.name}}</span>
+            <input name="name" required maxlength="80" autocomplete="name">
+          </label>
+          <label>
+            <span>{{form.email}}</span>
+            <input name="email" type="email" required maxlength="120" autocomplete="email">
+          </label>
+          <label>
+            <span>{{offer.message}}</span>
+            <textarea name="message" required maxlength="4000" rows="5"></textarea>
+          </label>
+          <button class="btn" type="submit">{{form.send}}</button>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="colophon">
-    <div class="page foot">
-      <p class="foot-cta">{{offer.foot}}</p>
-      <a class="foot-mail" href="mailto:mail@robin-prause.de">mail@robin-prause.de</a>
-      <form class="contact" id="kontakt" action="/contact" method="post">
-        <p class="form-note" role="status" data-fail="{{form.failed}}">{{form.note}}</p>
-        <input type="hidden" name="lang" value="{{html.lang}}">
-        <input type="hidden" name="back" value="{{offer.href}}">
-        <div class="hp" aria-hidden="true">
-          <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-        </div>
-        <label>
-          <span>{{form.name}}</span>
-          <input name="name" required maxlength="80" autocomplete="name">
-        </label>
-        <label>
-          <span>{{form.email}}</span>
-          <input name="email" type="email" required maxlength="120" autocomplete="email">
-        </label>
-        <label>
-          <span>{{offer.message}}</span>
-          <textarea name="message" required maxlength="4000" rows="5"></textarea>
-        </label>
-        <button type="submit">{{form.send}}</button>
-      </form>
-      <div class="foot-row">
-        <p>Robin Prause · Frankfurt · {{foot.year}}</p>
-        <p>
-          <a href="{{cv.href}}">{{cv.teaser}}</a>
-          <a href="https://www.linkedin.com/in/robin-prause-330666278" rel="noopener noreferrer">LinkedIn</a>
-          <a href="{{legal.impressumHref}}">{{legal.impressum}}</a>
-          <a href="{{legal.privacyHref}}">{{legal.privacy}}</a>
-          <a href="#top">{{foot.top}} ↑</a>
-        </p>
-      </div>
+  <footer class="foot">
+    <div class="wrap foot-row">
+      <p>Robin Prause · Rodgau · {{foot.year}}</p>
+      <p>
+        <a href="{{cv.href}}">{{cv.teaser}}</a>
+        <a href="https://www.linkedin.com/in/robin-prause-330666278" rel="noopener noreferrer">LinkedIn</a>
+        <a href="{{legal.impressumHref}}">{{legal.impressum}}</a>
+        <a href="{{legal.privacyHref}}">{{legal.privacy}}</a>
+      </p>
     </div>
   </footer>
 
-  <script src="/name.js?v=6"></script>
-  <script src="/motion.js?v=28"></script>
-  <script src="/controls.js?v=7"></script>
+  <script src="/home.js?v=2"></script>
   <script src="/contact.js?v=1"></script>
 </body>
 </html>
