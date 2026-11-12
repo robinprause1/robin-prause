@@ -2,6 +2,13 @@
 
 Persönliche Seite. Eine Datei, ein Node-Prozess, kein Framework. Railway startet `node server.js` und liest `PORT`.
 
+## VPS-Deployment
+
+Für den VPS ist ein GitHub-Actions-Workflow vorbereitet: Pushes auf `main`
+prüfen die Seiten und veröffentlichen nach einmaliger Einrichtung automatisch
+nach `/var/www/robin-prause`. Einrichtung, Zugangsdaten und Wiederherstellung
+sind in [deploy/README.md](deploy/README.md) beschrieben.
+
 ## Lokal
 
 ```bash

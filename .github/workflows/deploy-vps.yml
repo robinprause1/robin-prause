@@ -1,0 +1,60 @@
+name: Deploy website to VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: website-production
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install and check website
+        run: |
+          npm ci --omit=dev --ignore-scripts
+          node scripts/check-site.mjs
+  deploy:
+    needs: check
+    if: vars.VPS_DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package tracked website files
+        run: |
+          git archive --format=tar --output=site.tar "$GITHUB_SHA" \
+            server.js mail.js mcp.js package.json package-lock.json \
+            public templates i18n scripts/check-site.mjs
+          printf '%s\n' "$GITHUB_SHA" > .deploy-revision
+          tar -rf site.tar .deploy-revision
+      - name: Deploy over restricted SSH connection
+        env:
+          DEPLOY_KEY: ${{ secrets.VPS_DEPLOY_KEY }}
+          KNOWN_HOSTS: ${{ secrets.VPS_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$DEPLOY_KEY" && test -n "$KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s\n' "$DEPLOY_KEY" > "$HOME/.ssh/deploy_key"
+          printf '%s\n' "$KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/deploy_key" "$HOME/.ssh/known_hosts"
+          trap 'rm -f "$HOME/.ssh/deploy_key"' EXIT
+          ssh -T -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            -o ConnectTimeout=15 -o ServerAliveInterval=15 \
+            -o IdentitiesOnly=yes -i "$HOME/.ssh/deploy_key" \
+            site-deploy@37.114.55.70 deploy < site.tar
+      - name: Check public HTTPS endpoint
+        run: curl --fail --silent --show-error --retry 5 --retry-delay 3 --output /dev/null https://robin-prause.de/
