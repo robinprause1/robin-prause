@@ -32,7 +32,7 @@ PY
 cd "$work/new"
 [[ $(node -p 'Number(process.versions.node.split(".")[0])') -ge 22 ]]
 grep -Eq '^[0-9a-f]{40}$' .deploy-revision
-npm ci --omit=dev --ignore-scripts
+npm ci --omit=dev --ignore-scripts --cache "$work/npm-cache"
 node scripts/check-site.mjs
 
 directories=(public templates i18n node_modules)
