@@ -230,7 +230,7 @@
     "href": "/",
     "teaser": "Beratung für kleine Betriebe",
     "service": "KI und Automatisierung für kleine Betriebe",
-    "message": "Was bleibt bei euch liegen?",
+    "message": "Welche Arbeit kostet euch jede Woche viel Zeit?",
     "nav": {
       "label": "Seite",
       "top": "Beispiele",
@@ -243,9 +243,9 @@
     "hero": {
       "a": "Mehr Zeit für die",
       "b": "eigentliche Arbeit.",
-      "lede": "Ich begleite euch bei der Arbeit, finde die Aufgabe, die am meisten Zeit frisst, und nehme sie euch ab. Ohne dass ihr euch mit KI beschäftigen müsst.",
-      "cta": "Termin zum Begleiten anfragen",
-      "hint": "Das Begleiten ist im ersten Jahr kostenlos. Der Preis steht fest, bevor die Arbeit beginnt.",
+      "lede": "Ich schaue mir eure Arbeit an und richte Programme so ein, dass ihr weniger von Hand erledigen müsst.",
+      "cta": "Termin im Betrieb anfragen",
+      "hint": "Das Begleiten bei der Arbeit ist im ersten Jahr kostenlos. Den Preis für die Einrichtung nenne ich euch, bevor die Arbeit beginnt.",
       "by": "Robin Prause aus Rodgau bei Frankfurt. Für kleine Betriebe, Selbstständige und Privatleute."
     },
     "catalog": {
@@ -309,7 +309,7 @@
           "d": "zwei Minuten, dazu drei Fotos"
         },
         "b": {
-          "t": "Abgetippt und verstanden",
+          "t": "Sprachnachricht wird zu Text",
           "d": "Datum, Ort, Arbeiten und Stunden"
         },
         "c": {
@@ -318,7 +318,7 @@
         },
         "d": {
           "t": "Bericht liegt im Büro",
-          "d": "fertig als Arbeitsnachweis"
+          "d": "als Arbeitsbericht zur Prüfung vorbereitet"
         },
         "e": {
           "t": "Stunden stehen in der Tabelle",
@@ -340,8 +340,8 @@
         "d": "Abends und am Wochenende bleibt das Büro zu."
       },
       "own": {
-        "t": "Alles auf eurem Namen",
-        "d": "Konten und Daten gehören euch, und eure Leute können es danach allein."
+        "t": "Die Konten laufen auf euren Betrieb",
+        "d": "Die Benutzerkonten laufen auf euren Betrieb. Ihr behaltet die Zugänge."
       },
       "partner": {
         "t": "Ein fester Ansprechpartner",
@@ -349,7 +349,7 @@
       }
     },
     "top": {
-      "title": "Die meistgenutzten Automatisierungen",
+      "title": "Beispiele aus dem Arbeitsalltag",
       "lead": "Diese Aufgaben kosten in fast jedem Betrieb viel Zeit. Am einfachsten startet ihr meist im Büro, bei Rechnungen und Buchhaltung.",
       "one": {
         "t": "Eingangsrechnungen erfassen",
@@ -386,18 +386,18 @@
       "lead": "Drei Schritte, eine Aufgabe. Wenn sie läuft, kommt die nächste.",
       "optional": "Danach, auf Wunsch",
       "one": {
-        "title": "Begleiten",
+        "title": "Besuch im Betrieb",
         "text": "Ich komme zu euch, schaue zu und finde die Aufgabe, die am meisten Zeit frisst.",
         "meta": "Im ersten Jahr kostenlos"
       },
       "two": {
         "title": "Auftrag",
-        "text": "Ihr bekommt einen festen Preis. Dann richte ich die Aufgabe auf euren Konten ein.",
+        "text": "Ihr bekommt einen festen Preis. Ich richte die Programme ein. Die Benutzerkonten laufen auf euren Betrieb.",
         "meta": "Festpreis, in wenigen Wochen"
       },
       "three": {
         "title": "Übergabe",
-        "text": "Wir üben, bis es sitzt. Danach könnt ihr die Aufgabe allein.",
+        "text": "Ich zeige euch, wie ihr damit arbeitet, bis ihr sicher zurechtkommt.",
         "meta": "Mit Anleitung in euren Worten"
       },
       "four": {
@@ -405,7 +405,7 @@
         "text": "Ich bleibe für einen festen Monatsbetrag euer Ansprechpartner."
       },
       "five": {
-        "title": "Eigenbau",
+        "title": "Eigene Software bei Bedarf",
         "text": "Ein eigenes Werkzeug für euch, zum Beispiel eine App fürs Team."
       }
     },
@@ -423,16 +423,16 @@
         "d": "Eure Abläufe laufen auf Servern in Deutschland. Verarbeitet ein Werkzeug Daten anderswo, erfahrt ihr das vorher."
       },
       "name": {
-        "t": "Alles auf eurem Namen",
-        "d": "Konten, Daten und Zugänge gehören euch."
+        "t": "Die Konten laufen auf euren Betrieb",
+        "d": "Die Benutzerkonten laufen auf euren Betrieb. Ihr behaltet die Zugänge."
       },
       "less": {
         "t": "Nur die nötigen Daten",
         "d": "Wir legen gemeinsam fest, was ins Werkzeug geht."
       },
       "human": {
-        "t": "Ein Mensch prüft Wichtiges",
-        "d": "Angebote, Antworten und Zahlungen gehen erst nach eurer Freigabe raus."
+        "t": "Ihr prüft, bevor etwas rausgeht",
+        "d": "Angebote und Antworten werden vorbereitet. Ihr prüft sie und entscheidet, ob sie verschickt werden."
       },
       "health": {
         "t": "Gesundheitsdaten",
@@ -506,7 +506,7 @@
       },
       "after": {
         "q": "Was passiert nach der Übergabe?",
-        "a": "Ihr könnt die Aufgabe selbst ausführen, ändern und reparieren. Wer möchte, bucht die Betreuung, und ich bleibe euer Ansprechpartner."
+        "a": "Ihr bekommt eine Anleitung für die tägliche Nutzung und einfache Änderungen. Bei technischen Problemen helfe ich auf Wunsch weiter."
       },
       "extra": {
         "q": "Kommen zu den Preisen weitere Kosten dazu?",

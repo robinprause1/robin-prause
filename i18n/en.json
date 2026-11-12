@@ -230,7 +230,7 @@
     "href": "/en",
     "teaser": "Consulting for small businesses",
     "service": "AI and automation for small businesses",
-    "message": "What piles up for you?",
+    "message": "Which tasks take up a lot of your time each week?",
     "nav": {
       "label": "Page",
       "top": "Examples",
@@ -243,10 +243,10 @@
     "hero": {
       "a": "More time for your",
       "b": "real work.",
-      "lede": "I come along while you work, find the task that eats the most time and take it off your hands. You don't have to deal with AI yourself.",
-      "cta": "Ask for a visit",
-      "hint": "Coming along is free in the first year. The price is fixed before the work starts.",
-      "by": "Robin Prause from Rodgau near Frankfurt. For small businesses, freelancers and private people."
+      "lede": "I look at how you work and set up software to reduce the work you do by hand.",
+      "cta": "Arrange a visit to your business",
+      "hint": "My time observing your work is free in the first year. I give you the setup price before the work starts.",
+      "by": "Robin Prause from Rodgau near Frankfurt. For small businesses, freelancers and individuals."
     },
     "catalog": {
       "label": "Download the catalogue",
@@ -264,7 +264,7 @@
         },
         "b": {
           "t": "Recognised as an invoice",
-          "d": "supplier, date, amount and number are read out"
+          "d": "The software picks out the supplier, invoice date, amount and invoice number."
         },
         "c": {
           "t": "Filed properly",
@@ -309,7 +309,7 @@
           "d": "two minutes, plus three photos"
         },
         "b": {
-          "t": "Typed up and understood",
+          "t": "Voice message converted to text",
           "d": "date, place, work done and hours"
         },
         "c": {
@@ -318,7 +318,7 @@
         },
         "d": {
           "t": "Report is at the office",
-          "d": "ready as proof of work"
+          "d": "Work report ready for review"
         },
         "e": {
           "t": "Hours are in the sheet",
@@ -340,16 +340,16 @@
         "d": "The office stays closed at night and at the weekend."
       },
       "own": {
-        "t": "Everything in your name",
-        "d": "Accounts and data belong to you, and your people can run it on their own afterwards."
+        "t": "Accounts in your business name",
+        "d": "The accounts are registered to your business. You keep access to them."
       },
       "partner": {
-        "t": "One fixed contact",
+        "t": "One person to contact",
         "d": "If you like, I stay on after the handover."
       }
     },
     "top": {
-      "title": "The most used automations",
+      "title": "Examples from everyday work",
       "lead": "These tasks cost a lot of time in almost every business. The easiest place to start is usually the office, with invoices and bookkeeping.",
       "one": {
         "t": "Capture incoming invoices",
@@ -372,7 +372,7 @@
         "d": "Friendly reminders go out on time, and paid invoices are ticked off by themselves."
       },
       "six": {
-        "t": "Book appointments and remind",
+        "t": "Appointment booking and reminders",
         "d": "Customers pick a free slot and get a reminder the day before."
       },
       "seven": {
@@ -386,18 +386,18 @@
       "lead": "Three steps, one task. Once it runs, the next one follows.",
       "optional": "Afterwards, if you like",
       "one": {
-        "title": "Coming along",
-        "text": "I come to you, watch and find the task that eats the most time.",
+        "title": "On-site visit",
+        "text": "I visit your business, observe your work and find the task that takes the most time.",
         "meta": "Free in the first year"
       },
       "two": {
         "title": "The job",
-        "text": "You get a fixed price. Then I set the task up in your accounts.",
+        "text": "You get a fixed price. I set up the software. The accounts are registered to your business.",
         "meta": "Fixed price, within a few weeks"
       },
       "three": {
         "title": "Handover",
-        "text": "We practise until it sticks. After that you can run the task on your own.",
+        "text": "I show you how to use it until you feel confident using it yourselves.",
         "meta": "With a guide in your words"
       },
       "four": {
@@ -405,7 +405,7 @@
         "text": "I stay your contact for a fixed monthly sum."
       },
       "five": {
-        "title": "Custom build",
+        "title": "Custom software when needed",
         "text": "A tool of your own, for example an app for the team."
       }
     },
@@ -423,16 +423,16 @@
         "d": "Your workflows run on servers in Germany. Where a tool processes data elsewhere, you know beforehand."
       },
       "name": {
-        "t": "Everything in your name",
-        "d": "Accounts, data and access belong to you."
+        "t": "Accounts in your business name",
+        "d": "The accounts are registered to your business. You keep access to them."
       },
       "less": {
         "t": "Only the data that is needed",
         "d": "We decide together what goes into the tool."
       },
       "human": {
-        "t": "A person checks what matters",
-        "d": "Quotes, replies and payments only go out after your approval."
+        "t": "You check before anything is sent",
+        "d": "Quotes and replies are prepared for you. You review them and decide whether to send them."
       },
       "health": {
         "t": "Health data",
@@ -467,7 +467,7 @@
         "d": "at a time, so each one has my full attention."
       },
       "whoTitle": "Who it is for",
-      "who": "Small businesses of up to 20 people where the owner decides, for example landscaping, waste disposal, farming and service businesses. Also freelancers, the self-employed and private people.",
+      "who": "Small businesses of up to 20 people where the owner decides, for example landscaping, waste disposal, farming and service businesses. Also freelancers, the self-employed and individuals.",
       "more": "My background and references"
     },
     "faq": {
@@ -478,7 +478,7 @@
       },
       "cost": {
         "q": "What does it cost?",
-        "a": "Coming along is free in the first year. Afterwards I name the task and a fixed sum before the work starts. Example prices are in the offer catalogue."
+        "a": "My time observing your work is free in the first year. Afterwards I name the task and a fixed sum before the work starts. Example prices are in the offer catalogue."
       },
       "start": {
         "q": "Where is the best place to start?",
@@ -502,11 +502,11 @@
       },
       "time": {
         "q": "How much of our time does this take?",
-        "a": "While I come along, you simply carry on as usual. For practising you plan a few short sessions. After that you save time."
+        "a": "During my visit, you simply carry on as usual. For practising you plan a few short sessions. After that you save time."
       },
       "after": {
         "q": "What happens after the handover?",
-        "a": "You can run, change and fix the task yourselves. If you like, you book ongoing support and I stay your contact."
+        "a": "You get instructions for everyday use and simple changes. If you need help with technical problems, ongoing support is available."
       },
       "extra": {
         "q": "Are there costs on top of the prices?",
