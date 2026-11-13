@@ -10,6 +10,7 @@ if (existsSync(envFile)) process.loadEnvFile(envFile);
 
 const root = fileURLToPath(new URL("./public", import.meta.url));
 const template = readFileSync(new URL("./public/index.html", import.meta.url), "utf8");
+const siteFooter = readFileSync(new URL("./templates/site-footer.html", import.meta.url), "utf8");
 const pages = {
   cv: template,
   inbox: readFileSync(new URL("./templates/inbox-workflow.html", import.meta.url), "utf8"),
@@ -396,7 +397,7 @@ const server = createServer((req, res) => {
     const sent = new URL(req.url, "http://localhost").searchParams.get("sent");
     const extra = seoFields(page.name, page.lang);
     if (page.name === "cv" || page.name === "offer") extra["form.note"] = formNote(page.lang, sent);
-    const body = render(pages[page.name], page.lang, extra).replace("<!--ld-->", () => structuredData(page.name, page.lang));
+    const body = render(pages[page.name].replace("<!--site-footer-->", () => siteFooter), page.lang, extra).replace("<!--ld-->", () => structuredData(page.name, page.lang));
     const language = page.lang;
     res.writeHead(200, {
       ...headers,

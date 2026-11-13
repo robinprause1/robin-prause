@@ -1595,7 +1595,7 @@ details[open] > summary .chev {
   font-style: normal;
 }
 
-.legal a {
+.legal a:not(.btn) {
   color: var(--accent);
   text-underline-offset: 0.2em;
 }

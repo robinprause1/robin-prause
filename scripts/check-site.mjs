@@ -46,6 +46,24 @@ try {
     }
     console.log(`OK ${path} and referenced images`);
   }
+  for (const [home, path, downloadLabel] of [
+    ['/', '/vorlagen/n8n-posteingang-aufraeumen', 'n8n-Workflow herunterladen (.json)'],
+    ['/en', '/en/templates/n8n-email-inbox-cleanup', 'Download n8n workflow (.json)'],
+  ]) {
+    const homepage = await (await fetch(base + home)).text();
+    assert.ok(homepage.includes(`class="btn" href="${path}"`), 'Missing template button');
+
+    const response = await fetch(base + path);
+    assert.equal(response.status, 200, path);
+    const html = await response.text();
+    assert.ok(!html.includes('{{'), `Unresolved template variable on ${path}`);
+    assert.ok(html.includes(`href="${home}#beispiele"`), 'Missing back link');
+    assert.ok(html.includes(`class="btn" href="${home}#kontakt"`), 'Missing contact button');
+    assert.ok(html.includes(`download>${downloadLabel}</a>`), 'Missing download label');
+    assert.equal(html.match(/<footer[\s\S]*?<\/footer>/)?.[0],
+      homepage.match(/<footer[\s\S]*?<\/footer>/)?.[0]);
+    console.log(`OK ${path} navigation, download and footer`);
+  }
 } finally {
   if (!stopped) child.kill('SIGTERM');
   await exited;

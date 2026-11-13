@@ -178,7 +178,13 @@
           <li><h3>{{offer.top.seven.t}}</h3><p>{{offer.top.seven.d}}</p></li>
         </ul>
         <div class="more" data-reveal>
-          <p><a href="{{inbox.path}}">{{inbox.link}}</a></p>
+          <div>
+            <h3>{{inbox.example}}</h3>
+            <p>{{inbox.exampleText}}</p>
+          </div>
+          <a class="btn" href="{{inbox.path}}">{{inbox.link}}</a>
+        </div>
+        <div class="more" data-reveal>
           <p>{{offer.top.more}}</p>
           <a class="btn" href="/angebotskatalog.pdf" download="{{offer.catalog.file}}">
             <svg aria-hidden="true"><use href="#i-down"/></svg>
@@ -323,18 +329,7 @@
     </section>
   </main>
 
-  <footer class="foot">
-    <div class="wrap"><p class="foot-note" id="hinweis">* {{offer.foot.note}}</p></div>
-    <div class="wrap foot-row">
-      <p>Robin Prause · Rodgau · {{foot.year}}</p>
-      <p>
-        <a href="{{cv.href}}">{{cv.teaser}}</a>
-        <a href="https://www.linkedin.com/in/robin-prause-330666278" rel="noopener noreferrer">LinkedIn</a>
-        <a href="{{legal.impressumHref}}">{{legal.impressum}}</a>
-        <a href="{{legal.privacyHref}}">{{legal.privacy}}</a>
-      </p>
-    </div>
-  </footer>
+  <!--site-footer-->
 
   <script src="/site.js?v=4"></script>
   <script src="/contact.js?v=1"></script>
