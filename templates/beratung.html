@@ -25,7 +25,7 @@
   <!--ld-->
   <link rel="icon" href="/favicon.svg?v=6" type="image/svg+xml">
   <link rel="preload" href="/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/site.css?v=5">
+  <link rel="stylesheet" href="/site.css?v=7">
 </head>
 <body>
   <a class="skip" href="#inhalt">{{skip}}</a>
@@ -176,14 +176,12 @@
           <li><h3>{{offer.top.five.t}}</h3><p>{{offer.top.five.d}}</p></li>
           <li><h3>{{offer.top.six.t}}</h3><p>{{offer.top.six.d}}</p></li>
           <li><h3>{{offer.top.seven.t}}</h3><p>{{offer.top.seven.d}}</p></li>
-        </ul>
-        <div class="more" data-reveal>
-          <div>
+          <li id="beispiel-posteingang">
             <h3>{{inbox.example}}</h3>
             <p>{{inbox.exampleText}}</p>
-          </div>
-          <a class="btn" href="{{inbox.path}}">{{inbox.link}}</a>
-        </div>
+            <a class="btn btn-small pair-action" href="{{inbox.path}}">{{inbox.link}}</a>
+          </li>
+        </ul>
         <div class="more" data-reveal>
           <p>{{offer.top.more}}</p>
           <a class="btn" href="/angebotskatalog.pdf" download="{{offer.catalog.file}}">

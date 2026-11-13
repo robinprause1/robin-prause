@@ -51,13 +51,14 @@ try {
     ['/en', '/en/templates/n8n-email-inbox-cleanup', 'Download n8n workflow (.json)'],
   ]) {
     const homepage = await (await fetch(base + home)).text();
-    assert.ok(homepage.includes(`class="btn" href="${path}"`), 'Missing template button');
+    assert.ok(homepage.includes(`class="btn btn-small pair-action" href="${path}"`), 'Missing template button');
 
     const response = await fetch(base + path);
     assert.equal(response.status, 200, path);
     const html = await response.text();
     assert.ok(!html.includes('{{'), `Unresolved template variable on ${path}`);
-    assert.ok(html.includes(`href="${home}#beispiele"`), 'Missing back link');
+    assert.ok(homepage.match(/<ul class="pairs"[^>]*>[\s\S]*?<\/ul>/)?.[0].includes('id="beispiel-posteingang"'));
+    assert.ok(html.includes(`href="${home}#beispiel-posteingang"`), 'Missing back link');
     assert.ok(html.includes(`class="btn" href="${home}#kontakt"`), 'Missing contact button');
     assert.ok(html.includes(`download>${downloadLabel}</a>`), 'Missing download label');
     assert.equal(html.match(/<footer[\s\S]*?<\/footer>/)?.[0],
