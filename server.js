@@ -12,6 +12,7 @@ const root = fileURLToPath(new URL("./public", import.meta.url));
 const template = readFileSync(new URL("./public/index.html", import.meta.url), "utf8");
 const pages = {
   cv: template,
+  inbox: readFileSync(new URL("./templates/inbox-workflow.html", import.meta.url), "utf8"),
   impressum: readFileSync(new URL("./templates/impressum.html", import.meta.url), "utf8"),
   privacy: readFileSync(new URL("./templates/datenschutz.html", import.meta.url), "utf8"),
   offer: readFileSync(new URL("./templates/beratung.html", import.meta.url), "utf8"),
@@ -31,19 +32,21 @@ const catalogs = {
 };
 const site = (process.env.SITE_URL || "https://www.robin-prause.de").replace(/\/+$/, "");
 const paths = {
+  inbox: { en: "/en/templates/n8n-email-inbox-cleanup", de: "/vorlagen/n8n-posteingang-aufraeumen" },
   offer: { en: "/en", de: "/" },
   cv: { en: "/cv", de: "/de/lebenslauf" },
   impressum: { en: "/impressum", de: "/de/impressum" },
   privacy: { en: "/datenschutz", de: "/de/datenschutz" },
 };
-const fallbackLang = { offer: "de", cv: "en", impressum: "en", privacy: "en" };
-const indexed = ["offer", "cv"];
+const fallbackLang = { inbox: "de", offer: "de", cv: "en", impressum: "en", privacy: "en" };
+const indexed = ["offer", "cv", "inbox"];
 const faqKeys = ["ai", "cost", "start", "auto", "own", "privacy", "act", "time", "after", "extra"];
 const linkedin = "https://www.linkedin.com/in/robin-prause-330666278";
 const port = Number(process.env.PORT) || 4321;
 const host = "0.0.0.0";
 
 const types = {
+  ".json": "application/json; charset=utf-8",
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
@@ -110,6 +113,8 @@ function render(source, lang, extra = {}) {
 
 function pageFor(pathname) {
   const path = pathname.length > 1 && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+  if (path === paths.inbox.de) return { lang: "de", name: "inbox" };
+  if (path === paths.inbox.en) return { lang: "en", name: "inbox" };
   if (path === "/") return { lang: "de", name: "offer" };
   if (path === "/en") return { lang: "en", name: "offer" };
   if (path === "/cv") return { lang: "en", name: "cv" };
@@ -124,6 +129,7 @@ function pageFor(pathname) {
 function seoFields(name, lang) {
   return {
     site,
+    "inbox.path": paths.inbox[lang],
     canonical: site + paths[name][lang],
     "alt.en": site + paths[name].en,
     "alt.de": site + paths[name].de,
@@ -429,6 +435,10 @@ const server = createServer((req, res) => {
       "Content-Type": type,
       "Content-Length": info.size,
       "Cache-Control": cache,
+      ...(pathname === "/downloads/n8n-posteingang-aufraeumen.json" && {
+        "Content-Disposition": 'attachment; filename="n8n-posteingang-aufraeumen.json"',
+        "X-Robots-Tag": "noindex",
+      }),
     });
     if (req.method === "HEAD") {
       res.end();

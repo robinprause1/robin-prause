@@ -1,4 +1,21 @@
 {
+  "inbox": {
+    "title": "Automatically organize your inbox – free n8n template",
+    "description": "Download a free n8n workflow to sort emails into folders using IMAP and Vertex AI, with import and setup instructions.",
+    "language": "Language",
+    "link": "Example and template: organize your email inbox with n8n",
+    "lead": "This workflow sorts emails from your inbox and creates folders as needed. Messages that need a closer look go to “Zur Prüfung” (Review). Messages that clearly need a reply go to “Antwort nötig” (Reply needed).",
+    "download": "Download n8n workflow (.json)",
+    "requirementsTitle": "What you need",
+    "requirements": "Your own n8n instance, the n8n-nodes-imap community package, a compatible IMAP mailbox, and a Google Cloud project with Vertex AI. The template uses folder paths like INBOX.Karriere. Adjust this pattern if your email provider uses a different one.",
+    "setupTitle": "How to set up the workflow",
+    "imap": "Install the IMAP package and select your IMAP connection in all four IMAP nodes.",
+    "vertex": "Select your Google service account in both Vertex nodes and replace the placeholder in each URL with your project ID.",
+    "test": "Start with a test mailbox. The workflow moves messages and processes up to 30 emails per run with the default settings.",
+    "dataTitle": "What data is processed",
+    "data": "Vertex AI receives subject lines, sender addresses, message identifiers (IMAP UIDs), and folder information. Message bodies and attachments stay in the mailbox. Google may charge for model calls. The workflow provides a cost estimate.",
+    "import": "Download the JSON file and use “Import from File” in n8n."
+  },
   "html": {
     "lang": "en"
   },

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="{{html.lang}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{inbox.title}} | Robin Prause</title>
+  <meta name="description" content="{{inbox.description}}">
+  <link rel="canonical" href="{{canonical}}">
+  <link rel="alternate" hreflang="de" href="{{alt.de}}">
+  <link rel="alternate" hreflang="en" href="{{alt.en}}">
+  <link rel="alternate" hreflang="x-default" href="{{alt.default}}">
+  <link rel="icon" href="/favicon.svg?v=6" type="image/svg+xml">
+  <link rel="stylesheet" href="/site.css?v=5">
+</head>
+<body>
+  <a class="skip" href="#inhalt">{{skip}}</a>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="{{home}}">Robin Prause</a>
+      <nav class="langs" aria-label="{{inbox.language}}">
+        <a href="{{alt.de}}" hreflang="de" lang="de" class="{{lang.de.current}}">DE</a>
+        <a href="{{alt.en}}" hreflang="en" lang="en" class="{{lang.en.current}}">EN</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap legal" id="inhalt">
+    <h1>{{inbox.title}}</h1>
+    <p>{{inbox.lead}}</p>
+    <p><a class="btn" href="/downloads/n8n-posteingang-aufraeumen.json" download>{{inbox.download}}</a></p>
+    <h2>{{inbox.requirementsTitle}}</h2>
+    <p>{{inbox.requirements}}</p>
+    <h2>{{inbox.setupTitle}}</h2>
+    <ol>
+      <li>{{inbox.import}}</li>
+      <li>{{inbox.imap}}</li>
+      <li>{{inbox.vertex}}</li>
+      <li>{{inbox.test}}</li>
+    </ol>
+    <h2>{{inbox.dataTitle}}</h2>
+    <p>{{inbox.data}}</p>
+  </main>
+  <footer class="foot">
+    <div class="wrap foot-row">
+      <p>Robin Prause · {{foot.year}}</p>
+      <p>
+        <a href="{{legal.impressumHref}}">{{legal.impressum}}</a>
+        <a href="{{legal.privacyHref}}">{{legal.privacy}}</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,4 +1,21 @@
 {
+  "inbox": {
+    "title": "Posteingang automatisch aufräumen – kostenlose n8n-Vorlage",
+    "description": "Kostenlosen n8n-Workflow herunterladen und E-Mails per IMAP und Vertex AI in passende Ordner sortieren. Mit Anleitung für Import und Einrichtung.",
+    "language": "Sprache",
+    "link": "Praxisbeispiel und Vorlage: Posteingang mit n8n aufräumen",
+    "lead": "Der Workflow sortiert E-Mails aus deinem Posteingang in passende Ordner und legt fehlende Ordner an. Unklare Nachrichten landen unter „Zur Prüfung“. Bei klar erkennbarem Antwortbedarf landen sie unter „Antwort nötig“.",
+    "download": "n8n-Workflow herunterladen (.json)",
+    "requirementsTitle": "Was du brauchst",
+    "requirements": "Eine eigene n8n-Instanz, das Community-Paket n8n-nodes-imap, ein kompatibles IMAP-Postfach und ein Google-Cloud-Projekt mit Vertex AI. Die Vorlage verwendet Ordnerpfade wie INBOX.Karriere. Je nach Mailanbieter musst du dieses Schema anpassen.",
+    "setupTitle": "So richtest du den Workflow ein",
+    "imap": "Installiere das IMAP-Paket und wähle deine IMAP-Verbindung in allen vier IMAP-Knoten aus.",
+    "vertex": "Wähle dein Google-Dienstkonto in den beiden Vertex-Knoten aus und ersetze dort in den URLs den Platzhalter durch deine Projekt-ID.",
+    "test": "Starte mit einem Testpostfach. Der Workflow verschiebt Nachrichten und verarbeitet mit den voreingestellten Grenzen bis zu 30 E-Mails pro Durchlauf.",
+    "dataTitle": "Welche Daten verarbeitet werden",
+    "data": "Vertex AI erhält Betreff, Absenderadresse, Nachrichten-ID (IMAP-UID) und Ordnerinformationen. Mailtexte und Anhänge bleiben beim Postfach. Google kann die Modellaufrufe berechnen. Der Workflow gibt dafür eine Kostenschätzung aus.",
+    "import": "Lade die JSON-Datei herunter und importiere sie in n8n über „Import from File“."
+  },
   "html": {
     "lang": "de"
   },
